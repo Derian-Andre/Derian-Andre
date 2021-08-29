@@ -1,0 +1,83 @@
+// Colors
+$blue:     hsl(215, 95%, 50%);
+$indigo:   hsl(265, 90%, 50%);
+$purple:   hsl(260, 50%, 50%);
+$pink:     hsl(330, 65%, 50%);
+$red:      hsl(355, 70%, 60%);
+$orange:   hsl(25, 100%, 55%);
+$yellow:   hsl(45, 100%, 55%);
+$green:    hsl(150, 70%, 45%);
+$teal:     hsl(170, 80%, 40%);
+$cyan:     hsl(190, 90%, 50%);
+$white:    hsl(0, 100%, 100%);
+$gray:     hsl(220, 10%, 40%);
+
+// Color scheme
+$primary: hsl(000, 00%, 20%);
+$light:   hsl(220, 10%, 95%);
+$dark:    hsl(220, 10%, 05%);
+
+
+// Theme
+$colors: (
+	"blue":       $blue,
+	"indigo":     $indigo,
+	"purple":     $purple,
+	"pink":       $pink,
+	"red":        $red,
+	"orange":     $orange,
+	"yellow":     $yellow,
+	"green":      $green,
+	"teal":       $teal,
+	"cyan":       $cyan,
+	"white":      $white,
+	"gray":       $gray,
+);
+
+// Custom colors
+$custom-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Fonts
+$font-family-headings:	"Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif:		"Lora", "Cambria", Times, "Times New Roman", serif;
+$font-family-base:		$font-family-sans-serif;
+
+// Card
+$card-bg: #FFF;
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.5rem;
+$card-border-width: 0;
+$card-border-radius: 0.75rem;
+
+// Table
+$table-th-bg:          $secondary;
+$table-th-font-size:   75%;
+$table-th-font-family: $font-family-headings;
+$table-th-font-weight: bold !default;
+
+// Custom
+$expand: md;
+
+// Theme
+$theme-light: $light;
+$theme-dark:  $dark;
+
+// Header
+$header-padding-x: 2rem;
+$header-padding-y: 2rem;
+
+// Links
+$link-color: var(--body-color-normal);
+$link-hover-color: var(--body-color-high);
+
+// Buttons
+$btn-border-radius:    0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+$btn-border-width:     2px;

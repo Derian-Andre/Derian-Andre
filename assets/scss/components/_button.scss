@@ -1,0 +1,34 @@
+
+.btn {
+	transition: all 0.35s ease;
+	&.btn-outline-link {
+		color: var(--body-color-normal);
+		background: transparent;
+		border-color: var(--body-color-normal);
+		text-decoration: none;
+		&:hover {
+			background: var(--body-color-normal);
+			color: var(--body-bg);
+		}
+		&:active,
+		&:focus {
+			color: var(--body-bg);
+			background: var(--body-color-high);
+			border-color: var(--body-color-high);
+		}
+	}
+}
+
+.btn-back {
+	font-family: $font-family-headings;
+	display: inline-flex;
+	align-items: center;
+	font-weight: bold;
+	margin: 2.5rem 0;
+	font-size: 0.85rem;
+	box-shadow: none !important;
+	.bi {
+		font-size: 150%;
+		line-height: 1;
+	}
+}

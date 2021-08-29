@@ -1,0 +1,79 @@
+// Typography
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	color: var(--body-color-high);
+	font-family: $font-family-headings;
+	font-weight: bold;
+	transition: color 0.35s ease;
+}
+
+p {
+  &.lead {
+		@include rs('font-size', 1.2rem, 1.5vw, 1.5rem);
+  }
+}
+
+blockquote,
+pre {
+	margin: 1rem 0;
+	transition: all 0.35s ease;	
+	@include rs('font-size', 1.2rem, 1.5vw, 1.5rem);
+	@include media-breakpoint-up($expand) {
+		margin: 2rem 1rem;
+	}
+}
+
+blockquote {
+	display: block;
+	padding: 1.5rem;
+	position: relative;
+	border-left: 6px solid var(--body-color-muted);
+	background-color: var(--body-bg-muted);
+	color: var(--body-color-medium);
+	quotes: "\201C""\201D""\2018""\2019";
+	p {
+		line-height: 1.25;
+		margin: 0 !important;
+	}
+	cite {
+		display: block;
+		margin-top: 1rem;
+		font-weight: bold;
+    font-style: normal;
+    font-size: 1rem;
+		color: var(--body-color-muted);
+    font-family: $font-family-headings;
+		line-height: 1;
+		transition: all 0.35s ease;
+	}
+}
+
+pre {
+	display: block;
+	margin: 1rem 0;
+	padding: 1rem;
+	color: var(--body-color-muted);
+	font-family: $font-family-serif;
+	font-weight: 500;
+	line-height: 1.25;
+	white-space: pre-wrap;
+	overflow: inherit;
+	border-top: 2px solid var(--hr-bg);
+	border-bottom: 2px solid var(--hr-bg);	
+	&::before {
+		display: block;
+		content: "Derian dice:";
+		font-family: $font-family-headings;
+		font-weight: bold;
+		font-size: 0.85rem;
+		margin-bottom: 0.5rem;
+		color: var(--body-color-normal);
+	}
+}
+
+small,
+figure {
+  figcaption {
+    font-size: 0.85rem;
+  }
+}

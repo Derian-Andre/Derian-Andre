@@ -1,0 +1,21 @@
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.layout-enter,
+.layout-leave-to {
+  opacity: 0;
+}
+
+.layout {
+  position:         relative;
+  display:          flex;
+  flex-direction:   column;
+  flex-wrap:        nowrap;
+  min-height:       100vh;
+  overflow-x:       auto;
+  overflow-y:       hidden;
+  background-color: var(--body-bg);
+}
