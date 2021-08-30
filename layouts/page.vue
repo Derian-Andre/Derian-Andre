@@ -6,9 +6,7 @@
         <h1 id="title" class="title"><span>{{ title }}</span></h1>
         <span id="subtitle" class="subtitle" v-if="subtitle">{{ subtitle }}</span>
       </section>
-      <section id="content" class="content">
-        <Nuxt />
-      </section>
+      <Nuxt />
     </main>
     <Footer />
   </div>

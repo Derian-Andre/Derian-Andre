@@ -18,7 +18,7 @@
     head() {
       return {
         bodyAttrs: {
-          class: 'blog'
+          class: 'page blog'
         }
       }
     },

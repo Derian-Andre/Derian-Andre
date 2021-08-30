@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# SFTP vscode extension
+sftp.json

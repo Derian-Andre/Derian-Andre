@@ -2,6 +2,7 @@
   "name": "derianandre",
   "version": "1.0.0",
   "private": true,
+  "authir": "Derian André Castillo Franco",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

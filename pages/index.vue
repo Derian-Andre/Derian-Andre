@@ -13,6 +13,13 @@
 <script>
   export default {
     layout: 'index',
+    head() {
+      return {
+        bodyAttrs: {
+          class: 'home'
+        }
+      }
+    },
     async asyncData ({ $content }) {
       const projects = await $content('projects')
         .only(['title', 'date', 'slug'])

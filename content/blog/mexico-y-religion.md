@@ -25,6 +25,8 @@ date: 2021-03-09 12:00:00
 
 <pre>Digo inclinaciones porque no tengo un rumbo claro, es muy difícil aprobar o refutar la idea de Dios.</pre>
 
-Y sinceramente, <strong>¿Quiénes somos notros como para entender una idea tan compleja como Dios?</strong>, es decir, es como ser un átomo tratando de entender el universo. Aunque sin duda es un tema fascinante que estaré también hablando sobre esto en futuras entradas. Y como digo, nacemos con una curiosidad insaciable y lo importante es mantenerla viva, pero cuidado, que es un arma de doble filo (como todo en esta vida).</p>
+<p>Y sinceramente, <strong>¿Quiénes somos notros como para entender una idea tan compleja como Dios?</strong>, es decir, es como ser un átomo tratando de entender el universo. Aunque sin duda es un tema fascinante que estaré también hablando sobre esto en futuras entradas. Y como digo, nacemos con una curiosidad insaciable y lo importante es mantenerla viva, pero cuidado, que es un arma de doble filo (como todo en esta vida).</p>
+
+<hr>
 
 <p class="lead">En fin, el punto es que <strong>está bien dudar, está bien cuestionarse, está bien no tener el sentido de pertenencia cuando es algo que no elegimos y sobre todo, está bien buscar en otro lugar.</strong></p>

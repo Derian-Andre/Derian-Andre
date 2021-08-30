@@ -28,9 +28,38 @@
 </template>
 
 <script>
-   import metaGlobal from '~/utils/metaGlobal';
    import metaSite from '~/utils/metaSite';
    export default {
+      head() {
+         return {
+            title:  `${this.blog.title} – Blog – Derian André`,
+            bodyAttrs: {
+               class: 'blog-post'
+            },
+            meta: [
+               ...this.meta,
+               {
+                  property: 'article:published_time',
+                  content:  this.blog.date,
+               },
+               {
+                  property: 'article:modified_time',
+                  content:  this.blog.updatedAt,
+               },
+               {
+                  property: 'article:tag',
+                  content:  this.blog.tags ? this.blog.tags.toString() : '',
+               },
+            ],
+            link: [
+               {
+                  hid: 'canonical',
+                  rel: 'canonical',
+                  href: this.$config.baseUrl + this.blog.path,
+               },
+            ],
+         };
+      },
       async asyncData({ $content, params }) {
          const blog = await $content('blog', params.slug).fetch()
          const [prev, next] = await $content('blog')
@@ -65,36 +94,6 @@
             };
             return metaSite(metadata);
          },
-      },
-      head() {
-         return {
-            title:  this.blog.title,
-            bodyAttrs: {
-               class: 'blog'
-            },
-            meta: [
-               ...this.meta,
-               {
-                  property: 'article:published_time',
-                  content:  this.blog.date,
-               },
-               {
-                  property: 'article:modified_time',
-                  content:  this.blog.updatedAt,
-               },
-               {
-                  property: 'article:tag',
-                  content:  this.blog.tags ? this.blog.tags.toString() : '',
-               },
-            ],
-            link: [
-               {
-                  hid: 'canonical',
-                  rel: 'canonical',
-                  href: this.$config.baseUrl + this.blog.path,
-               },
-            ],
-         };
       },
    }
 </script>

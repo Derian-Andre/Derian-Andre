@@ -1,25 +1,29 @@
 <template>
-   <div>
+   <section id="content" class="content">
       <h2 class="page-title">Más reciente</h2>
-      <hr>
       <template v-for="(blog, index) in blogs">
          <NuxtLink class="post" :key="blog.slug" :to="{ name: 'blog-slug', params: { slug: blog.slug } }" :title="blog.title">
             <span class="date">{{ formatDate(blog.date) }}</span>
             <h3 class="title">{{ blog.title }}</h3>
          </NuxtLink>
-         <template v-if="index == 0">
-            <hr :key="index">
-         </template>
+         <hr v-if="index == 0" :key="index">
       </template>
-
       <hr>
       pagination
-   </div>
+   </section>
 </template>
 
 <script>
    export default {
-      layout: 'blog',
+      layout: 'page',
+      head() {
+         return {
+            title: 'Blog – Derian André',
+            bodyAttrs: {
+               class: 'blog'
+            }
+         }
+      },
       async asyncData ({ $content }) {
          const blogs = await $content('blog')
             .only(['title', 'date', 'slug'])
@@ -31,6 +35,7 @@
       },
       created() {
          this.$store.commit('page/setTitle', 'Blog')
+         this.$store.commit('page/setSubtitle', 'Lee mi mente')
       },
       methods: {
          formatDate(date) {

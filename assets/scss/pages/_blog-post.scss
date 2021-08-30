@@ -1,0 +1,23 @@
+body.blog-post {
+	main.page {
+		section.content {
+			max-width: 100%;
+			font-family: $font-family-serif;
+			font-size: 1.1rem;
+			@media (min-width: 1700px) {
+				margin-left: calc(-1 * (var(--header-width, 0px) + var(--info-width, 0px)));
+			}
+			.container {
+				max-width: 950px;
+			}
+			.btn-outline-link {
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

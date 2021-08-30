@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<section section id="content" class="content">
 		<h2>Diseño</h2>
 		<ul>
 			<li>Branding 
@@ -14,9 +14,7 @@
 			<li>Diseño UI (Interfaz de usuario)</li>
 			<li>Diseño UX (Experiencia de usuario)</li>
 		</ul>
-		
 		<hr>
-
 		<h2>Desarrollo</h2>
 		<ul>
 			<li>Páginas: Landings, Tiendas, Portafolios, Galerías, etc.</li>
@@ -24,7 +22,6 @@
 			<li>WordPress Themes</li>
 		</ul>
 		<hr>
-
 		<h2>Fotografía</h2>
 		<ul>
 			<li>Retratos</li>
@@ -32,15 +29,13 @@
 			<li>Productos</li>
 			<li>Manipulación/retoque digital</li>
 		</ul>
-
 		<hr>
-
-		<p> 
+		<p>
 			<a href="mailto:hola@derianandre.com" class="btn btn-outline-link">
 				¡Hagamos algo chingón!
 			</a>
 		</p>
-	</div>
+	</section>
 </template>
 
 <script>

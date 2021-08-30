@@ -1,7 +1,7 @@
 
 .layout-enter-active,
 .layout-leave-active {
-  transition: opacity 0.35s;
+  transition: opacity 0.5s ease;
 }
 
 .layout-enter,
@@ -10,12 +10,12 @@
 }
 
 .layout {
+  background-color: var(--body-bg);
   position:         relative;
   display:          flex;
-  flex-direction:   column;
   flex-wrap:        nowrap;
+  flex-direction:   column;
   min-height:       100vh;
-  overflow-x:       auto;
-  overflow-y:       hidden;
-  background-color: var(--body-bg);
+  //overflow-x:       auto;     // Removed as it causes `position: sticky` to break
+  //overflow-y:       hidden;   // Removed as it causes `position: sticky` to break
 }

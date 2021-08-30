@@ -1,0 +1,15 @@
+body.error {
+	footer.footer {
+		@media (max-width: 1400px) {
+			display: none;
+		}
+	}
+	section.right {
+		align-items: center;
+		justify-content: center;
+		.emoji {
+			display: block;
+			@include rs('font-size', 5rem, 30vw, 30rem)
+		}
+	}
+}
