@@ -159,12 +159,12 @@
 			}
 		},
 		head() {
-				return {
-					title: 'Curriculum vitae | Derian André',
-					bodyAttrs: {
-							class: 'curriculum'
-					}
+			return {
+				title: 'Curriculum vitae | Derian André',
+				bodyAttrs: {
+					class: 'curriculum'
 				}
+			}
 		},
 		created() {
 			this.$store.commit('page/setTitle', 'Derian André Castillo Franco')

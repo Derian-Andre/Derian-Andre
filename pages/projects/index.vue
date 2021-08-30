@@ -1,7 +1,7 @@
 <script>
-   export default {
-      mounted() {
-         this.$router.push('/')
-      },
-   }
+	export default {
+		mounted() {
+			this.$router.push('/')
+		},
+	}
 </script>
