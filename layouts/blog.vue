@@ -15,6 +15,13 @@
 
 <script>
   export default {
+    head() {
+      return {
+        bodyAttrs: {
+          class: 'blog'
+        }
+      }
+    },
     mounted() {
       const root = document.documentElement,
             header  = document.querySelector('header.header') || null,
@@ -28,7 +35,7 @@
     },
     computed: {
       name() {
-        return this.$store.getters['page/getName']
+        return this.$store.getters['page/getTitle']
       }
     }
   }

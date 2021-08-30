@@ -20,13 +20,6 @@
 <script>
    export default {
       layout: 'blog',
-      head() {
-         return {
-            bodyAttrs: {
-               
-            }
-         }
-      },
       async asyncData ({ $content }) {
          const blogs = await $content('blog')
             .only(['title', 'date', 'slug'])
@@ -37,7 +30,7 @@
          }
       },
       created() {
-         this.$store.commit('page/setName', 'Blog')
+         this.$store.commit('page/setTitle', 'Blog')
       },
       methods: {
          formatDate(date) {

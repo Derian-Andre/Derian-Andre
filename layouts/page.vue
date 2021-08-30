@@ -3,7 +3,8 @@
     <Header />
     <main role="main" id="main" class="page">
       <section id="info" class="info">
-        <h1 id="title" class="title"><span>{{ name }}</span></h1>
+        <h1 id="title" class="title"><span>{{ title }}</span></h1>
+        <span id="subtitle" class="subtitle" v-if="subtitle">{{ subtitle }}</span>
       </section>
       <section id="content" class="content">
         <Nuxt />
@@ -27,8 +28,11 @@
       window.addEventListener('resize', rootVariables, false);
     },
     computed: {
-      name() {
-        return this.$store.getters['page/getName']
+      title() {
+        return this.$store.getters['page/getTitle']
+      },
+      subtitle() {
+        return this.$store.getters['page/getSubtitle']
       }
     }
   }

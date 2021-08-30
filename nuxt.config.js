@@ -51,7 +51,10 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/color-mode'
+    // https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode',
+    // https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -64,9 +67,20 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon: {
+      source: '@/static/',
+      fileName: 'icon.png'
+    },
     manifest: {
-      lang: 'es'
-    }
+      name: 'Derian André',
+      short_name: 'Derian André',
+      description: 'Freelancer: Diseño, Desarrollo y Fotografía',
+      lang: 'es',
+      theme_color: '#333333'
+    },
+    meta: {
+      theme_color: '#333333'
+    },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

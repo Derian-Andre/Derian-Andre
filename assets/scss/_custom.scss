@@ -195,7 +195,35 @@ main.page {
 	}
 }
 
-main.page.blog {
+body.blog {
+	footer.footer {
+		@media (max-width: 1400px) {
+			display: none;
+		}
+	}
+
+	main.page {
+		section.content {
+			max-width: 100%;
+			font-family: $font-family-serif;
+			font-size: 1.1rem;
+			@media (min-width: 1700px) {
+				margin-left: calc(-1 * (var(--header-width, 0px) + var(--info-width, 0px)));
+			}
+			.container {
+				max-width: 950px;
+			}
+			.btn-outline-link {
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
 	section.content {
 		max-width: 1100px;
 	}
@@ -297,7 +325,7 @@ main.page.blog {
 	}
 }
 
-main.page.curriculum {
+body.curriculum {
 	section.content {
 		max-width: 1100px;
 		overflow: hidden;
@@ -398,42 +426,13 @@ main.page.curriculum {
 	}
 }
 
-main.page.error {
+body.error {
 	section.right {
 		align-items: center;
 		justify-content: center;
 		.emoji {
 			display: block;
 			@include rs('font-size', 5rem, 30vw, 30rem)
-		}
-	}
-}
-
-body.blog {
-	footer.footer {
-		@media (max-width: 1400px) {
-			display: none;
-		}
-	}
-	main.page {
-		section.content {
-			max-width: 100%;
-			font-family: $font-family-serif;
-			font-size: 1.1rem;
-			@media (min-width: 1700px) {
-				margin-left: calc(-1 * (var(--header-width, 0px) + var(--info-width, 0px)));
-			}
-			.container {
-				max-width: 950px;
-			}
-			.btn-outline-link {
-				&:first-child {
-					margin-top: 0;
-				}
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
 		}
 	}
 }
