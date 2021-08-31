@@ -6,16 +6,20 @@
 		</NuxtLink>
 		<div class="wrapper">
 			<nav>
-				<NuxtLink to="/">Inicio</NuxtLink>
-				<NuxtLink to="/blog/">Blog</NuxtLink>
-				<NuxtLink to="/servicios/">Work</NuxtLink>
-				<NuxtLink to="/curriculum/">Ego</NuxtLink>
-				<a role="button" id="toggler" class="toggler" title="Cambiar el tema"></a>
+				<NuxtLink class="link" v-for="item in menu" :key="item.slug" :to="item.to">
+					{{ $t(`header.${item.slug}`) }}
+				</NuxtLink>
+				<button class="link" type="button" @click="changeLanguage">
+					{{ $i18n.locale }}
+				</button>
+				<button class="link" type="button" @click="changeTheme">
+					{{ $t(`header.${$colorMode.value}`) }}
+				</button>
 			</nav>
 		</div>
-		<a class="footer" href="mailto:hola@derianandre.com" title="Mándame un correo">
+		<a class="footer" href="mailto:hola@derianandre.com" :title="$t('header.send_mail')">
 			<i class="bi bi-envelope"></i>
-			<span class="visually-hidden">Mándame un correo</span>
+			<span class="visually-hidden">{{ $t('header.send_mail') }}</span>
 		</a>
 	</header>
 </template>
@@ -24,25 +28,41 @@
 	export default {
 		data() {
 			return {
-				themes: {
-					'dark':   'Dark',
-					'light':  'Light',
-					'system': 'Sistema'
-				},
+				locales: [
+					{ code: 'es', name: 'Español' },
+					{ code: 'en', name: 'English' },
+				],
+				menu: [
+					{ slug: 'home', to: '/' },
+					{ slug: 'blog', to: '/blog/' },
+					{ slug: 'services', to: '/servicios/' },
+					{ slug: 'curriculum', to: '/curriculum/' },
+				]
 			}
 		},
 		mounted() {
-			const root    = document.documentElement,
+			setTimeout(this.rootVariables, 1);
+			window.addEventListener('resize', this.rootVariables, false);
+		},
+		methods: {
+			rootVariables() {
+				// Constants
+				const	root    = document.documentElement,
 						header  = document.querySelector('#header') || null,
 						info    = document.querySelector('#info') || null;
-			function rootVariables() {
-				var headerWidth = header ? header.offsetWidth : 0,
-						infoWidth   = info   ? info.offsetWidth   : 0;
+				// Variables
+				var	headerWidth = header ? header.offsetWidth : 92,
+						infoWidth 	= info   ? info.offsetWidth   : 130;
+				// Root variables
 				root.style.setProperty('--header-width', `${headerWidth}px`);
 				root.style.setProperty('--info-width',   `${infoWidth}px`);
+			},
+			changeLanguage() {
+				this.$i18n.locale = this.$i18n.locale === 'es' ? 'en' : 'es';
+			},
+			changeTheme() {
+				this.$colorMode.preference = this.$colorMode.value === 'dark' ? 'light' : 'dark';
 			}
-			rootVariables();
-			window.addEventListener('resize', rootVariables, false);
 		},
 	}
 </script>

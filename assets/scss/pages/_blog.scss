@@ -1,103 +1,95 @@
-
-body.blog {
-	footer.footer {
-		@media (max-width: 1400px) {
-			display: none;
+section.content.blog-list {
+	max-width: 1100px !important;
+	.page-title {
+		font-size: 120%;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+		color: var(--body-color-normal)
+	}
+	.post {
+		display: flex;
+		align-items: baseline;
+		color: var(--body-color-normal);
+		text-decoration: none;
+		margin: 0.75rem 0;
+		flex-direction: column;
+		text-decoration: none;
+		@include media-breakpoint-up($expand) {
+			margin: 1rem 0;
+			flex-direction: row;
+		}
+		.title {
+			position: relative;
+			margin: 0;
+			font-weight: bold;
+			&::after { 
+				content: "";
+				background: var(--hr-bg);
+				display: block;
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				width: 0;
+				height: 6px;
+				opacity: 0;
+				transition: all 0.35s ease;
+			}
+		}
+		.date {
+			width: 100%;
+			max-width: 200px;
+			color: var(--body-color-muted);
+			font-weight: 600;
+			font-family: $font-family-serif;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:hover {
+			color: var(--body-color-normal);
+			.title {
+				&::after {
+					width: 50%;
+					opacity: 1;
+				}
+			}
 		}
 	}
-	section.content {
-		max-width: 1100px !important;
-		.page-title {
-			font-size: 120%;
-			font-weight: bold;
-			text-transform: uppercase;
-			margin-bottom: 1rem;
-			color: var(--body-color-normal)
+	.pagination {
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0.4rem 0 3rem;
+		font-family: $font-family-headings;
+		@include media-breakpoint-up($expand) {
+			margin: 0.35rem 0 0;
 		}
-		.post {
-			display: flex;
-			align-items: baseline;
-			color: var(--body-color-normal);
-			text-decoration: none;
-			margin: 0.75rem 0;
-			flex-direction: column;
-			text-decoration: none;
-			@include media-breakpoint-up($expand) {
-				margin: 1rem 0;
-				flex-direction: row;
-			}
-			.title {
-				position: relative;
-				margin: 0;
-				font-weight: bold;
-				&::after { 
-					content: "";
-					background: var(--hr-bg);
-					display: block;
-					position: absolute;
-					bottom: -10px;
-					left: 0;
-					width: 0;
-					height: 6px;
-					opacity: 0;
-					transition: all 0.35s ease;
-				}
-			}
-			.date {
-				width: 100%;
-				max-width: 200px;
-				color: var(--body-color-muted);
-				font-weight: 600;
-				font-family: $font-family-serif;
-			}
-			&:last-child {
-				margin-bottom: 0;
-			}
-			&:hover {
-				color: var(--body-color-normal);
-				.title {
-					&::after {
-						width: 50%;
-						opacity: 1;
-					}
-				}
-			}
-		}
-		.pagination {
+		.page-numbers {
 			display: flex;
 			align-items: center;
-			font-weight: bold;
-			text-transform: uppercase;
-			margin: 0.4rem 0 3rem;
-			font-family: $font-family-headings;
-			@include media-breakpoint-up($expand) {
-				margin: 0.35rem 0 0;
+			justify-content: center;
+			text-align: center;
+			width: 32px;
+			height: 32px;
+			margin: 0.35rem;
+			text-decoration: none;
+			color: var(--body-color-normal);
+			border-bottom: 1px solid transparent;
+			font-size: 0.85rem;
+			&.current {
+				color: var(--body-color-high);
+				border-bottom: 1px solid var(--body-color-muted);
 			}
-			.page-numbers {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				text-align: center;
-				width: 32px;
-				height: 32px;
-				margin: 0.35rem;
-				text-decoration: none;
-				color: var(--body-color-normal);
-				border-bottom: 1px solid transparent;
-				font-size: 0.85rem;
-				&.current {
-					color: var(--body-color-high);
-					border-bottom: 1px solid var(--body-color-muted);
-				}
-				&.next,
-				&.prev {
-					width: auto;
-					color: var(--body-color-muted);
-				}
-				&:not(.current):hover {
-					color: var(--body-color-high);
-					border-bottom: 1px solid var(--body-color-high);
-				}
+			&.next,
+			&.prev {
+				width: auto;
+				color: var(--body-color-muted);
+			}
+			&:not(.current):hover {
+				color: var(--body-color-high);
+				border-bottom: 1px solid var(--body-color-high);
 			}
 		}
 	}

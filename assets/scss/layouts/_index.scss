@@ -1,16 +1,4 @@
-
-.layout-enter-active,
-.layout-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.layout-enter,
-.layout-leave-to {
-  opacity: 0;
-}
-
 .layout {
-  background-color: var(--body-bg);
   position:         relative;
   display:          flex;
   flex-wrap:        nowrap;

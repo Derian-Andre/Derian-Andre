@@ -32,7 +32,7 @@ header.header {
 			position: absolute;
 			transform: rotate(-90deg) translate(-50%, -50%);
 			transform-origin: 0 0;
-			a {
+			.link {
 				margin: 0 1rem;
 				font-size: .85rem;
 				text-transform: uppercase;
@@ -42,6 +42,8 @@ header.header {
 				color: white;
 				position: relative;
 				letter-spacing: 1px;
+				background: transparent;
+				border: 0;
 				&::after {
 					content: "";
 					display: block;

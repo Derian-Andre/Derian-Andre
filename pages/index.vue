@@ -1,5 +1,5 @@
 <template>
-	<main id="main" role="main" class="gallery">
+	<div role="main" class="gallery">
 		<NuxtLink class="post" v-for="project in projects" :key="project.slug" :title="project.title" :to="{ name: 'projects-slug', params: { slug: project.slug } }">
 			<LazyImage :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title" />
 			<div class="overlay">
@@ -7,17 +7,18 @@
 				<span class="date">{{ formatDate(project.date) }}</span>
 			</div>
 		</NuxtLink>
-	</main>
+	</div>
 </template>
 
 <script>
 	export default {
-		layout: 'index',
+		layout: 'home',
 		head() {
 			return {
-			bodyAttrs: {
-				class: 'home'
-			}
+				title:  `${this.$i18n.t('home.title')} – Derian André`,
+				bodyAttrs: {
+					class: 'home'
+				}
 			}
 		},
 		async asyncData ({ $content }) {
@@ -36,7 +37,7 @@
 					month: 'long',
 					day:   'numeric'
 				}
-				return new Date(date).toLocaleDateString('es', options);
+				return new Date(date).toLocaleDateString(this.$i18n.locale, options);
 			}
 		},
 	}

@@ -4,13 +4,3 @@
 @import "curriculum";
 @import "services";
 @import "error";
-
-.page-enter-active,
-.page-leave-active {
-	transition: opacity 0.45s ease;
-}
-
-.page-enter,
-.page-leave-to {
-	opacity: 0;
-}

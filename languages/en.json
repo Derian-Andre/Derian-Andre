@@ -1,0 +1,32 @@
+{
+	"header": {
+		"home": "Home",
+		"blog": "Blog",
+		"services": "Services",
+		"curriculum":	"CV",
+		"dark": "Dark",
+		"light": "Light",
+		"send_mail": "Send me an e-mail"
+	},
+	"home": {
+		"title": "Home",
+		"subtitle": "My portfolio"
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "A slice of my life",
+		"recent": "Recent posts"
+	},
+	"services": {
+		"title": "Services",
+		"subtitle": "What I do"
+	},
+	"curriculum": {
+		"title": "Curriculum Vitae",
+		"subtitle": "Derian Castillo"
+	},	
+	"projects": {
+		"title": "Projects",
+		"subtitle": "Here are some of my projects"
+	}
+}

@@ -1,6 +1,6 @@
 const state = () => ({
-  title: 'Página',
-  subtitle: null,
+  title: 	false,
+  subtitle: false,
 })
 
 const mutations = {

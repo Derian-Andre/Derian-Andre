@@ -1,0 +1,32 @@
+{
+	"header": {
+		"home": "Inicio",
+		"blog": "Blog",
+		"services": "Servicios",
+		"curriculum":	"CV",
+		"dark": "Oscuro",
+		"light": "Claro",
+		"send_mail": "Mándame un correo"
+	},
+	"home": {
+		"title": "Inicio",
+		"subtitle": "Mi portafolio"
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "Reflexiones de la vida",
+		"recent": "Más reciente"
+	},
+	"services": {
+		"title": "Servicios",
+		"subtitle": "Diseño y desarrollo web"
+	},
+	"curriculum": {
+		"title": "Curriculum Vitae",
+		"subtitle": "Derian André Castillo Franco"
+	},
+	"projects": {
+		"title": "Proyectos",
+		"subtitle": "Lo más reciente"
+	}
+}

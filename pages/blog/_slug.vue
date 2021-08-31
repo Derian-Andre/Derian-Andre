@@ -1,40 +1,18 @@
 <template>
-	<main role="main" id="main" class="page blog">
-		<section id="info" class="info">
-			<h1 id="title" class="title"><span>{{ blog.title }}</span></h1>
-			<span id="date" class="date">{{ formatDate(blog.date) }}</span>
-		</section>
-		<!-- Content -->
-		<section id="content" class="content">
-			<div class="container g-0">
-				<!-- Go back to blog -->
-				<NuxtLink class="btn btn-outline-link btn-back" to="/blog">
-					<i class="bi bi-arrow-left me-2"></i>
-					Volver al blog
-				</NuxtLink>
-				<!-- Article -->
-				<article v-if="blog.body">
-					<NuxtContent class="d-flex flex-column" :document="blog"/>
-				</article>
-				<p v-else>Contenido en construcción</p>
-				<!-- Go back to blog -->
-				<NuxtLink class="btn btn-outline-link btn-back" to="/blog">
-					<i class="bi bi-arrow-left me-2"></i>
-					Volver al blog
-				</NuxtLink>
-			</div>
-		</section>
-	</main>
+	<article>
+		<NuxtContent class="article-content" :document="blog"/>
+	</article>
 </template>
 
 <script>
 	import metaSite from '~/utils/metaSite';
 	export default {
+		layout: 'blog',
 		head() {
 			return {
-				title:  `${this.blog.title} – Blog – Derian André`,
+				title:  `${this.blog.title} – ${this.$i18n.t('blog.title')} – Derian André`,
 				bodyAttrs: {
-					class: 'blog-post'
+					class: 'blog'
 				},
 				meta: [
 					...this.meta,
@@ -67,22 +45,16 @@
 				.sortBy('createdAt', 'asc')
 				.surround(params.slug)
 				.fetch();
-				
+			console.log(prev);
 			return {
 				blog,
 				prev,
 				next
 			}
 		},
-		methods: {
-			formatDate(date) {
-				const options = { 
-					year:  'numeric',
-					month: 'long',
-					day:   'numeric'
-				}
-				return new Date(date).toLocaleDateString('es', options);
-			}
+		fetch() {
+			this.$store.commit('page/setTitle',    this.blog.title);
+			this.$store.commit('page/setSubtitle', this.formatDate(this.blog.date));
 		},
 		computed: {
 			meta() {
@@ -94,6 +66,16 @@
 				};
 				return metaSite(metadata);
 			},
+		},
+		methods: {
+			formatDate(date) {
+				const options = { 
+					year:  'numeric',
+					month: 'long',
+					day:   'numeric'
+				}
+				return new Date(date).toLocaleDateString(this.$i18n.locale, options);
+			}
 		},
 	}
 </script>

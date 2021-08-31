@@ -40,10 +40,14 @@
 
 <script>
 	export default {
-		layout: 'page',
-		created() {
-			this.$store.commit('page/setTitle', 'Servicios')
-			this.$store.commit('page/setSubtitle', 'Sin miedo al éxito')
+		head () {
+			return {
+				title:  `${this.$i18n.t('services.title')} – Derian André`,
+			}
+		},
+		fetch() {
+			this.$store.commit('page/setTitle',		'Servicios');
+			this.$store.commit('page/setSubtitle',	'Sin miedo al éxito');
 		},
 	}
 </script>

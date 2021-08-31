@@ -1,45 +1,49 @@
 <template>
-	<section id="content" class="content">
+	<section id="content" class="content curriculum">
 		<div class="row">
 			<!-- About -->
 			<div class="about">
 				<h4>Perfil</h4>
 				<h5 class="intro">Ingeniero en nanotecnología con enfoque en desarrollo de aplicaciones, diseño, programación, simulación y modelado matemático, todo con un diseño UX/UI hermoso.</h5>
-
 				<hr>
-
 				<!-- Contacto -->
 				<h4>Contacto</h4>
 				<ul class="list-unstyled">
-					<li>Zapopan, Jalisco, México</li>
-					<li><a href="tel:+523312781411">33 1278 1411</a></li>
-					<li><a href="mailto:hola@derianandre.com">hola@derianandre.com</a></li>
-					<li><a href="http://linkedin.com/in/derianandre">linkedin.com/in/derianandre</a></li>
+					<li>
+						<i class="me-3 bi bi-geo-alt"></i>
+						Zapopan, Jalisco, México
+					</li>
+					<li>
+						<i class="me-3 bi bi-phone"></i>
+						<a target="_blank" rel="noopener noreferrer" href="tel:+523312781411">33 1278 1411</a>
+					</li>
+					<li>
+						<i class="me-3 bi bi-envelope"></i>
+						<a target="_blank" rel="noopener noreferrer" href="mailto:hola@derianandre.com">hola@derianandre.com</a>
+					</li>
+					<li>
+						<i class="me-3 bi bi-linkedin"></i>
+						<a target="_blank" rel="noopener noreferrer" href="http://linkedin.com/in/derianandre">linkedin.com/in/derianandre</a>
+					</li>
 				</ul>
-
 				<hr>
-
 				<!-- Área -->
 				<h4>Áreas de especialidad</h4>
 				<h5>Diseño, desarrollo, ingeniería e investigación.</h5>
-
 				<hr>
-
 				<!-- Idiomas -->
 				<h4>Idiomas</h4>
 				<h5>Inglés  <span>Avanzado</span></h5>
 				<h5>Español <span>Nativo</span></h5>
-
 				<hr>
-
 				<!-- Habilidades -->
 				<h4>Mis habilidades</h4>
 				<h5>Diseño <span>10 años</span></h5>
-				<p>Ilustrator Figma Photoshop InDesign</p>
-				<h5>Desarrollo web <span>7 años</span></h5>
-				<p>HTML CSS SASS JavaScript jQuery</p>
-				<h5>Programación <span>4 años</span></h5>
-				<p>C PHP Python SQL Matlab</p>
+				<p>Illustrator Photoshop InDesign Figma</p>
+				<h5>Front-end <span>3 años</span></h5>
+				<p>HTML CSS SASS JavaScript NuxtJS VueJS jQuery</p>
+				<h5>Back-end <span>2 años</span></h5>
+				<p>NodeJS ExpressJS MongoDB Mongoose PHP MySQL Python</p>
 				<h5>Fotografía <span>5 años</span></h5>
 				<p>Retrato Paisaje Producto</p>
 				<h5>Trabajo en equipo <span>3 años</span></h5>
@@ -51,20 +55,20 @@
 				<!-- Xolvex -->
 				<figure v-html="Xolvex" />
 				<h3>Xolvex</h3>
-				<h4>Arquitecto de proyectos</h4>
+				<h4>Lead Front-end Developer</h4>
 				<span class="date">2019 Enero − Actual</span>
 				<p>Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web (principalmente front-end).</p>
 				<!-- Inbright -->
 				<figure v-html="Inbright"/>
 				<h3>Inbright</h3>
-				<h4>Arquitecto de proyectos</h4>
+				<h4>Lead Front-end Developer</h4>
 				<span class="date">2018 Noviembre − Actual</span>
 				<p>Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos, tales como:</p>
 				<p><a href="https://inbright.mx">Inbright</a>, <a href="https://uxlon.com">Uxlon</a>, <a href="https://makeov.com">Makeov</a>, <a href="https://tudepot.com">TuDepot</a>, <a href="https://paxut.com">Paxut</a>, <a href="https://thehiveoffices.com">The Hive Offices</a>, <a href="https://xolvex.com">Xolvex</a>.</p>
 				<!-- Uxlon -->
 				<figure v-html="Uxlon"/>
 				<h3>Uxlon</h3>
-				<h4>Front-end developer</h4>
+				<h4>Lead Front-end Developer</h4>
 				<span class="date">2018 Noviembre − 2019 Enero</span>
 				<p>Uxlon es perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain.</p>
 				<hr>
@@ -83,22 +87,22 @@
 				<figure v-html="DerianAndre" />
 				<h4>ORCA Tools</h4>
 				<p>Herramienta para el analisis de archivos .out del paquete de programas de química cuántica ab initio.</p>
-				<a rel="noreferrer noopener" href="http://derianandre.com/orca/" target="_blank">Utiliza las herraminetas para ORCA</a>
+				<a target="_blank" rel="noreferrer noopener" href="http://derianandre.com/orca/">Utiliza las herraminetas para ORCA</a>
 				<!-- Minimal W -->
 				<figure v-html="DerianAndre" />
 				<h4>Minimal W</h4>
 				<p>Skin del programa para reproductor multimedia VLC con un estilo inspirado en el diseño de Windows 10 (en sus primeras versiones) dándole un estilo nativo del sistema operativo.</p>
-				<a rel="noreferrer noopener" href="http://derianandre.com/minimal-w/" target="_blank">Descarga el skin para VLC Minimal W</a>
+				<a target="_blank" rel="noreferrer noopener" href="http://derianandre.com/minimal-w/">Descarga el skin para VLC Minimal W</a>
 				<!-- Phoenix.vg -->
 				<figure><img src="~/static/assets/img/cv/phoenix.png" alt="Phoenix"></figure>
 				<h4>Phoenix</h4>
 				<p>Phoenix es programa open-source, emulador de múltiples sistemas (videojuegos) diseñado para ser potente y fácil de usar. Desarrollado con Qt 5 y Libretro. Contribuí con todo el diseño, tanto la identidad, web e interfaz de usuario.</p>
-				<a rel="noreferrer noopener" href="http://phoenix.vg/" target="_blank">Chéca la página de Phoenix.vg</a>
+				<a target="_blank" rel="noreferrer noopener" href="http://phoenix.vg/">Chéca la página de Phoenix.vg</a>
 				<!-- PicoTorrent -->
 				<figure v-html="PicoTorrent" />
 				<h4>PicoTorrent</h4>
 				<p>Cliente de BiTorrent hackeable, ligero y open-source con un estilo nativo diseñado para Windows. Contribuyo en la parte visual del desarollo: identidad, web y diseño de interfaz.</p>
-				<a rel="noreferrer noopener" href="https://picotrrent.org" target="_blank">Visita la página oficial de PicoTorrent</a>
+				<a target="_blank" rel="noreferrer noopener" href="https://picotrrent.org">Visita la página oficial de PicoTorrent</a>
 				<hr>
 				<!-- Prácticas profesionales -->
 				<h2>Prácticas profesionales</h2>
@@ -145,7 +149,6 @@
 	import DGETI from '~/static/assets/img/cv/dgeti.svg?raw';
 
 	export default {
-		layout: 'page',
 		data() {
 			return {
 				DerianAndre,
@@ -160,15 +163,15 @@
 		},
 		head() {
 			return {
-				title: 'Curriculum vitae | Derian André',
+				title: `${this.$i18n.t('curriculum.title')} – Derian André`,
 				bodyAttrs: {
 					class: 'curriculum'
 				}
 			}
 		},
-		created() {
-			this.$store.commit('page/setTitle', 'Derian André Castillo Franco')
-			this.$store.commit('page/setSubtitle', 'Curriculum Vitae')
+		fetch() {
+			this.$store.commit('page/setTitle',    this.$i18n.t('curriculum.title'));
+			this.$store.commit('page/setSubtitle', this.$i18n.t('curriculum.subtitle'));
 		},
 	}
 </script>

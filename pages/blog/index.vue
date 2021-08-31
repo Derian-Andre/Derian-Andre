@@ -1,6 +1,6 @@
 <template>
-	<section id="content" class="content">
-		<h2 class="page-title">Más reciente</h2>
+	<section id="content" class="content blog-list">
+		<h2 class="page-title">{{ $t('blog.recent') }}</h2>
 		<template v-for="(blog, index) in blogs">
 			<NuxtLink class="post" :key="blog.slug" :to="{ name: 'blog-slug', params: { slug: blog.slug } }" :title="blog.title">
 				<span class="date">{{ formatDate(blog.date) }}</span>
@@ -15,10 +15,9 @@
 
 <script>
 	export default {
-		layout: 'page',
 		head() {
 			return {
-				title: 'Blog – Derian André',
+				title: `${this.$i18n.t('blog.title')} – Derian André`,
 				bodyAttrs: {
 					class: 'blog'
 				}
@@ -27,24 +26,24 @@
 		async asyncData ({ $content }) {
 			const blogs = await $content('blog')
 				.only(['title', 'date', 'slug'])
-				.sortBy('date', 'asc')
+				.sortBy('date', 'desc')
 				.fetch();
 			return {
 				blogs
 			}
 		},
-		created() {
-			this.$store.commit('page/setTitle', 'Blog')
-			this.$store.commit('page/setSubtitle', 'Lee mi mente')
+		fetch() {
+			this.$store.commit('page/setTitle',		this.$i18n.t('blog.title'));
+			this.$store.commit('page/setSubtitle', this.$i18n.t('blog.subtitle'));
 		},
 		methods: {
 			formatDate(date) {
 				const options = { 
-						year:  'numeric',
-						month: 'long',
-						day:   'numeric'
+					year:  'numeric',
+					month: 'long',
+					day:   'numeric'
 				}
-				return new Date(date).toLocaleDateString('es', options);
+				return new Date(date).toLocaleDateString(this.$i18n.locale, options);
 			}
 		},
 	}

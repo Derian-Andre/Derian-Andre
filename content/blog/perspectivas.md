@@ -1,6 +1,6 @@
 ---
 title: Perspectivas
-date: 2021-03-08 12:00:00
+date: 2021-03-28 12:00:00
 ---
 <blockquote>
    <p>Del latín tardío <em>perspectīvus,</em> y este deriva del latín <em>perspicĕre</em> “mirar a través de”, “observar atentamente”; la forma f., del latín medieval <em>perspectiva</em> “óptica”.</p>

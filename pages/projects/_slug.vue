@@ -1,9 +1,7 @@
 <template>
-	<main role="main" id="main" class="page">
-		<section id="info" class="info">
-			<h1 id="title" class="title"><span>{{ project.title }}</span></h1>
-			<span id="date" class="date">{{ formatDate(project.date) }}</span>
-		</section>
+	<main role="main" id="main">
+		<!-- Info -->
+		<Info :title="project.title" :subtitle="formatDate(project.date)" />
 		<!-- Content -->
 		<section id="content" class="content">
 			<article v-if="project.body">
@@ -12,7 +10,7 @@
 			<p v-else>Contenido en construcción</p>
 		</section>
 		<!-- Right -->
-		<section id="right" class="right hero">
+		<section id="right" class="right hero" v-if="project.slug">
 			<img :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title">
 		</section>
 	</main>
@@ -20,8 +18,10 @@
 
 <script>
 	export default {
+		layout: 'project',
 		head() {
 			return {
+				title: `${this.project.title} – ${this.$i18n.t('projects.title')} – Derian André`,
 				bodyAttrs: {
 					class: 'projects'
 				}
@@ -49,8 +49,19 @@
 					month: 'long',
 					day:   'numeric'
 				}
-				return new Date(date).toLocaleDateString('es', options);
+				return new Date(date).toLocaleDateString(this.$i18n.locale, options);
 			}
+		},
+		computed: {
+			meta() {
+				const metadata = {
+					type:        'article',
+					title:       this.blog.title,
+					description: this.blog.description,
+					url:         `${this.$config.baseUrl}/blog/${this.$route.params.slug}`
+				};
+				return metaSite(metadata);
+			},
 		},
 	}
 </script>

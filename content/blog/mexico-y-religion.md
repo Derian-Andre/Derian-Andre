@@ -1,6 +1,6 @@
 ---
 title: México y religión
-date: 2021-03-09 12:00:00
+date: 2021-03-29 12:00:00
 ---
 <blockquote>
    <p>

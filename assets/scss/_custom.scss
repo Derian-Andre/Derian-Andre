@@ -1,8 +1,11 @@
 @use "sass:math";
 
+#__nuxt {
+	background-color: var(--body-bg);
+}
+
 html {
 	scroll-behavior: smooth;
-	background-color: var(--body-bg);
 	&.light {
 		--theme-name:                 'Claro';
 		--theme-lightness:            98%;
@@ -48,11 +51,6 @@ body {
 	color: var(--body-color-normal);
 }
 
-[disabled],
-.disabled {
-	cursor: not-allowed !important;
-}
-
 * {
 	// Verticla width
 	::-webkit-scrollbar {
@@ -72,7 +70,6 @@ body {
 		}
 	}
 }
-
 
 header.header,
 footer.footer {
@@ -99,7 +96,7 @@ footer.footer {
 	}
 }
 
-main.page {
+main {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
@@ -193,10 +190,6 @@ main.page {
 			min-height: 100vh;
 		}
 	}
-}
-
-a {
-	transition: all 0.35s ease;
 }
 
 img {
