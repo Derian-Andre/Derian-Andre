@@ -8,6 +8,13 @@
 		"light": "Light",
 		"send_mail": "Send me an e-mail"
 	},
+	"social": {
+		"instagram": "My Instagram profile",
+		"linkedin": "My Linkedin profile",
+		"github": "My Github profile",
+		"whatsapp": "Send me a Whatsapp message!",
+		"whatsapp_api": "Hello, I am contacting myself from your portfolio!"
+	},
 	"home": {
 		"title": "Home",
 		"subtitle": "My portfolio"
@@ -23,7 +30,61 @@
 	},
 	"curriculum": {
 		"title": "Curriculum Vitae",
-		"subtitle": "Derian Castillo"
+		"subtitle": "Derian Castillo",
+		"about": {
+			"title": "Profile",
+			"intro": "Nanotechnology engineer with a focus on application development, design, programming, simulation, and mathematical modeling, all with beautiful UX / UI design",
+			"contact": {
+				"title": "Contact",
+				"address": "Zapopan, Jalisco, Mexico"
+			},
+			"area": {
+				"title": "Specialty area",
+				"subtitle": "Design, development, engineering and research"
+			},
+			"languages": {
+				"title": "Languages",
+				"english": {
+					"title": "English",
+					"level": "Advanced"
+				},
+				"spanish": {
+					"title": "Spanish",
+					"level": "Native"
+				}
+			},
+			"abilities": {
+				"title": "Abilities",
+				"design": {
+					"title": "Design",
+					"level": "10 years",
+					"abilities": "Illustrator Photoshop InDesign Figma"
+				},
+				"frontend": {
+					"title": "Front-end",
+					"level": "3 years",
+					"abilities": "HTML CSS SASS JavaScript NuxtJS VueJS jQuery"
+				},
+				"backend": {
+					"title": "Back-end",
+					"level": "2 years",
+					"abilities": "NodeJS ExpressJS MongoDB Mongoose PHP MySQL Python"
+				},
+				"photography": {
+					"title": "Photography",
+					"level": "5 years",
+					"abilities": "Portrait Landscape Product"
+				},
+				"team": {
+					"title": "Teamwork",
+					"level": "3 years",
+					"abilities": "Git Slack Trello"
+				}
+			}
+		},
+		"experience": {
+
+		}
 	},	
 	"projects": {
 		"title": "Projects",

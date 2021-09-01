@@ -8,6 +8,13 @@
 		"light": "Claro",
 		"send_mail": "Mándame un correo"
 	},
+	"social": {
+		"instagram": "Mi perfil de Instagram",
+		"linkedin": "Mi perfil de Linkedin",
+		"github": "Mi perfil de Github",
+		"whatsapp": "¡Mándame un mensaje por Whatsapp!",
+		"whatsapp_api": "¡Hola, me contacto desde tu portafolio!"
+	},
 	"home": {
 		"title": "Inicio",
 		"subtitle": "Mi portafolio"
@@ -23,7 +30,61 @@
 	},
 	"curriculum": {
 		"title": "Curriculum Vitae",
-		"subtitle": "Derian André Castillo Franco"
+		"subtitle": "Derian André Castillo Franco",
+		"about": {
+			"title": "Perfil",
+			"intro": "Ingeniero en nanotecnología con enfoque en desarrollo de aplicaciones, diseño, programación, simulación y modelado matemático, todo con un diseño UX/UI hermoso",
+			"contact": {
+				"title": "Contacto",
+				"address": "Zapopan, Jalisco, México"
+			},
+			"area": {
+				"title": "Área de especialidad",
+				"subtitle": "Diseño, desarrollo, ingeniería e investigación"
+			},
+			"languages": {
+				"title": "Idiomas",
+				"english": {
+					"title": "Inglés",
+					"level": "Avanzado"
+				},
+				"spanish": {
+					"title": "Español",
+					"level": "Nativo"
+				}
+			},
+			"abilities": {
+				"title": "Habilidades",
+				"design": {
+					"title": "Diseño",
+					"level": "10 años",
+					"abilities": "Ilustrador Photoshop InDesign Figma"
+				},
+				"frontend": {
+					"title": "Front-end",
+					"level": "3 años",
+					"abilities": "HTML CSS SASS JavaScript NuxtJS VueJS jQuery"
+				},
+				"backend": {
+					"title": "Back-end",
+					"level": "2 años",
+					"abilities": "NodeJS ExpressJS MongoDB Mongoose PHP MySQL Python"
+				},
+				"photography": {
+					"title": "Fotografía",
+					"level": "5 años",
+					"abilities": "Retrato Paisaje Producto"
+				},
+				"team": {
+					"title": "Trabajo en equipo",
+					"level": "3 años",
+					"abilities": "Git Slack Trello"
+				}
+			}
+		},
+		"experience": {
+
+		}
 	},
 	"projects": {
 		"title": "Proyectos",

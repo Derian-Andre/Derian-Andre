@@ -123,7 +123,6 @@ export default {
 	// Internationalization (nuxt-i18n)
 	i18n: {
 		strategy: 'prefix',
-		seo: true,
 		locales: [
 			{
 				code: 'en',

@@ -17,7 +17,6 @@ section.content.curriculum {
 	h5 {
 		@include rs('font-size', 1rem, 1vw, 1.25rem);
 	}
-	.figure,
 	figure {
 		margin: 2.5rem 0 1.5rem !important;
 		display: block;
@@ -25,14 +24,14 @@ section.content.curriculum {
 		img, svg {
 			width: auto;
 			max-width: 100%;
-			height: 32px;
+			height: 26px;
 		}
 	}
 	.btn-outline-link {
 		flex: 1 1 auto;
 	}
 	.row {
-		--bs-gutter-x: 2rem;
+		--bs-gutter-x: 3rem;
 	}
 	.about,
 	.experience {
@@ -91,9 +90,6 @@ section.content.curriculum {
 		}
 		h4 {
 			margin-top: 0;
-		}
-		hr {
-			margin: 3rem 0;
 		}
 		.date {
 			color: var(--body-color-muted);

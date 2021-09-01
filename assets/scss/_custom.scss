@@ -2,6 +2,7 @@
 
 #__nuxt {
 	background-color: var(--body-bg);
+	transition: background-color 0.35s ease;
 }
 
 html {

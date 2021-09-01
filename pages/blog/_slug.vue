@@ -40,16 +40,8 @@
 		},
 		async asyncData({ $content, params }) {
 			const blog = await $content('blog', params.slug).fetch()
-			const [prev, next] = await $content('blog')
-				.only(['title', 'slug'])
-				.sortBy('createdAt', 'asc')
-				.surround(params.slug)
-				.fetch();
-			console.log(prev);
 			return {
-				blog,
-				prev,
-				next
+				blog
 			}
 		},
 		fetch() {

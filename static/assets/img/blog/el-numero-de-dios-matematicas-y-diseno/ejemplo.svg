@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+	<title>Ejemplo de uso del número áureo - Derian Castillo</title>
+	<defs>
+		<style>.a,.b,.c,.d,.e{fill:none;stroke:currentColor;stroke-miterlimit:10;}.a{stroke-width:2px;}.c{stroke-width:4px;}.d{stroke-width:3px;}.e{opacity:0.25;}</style>
+	</defs>
+	<ellipse class="a" cx="475.74" cy="147.48" rx="14.56" ry="14.52"></ellipse>
+	<ellipse class="a" cx="514.02" cy="138.34" rx="23.73" ry="23.66"></ellipse>
+	<ellipse class="a" cx="399.61" cy="100.3" rx="61.86" ry="61.7"></ellipse>
+	<ellipse class="a" cx="499.32" cy="76.64" rx="38.14" ry="38.03"></ellipse>
+	<rect class="b" x="57.75" y="38.13" width="123.63" height="123.63"></rect>
+	<rect class="b" x="181.38" y="38.13" width="76.37" height="76.37"></rect>
+	<rect class="b" x="210.48" y="114.5" width="47.27" height="47.27"></rect>
+	<rect class="b" x="181.38" y="132.67" width="29.09" height="29.09"></rect>
+	<rect class="b" x="181.38" y="114.5" width="18.15" height="18.17"></rect>
+	<rect class="b" x="199.53" y="114.5" width="10.95" height="10.95"></rect>
+	<rect class="b" x="203.24" y="125.45" width="7.24" height="7.22"></rect>
+	<rect class="b" x="199.53" y="128.96" width="3.71" height="3.71"></rect>
+	<path class="c" d="M57.9,161.87A123.65,123.65,0,0,1,181.62,38.14h-.29a76.22,76.22,0,0,1,76.27,76.27,47.43,47.43,0,0,1-47.45,47.46h.29a29.1,29.1,0,0,1-29.11-29.12,18.33,18.33,0,0,1,18.34-18.34h-.29a11.06,11.06,0,0,1,11.06,11.07,7.27,7.27,0,0,1-7.28,7.27,3.64,3.64,0,0,1-3.49-3.78"></path>
+	<circle class="a" cx="679.75" cy="100" r="14.71"></circle>
+	<circle class="a" cx="679.75" cy="100" r="23.97"></circle>
+	<circle class="a" cx="679.75" cy="100" r="62.5"></circle>
+	<circle class="a" cx="679.75" cy="100" r="38.53"></circle>
+	<line class="d" x1="567.75" y1="100" x2="585.75" y2="100"></line>
+	<polyline class="d" points="580.69 94.93 585.75 99.99 580.67 105.07"></polyline>
+	<rect class="e" x="537.75" y="85" width="30" height="30" rx="15"></rect>
+	<rect class="e" x="587.75" y="85" width="30" height="30" rx="15"></rect>
+	<line class="d" x1="287.75" y1="100" x2="305.75" y2="100"></line>
+	<polyline class="d" points="300.69 94.93 305.75 99.99 300.67 105.07"></polyline>
+	<rect class="e" x="257.75" y="85" width="30" height="30"></rect>
+	<rect class="e" x="307.75" y="85" width="30" height="30"></rect>
+</svg>
