@@ -4,7 +4,7 @@
 		<Header />
 		<main role="main" id="main" class="page blog">
 			<!-- Info -->
-			<Info :title="title" :subtitle="subtitle" />
+			<PageInfo :title="title" :subtitle="subtitle" />
 			<!-- Content -->
 			<section id="content" class="content blog-post">
 				<div class="container g-0">

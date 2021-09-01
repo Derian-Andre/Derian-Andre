@@ -9,7 +9,7 @@
 				<NuxtLink class="link" v-for="item in menu" :key="item.slug" :to="item.to">
 					{{ $t(`header.${item.slug}`) }}
 				</NuxtLink>
-				<button class="link" type="button" @click="changeLanguage">
+				<button class="link" type="button" @click="changeLanguage" :title="locales[$i18n.locale].name">
 					{{ $i18n.locale }}
 				</button>
 				<button class="link" type="button" @click="changeTheme">
@@ -28,10 +28,14 @@
 	export default {
 		data() {
 			return {
-				locales: [
-					{ code: 'es', name: 'Español' },
-					{ code: 'en', name: 'English' },
-				],
+				locales: {
+					es: {
+						name: 'Español',
+					},
+					en: {
+						name: 'English',
+					}
+				},
 				menu: [
 					{ slug: 'home', to: '/' },
 					{ slug: 'blog', to: '/blog/' },

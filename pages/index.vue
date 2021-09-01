@@ -1,5 +1,5 @@
 <template>
-	<div role="main" class="gallery">
+	<div role="main" id="gallery" class="gallery">
 		<NuxtLink class="post" v-for="project in projects" :key="project.slug" :title="project.title" :to="{ name: 'projects-slug', params: { slug: project.slug } }">
 			<LazyImage :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title" />
 			<div class="overlay">

@@ -1,53 +1,38 @@
 <template>
 	<section section id="content" class="content">
-		<h2>Diseño</h2>
-		<ul>
-			<li>Branding 
-				<ul>
-					<li>Naming</li>
-					<li>Branding</li>
-					<li>Rediseño</li>
-					<li>Asesoramiento de Imagen</li>
-					<li>Papelería</li>
-				</ul>
-			</li>
-			<li>Diseño UI (Interfaz de usuario)</li>
-			<li>Diseño UX (Experiencia de usuario)</li>
-		</ul>
-		<hr>
-		<h2>Desarrollo</h2>
-		<ul>
-			<li>Páginas: Landings, Tiendas, Portafolios, Galerías, etc.</li>
-			<li>Maquetación</li>
-			<li>WordPress Themes</li>
-		</ul>
-		<hr>
-		<h2>Fotografía</h2>
-		<ul>
-			<li>Retratos</li>
-			<li>Bodas</li>
-			<li>Productos</li>
-			<li>Manipulación/retoque digital</li>
-		</ul>
-		<hr>
-		<p>
-			<a href="mailto:hola@derianandre.com" class="btn btn-outline-link">
-				¡Hagamos algo chingón!
-			</a>
-		</p>
+		<template v-for="item, index in services">
+			<section :id="item" :key="item">
+				<h2 class="mb-4">{{ $t(`services.${item}.title`) }}</h2>
+				<p v-html="$t(`services.${item}.description`)" />
+				<ul v-html="$t(`services.${item}.list`)" />
+			</section>
+			<hr :key="index">
+		</template>
+		<a href="mailto:hola@derianandre.com" class="btn btn-outline-link">
+			{{ $t('services.cta') }}
+		</a>
 	</section>
 </template>
 
 <script>
 	export default {
+		data() {
+			return {
+				services: [
+					'design',
+					'development',
+					'photography'
+				]
+			}
+		},
 		head () {
 			return {
 				title:  `${this.$i18n.t('services.title')} – Derian André`,
 			}
 		},
 		fetch() {
-			this.$store.commit('page/setTitle',		'Servicios');
-			this.$store.commit('page/setSubtitle',	'Sin miedo al éxito');
+			this.$store.commit('page/setTitle',    this.$i18n.t('services.title'));
+			this.$store.commit('page/setSubtitle', this.$i18n.t('services.subtitle'));
 		},
 	}
 </script>

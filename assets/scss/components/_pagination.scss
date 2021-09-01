@@ -1,0 +1,25 @@
+.pagination {
+	.page-item {
+		@include rs('font-size', 0.75rem, 1vw, 0.95rem);
+		.page-link {
+			color: var(--body-color-muted);
+			background: transparent !important;
+			border-color: var(--body-color-muted);
+			border-radius: 0 !important;
+			transition: all 0.35s ease;
+		}
+		&.active,
+		&:hover {
+			.page-link {
+				color: var(--body-color-high);
+				border-color: var(--body-color-high);
+			}
+		}
+		&.disabled {
+			.page-link {
+				color: var(--body-color-muted);
+				border-color: transparent;
+			}
+		}
+	}
+}

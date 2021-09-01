@@ -207,6 +207,8 @@ svg {
 hr {
 	max-width: 35%;
 	margin: 2rem 0;
+	background: var(--hr-bg);
+	opacity: 1;
 }
 
 figure,

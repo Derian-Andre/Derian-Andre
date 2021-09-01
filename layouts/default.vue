@@ -4,7 +4,7 @@
 		<Header />
 		<main role="main" id="main">
 			<!-- Info -->
-			<Info :title="title" :subtitle="subtitle" v-if="title"/>
+			<PageInfo :title="title" :subtitle="subtitle" v-if="title"/>
 			<!-- Content -->
 			<Nuxt />
 			<!-- Right -->

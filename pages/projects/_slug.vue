@@ -1,7 +1,7 @@
 <template>
 	<main role="main" id="main">
 		<!-- Info -->
-		<Info :title="project.title" :subtitle="formatDate(project.date)" />
+		<PageInfo :title="project.title" :subtitle="formatDate(project.date)" />
 		<!-- Content -->
 		<section id="content" class="content">
 			<article v-if="project.body">

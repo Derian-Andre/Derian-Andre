@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
-  <defs>
-    <linearGradient id="gradient" x1="24" y1="24" x2="24" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#199bd8" />
-      <stop offset="1" stop-color="#5bcded" />
-    </linearGradient>
-  </defs>
-  <path fill="url(#gradient)" d="M36.65,18c-1.16-2.35-2.48-4.71-3.82-6.92l-5.65,5.54L15,28.54,8.17,35.25,2.1,41.19A23.2,23.2,0,0,0,6,48l6.17-6A16.58,16.58,0,0,0,40.58,30.31C40.58,27.16,38.93,22.61,36.65,18ZM24,38.93a9.07,9.07,0,0,1-6.21-2.45L31.14,23.39a16.91,16.91,0,0,1,2,6.4A9.13,9.13,0,0,1,24,38.93ZM31.15,8.39C28,3.56,25,0,24,0,21.52,0,7.42,21.15,7.42,30.31c0,.43,0,.86,0,1.29Z"/>
+	<title>PicoTorrent</title>
+	<defs>
+		<linearGradient id="gradient" x1="24" y1="24" x2="24" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#199bd8" />
+			<stop offset="1" stop-color="#5bcded" />
+		</linearGradient>
+	</defs>
+	<path fill="url(#gradient)" d="M36.65,18c-1.16-2.35-2.48-4.71-3.82-6.92l-5.65,5.54L15,28.54,8.17,35.25,2.1,41.19A23.2,23.2,0,0,0,6,48l6.17-6A16.58,16.58,0,0,0,40.58,30.31C40.58,27.16,38.93,22.61,36.65,18ZM24,38.93a9.07,9.07,0,0,1-6.21-2.45L31.14,23.39a16.91,16.91,0,0,1,2,6.4A9.13,9.13,0,0,1,24,38.93ZM31.15,8.39C28,3.56,25,0,24,0,21.52,0,7.42,21.15,7.42,30.31c0,.43,0,.86,0,1.29Z"/>
 </svg>
