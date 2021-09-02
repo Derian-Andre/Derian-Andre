@@ -5,8 +5,6 @@ article {
 	overflow: hidden;
 	p:first-child {
 		color: var(--body-color-medium);
-		line-height: 1.35;
-		@include rs('font-size', 1.2rem, 1.5vw, 1.5rem);
 	}
 	& > *:first-child {
 		margin-top: 0 !important;

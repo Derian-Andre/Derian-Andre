@@ -12,15 +12,15 @@
 				<button class="link" type="button" @click="changeLanguage" :title="locales[$i18n.locale].name">
 					{{ $i18n.locale }}
 				</button>
-				<button class="link" type="button" @click="changeTheme">
-					{{ $t(`header.${$colorMode.value}`) }}
-				</button>
 			</nav>
 		</div>
-		<a class="footer" href="mailto:hola@derianandre.com" :title="$t('header.send_mail')">
-			<i class="bi bi-envelope"></i>
-			<span class="visually-hidden">{{ $t('header.send_mail') }}</span>
-		</a>
+		<div class="footer">
+			<button class="toggler" type="button" @click="changeTheme" :title="$t(`header.${$colorMode.value}`)">
+				<span class="visually-hidden">
+					{{ $t(`header.${$colorMode.value}`) }}
+				</span>
+			</button>
+		</div>
 	</header>
 </template>
 

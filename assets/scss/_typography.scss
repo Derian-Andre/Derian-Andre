@@ -7,17 +7,18 @@ h1, h2, h3, h4, h5, h6,
 	transition: color 0.35s ease;
 }
 
-p {
-  &.lead {
-		@include rs('font-size', 1.2rem, 1.5vw, 1.5rem);
-  }
+article p:first-child,
+p.lead,
+blockquote p,
+pre {
+	line-height: 1.35;
+	transition: all 0.35s ease;
+	@include rs('font-size', 1.1rem, 1.5vw, 1.5rem);
 }
 
 blockquote,
 pre {
-	margin: 1rem 0;
-	transition: all 0.35s ease;	
-	@include rs('font-size', 1.2rem, 1.5vw, 1.5rem);
+	margin: 1rem 0;	
 	@include media-breakpoint-up($expand) {
 		margin: 2rem 1rem;
 	}
@@ -30,9 +31,8 @@ blockquote {
 	border-left: 6px solid var(--body-color-muted);
 	background-color: var(--body-bg-muted);
 	color: var(--body-color-medium);
-	quotes: "\201C""\201D""\2018""\2019";
+	quotes: "\201C" "\201D" "\2018" "\2019";
 	p {
-		line-height: 1.25;
 		margin: 0 !important;
 	}
 	cite {
@@ -67,7 +67,7 @@ pre {
 		font-weight: bold;
 		font-size: 0.85rem;
 		margin-bottom: 0.5rem;
-		color: var(--body-color-normal);
+		color: var(--body-color-normal)
 	}
 }
 

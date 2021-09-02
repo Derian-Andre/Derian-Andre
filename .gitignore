@@ -91,3 +91,4 @@ sw.*
 
 # SFTP vscode extension
 sftp.json
+.vscode/settings.json

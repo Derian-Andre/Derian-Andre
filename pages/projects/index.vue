@@ -1,7 +1,7 @@
 <script>
 	export default {
-		mounted() {
-			this.$router.push('/')
-		},
+		middleware({ redirect }) {
+			return redirect('301', '/');
+		}
 	}
 </script>

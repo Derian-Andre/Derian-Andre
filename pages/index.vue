@@ -1,6 +1,6 @@
 <template>
 	<div role="main" id="gallery" class="gallery">
-		<NuxtLink class="post" v-for="project in projects" :key="project.slug" :title="project.title" :to="{ name: 'projects-slug', params: { slug: project.slug } }">
+		<NuxtLink class="post" v-for="project in projects" :key="project.slug" :to="{ name: 'projects-slug', params: { slug: project.slug } }">
 			<LazyImage :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title" />
 			<div class="overlay">
 				<h2 class="title">{{ project.title }}</h2>
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+	import Utils from '~/utils';
 	export default {
 		layout: 'home',
 		head() {
@@ -32,12 +33,7 @@
 		},
 		methods: {
 			formatDate(date) {
-				const options = { 
-					year:  'numeric',
-					month: 'long',
-					day:   'numeric'
-				}
-				return new Date(date).toLocaleDateString(this.$i18n.locale, options);
+				return Utils.formatDate(this.$i18n.locale, date);
 			}
 		},
 	}

@@ -1,68 +1,68 @@
 {
 	"header": {
-		"home": "Home",
-		"blog": "Blog",
-		"services": "Services",
-		"curriculum":	"CV",
-		"dark": "Dark",
-		"light": "Light",
-		"send_mail": "Send me an e-mail"
+		"home":       "Home",
+		"blog":       "Blog",
+		"services":   "Services",
+		"curriculum": "CV",
+		"dark":       "Dark",
+		"light":      "Light"
 	},
 	"social": {
-		"instagram": "My Instagram profile",
-		"linkedin": "My Linkedin profile",
-		"github": "My Github profile",
-		"whatsapp": "Send me a Whatsapp message!",
+		"instagram":    "My Instagram profile",
+		"linkedin":     "My Linkedin profile",
+		"github":       "My Github profile",
+		"mail":         "Send me an e-mail!",
+		"whatsapp":     "Send me a Whatsapp message!",
 		"whatsapp_api": "Hello, I am contacting myself from your portfolio!"
 	},
 	"home": {
-		"title": "Home",
+		"title":    "Home",
 		"subtitle": "My portfolio"
 	},
 	"blog": {
-		"title": "Blog",
+		"title":    "Blog",
 		"subtitle": "A slice of my life",
-		"recent": "Recent posts",
-		"page": "Page "
+		"recent":   "Recent posts",
+		"page":     "Page "
 	},
 	"services": {
-		"title": "Services",
+		"title":    "Services",
 		"subtitle": "Don't be afraid of success!",
-		"cta": "Let's make something amazing",
-		"design": {
-			"title": "Design",
+		"cta":      "Let's make something amazing",
+		"design":   {
+			"title":       "Design",
 			"description": "I specialize in branding and web design, from brand development to mobile application design and everything that both entails.",
-			"list": "<li> Branding <ul> <li> Naming </li> <li> Branding </li> <li> Redesign </li> <li> Image Consulting </li> <li> Stationery </li> </ul> </li> <li> UI Design (User Interface) </li> <li> UX Design (User Experience) </li> "
+			"list":        "<li> Branding <ul> <li> Naming </li> <li> Branding </li> <li> Redesign </li> <li> Image Consulting </li> <li> Stationery </li> </ul> </li> <li> UI Design (User Interface) </li> <li> UX Design (User Experience) </li> "
 		},
 		"development": {
-			"title": "Development",
+			"title":       "Development",
 			"description": "I am a full-stack developer, specializing in front-end, I love creating beautiful things with a good user experience.",
-			"list": "<li> Landings, Stores, Portfolios, Galleries, etc. </li> <li> Page Layout </li> <li> WordPress Themes </li>"
+			"list":        "<li> Landings, Stores, Portfolios, Galleries, etc. </li> <li> Page Layout </li> <li> WordPress Themes </li>"
 		},
 		"photography": {
-			"title": "Photography",
+			"title":       "Photography",
 			"description": "Taking photos is one of the things I like the most, creativity and composition are my main weapons to portray whatever is necessary.",
-			"list": "<li> Portraits </li> <li> Weddings </li> <li> Products </li> <li> Digital manipulation / retouching </li>"
+			"list":        "<li> Portraits </li> <li> Weddings </li> <li> Products </li> <li> Digital manipulation / retouching </li>"
 		}
 	},
 	"curriculum": {
-		"title": "Curriculum Vitae",
+		"title":    "Curriculum Vitae",
 		"subtitle": "Derian Castillo",
-		"about": {
+		"about":    {
 			"intro": {
-				"title": "Profile",
+				"title":    "Profile",
 				"subtitle": "Nanotechnology engineer with a focus on application development, design, programming, simulation, and mathematical modeling, all with beautiful UX / UI design"
 			},
 			"contact": {
-				"title": "Contact",
+				"title":   "Contact",
 				"address": "Zapopan, Jalisco, Mexico"
 			},
 			"specialty": {
-				"title": "Specialty area",
+				"title":    "Specialty area",
 				"subtitle": "Design, development, engineering and research"
 			},
 			"languages": {
-				"title": "Languages",
+				"title":   "Languages",
 				"english": {
 					"title": "English",
 					"level": "Advanced"
@@ -73,138 +73,153 @@
 				}
 			},
 			"abilities": {
-				"title": "Abilities",
+				"title":  "Abilities",
 				"design": {
-					"title": "Design",
-					"level": "10 years",
+					"title":     "Design",
+					"level":     "10 years",
 					"abilities": "Illustrator Photoshop InDesign Figma"
 				},
 				"frontend": {
-					"title": "Front-end",
-					"level": "3 years",
+					"title":     "Front-end",
+					"level":     "3 years",
 					"abilities": "HTML CSS SASS JavaScript NuxtJS VueJS jQuery"
 				},
 				"backend": {
-					"title": "Back-end",
-					"level": "2 years",
+					"title":     "Back-end",
+					"level":     "2 years",
 					"abilities": "NodeJS ExpressJS MongoDB Mongoose PHP MySQL Python"
 				},
 				"photography": {
-					"title": "Photography",
-					"level": "5 years",
+					"title":     "Photography",
+					"level":     "5 years",
 					"abilities": "Portrait Landscape Product"
 				},
 				"team": {
-					"title": "Teamwork",
-					"level": "3 years",
+					"title":     "Teamwork",
+					"level":     "3 years",
 					"abilities": "Git Slack Trello"
 				}
 			}
 		},
 		"experience": {
 			"title": "Experience",
-			"jobs": {
+			"jobs":  {
 				"xolvex": {
-					"title": "Xolvex",
-					"position": "Lead Frond-end Developer",
-					"date": "2019 January - Actual",
+					"title":       "Xolvex",
+					"position":    "Lead Frond-end Developer",
+					"date":        "2019 January - Actual",
 					"description": "In charge of the image of any project, in any aspect: graphic design, interface design, user experience and web development (mainly front-end)"
 				},
 				"inbright": {
-					"title": "Inbright",
-					"position": "Lead Frond-end Developer",
-					"date": "2018 November − 2019 January",
+					"title":       "Inbright",
+					"position":    "Lead Frond-end Developer",
+					"date":        "2018 November − 2019 January",
 					"description": "Lead member of the team responsible for general development, graphic design in general, user interface design, user experience and full-stack development (mainly front-end) for the various in-house and external projects"
 				},
 				"uxlon": {
-					"title": "Uxlon",
-					"position": "Lead Front-end Developer",
-					"date": "2018 November − 2019 January",
+					"title":       "Uxlon",
+					"position":    "Lead Front-end Developer",
+					"date":        "2018 November − 2019 January",
 					"description": "Uxlon is owned by Inbright. Main member of the team responsible for the design and user experience for the Uxlon platform, ICO frontpage and the Company's website as a service provider with Blockchain technology"
 				},
 				"derianandre": {
-					"heading": "Experience as Freelance",
-					"title": "Freelance",
-					"position": "Design, Development & Photography",
-					"date": "2015 August − Actual",
+					"heading":     "Experience as Freelance",
+					"title":       "Freelance",
+					"position":    "Design, Development & Photography",
+					"date":        "2015 August − Actual",
 					"description": "Through the years I have been in charge of various projects, from corporate image redesign, to full-stack solutions for SMEs; a complete and professional solution for your digital adoption needs, improving the structure of your company through projects such as online inventory management, among many other jobs"
 				}
 			},
 			"education": {
 				"title": "Education",
 				"iteso": {
-					"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
-					"subtitle": "Nanotechnology engineering",
-					"date": "2013 - 2018",
+					"title":       "Instituto Tecnológico y de Estudios Superiores de Occidente",
+					"subtitle":    "Nanotechnology engineering",
+					"date":        "2013 - 2018",
 					"description": "Nanotechnology laboratory management: SEM, XPS, AFM and Sputtering equipment. Simulation of molecular systems and particles with Python and ORCA. Synthesis and characterization of nanomaterials: carbon nanotubes, silver and copper nanoparticles, etc. Programming : Python, PHP, C, CSS, HTML, Databases (MySQL) "
 				},
 				"cbtis": {
-					"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
-					"subtitle": "Mechatronic technician",
-					"date": "2010 - 2013",
+					"title":       "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
+					"subtitle":    "Mechatronic technician",
+					"date":        "2010 - 2013",
 					"description": "PLC programming. CAD (AutoCAD) and 3D (SolidWorks) design for mechanism and part design. PCB circuit design and printing. Handling of equipment such as lathe and milling machine."
 				}
 			},
 			"practices": {
-				"title": "Professional Practices",
+				"title":     "Professional Practices",
 				"cinvestav": {
-					"title": "UDG - CINVESTAV",
-					"subtitle": "Simulations of organometallic molecular systems and development of web application for analysis and data management",
-					"date": "2018 August - December",
+					"title":       "UDG - CINVESTAV",
+					"subtitle":    "Simulations of organometallic molecular systems and development of web application for analysis and data management",
+					"date":        "2018 August - December",
 					"description": "Simulations of different organometallic molecular systems of C<sub>n</sub>H<sub>n</sub> (n = 4 - 6) with Sc, Ti and V for absorption of molecular hydrogen and the effect of binders (H, OH, NH<sub>2</sub>, CH<sub>3</sub> and F) with the ORCA ab initio software Development of a web application for the analysis of “.out files ”Obtained from the simulations: comparison of initial and final geometries in different systems, graph of orbital energies, comparison of data between different simulations, detection of optimization, visualization of the 3D model, generator of comparative tables between simulations of the same type, among other functions"
 				},
 				"casasyterrenos": {
-					"title": "Casa y Terrenos",
-					"subtitle": "Mathematical modeling program for the development of business plans and projects using machine learning",
-					"date": "2018 January - May",
+					"title":       "Casa y Terrenos",
+					"subtitle":    "Mathematical modeling program for the development of business plans and projects using machine learning",
+					"date":        "2018 January - May",
 					"description": "Property qualification system according to the quality of your information, management of MySQL and MongoDB databases, management of server through SSH tunneling, Python programming."
 				}
 			},
 			"projects": {
-				"title": "Personal projects",
-				"minimalw": {
-					"image": "derianandre.svg",
-					"title": "Minimal W",
-					"subtitle": "A free skin for VLC",
-					"date": "2014",
-					"description": "Skin of the VLC media player program with a style inspired by the design of Windows 10 (in its first versions) giving it a native style of the operating system",
-					"url": "Download the skin for VLC Minimal W"
-				},
+				"title":     "Personal projects",
 				"orcatools": {
-					"image": "derianandre.svg",
-					"title": "ORCA Tools",
-					"subtitle": "An open-source web application",
-					"date": "2015",
+					"image":       "derianandre.svg",
+					"title":       "ORCA Tools",
+					"subtitle":    "An open-source web application",
+					"date":        "2015",
 					"description": "Tool for the analysis of <code>.out</code> files of the ab initio quantum chemistry program package",
-					"url": "Use the tools for ORCA"
+					"url":         "Use the tools for ORCA"
+				},
+				"minimalw": {
+					"image":       "derianandre.svg",
+					"title":       "Minimal W",
+					"subtitle":    "A free skin for VLC",
+					"date":        "2017",
+					"description": "Skin of the VLC media player program with a style inspired by the design of Windows 10 (in its first versions) giving it a native style of the operating system",
+					"url":         "Download the skin for VLC Minimal W"
 				},
 				"phoenixvg": {
-					"image": "phoenixvg.png",
-					"title": "Phoenix.vg",
-					"subtitle": "An open-source multi-system emulator",
-					"date": "2017",
+					"image":       "phoenixvg.png",
+					"title":       "Phoenix.vg",
+					"subtitle":    "An open-source multi-system emulator",
+					"date":        "2017",
 					"description": "Phoenix is ​​an open-source, multi-system (video game) emulator designed to be powerful and easy to use. Developed with Qt 5 and Libretro. I contributed with all the design, both the identity, web and user interface",
-					"url": "Check out the Phoenix.vg offical page"
+					"url":         "Check out the Phoenix.vg offical page"
 				},
 				"picotorrent": {
-					"image": "picotorrent.svg",
-					"title": "PicoTorrent",
-					"subtitle": "An open-source torrent client",
-					"date": "2021",
+					"image":       "picotorrent.svg",
+					"title":       "PicoTorrent",
+					"subtitle":    "An open-source torrent client",
+					"date":        "2021",
 					"description": "Hackable, lightweight and open-source torrent client with a native style designed for Windows. I contribute in the visual part of the development: identity, web and interface design",
-					"url": "Visit the official PicoTorrent page"
+					"url":         "Visit the official PicoTorrent page"
 				}
 			}
 		}
 	},	
 	"projects": {
-		"title": "Projects",
+		"title":    "Projects",
 		"subtitle": "Here are some of my projects"
 	},
+	"minimal-w": {
+		"title":       "Minimal W",
+		"subtitle":    "Windows 10-style VLC",
+		"description": "Skin of the VLC multimedia player program with a style inspired by the design of Windows 10 (in its first versions) giving it a native style of the operating system",
+		"download":    {
+		"title":       "Download",
+		"description": "This skin is completely free and always will be, enjoy it.",
+		"url":         "Download Minimal W (latest version)"
+		},
+		"donate": {
+		"title":       "Donate",
+		"description": "If you liked this project, you can help with a donation, motivation is always welcome.",
+		"url":         "Make a donation through Paypal"
+		}
+	},
 	"pagination": {
-		"first": "Recent",
-		"next": "Siguiente",
+		"first":    "Recent",
+		"next":     "Siguiente",
 		"previous": "Anterior",
-		"last": "Latest"
+		"last":     "Latest"
 	}
 }

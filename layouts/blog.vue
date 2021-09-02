@@ -2,7 +2,8 @@
 	<div class="layout">
 		<!-- Header -->
 		<Header />
-		<main role="main" id="main" class="page blog">
+		<main role="main" id="main" class="page blog position-relative">
+			<div class="title-decor">{{ title }}</div>
 			<!-- Info -->
 			<PageInfo :title="title" :subtitle="subtitle" />
 			<!-- Content -->

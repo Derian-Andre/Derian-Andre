@@ -1,7 +1,7 @@
 <template>
 	<section id="content" class="content blog-list">
 		<h2 class="page-title">
-			<template  v-if="page === 1">
+			<template  v-if="page == 1">
 				{{ $t('blog.recent') }}
 			</template>
 			<template v-else>
@@ -13,7 +13,7 @@
 			<hr v-if="page === 1 && index == 0" :key="index">
 		</template>
 		<hr>
-		<BlogPagination v-if="blogsTotal > 5" :total="blogsTotal" />
+		<BlogPagination v-if="blogsTotal > 10" :total="blogsTotal" />
 	</section>
 </template>
 
@@ -31,14 +31,14 @@
 		async asyncData ({ $content, params, error }) {
 			const blogs = await blogContent($content, params, error);
 			return {
-				page: params.page,
+				page:       params.page,
 				blogsTotal: blogs.allBlogs.length,
-				blogs: blogs.paginatedBlogs
+				blogs:      blogs.paginatedBlogs
 			}
 		},
 		fetch() {
 			this.$store.commit('page/setTitle',		this.$i18n.t('blog.title'));
-			this.$store.commit('page/setSubtitle', this.$i18n.t('blog.subtitle'));
+			this.$store.commit('page/setSubtitle',	this.$i18n.t('blog.subtitle'));
 		}
 	}
 </script>

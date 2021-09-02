@@ -154,13 +154,13 @@
 					'casasyterrenos'
 				],
 				projects: {
-					'minimalw': {
-						image: 'derianandre',
-						to:    '/minimalw'
-					},
 					'orcatools': {
 						image: 'derianandre',
 						href:  '/orcatools'
+					},
+					'minimalw': {
+						image: 'derianandre',
+						to:    '/minimalw'
 					},
 					'phoenixvg': {
 						image: 'phoenixvg',

@@ -2,6 +2,7 @@ section.content.blog-post {
 	max-width: 100%;
 	font-family: $font-family-serif;
 	font-size: 1.1rem;
+	justify-content: flex-start;
 	@media (min-width: 1700px) {
 		margin-left: calc(-1 * (var(--header-width, 0px) + var(--info-width, 0px) - 3.5rem));
 	}
@@ -11,9 +12,6 @@ section.content.blog-post {
 	.btn-outline-link {
 		&:first-child {
 			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
 		}
 	}
 	article {

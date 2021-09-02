@@ -1,5 +1,5 @@
 <template>
-	<section section id="content" class="content">
+	<section id="content" class="content">
 		<template v-for="item, index in services">
 			<section :id="item" :key="item">
 				<h2 class="mb-4">{{ $t(`services.${item}.title`) }}</h2>

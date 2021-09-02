@@ -5,6 +5,7 @@
 </template>
 
 <script>
+	import Utils from '~/utils';
 	import metaSite from '~/utils/metaSite';
 	export default {
 		layout: 'blog',
@@ -61,13 +62,8 @@
 		},
 		methods: {
 			formatDate(date) {
-				const options = { 
-					year:  'numeric',
-					month: 'long',
-					day:   'numeric'
-				}
-				return new Date(date).toLocaleDateString(this.$i18n.locale, options);
+				return Utils.formatDate(this.$i18n.locale, date);
 			}
-		},
+		}
 	}
 </script>
