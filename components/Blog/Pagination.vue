@@ -1,5 +1,5 @@
 <template>
-	<nav aria-label="Pagination">
+	<nav :aria-label="$t('pagination.label')">
 		<ul class="pagination">
 			<!-- First page -->
 			<li class="page-item disabled" v-if="currentPage === 1">

@@ -1,6 +1,5 @@
 // Typography
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
 	color: var(--body-color-high);
 	font-family: $font-family-headings;
 	font-weight: bold;
@@ -9,7 +8,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 article p:first-child,
-p.lead,
+article p.lead,
 blockquote p,
 pre {
 	line-height: 1.5;
@@ -17,10 +16,11 @@ pre {
 	@include rs('font-size', 1.1rem, 1.5vw, 1.5rem);
 }
 
-p,
-pre {
-	margin: 1rem 0;
+p.lead {
+	color: var(--body-color-medium);
+	@include rs('font-size', 1.05rem, 1.5vw, 1.25rem);
 }
+
 
 blockquote,
 pre {

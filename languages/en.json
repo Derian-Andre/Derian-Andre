@@ -29,20 +29,20 @@
 	"services": {
 		"title":    "Services",
 		"subtitle": "Don't be afraid of success!",
-		"cta":      "Let's make something amazing",
+		"cta":      "Let's make something amazing! 👊🏻",
 		"design":   {
 			"title":       "Design",
-			"description": "I specialize in branding and web design, from brand development to mobile application design and everything that both entails.",
+			"description": "I specialize in branding and web design, from brand development to mobile application design and everything that both entails",
 			"list":        "<li>Branding<ul><li>Naming</li><li>Branding</li><li>Redesign</li><li>Image Consulting</li><li>Stationery</li></ul></li><li>UI Design (User Interface)</li><li>UX Design (User Experience)</li>"
 		},
 		"development": {
 			"title":       "Development",
-			"description": "I am a full-stack developer, specializing in front-end, I love creating beautiful things with a good user experience.",
+			"description": "I am a full-stack developer, specializing in front-end, I love creating beautiful things with a good user experience",
 			"list":        "<li>Landings, Stores, Portfolios, Galleries, etc.</li><li>Page Layout</li><li>WordPress Themes</li>"
 		},
 		"photography": {
 			"title":       "Photography",
-			"description": "Taking photos is one of the things I like the most, creativity and composition are my main weapons to portray whatever is necessary.",
+			"description": "Taking photos is one of the things I like the most, creativity and composition are my main weapons to portray whatever is necessary",
 			"list":        "<li>Portraits</li><li>Weddings</li><li>Products</li><li>Digital manipulation / retouching</li>"
 		}
 	},
@@ -143,7 +143,7 @@
 					"title":       "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
 					"subtitle":    "Mechatronic technician",
 					"date":        "2010 - 2013",
-					"description": "PLC programming. CAD (AutoCAD) and 3D (SolidWorks) design for mechanism and part design. PCB circuit design and printing. Handling of equipment such as lathe and milling machine."
+					"description": "PLC programming. CAD (AutoCAD) and 3D (SolidWorks) design for mechanism and part design. PCB circuit design and printing. Handling of equipment such as lathe and milling machine"
 				}
 			},
 			"practices": {
@@ -158,7 +158,7 @@
 					"title":       "Casa y Terrenos",
 					"subtitle":    "Mathematical modeling program for the development of business plans and projects using machine learning",
 					"date":        "2018 January - May",
-					"description": "Property qualification system according to the quality of your information, management of MySQL and MongoDB databases, management of server through SSH tunneling, Python programming."
+					"description": "Property qualification system according to the quality of your information, management of MySQL and MongoDB databases, management of server through SSH tunneling, Python programming"
 				}
 			},
 			"projects": {
@@ -208,12 +208,12 @@
 		"description": "Skin of the VLC multimedia player program with a style inspired by the design of Windows 10 (in its first versions) giving it a native style of the operating system",
 		"download":    {
 		"title":       "Download",
-		"description": "This skin is completely free and always will be, enjoy it.",
+		"description": "This skin is completely free and always will be, enjoy it",
 		"url":         "Download Minimal W (latest version)"
 		},
 		"donate": {
 		"title":       "Donate",
-		"description": "If you liked this project, you can help with a donation, motivation is always welcome.",
+		"description": "If you liked this project, you can help with a donation, motivation is always welcome",
 		"url":         "Make a donation through Paypal"
 		}
 	},
@@ -224,9 +224,11 @@
 		"go_home": "Go back to the beginning of creation!"
 	},
 	"pagination": {
+		"label":    "Blog pagination",
+		"page": "Page ",
 		"first":    "Recent",
-		"next":     "Siguiente",
-		"previous": "Anterior",
+		"next":     "Next",
+		"previous": "Previous",
 		"last":     "Latest"
 	}
 }

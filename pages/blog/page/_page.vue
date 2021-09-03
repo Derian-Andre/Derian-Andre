@@ -17,7 +17,7 @@
 				<hr v-if="pageNumber === 1 && index == 0" :key="index">
 			</template>
 			<hr>
-			<BlogPagination v-if="blogsTotal > 10" :total="blogsTotal" />
+			<BlogPagination :total="blogsTotal"/>
 		</section>
 	</main>
 </template>

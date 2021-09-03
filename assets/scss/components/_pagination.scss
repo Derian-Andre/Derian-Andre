@@ -4,18 +4,23 @@
 		.page-link {
 			color: var(--body-color-muted);
 			background: transparent !important;
-			border-color: var(--body-color-muted);
+			border-color: transparent;
 			border-radius: 0 !important;
 			transition: all 0.35s ease;
+			user-select: none;
+			box-shadow: none;
 		}
-		&.active,
-		&:hover {
+		&:hover,
+		&.active {
 			.page-link {
-				color: var(--body-color-high);
-				border-color: var(--body-color-high);
+				color: var(--body-color-normal);
+				border-color: var(--body-color-muted);
 			}
 		}
 		&.disabled {
+			&:hover {
+				cursor: not-allowed;
+			}
 			.page-link {
 				color: var(--body-color-muted);
 				border-color: transparent;

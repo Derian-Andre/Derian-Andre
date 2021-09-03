@@ -42,14 +42,14 @@ main {
 		display: flex;
 		width: 100%;
 		height: 100%;
-		padding: $header-padding-y 0;
 		flex-direction: column-reverse;
 		z-index: 99;
+		@include rs('padding-top', 0.95rem, 3vw, 1.5rem);
+		@include rs('padding-bottom', 0.95rem, 3vw, 1.5rem);
 		@include media-breakpoint-up($expand) {
 			flex: 0;
 			position: sticky;
 			top: 0;
-			padding: $header-padding-y 0;
 			writing-mode: tb-rl;
 		}
 		.title {
@@ -94,15 +94,16 @@ main {
 		display: flex;
 		flex-direction: column;
 		flex: 1 1;
-		padding: 0;
 		line-height: 150%;
+		padding: 0;
+		@include rs('padding-bottom', 0.95rem, 3vw, 1.5rem);
 		@include media-breakpoint-up($expand) {
 			min-height: 100vh;
 			justify-content: flex-end;
 			position: sticky;
 			top: 0;
 			max-width: 450px;
-			padding: $header-padding-y;
+			@include rs('padding', 0.95rem, 3vw, 1.5rem);
 		}
 	}
 	section.right {
@@ -140,8 +141,7 @@ hr {
 	opacity: 1;
 }
 
-figure,
-.figure {
+figure {
 	display: block;
 	text-align: center;
 	max-width: 100%;
@@ -158,6 +158,13 @@ figure,
 		text-align: center !important;
 		margin-top: 1rem !important;
 		margin-bottom: 0 !important;
+	}
+}
+
+ul {
+	list-style: katakana;
+	li::marker {
+		color: var(--body-color-muted);
 	}
 }
 

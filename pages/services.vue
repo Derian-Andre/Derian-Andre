@@ -3,16 +3,18 @@
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
-		<section id="content" class="content">
-			<template v-for="item, index in services">
-				<section :id="item" :key="item">
-					<h2 class="mb-4">{{ $t(`services.${item}.title`) }}</h2>
-					<p v-html="$t(`services.${item}.description`)" />
-					<ul v-html="$t(`services.${item}.list`)" />
-				</section>
-				<hr :key="index">
-			</template>
-			<a href="mailto:hola@derianandre.com" class="btn btn-outline-link">
+		<section id="content" class="content" style="max-width: 800px !important">
+			<div class="row row-cols-1 row-cols-md-2 gx-5">
+				<template v-for="item in services">
+					<section class="col d-flex flex-column" :id="item" :key="item">
+						<h3>{{ $t(`services.${item}.title`) }}</h3>
+						<p class="lead" v-html="$t(`services.${item}.description`)" />
+						<ul class="mb-auto" v-html="$t(`services.${item}.list`)" />
+						<hr>
+					</section>
+				</template>
+			</div>
+			<a href="mailto:hola@derianandre.com" class="btn btn-outline-link align-self-start px-5">
 				{{ $t('services.cta') }}
 			</a>
 		</section>

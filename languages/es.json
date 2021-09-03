@@ -29,20 +29,20 @@
 	"services": {
 		"title":    "Servicios",
 		"subtitle": "Sin miedo al éxito",
-		"cta":      "¡Hagamos algo chingón!",
+		"cta":      "¡Hagamos algo chingón! 👊🏻",
 		"design":   {
 			"title":       "Diseño",
-			"description": "Me especializo en el branding y en diseño web, desde desarrollo de marcas hasta el diseño de aplicaciones móviles y todo lo que conlleva ambas.",
+			"description": "Me especializo en el branding y en diseño web, desde desarrollo de marcas hasta el diseño de aplicaciones móviles y todo lo que conlleva ambas",
 			"list":        "<li>Branding<ul><li>Naming</li><li>Branding</li><li>Rediseño</li><li>Asesoramiento de Imagen</li><li>Papelería</li></ul></li><li>Diseño UI (Interfaz de usuario)</li><li>Diseño UX (Experiencia de usuario)</li>"
 		},
 		"development": {
 			"title":       "Desarrollo",
-			"description": "Soy un desarollador full-stack, con especialización en front-end, me encanta crear cosas hermosas y con una buena experiencia para el usuario.",
+			"description": "Soy un desarollador full-stack, con especialización en front-end, me encanta crear cosas hermosas y con una buena experiencia para el usuario",
 			"list":        "<li>Landings, Tiendas, Portafolios, Galerías, etc.</li><li>Maquetación de páginas</li><li>WordPress Themes</li>"
 		},
 		"photography": {
 			"title":       "Fotografía",
-			"description": "Tomar fotos es una de las cosas que más me gusta, creatividad y composición son mis armas principales para retratar lo que sea necesario.",
+			"description": "Tomar fotos es una de las cosas que más me gusta, creatividad y composición son mis armas principales para retratar lo que sea necesario",
 			"list":        "<li>Retratos</li><li>Bodas</li><li>Productos</li><li>Manipulación/retoque digital</li>"
 		}
 	},
@@ -109,7 +109,7 @@
 					"title":       "Xolvex",
 					"position":    "Desarrollador Front-end líder",
 					"date":        "2019 Enero - Actual",
-					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web (principalmente front-end)."
+					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web (principalmente front-end)"
 				},
 				"inbright": {
 					"title":       "Inbright",
@@ -121,14 +121,14 @@
 					"title":       "Uxlon",
 					"position":    "Desarrollador Front-end líder",
 					"date":        "2018 Noviembre − 2019 Enero",
-					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain."
+					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain"
 				},
 				"derianandre": {
 					"heading":     "Experiencia como Independiente",
 					"title":       "Independiente",
 					"position":    "Diseño, Desarrollo & Fotografía",
 					"date":        "2015 Agosto − Actual",
-					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos."
+					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos"
 				}
 			},
 			"education": {
@@ -143,7 +143,7 @@
 					"title":       "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
 					"subtitle":    "Técnico mecatrónico",
 					"date":        "2010 − 2013",
-					"description": "Programación de PLC. Diseño CAD (AutoCAD) y 3D (SolidWorks) para diseño de mecanismos y piezas. Diseño e impresión de circuitos en PCB. Manejo de equipos como el torno y la fresadora."
+					"description": "Programación de PLC. Diseño CAD (AutoCAD) y 3D (SolidWorks) para diseño de mecanismos y piezas. Diseño e impresión de circuitos en PCB. Manejo de equipos como el torno y la fresadora"
 				}
 			},
 			"practices": {
@@ -158,7 +158,7 @@
 					"title":       "Casa y Terrenos",
 					"subtitle":    "Programa de modelación matemática para el desarrollo de planes y proyectos de negocio utilizando machine learning",
 					"date":        "2018 Enero − Mayo",
-					"description": "Sistema de caliﬁcación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por tunelaje SSH, programación en Python."
+					"description": "Sistema de caliﬁcación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por tunelaje SSH, programación en Python"
 				}
 			},
 			"projects": {
@@ -208,12 +208,12 @@
 		"description": "Skin del programa para reproductor multimedia VLC con un estilo inspirado en el diseño de Windows 10 (en sus primeras versiones) dándole un estilo nativo del sistema operativo",
 		"download":    {
 			"title":       "Descargar",
-			"description": "Esta skin es completamente gratuita y siempre lo será, disfrutala.",
+			"description": "Esta skin es completamente gratuita y siempre lo será, disfrútala",
 			"url":         "Descargar Minimal W (última versión)"
 		},
 		"donate": {
 			"title":       "Donar",
-			"description": "Si te gustó este proyecto, puedes ayudar con una donación, la motivación siempre es bienvenida.",
+			"description": "Si te gustó este proyecto, puedes ayudar con una donación, la motivación siempre es bienvenida",
 			"url":         "Hacer una donación por Paypal"
 		}
 	},
@@ -224,6 +224,8 @@
 		"go_home": "¡Regresa al inicio de la creación!"
 	},
 	"pagination": {
+		"label":    "Paginación del blog",
+		"page":     "Página ",
 		"first":    "Recientes",
 		"next":     "Siguiente",
 		"previous": "Anterior",
