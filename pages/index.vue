@@ -14,11 +14,16 @@
 	import Utils from '~/utils';
 	export default {
 		layout: 'home',
+		data() {
+			return {
+				page: 'home'
+			}
+		},
 		head() {
 			return {
-				title:  `${this.$i18n.t('home.title')} – Derian André`,
+				title: `${this.$t(`${this.page}.title`)} – Derian André`,
 				bodyAttrs: {
-					class: 'home'
+					class: `page-${this.page}`
 				}
 			}
 		},

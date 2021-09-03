@@ -23,7 +23,8 @@
 		"title":    "Blog",
 		"subtitle": "Reflexiones de la vida",
 		"recent":   "Más reciente",
-		"page":     "Página "
+		"page":     "Página ",
+		"go_back":  "Volver al blog"
 	},
 	"services": {
 		"title":    "Servicios",
@@ -215,6 +216,12 @@
 			"description": "Si te gustó este proyecto, puedes ayudar con una donación, la motivación siempre es bienvenida.",
 			"url":         "Hacer una donación por Paypal"
 		}
+	},
+	"error": {
+		"title": "Error en la matrix",
+		"subtitle": "No se encontró la estúpida y sensual página",
+		"content": "<p class=\"lead\">Quizás la borré o quién sabe... todo se me olvida o quizás no...</p><p>En fin, si esta página no se encontró, <b>¿por qué existe esta página?</b></p><p><b>¿Como puedo ser una página no encontrada?</b>, si me acabas de encontrar...</p><p>Entonces.. <b>¿soy o no soy?</b></p><p><b>¿Qué es ser?</b></p><p><b>¿Quién eres tú?</b> y... <b>¿qué haces aquí?</b></p><p><b>¿Eres real?</b></p>",
+		"go_home": "¡Regresa al inicio de la creación!"
 	},
 	"pagination": {
 		"first":    "Recientes",

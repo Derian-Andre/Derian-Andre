@@ -1,17 +1,9 @@
-footer.footer {
+footer.social {
 	right: 0;
-	nav {
-		display: flex;
-		flex-direction: column;
-		a {
-			padding: 0.25rem 0;
-			transition: all 0.35s ease;
-			&:hover {
-				transform: scale(1.25);
-			}
+	a {
+		transition: all 0.35s ease;
+		&:hover {
+			transform: scale(1.25);
 		}
-	}
-	.bi {
-		font-size: 1.25rem;
 	}
 }

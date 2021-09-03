@@ -36,7 +36,7 @@ date: 2021-03-28 12:00:00
 
 <pre>Sí, ya sé, una frase muy cliché</pre>
 
-<p>Lo que importa de la frase es como la interpretamos, que tanto nos hace pensar; en este caso nos damos cuenta de cuan realmente importa la perspectiva, porque todos adquirimos diferentes y es dado que dependemos del contexto, de nuestra familia, amigos, escuela (regreso a lo mismo de la <a rel="noreferrer noopener" href="https://derianandre.com/2021/cogito-ergo-sum/" data-type="post" data-id="974" target="_blank">entrada anterior</a>).</p>
+<p>Lo que importa de la frase es como la interpretamos, que tanto nos hace pensar; en este caso nos damos cuenta de cuan realmente importa la perspectiva, porque todos adquirimos diferentes y es dado que dependemos del contexto, de nuestra familia, amigos, escuela (regreso a lo mismo de la <blog-link to="cogito-ergo-sum">entrada anterior</blog-link>).</p>
 
 <p>Yo siempre digo que <strong>nosotros no somos quienes somos porque nosotros decidimos ser así</strong> (claro que esto es hasta cierto punto) y es aquí donde entra de lleno la filosofía, es un parte aguas para alguien que desconoce de ella. Aquí es dónde podemos adquirir una<strong> verdadera conciencia de lo que somos, que queremos y por qué vivimos, de nuestras perspectivas, nuestra forma de ver el mundo.</strong></p>
 

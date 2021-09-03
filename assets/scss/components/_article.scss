@@ -1,8 +1,10 @@
 // Article
-article {
+article.blog {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	font-family: $font-family-serif;
+	line-height: 1.75;
 	p:first-child {
 		color: var(--body-color-medium);
 	}
@@ -18,19 +20,13 @@ article {
 			margin-bottom: 0 !important;
 		}
 	}
-	h1, h2, h3, h4, h5, h6,
-	.h1, .h2, .h3, .h4, .h5, .h6 {
+	h1, h2, h3, h4, h5, h6 {
 		margin: 2.5rem 0 1.5rem;
 	}
-	p {
-		line-height: 1.5;
-		margin: 1rem 0;
-	}
 	b, strong {
-		color: var(--body-color-high)
+		color: var(--body-color-medium)
 	}
-	figure,
-	.figure {
+	figure {
 		width: 100%;
 		text-align: center;
 		img, svg {

@@ -1,6 +1,9 @@
 header.header {
 	top: 0;
 	left: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	flex-direction: column;
 	.logo {
 		h1 {
 			margin: 0;

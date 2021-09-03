@@ -6,7 +6,7 @@ date: 2021-03-29 12:00:00
    <p>
       El 25 de enero se dieron a conocer los resultados del Censo de Población y Vivienda 2020. Las primeras cifras que llamaron más la atención en materia de religión fueron las comparaciones entre 2010 y 2020: un <strong>menor porcentaje</strong> de fieles de la iglesia católica (de 82.7 a 77.7 %), un <strong>mayor porcentaje</strong> de fieles de las iglesias protestantes y evangélicas (de 7.5 a 11.2 %) y, sobre todo, un <strong>mayor porcentaje de personas sin religión</strong> (de 4.7 a 8.1 %, con un 2.5 adicional de personas sin adscripción religiosa).
    </p>
-   <cite><a href="https://datos.nexos.com.mx/que-nos-dice-el-censo-2020-sobre-religion-en-mexico/">¿Qué nos dice el Censo 2020 sobre religión en México? | Taller de datos (nexos.com.mx)</a></cite>
+   <cite><a href="https://datos.nexos.com.mx/que-nos-dice-el-censo-2020-sobre-religion-en-mexico/" target="_blank" rel="noopener noreferrer nofollow">¿Qué nos dice el Censo 2020 sobre religión en México? | Taller de datos (nexos.com.mx)</a></cite>
 </blockquote>
 
 <p>Probablemente alrededor del 90% de las personas en México nacieron bajo una cuna religiosa, como podemos ver en los datos, alrededor de un 80% de estas personas serán católicos, 11% protestantes y evangélicas y el resto sin religión.</p>

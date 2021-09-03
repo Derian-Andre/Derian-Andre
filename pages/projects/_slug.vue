@@ -1,16 +1,17 @@
 <template>
 	<main role="main" id="main">
 		<!-- Info -->
-		<PageInfo :title="project.title" :subtitle="formatDate(project.date)" />
+		<PageInfo :title="project.title" :subtitle="formatDate(project.date)"/>
 		<!-- Content -->
 		<section id="content" class="content">
-			<article v-if="project.body">
+			<!-- Project -->
+			<article class="project" v-if="project.body">
 				<NuxtContent :document="project"/>
 			</article>
 			<p v-else>Contenido en construcción</p>
 		</section>
 		<!-- Right -->
-		<section id="right" class="right hero" v-if="project.slug">
+		<section id="right" class="right hero">
 			<img :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title">
 		</section>
 	</main>
@@ -20,12 +21,16 @@
 	import Utils from '~/utils';
 	import metaSite from '~/utils/metaSite';
 	export default {
-		layout: 'project',
+		data() {
+			return {
+				page: 'projects'
+			}
+		},
 		head() {
 			return {
-				title: `${this.project.title} – ${this.$i18n.t('projects.title')} – Derian André`,
+				title: `${this.project.title} – ${this.$t(`${this.page}.title`)} – Derian André`,
 				bodyAttrs: {
-					class: 'projects'
+					class: `page-${this.page}`
 				}
 			}
 		},

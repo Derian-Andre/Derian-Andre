@@ -1,17 +1,40 @@
 <template>
-	<article>
-		<NuxtContent class="article-content" :document="blog"/>
-	</article>
+	<main role="main" id="main">
+		<!-- Info -->
+		<PageInfo :title="blog.title" :subtitle="formatDate(this.blog.date)"/>
+		<!-- Content -->
+		<section id="content" class="content blog-post">
+			<div class="container g-0">
+				<BlogBack />
+				<!-- Article -->
+				<article class="blog">
+					<NuxtContent class="article-content" :document="blog"/>
+				</article>
+				<BlogBack />
+			</div>
+		</section>
+	</main>
 </template>
 
 <script>
 	import Utils from '~/utils';
 	import metaSite from '~/utils/metaSite';
 	export default {
-		layout: 'blog',
+		data() {
+			return {
+				page: 'blog'
+			}
+		},
+		async asyncData({ $content, params }) {
+			const blog = await $content('blog', params.slug)
+				.fetch()
+			return {
+				blog
+			}
+		},
 		head() {
 			return {
-				title:  `${this.blog.title} – ${this.$i18n.t('blog.title')} – Derian André`,
+				title: `${this.blog.title} – ${this.$t(`${this.page}.title`)} – Derian André`,
 				bodyAttrs: {
 					class: 'blog'
 				},
@@ -38,16 +61,6 @@
 					},
 				],
 			};
-		},
-		async asyncData({ $content, params }) {
-			const blog = await $content('blog', params.slug).fetch()
-			return {
-				blog
-			}
-		},
-		fetch() {
-			this.$store.commit('page/setTitle',    this.blog.title);
-			this.$store.commit('page/setSubtitle', this.formatDate(this.blog.date));
 		},
 		computed: {
 			meta() {

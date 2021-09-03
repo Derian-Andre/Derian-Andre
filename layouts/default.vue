@@ -2,16 +2,8 @@
 	<div class="layout">
 		<!-- Header -->
 		<Header />
-		<main role="main" id="main">
-			<!-- Info -->
-			<PageInfo :title="title" :subtitle="subtitle" v-if="title"/>
-			<!-- Content -->
-			<Nuxt />
-			<!-- Right -->
-			<section id="right" class="right hero" v-if="right">
-				<img :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title">
-			</section>
-		</main>
+		<!-- Content -->
+		<Nuxt />
 	</div>
 </template>
 

@@ -5,20 +5,25 @@ h1, h2, h3, h4, h5, h6,
 	font-family: $font-family-headings;
 	font-weight: bold;
 	transition: color 0.35s ease;
+	@include rs('margin-bottom', 1rem, 1vw, 1.5rem);
 }
 
 article p:first-child,
 p.lead,
 blockquote p,
 pre {
-	line-height: 1.35;
+	line-height: 1.5;
 	transition: all 0.35s ease;
 	@include rs('font-size', 1.1rem, 1.5vw, 1.5rem);
 }
 
+p,
+pre {
+	margin: 1rem 0;
+}
+
 blockquote,
 pre {
-	margin: 1rem 0;	
 	@include media-breakpoint-up($expand) {
 		margin: 2rem 1rem;
 	}

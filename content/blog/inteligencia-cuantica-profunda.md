@@ -40,7 +40,7 @@ date: 2021-04-01 12:00:00
 <p> Al final sólo queda esperar y confiar en los expertos y rezar que no nos pase lo mismo que pasó con Skynet en Terminator.</p>
 
 <figure>
-	<img width="500" height="214" src="https://derianandre.com/wp-content/uploads/2021/04/hasta-la-vista-baby-1.gif">
+	<img width="500" height="214" src="/assets/img/blog/inteligencia-cuantica-profunda/hasta-la-vista.gif">
 </figure>
 
 <h2>¡Extra, extra!</h2>

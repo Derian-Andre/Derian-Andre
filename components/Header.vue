@@ -6,7 +6,7 @@
 		</NuxtLink>
 		<div class="wrapper">
 			<nav>
-				<NuxtLink class="link" v-for="item in menu" :key="item.slug" :to="item.to">
+				<NuxtLink class="link" v-for="item in menu" :key="item.slug" :to="localePath(item.to)">
 					{{ $t(`header.${item.slug}`) }}
 				</NuxtLink>
 				<button class="link" type="button" @click="changeLanguage" :title="locales[$i18n.locale].name">
@@ -39,7 +39,7 @@
 				menu: [
 					{ slug: 'home', to: '/' },
 					{ slug: 'blog', to: '/blog/' },
-					{ slug: 'services', to: '/servicios/' },
+					{ slug: 'services', to: '/services/' },
 					{ slug: 'curriculum', to: '/curriculum/' },
 				]
 			}

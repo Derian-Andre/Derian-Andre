@@ -11,7 +11,7 @@ date: 2021-03-31 12:00:00
 <figure>
 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Zeno_Achilles_Paradox.png/1024px-Zeno_Achilles_Paradox.png" width="512" height="512">
 	<figcaption>
-		<a href="https://es.wikipedia.org/wiki/Paradojas_de_Zen%C3%B3n#/media/Archivo:Zeno_Achilles_Paradox.png">Zeno Achilles Paradox – Paradojas de Zenón – Wikipedia, la enciclopedia libre</a>
+		<a href="https://es.wikipedia.org/wiki/Paradojas_de_Zen%C3%B3n#/media/Archivo:Zeno_Achilles_Paradox.png" target="_blank" rel="noopener noreferrer nofollow">Zeno Achilles Paradox – Paradojas de Zenón – Wikipedia, la enciclopedia libre</a>
 	</figcaption>
 </figure>
 

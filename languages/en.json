@@ -23,7 +23,8 @@
 		"title":    "Blog",
 		"subtitle": "A slice of my life",
 		"recent":   "Recent posts",
-		"page":     "Page "
+		"page":     "Page ",
+		"go_back":  "Go back to blog"
 	},
 	"services": {
 		"title":    "Services",
@@ -32,17 +33,17 @@
 		"design":   {
 			"title":       "Design",
 			"description": "I specialize in branding and web design, from brand development to mobile application design and everything that both entails.",
-			"list":        "<li> Branding <ul> <li> Naming </li> <li> Branding </li> <li> Redesign </li> <li> Image Consulting </li> <li> Stationery </li> </ul> </li> <li> UI Design (User Interface) </li> <li> UX Design (User Experience) </li> "
+			"list":        "<li>Branding<ul><li>Naming</li><li>Branding</li><li>Redesign</li><li>Image Consulting</li><li>Stationery</li></ul></li><li>UI Design (User Interface)</li><li>UX Design (User Experience)</li>"
 		},
 		"development": {
 			"title":       "Development",
 			"description": "I am a full-stack developer, specializing in front-end, I love creating beautiful things with a good user experience.",
-			"list":        "<li> Landings, Stores, Portfolios, Galleries, etc. </li> <li> Page Layout </li> <li> WordPress Themes </li>"
+			"list":        "<li>Landings, Stores, Portfolios, Galleries, etc.</li><li>Page Layout</li><li>WordPress Themes</li>"
 		},
 		"photography": {
 			"title":       "Photography",
 			"description": "Taking photos is one of the things I like the most, creativity and composition are my main weapons to portray whatever is necessary.",
-			"list":        "<li> Portraits </li> <li> Weddings </li> <li> Products </li> <li> Digital manipulation / retouching </li>"
+			"list":        "<li>Portraits</li><li>Weddings</li><li>Products</li><li>Digital manipulation / retouching</li>"
 		}
 	},
 	"curriculum": {
@@ -151,7 +152,7 @@
 					"title":       "UDG - CINVESTAV",
 					"subtitle":    "Simulations of organometallic molecular systems and development of web application for analysis and data management",
 					"date":        "2018 August - December",
-					"description": "Simulations of different organometallic molecular systems of C<sub>n</sub>H<sub>n</sub> (n = 4 - 6) with Sc, Ti and V for absorption of molecular hydrogen and the effect of binders (H, OH, NH<sub>2</sub>, CH<sub>3</sub> and F) with the ORCA ab initio software Development of a web application for the analysis of “.out files ”Obtained from the simulations: comparison of initial and final geometries in different systems, graph of orbital energies, comparison of data between different simulations, detection of optimization, visualization of the 3D model, generator of comparative tables between simulations of the same type, among other functions"
+					"description": "Simulations of different organometallic molecular systems of C<sub>n</sub>H<sub>n</sub>(n = 4 - 6) with Sc, Ti and V for absorption of molecular hydrogen and the effect of binders (H, OH, NH<sub>2</sub>, CH<sub>3</sub>and F) with the ORCA ab initio software Development of a web application for the analysis of “.out files ”Obtained from the simulations: comparison of initial and final geometries in different systems, graph of orbital energies, comparison of data between different simulations, detection of optimization, visualization of the 3D model, generator of comparative tables between simulations of the same type, among other functions"
 				},
 				"casasyterrenos": {
 					"title":       "Casa y Terrenos",
@@ -167,7 +168,7 @@
 					"title":       "ORCA Tools",
 					"subtitle":    "An open-source web application",
 					"date":        "2015",
-					"description": "Tool for the analysis of <code>.out</code> files of the ab initio quantum chemistry program package",
+					"description": "Tool for the analysis of<code>.out</code>files of the ab initio quantum chemistry program package",
 					"url":         "Use the tools for ORCA"
 				},
 				"minimalw": {
@@ -215,6 +216,12 @@
 		"description": "If you liked this project, you can help with a donation, motivation is always welcome.",
 		"url":         "Make a donation through Paypal"
 		}
+	},
+	"error": {
+		"title": "Error in the matrix",
+		"subtitle": "The stupid sexy page was not found",
+		"content": "<p class=\"lead\">Maybe I deleted it or who knows ... I forget everything or maybe not ...</p><p>Anyway, if this page was not found ,<b>why does this page exist?</b></p><p><b>How can I be a page not found?</b>, if you just found me ...</ p ><p>So ..<b>Am I or am I not?</b></p><p><b>What is being?</b></p><p><b>Who are you?</b>and ...<b>what are you doing here?</b></p><p><b>Are you real?</b></p>",
+		"go_home": "Go back to the beginning of creation!"
 	},
 	"pagination": {
 		"first":    "Recent",

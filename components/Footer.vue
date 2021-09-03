@@ -1,13 +1,11 @@
 <template>
-	<footer class="footer social">
-		<nav>
-			<a target="_blank" rel="noopener noreferrer" v-for="item in social" :key="item.slug" :href="item.link" :title="$t(`social.${item.slug}`)">
-				<i class="bi" :class="`bi-${item.icon}`"></i>
-			</a>
-			<a target="_blank" rel="noopener noreferrer" :href="`https://wa.me/523312781411?text=${$t('social.whatsapp_api')}`" :title="$t('social.whatsapp')">
-				<i class="bi bi-whatsapp"></i>
-			</a>
-		</nav>
+	<footer class="social vstack gap-1">
+		<a target="_blank" rel="noopener noreferrer" v-for="item in social" :key="item.slug" :href="item.link" :title="$t(`social.${item.slug}`)">
+			<i class="bi" :class="`bi-${item.icon}`"></i>
+		</a>
+		<a target="_blank" rel="noopener noreferrer" :href="`https://wa.me/523312781411?text=${$t('social.whatsapp_api')}`" :title="$t('social.whatsapp')">
+			<i class="bi bi-whatsapp"></i>
+		</a>
 	</footer>
 </template>
 
