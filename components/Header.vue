@@ -1,20 +1,22 @@
 <template>
 	<header id="header" class="header">
-		<NuxtLink class="logo" to="/">
-			<h1>Derian André Castillo Franco</h1>
-			<Logo />
-		</NuxtLink>
-		<div class="wrapper">
+		<div class="top">
+			<NuxtLink class="logo" :to="localePath('/')">
+				<h1>Derian André Castillo Franco</h1>
+				<Logo />
+			</NuxtLink>
+		</div>
+		<div class="center">
 			<nav>
-				<NuxtLink class="link" v-for="item in menu" :key="item.slug" :to="localePath(item.to)">
+				<NuxtLink class="item" v-for="item in menu" :key="item.slug" :to="localePath(item.to)">
 					{{ $t(`header.${item.slug}`) }}
 				</NuxtLink>
-				<button class="link" type="button" @click="changeLanguage" :title="locales[$i18n.locale].name">
+				<button class="item" type="button" @click="changeLanguage" :title="locales[$i18n.locale].name">
 					{{ $i18n.locale }}
 				</button>
 			</nav>
 		</div>
-		<div class="footer">
+		<div class="bottom">
 			<button class="toggler" type="button" @click="changeTheme" :title="$t(`header.${$colorMode.value}`)">
 				<span class="visually-hidden">
 					{{ $t(`header.${$colorMode.value}`) }}
@@ -51,15 +53,15 @@
 		methods: {
 			rootVariables() {
 				// Constants
-				const	root    = document.documentElement,
-						header  = document.querySelector('#header') || null,
-						info    = document.querySelector('#page-info') || null;
+				const	root    	=	document.documentElement,
+						header  	=	document.querySelector('#header') || null,
+						pageInfo	=	document.querySelector('#page-info') || null;
 				// Variables
-				var	headerWidth = header ? header.offsetWidth : 92,
-						infoWidth 	= info   ? info.offsetWidth   : 130;
+				var	headerWidth		= header ? header.offsetWidth : 92,
+						pageInfoWidth	= pageInfo ? pageInfo.offsetWidth : 130;
 				// Root variables
 				root.style.setProperty('--header-width', `${headerWidth}px`);
-				root.style.setProperty('--info-width',   `${infoWidth}px`);
+				root.style.setProperty('--info-width',   `${pageInfoWidth}px`);
 			},
 			changeLanguage() {
 				this.$i18n.locale = this.$i18n.locale === 'es' ? 'en' : 'es';

@@ -4,28 +4,33 @@ header.header {
 	display: flex;
 	flex-flow: row nowrap;
 	flex-direction: column;
-	.logo {
-		h1 {
-			margin: 0;
-			visibility: hidden;
-			font-size: 0 !important;
-		}
-		img, svg {
-			margin: 0;
-			display: block;
-			width: 28px;
-			height: 28px;
-			object-fit: contain;
-			transition: all 0.35s ease;
+	.top {
+		transition: all 0.35s ease;
+		.logo {
+			h1 {
+				margin: 0;
+				font-size: 0 !important;
+			}
+			svg {
+				margin: 0;
+				display: block;
+				width: 24px;
+				height: 24px;
+				object-fit: contain;
+				@include media-breakpoint-up(md) {
+					width: 28px;
+					height: 28px;
+				}
+			}
 		}
 		&:hover {
-			img, svg {
+			transform: scale(1.15);
+			@include media-breakpoint-up(md) {
 				transform: scale(1.25);
 			}
 		}
 	}
-
-	.wrapper {
+	.center {
 		flex: 1;
 		position: relative;
 		nav {
@@ -37,30 +42,26 @@ header.header {
 			transform-origin: 0 0;
 		}
 	}
-
-	.toggler {
-		border: 0;
-		background-color: transparent;
-		padding: 0;
-		&::before {
-			content: var(--theme-icon);
-			@include bootstrap-icon()
-		}
-	}
-
-	.footer {
+	.bottom {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		line-height: 1;
-		transition: all 0.35s ease;
-		&:hover {
-			transform: scale(1.15);
+		.toggler {
+			border: 0;
+			padding: 0;
+			background-color: transparent;
+			transition: all 0.35s ease;
+			&::before {
+				content: var(--theme-icon);
+				@include bootstrap-icon();
+			}
+			&:hover {
+				transform: scale(1.15);
+			}
 		}
 	}
-
-	
-	.link {
+	.item {
 		margin: 0 1rem;
 		font-size: .85rem;
 		text-transform: uppercase;
@@ -82,7 +83,7 @@ header.header {
 			height: 4px;
 			transform: translateY(-250%);
 			transition: all 0.35s ease;
-			background: #FFF;
+			background: white;
 			opacity: 0;
 		}
 		&:hover {
