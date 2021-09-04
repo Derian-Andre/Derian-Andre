@@ -8,7 +8,7 @@
 				</a>
 			</li>
 			<li class="page-item" v-else>
-				<NuxtLink class="page-link" :to="{ name: page, params: { page: 1 } }" :title="$t('pagination.first')" :aria-label="$t('pagination.first')">
+				<NuxtLink class="page-link" :to="localePath({ name: page, params: { page: 1 } })" :title="$t('pagination.first')" :aria-label="$t('pagination.first')">
 					<i class="bi bi-chevron-bar-left"></i>
 				</NuxtLink>
 			</li>
@@ -19,13 +19,13 @@
 				</a>
 			</li>
 			<li class="page-item" v-else>
-				<NuxtLink class="page-link" :to="{ name: page, params: { page: prevPage } }" :title="$t('pagination.previous')" :aria-label="$t('pagination.previous')">
+				<NuxtLink class="page-link" :to="localePath({ name: page, params: { page: prevPage } })" :title="$t('pagination.previous')" :aria-label="$t('pagination.previous')">
 					<i class="bi bi-chevron-left"></i>
 				</NuxtLink>
 			</li>
 			<!-- Pages -->
 			<li class="page-item" :class="currentPage === i ? 'active' : false" v-for="i in totalPages" :key="i">
-				<NuxtLink class="page-link" :to="{ name: page, params: { page: i } }" :title="$t('pagination.page') + i" :aria-label="$t('pagination.page') + i">
+				<NuxtLink class="page-link" :to="localePath({ name: page, params: { page: i } })" :title="$t('pagination.page') + i" :aria-label="$t('pagination.page') + i">
 					{{ i }}
 				</NuxtLink>
 			</li>
@@ -36,7 +36,7 @@
 				</a>
 			</li>
 			<li class="page-item" v-else>
-				<NuxtLink class="page-link" :to="{ name: page, params: { page: nextPage } }" :title="$t('pagination.next')" :aria-label="$t('pagination.next')">
+				<NuxtLink class="page-link" :to="localePath({ name: page, params: { page: nextPage } })" :title="$t('pagination.next')" :aria-label="$t('pagination.next')">
 					<i class="bi bi-chevron-right"></i>
 				</NuxtLink>
 			</li>
@@ -47,7 +47,7 @@
 				</a>
 			</li>
 			<li class="page-item" v-else>
-				<NuxtLink class="page-link" :to="{ name: page, params: { page: totalPages } }" :title="$t('pagination.last')" :aria-label="$t('pagination.last')">
+				<NuxtLink class="page-link" :to="localePath({ name: page, params: { page: totalPages } })" :title="$t('pagination.last')" :aria-label="$t('pagination.last')">
 					<i class="bi bi-chevron-bar-right"></i>
 				</NuxtLink>
 			</li>

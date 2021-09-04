@@ -1,19 +1,16 @@
 <template>
-	<main role="main" id="main">
+	<PageMain class="blog-post">
+		<div class="heading" v-text="blog.title" />
 		<!-- Info -->
 		<PageInfo :title="blog.title" :subtitle="formatDate(this.blog.date)"/>
 		<!-- Content -->
-		<section id="content" class="content blog-post">
-			<div class="container g-0">
-				<BlogBack />
-				<!-- Article -->
-				<article class="blog">
-					<NuxtContent class="article-content" :document="blog"/>
-				</article>
-				<BlogBack />
-			</div>
-		</section>
-	</main>
+		<PageContent class="blog-content">
+			<!-- Article -->
+			<article class="article-blog container">
+				<NuxtContent class="article-blog-content" :document="blog"/>
+			</article>
+		</PageContent>
+	</PageMain>
 </template>
 
 <script>
@@ -36,7 +33,7 @@
 			return {
 				title: `${this.blog.title} – ${this.$t(`${this.page}.title`)} – Derian André`,
 				bodyAttrs: {
-					class: 'blog'
+					class: `page page-${this.page}`
 				},
 				meta: [
 					...this.meta,

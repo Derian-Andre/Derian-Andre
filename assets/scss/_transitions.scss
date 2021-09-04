@@ -12,12 +12,12 @@
 // Page
 .page-enter-active,
 .page-leave-active {
-	transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease !important;
 }
 
 .page-enter,
 .page-leave-to {
-	opacity: 0;
+	opacity: 0 !important;
 }
 
 // Fade
@@ -29,4 +29,22 @@
 .fade-enter,
 .fade-leave-to {
 	opacity: 0;
+}
+
+// Elements
+.toggler::before,
+p,
+.bi,
+ul,
+::marker,
+span {
+	transition: color 0.35s ease;
+}
+
+path {
+	transition: fill 0.35s ease;
+}
+
+hr {
+	transition: background 0.35s ease;
 }

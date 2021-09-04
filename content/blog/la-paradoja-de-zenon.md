@@ -8,12 +8,9 @@ date: 2021-03-31 12:00:00
 
 <p>Este planteamiento se le conoce como <strong>la paradoja de la tortuga y Aquiles de Zenón</strong> (sí Aquiles el del famoso talón), es una de las paradojas de <strong>Zenón de Elea (c. 490-430 a. C.),</strong> un <strong>filósofo de la antigua Grecia</strong>. Ahora bien, planteémonos mejor de una manera visual:</p>
 
-<figure>
-	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Zeno_Achilles_Paradox.png/1024px-Zeno_Achilles_Paradox.png" width="512" height="512">
-	<figcaption>
-		<a href="https://es.wikipedia.org/wiki/Paradojas_de_Zen%C3%B3n#/media/Archivo:Zeno_Achilles_Paradox.png" target="_blank" rel="noopener noreferrer nofollow">Zeno Achilles Paradox – Paradojas de Zenón – Wikipedia, la enciclopedia libre</a>
-	</figcaption>
-</figure>
+<Imagen src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Zeno_Achilles_Paradox.png/1024px-Zeno_Achilles_Paradox.png" width="500px">
+	<a href="https://es.wikipedia.org/wiki/Paradojas_de_Zen%C3%B3n#/media/Archivo:Zeno_Achilles_Paradox.png" target="_blank" rel="noopener noreferrer nofollow">Zeno Achilles Paradox – Paradojas de Zenón – Wikipedia, la enciclopedia libre</a>
+</Imagen>
 
 <p>Lo que nos quiere dar a entender es que los seres están recorriendo una ilusión pues esta es una sucesión infinita de pasos, es decir, es un mero concepto.</p>
 

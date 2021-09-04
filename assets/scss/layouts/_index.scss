@@ -3,7 +3,5 @@
   display:          flex;
   flex-wrap:        nowrap;
   flex-direction:   column;
-  min-height:       100vh;
-  //overflow-x:       auto;     // Removed as it causes `position: sticky` to break
-  //overflow-y:       hidden;   // Removed as it causes `position: sticky` to break
+  // Removed `overflow` as it causes `position: sticky` to not work
 }

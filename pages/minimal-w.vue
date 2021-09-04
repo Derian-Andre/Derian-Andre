@@ -1,9 +1,9 @@
 <template>
-	<main role="main" id="main">
+	<PageMain>
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
-		<section id="content" class="content">
+		<PageContent>
 			<h2>{{ $t('minimal-w.title') }} <small class="text-muted">v1.1.0</small></h2>
 			<p class="lead" v-html="$t('minimal-w.description')" />
 			<hr>
@@ -18,8 +18,13 @@
 			<a target="_blank" rel="norefer noopener" href="https://paypal.me/DerianAndre" class="btn btn-outline-link">
 				{{ $t('minimal-w.donate.url') }}
 			</a>
-		</section>
-	</main>
+		</PageContent>
+		<hr class="d-lg-none">
+		<!-- Side -->
+		<PageSide class="order-1">
+			<Imagen :src="`img/projects/${page}.png`" :alt="$t(`${this.page}.title`)" />
+		</PageSide>
+	</PageMain>
 </template>
 
 <script>
@@ -37,6 +42,9 @@
 		head () {
 			return {
 				title: `${this.$t(`${this.page}.title`)} – Derian André`,
+				bodyAttrs: {
+					class: `page page-${this.page}`
+				}
 			}
 		}
 	}

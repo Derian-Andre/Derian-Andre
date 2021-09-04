@@ -2,12 +2,9 @@
 title: El número de Dios, matemáticas y diseño
 date: 2021-03-30 12:00:00
 ---
-<figure>
-	<img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" alt="Vista De Gusanos De Las Decoraciones De Vidrieras En Espiral A Través Del Techo" width="850" height="565">
-	<figcaption>
+<Imagen src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" width="850" height="565">
 		<a href="https://www.pexels.com/photo/worms-eye-view-of-spiral-stained-glass-decors-through-the-roof-161154/">Worms Eye View of Spiral Stained Glass Decors Through the Roof · Free Stock Photo (pexels.com)</a>
-	</figcaption>
-</figure>
+</Imagen>
 
 <blockquote>
 	<p>El número áureo también conocido como el número de Dios, se trata de un número algebraico irracional (<strong>su representación decimal es infinita y no tiene periodo</strong>) que posee <strong>muchas propiedades interesantes</strong> y que fue descubierto en la Antigüedad, no como una expresión aritmética, sino como<strong> relación o proporción entre dos segmentos de una recta</strong>.</p>
@@ -16,22 +13,21 @@ date: 2021-03-30 12:00:00
 
 <p><strong>El valor del número áureo aproximadamente es:</strong></p>
 
-<svg-inline src="img/blog/el-numero-de-dios-matematicas-y-diseno/numero-aureo.svg"></svg-inline>
+<Imagen src="img/blog/el-numero-de-dios-matematicas-y-diseno/numero-aureo.svg"></Imagen>
 
 <p>Sí te interesa leer más información concreta acerca de este famoso número, lo puedes hacer en la vieja confiable: <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo">Wikipedia, la enciclopedia libre</a>.</p>
 
 <p>Quizás para las personas que desconozcan sobre Diseño, les parecerá que es un arte sumamente subjetivo, cuando realmente existen diferentes reglas que <strong>podemos</strong> seguir, una de estas reglas implícitas es el diseño a través del número áureo, pues lo podemos utilizar para generar <strong>estructuras orgánicas</strong> a través de diferentes métodos.</p>
 
-<svg-inline src="img/blog/el-numero-de-dios-matematicas-y-diseno/ejemplo.svg" caption="Diseño propio de como utilizo el número áureo"></svg-inline>
+<Imagen src="img/blog/el-numero-de-dios-matematicas-y-diseno/ejemplo.svg">
+	Diseño propio de como utilizo el número áureo
+</Imagen>
 
 <p>Y bien, te preguntarás <strong>¿Cómo se utiliza esta relación matemática en el diseño?</strong>, te pongo unos ejemplos:</p>
 
-<figure class="aligncenter is-resized">
-	<img src="https://i.pinimg.com/originals/23/f7/0f/23f70f9f69daef96d44fdb8290d25532.jpg" width="750" height="305">
-	<figcaption>
-		Imagen obtenida de <a href="http://ojharper.com/what-makes-a-logo-effective/">ojharper.com</a>
-	</figcaption>
-</figure>
+<Imagen src="https://i.pinimg.com/originals/23/f7/0f/23f70f9f69daef96d44fdb8290d25532.jpg" width="750" height="305">
+	Imagen obtenida de <a href="http://ojharper.com/what-makes-a-logo-effective/">ojharper.com</a>
+</Imagen>
 
 <p>Estos son algunas de las marcas que todos conocemos que tienen <strong>fundamentos matemáticos para justificar la forma en la que están estructuradas sus formas geométricas</strong>, pero el número áureo se puede aplicar en <strong>cualquier campo del arte y más allá</strong>, lo podemos encontrar en pinturas, fotografías, en la arquitectura, en la naturaleza y en muchos lados más.</p>
 
@@ -41,16 +37,10 @@ date: 2021-03-30 12:00:00
 
 <p>Para terminar te dejo imagenes de la naturaleza donde podemos apreciar esta relación:</p>
 
-<figure class="aligncenter size-large is-resized">
-	<img src="https://derianandre.com/wp-content/uploads/2021/03/images.squarespace-cdn.jpg" width="750" height="500">
-	<figcaption>
-		Imagen de <a href="https://static1.squarespace.com/static/526e93fde4b0825dbf634205/t/55376c19e4b04fa840f0d570/1429695527113/">Totem Learning</a>
-	</figcaption>
-</figure>
+<Imagen src="https://derianandre.com/wp-content/uploads/2021/03/images.squarespace-cdn.jpg" width="750" height="500">
+	Imagen de <a href="https://static1.squarespace.com/static/526e93fde4b0825dbf634205/t/55376c19e4b04fa840f0d570/1429695527113/">Totem Learning</a>
+</Imagen>
 
-<figure>
-	<img loading="lazy" src="https://derianandre.com/wp-content/uploads/2021/03/image-4.png" width="750" height="498">
-	<figcaption>
-		<a href="https://www.popicon.com/blogs/iconography/the-golden-spiral-design-found-in-art-and-nature">The Golden Spiral: Design found in art and nature – Popicon</a>
-	</figcaption>
-</figure>
+<Imagen src="https://derianandre.com/wp-content/uploads/2021/03/image-4.png" width="750" height="498">
+	<a href="https://www.popicon.com/blogs/iconography/the-golden-spiral-design-found-in-art-and-nature">The Golden Spiral: Design found in art and nature – Popicon</a>
+</Imagen>

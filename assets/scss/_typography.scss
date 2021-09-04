@@ -1,4 +1,8 @@
 // Typography
+a {
+	transition: color 0.35s ease;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: var(--body-color-high);
 	font-family: $font-family-headings;
@@ -7,20 +11,10 @@ h1, h2, h3, h4, h5, h6 {
 	@include rs('margin-bottom', 1rem, 1vw, 1.5rem);
 }
 
-article p:first-child,
-article p.lead,
-blockquote p,
-pre {
-	line-height: 1.5;
-	transition: all 0.35s ease;
-	@include rs('font-size', 1.1rem, 1.5vw, 1.5rem);
-}
-
 p.lead {
 	color: var(--body-color-medium);
-	@include rs('font-size', 1.05rem, 1.5vw, 1.25rem);
+	@include rs('font-size', 1.05rem, 1.5vw, 1.25rem, true);
 }
-
 
 blockquote,
 pre {
@@ -42,14 +36,14 @@ blockquote {
 	}
 	cite {
 		display: block;
-		margin-top: 1rem;
-		font-weight: bold;
+		font-weight: 600;
 		font-style: normal;
-		font-size: 1rem;
 		color: var(--body-color-muted);
 		font-family: $font-family-headings;
-		line-height: 1;
+		line-height: 1.5;
 		transition: all 0.35s ease;
+		@include rs('margin-top', 1rem, 1.5vw, 1.5rem);
+		@include rs('font-size', 0.85rem, 1.5vw, 1rem);
 	}
 }
 
@@ -78,7 +72,16 @@ pre {
 
 small,
 figure {
-  figcaption {
-    font-size: 0.85rem;
-  }
+	figcaption {
+		font-size: 0.85rem;
+	}
+}
+
+article p:first-child,
+article p.lead,
+blockquote p,
+pre {
+	line-height: 1.5;
+	transition: all 0.35s ease;
+	@include rs('font-size', 1.1rem, 1.5vw, 1.5rem, true);
 }

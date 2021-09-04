@@ -1,9 +1,9 @@
 <template>
-	<main role="main" id="main">
+	<PageMain>
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
-		<section id="content" class="content curriculum">
+		<PageContent class="content-curriculum">
 			<div class="row">
 				<!-- About -->
 				<div class="col about">
@@ -78,7 +78,7 @@
 							<hr :key="index" v-if="index === jobs.length - 1" />
 							<section :id="item" :key="item">
 								<h2 v-if="index === jobs.length - 1">{{ $t(`curriculum.experience.jobs.${item}.heading`) }}</h2>
-								<svg-inline :src="`img/cv/${item}.svg`"/>
+								<Imagen :src="`img/cv/${item}.svg`" />
 								<h3>{{ $t(`curriculum.experience.jobs.${item}.title`) }}</h3>
 								<h4>{{ $t(`curriculum.experience.jobs.${item}.position`) }}</h4>
 								<h5 class="date">{{ $t(`curriculum.experience.jobs.${item}.date`) }}</h5>
@@ -92,7 +92,7 @@
 						<h2>{{ $t(`curriculum.experience.education.title`) }}</h2>
 						<template v-for="item in education" >
 							<section :id="item" :key="item">
-								<svg-inline :src="`img/cv/${item}.svg`"/>
+								<Imagen :src="`img/cv/${item}.svg`" />
 								<h3>{{ $t(`curriculum.experience.education.${item}.title`) }}</h3>
 								<h4>{{ $t(`curriculum.experience.education.${item}.subtitle`) }}</h4>
 								<h5 class="date">{{ $t(`curriculum.experience.education.${item}.date`) }}</h5>
@@ -106,7 +106,7 @@
 						<h2>{{ $t(`curriculum.experience.practices.title`) }}</h2>
 						<template v-for="item in practices" >
 							<section :id="item" :key="item">
-								<svg-inline :src="`img/cv/${item}.svg`"/>
+								<Imagen :src="`img/cv/${item}.svg`" />
 								<h3>{{ $t(`curriculum.experience.practices.${item}.title`) }}</h3>
 								<h4>{{ $t(`curriculum.experience.practices.${item}.subtitle`) }}</h4>
 								<h5 class="date">{{ $t(`curriculum.experience.practices.${item}.date`) }}</h5>
@@ -120,7 +120,7 @@
 						<h2>Proyectos personales</h2>
 						<template v-for="val, item in projects">
 							<section :id="item" :key="item">
-								<svg-inline :src="`img/cv/${val.image}.svg`"/>
+								<Imagen :src="`img/cv/${val.image}.svg`" />
 								<h3>{{ $t(`curriculum.experience.projects.${item}.title`) }}</h3>
 								<h4>{{ $t(`curriculum.experience.projects.${item}.subtitle`) }}</h4>
 								<h5 class="date">{{ $t(`curriculum.experience.projects.${item}.date`) }}</h5>
@@ -136,8 +136,8 @@
 					</section>
 				</div>
 			</div>
-		</section>
-	</main>
+		</PageContent>
+	</PageMain>
 </template>
 
 <script>
@@ -183,7 +183,7 @@
 			return {
 				title: `${this.$t(`${this.page}.title`)} – Derian André`,
 				bodyAttrs: {
-					class: `page-${this.page}`
+					class: `page page-${this.page}`
 				}
 			}
 		},

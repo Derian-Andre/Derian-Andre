@@ -3,8 +3,8 @@ title: Perspectivas
 date: 2021-03-28 12:00:00
 ---
 <blockquote>
-   <p>Del latín tardío <em>perspectīvus,</em> y este deriva del latín <em>perspicĕre</em> “mirar a través de”, “observar atentamente”; la forma f., del latín medieval <em>perspectiva</em> “óptica”.</p>
-   <cite>Real Academia Española</cite>
+	<p>Del latín tardío <em>perspectīvus,</em> y este deriva del latín <em>perspicĕre</em> “mirar a través de”, “observar atentamente”; la forma f., del latín medieval <em>perspectiva</em> “óptica”.</p>
+	<cite>Real Academia Española</cite>
 </blockquote>
 
 <p>Una de las cosas más interesantes de estudiar una carrea (no necesariamente en una escuela) es que tu perspectiva evoluciona y adquieres una nueva forma de ver las cosas. Yo, por ejemplo, a lo largo de mis estudios (dentro y fuera de la escuela) he adquirido diferentes perspectivas: </p>
@@ -13,10 +13,9 @@ date: 2021-03-28 12:00:00
 
 <p>Con dichas perspectivas yo puedo analizar de diferentes formas, pongamos un ejemplo con la siguiente imagen:</p>
 
-<figure>
-   <img src="https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" alt="Fotografía Macro de árbol" width="844" height="563">
-   <figcaption><a href="https://www.pexels.com/es-es/foto/fotografia-macro-de-arbol-235615/">Fotografía Macro de árbol · Fotos de stock gratuitas (pexels.com)</a></figcaption>
-</figure>
+<Imagen src="https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" width="844" height="563">
+	<a href="https://www.pexels.com/es-es/foto/fotografia-macro-de-arbol-235615/">Fotografía Macro de árbol · Fotos de stock gratuitas (pexels.com)</a>
+</Imagen>
 
 <ul>
    <li><strong>Física:</strong> ¿Cómo será su composición atómica y química?, ¿Cuáles son sus propiedades ópticas?, etc.</li>

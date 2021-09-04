@@ -1,0 +1,13 @@
+
+main.page-main {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	padding: 0 1.5rem 0 var(--header-width, 50px);
+	@include media-breakpoint-up($expand) {
+		flex-direction: row;
+		padding-right: 0;
+	}
+}

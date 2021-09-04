@@ -95,8 +95,5 @@ sftp.json
 # VS Code Folder
 .vscode/
 
-# Assets / Images / Blog
-static/assets/img/blog/*/*.gif
-static/assets/img/blog/*/*.jpg
-static/assets/img/blog/*/*.jpeg
-static/assets/img/blog/*/*.png
+# Assets / Images
+static/assets/img/*

@@ -1,6 +1,7 @@
 
 .btn {
 	transition: all 0.35s ease;
+	align-self: flex-start;
 	&.btn-outline-link {
 		color: var(--body-color-normal);
 		background: transparent;

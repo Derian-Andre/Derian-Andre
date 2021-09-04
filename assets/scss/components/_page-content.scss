@@ -1,0 +1,16 @@
+section.page-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1;
+	line-height: 150%;
+	padding: 0;
+	@include rs('padding-bottom', 0.95rem, 3vw, 1.5rem);
+	@include media-breakpoint-up($expand) {
+		min-height: 100vh;
+		justify-content: flex-end;
+		position: sticky;
+		top: 0;
+		max-width: 450px;
+		@include rs('padding', 0.95rem, 3vw, 1.5rem);
+	}
+}

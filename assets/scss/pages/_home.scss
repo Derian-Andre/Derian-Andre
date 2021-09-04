@@ -1,5 +1,6 @@
-.gallery {
-	display: grid;
+main.gallery {
+	padding: 0 !important;
+	display: grid !important;
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: auto;
 	overflow: hidden;
@@ -12,7 +13,10 @@
 	.post {
 		position: relative;
 		overflow: hidden;
-		height: 50vh;
+		height: 33.33vh;
+		@include media-breakpoint-up(xl) {
+			height: 50vh;
+		}
 		img {
 			width: 100%;
 			height: 100%;

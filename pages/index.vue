@@ -1,13 +1,13 @@
 <template>
-	<div role="main" id="gallery" class="gallery">
+	<PageMain class="gallery">
 		<NuxtLink class="post" v-for="project in projects" :key="project.slug" :to="{ name: 'projects-slug', params: { slug: project.slug } }">
-			<LazyImage :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title" />
+			<LazyImg :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title" />
 			<div class="overlay">
 				<h2 class="title">{{ project.title }}</h2>
 				<span class="date">{{ formatDate(project.date) }}</span>
 			</div>
 		</NuxtLink>
-	</div>
+	</PageMain>
 </template>
 
 <script>
@@ -23,7 +23,7 @@
 			return {
 				title: `${this.$t(`${this.page}.title`)} – Derian André`,
 				bodyAttrs: {
-					class: `page-${this.page}`
+					class: `page page-${this.page}`
 				}
 			}
 		},

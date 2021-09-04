@@ -12,14 +12,17 @@ date: 2021-04-01 12:00:00
 	<p>Imagina una caja de metal, introduce un gato y una granada, cierra la caja. El estado de superposición cuántica nos indica que el gato está vivo y muerto al mismo tiempo, porque no podemos saber con certeza si la granada explotó y el gato murió ya sea por un defecto de fabrica o cualquier motivo, el punto es que solamente conocemos el resultado cuando abrimos la caja mientras tanto, el gato está vivo y muerto.</p>
 </blockquote>
 
-
-<svg-inline src="img/blog/inteligencia-cuantica-profunda/gato-de-schrodinger.svg"></svg-inline>
+<Imagen src="img/blog/inteligencia-cuantica-profunda/gato-de-schrodinger.svg">
+	Imagen traducida del inglés
+</Imagen>
 
 <p>Al momento de abrir la caja cambiamos el sistema cuántico y esta transición de la cuántica a nuestra percepción de la realidad se llama <strong>decoherencia</strong>.</p>
 
 <p>Este estado de superposición nos abre a nuevas posibilidades ya que no es un sistema binario: 0 o 1, verdadero o falso, a estos le conocemos como bits, sin embargo, para un sistema computacional cuántico tenemos lo equivalente, los cúbits (<em>quantic-bits o qbits en inglés</em>) y estos como lo expliqué en la paradoja, pueden tener estos dos estados al mismo tiempo, es decir es verdadero y falso, dando lugar a nuevas puertas lógicas y nuevos algoritmos.</p>
 
-<svg-inline src="img/blog/inteligencia-cuantica-profunda/esfera-de-bloch.svg" caption="Representación gráfica de un cúbit en forma de esfera de Bloch"></svg-inline>
+<Imagen src="img/blog/inteligencia-cuantica-profunda/esfera-de-bloch.svg">
+	Representación gráfica de un cúbit en forma de esfera de Bloch
+</Imagen>
 
 <p>Con esto tenemos ya una idea básica y podemos pasarnos del lado de la Inteligencia Artificial, Machine Learning, Deep Learning y demás, la capacidad de computación cuántica será más que sólo exponencial. Al tener más de dos estados los cálculos increíblemente más altos que el sistema actual. Por poner un ejemplo extremo: <strong>el cálculo de una supercomputadora que tarda 10,000 años en resolverse con la tecnología de ahora lo equivalente a una computadora cuántica sería en unos 10 minutos.</strong></p>
 
@@ -27,7 +30,9 @@ date: 2021-04-01 12:00:00
 
 <p>La famosa caja negra es básicamente una capa por dónde entran datos, la capa los procesa y esta nos da los resultados. Esta sería una simplificación de una red neuronal:</p>
 
-<svg-inline src="img/blog/inteligencia-cuantica-profunda/red-neuronal.svg" caption="Diagrama sencillo de una red neuronal"></svg-inline>
+<Imagen src="img/blog/inteligencia-cuantica-profunda/red-neuronal.svg">
+	Diagrama sencillo de una red neuronal
+</Imagen>
 
 <p>El problema radica en la parte dónde desconocemos como funcionaran a profundidad estos modelos, no podremos saber con certeza que está pasando y peor aún <strong>¿Cómo podemos modelar conceptos como la ética, la moralidad, el bien y el mal?</strong></p>
 
@@ -39,9 +44,7 @@ date: 2021-04-01 12:00:00
 
 <p> Al final sólo queda esperar y confiar en los expertos y rezar que no nos pase lo mismo que pasó con Skynet en Terminator.</p>
 
-<figure>
-	<img width="500" height="214" src="/assets/img/blog/inteligencia-cuantica-profunda/hasta-la-vista.gif">
-</figure>
+<Imagen src="img/blog/inteligencia-cuantica-profunda/hasta-la-vista.gif" alt="Hasta la vista baby"></Imagen>
 
 <h2>¡Extra, extra!</h2>
 

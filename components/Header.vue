@@ -53,7 +53,7 @@
 				// Constants
 				const	root    = document.documentElement,
 						header  = document.querySelector('#header') || null,
-						info    = document.querySelector('#info') || null;
+						info    = document.querySelector('#page-info') || null;
 				// Variables
 				var	headerWidth = header ? header.offsetWidth : 92,
 						infoWidth 	= info   ? info.offsetWidth   : 130;

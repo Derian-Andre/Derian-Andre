@@ -1,9 +1,9 @@
 <template>
-	<main role="main" id="main">
+	<PageMain>
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
-		<section id="content" class="content" style="max-width: 800px !important">
+		<PageContent style="max-width: 800px !important">
 			<div class="row row-cols-1 row-cols-md-2 gx-5">
 				<template v-for="item in services">
 					<section class="col d-flex flex-column" :id="item" :key="item">
@@ -14,11 +14,11 @@
 					</section>
 				</template>
 			</div>
-			<a href="mailto:hola@derianandre.com" class="btn btn-outline-link align-self-start px-5">
+			<a href="mailto:hola@derianandre.com" class="btn btn-outline-link">
 				{{ $t('services.cta') }}
 			</a>
-		</section>
-	</main>
+		</PageContent>
+	</PageMain>
 </template>
 
 <script>
@@ -37,7 +37,7 @@
 			return {
 				title: `${this.$t(`${this.page}.title`)} – Derian André`,
 				bodyAttrs: {
-					class: `page-${this.page}`
+					class: `page page-${this.page}`
 				}
 			}
 		}
