@@ -77,6 +77,20 @@ figure {
 	}
 }
 
+figure {
+	display: block;
+	text-align: center;
+	max-width: 100%;
+	user-select: none;
+	margin: 1.5rem 0;
+	figcaption {
+		display: block;
+		text-align: center !important;
+		margin-top: 1rem !important;
+		margin-bottom: 0 !important;
+	}
+}
+
 article p:first-child,
 article p.lead,
 blockquote p,

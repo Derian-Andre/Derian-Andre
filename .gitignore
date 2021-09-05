@@ -95,5 +95,5 @@ sftp.json
 # VS Code Folder
 .vscode/
 
-# Assets / Images
-static/assets/img/*
+# Assets
+static/assets/*

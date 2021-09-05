@@ -4,12 +4,12 @@
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
 		<PageContent>
-			<h2>{{ $t('minimal-w.title') }} <small class="text-muted">v1.1.0</small></h2>
+			<h2>{{ $t('minimal-w.title') }} <small class="text-muted">v1.1.0 (2017)</small></h2>
 			<p class="lead" v-html="$t('minimal-w.description')" />
 			<hr>
 			<h3>{{ $t('minimal-w.download.title') }}</h3>
 			<p class="mb-4" v-html="$t('minimal-w.download.description')" />
-			<a target="_blank" rel="norefer noopener" href="assets/minimal-w/latest.zip" download="minimalw-latest.zip" class="btn btn-outline-link">
+			<a target="_blank" rel="norefer noopener" href="assets/projects/minimal-w/minimal-w-latest.zip" download="minimal-w-latest.zip" class="btn btn-outline-link">
 				{{ $t('minimal-w.download.url') }}
 			</a>
 			<hr>
