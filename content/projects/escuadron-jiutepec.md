@@ -1,7 +1,7 @@
 ---
 title: Somos Escuadrón Jiutepec
 date: 2017-05-30 12:00:00
-gallery: 1
+gallery: 2
 ---
 <p class="lead">
 	Somos Escuadrón está conformado por un grupo de empresarios y ciudadanos voluntarios nacidos en Morelos que buscan mejorar la calidad de vida de las familias de nuestro estado, generar empleos y apoyar en la mejora de nuestra sociedad.

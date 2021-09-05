@@ -1,7 +1,7 @@
 ---
 title: Fundación de 10 por México
 date: 2016-07-09 12:00:00
-gallery: 2
+gallery: 1
 ---
 <p class="lead">
 	Fundación de Diez por México es un grupo juvenil conformado por líderes sociales que tienen por objetivo fomentar la participación ciudadana a través de diversas actividades en los distintos rubros que actualmente le aquejan a la sociedad morelense.

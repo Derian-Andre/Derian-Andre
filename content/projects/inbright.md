@@ -1,7 +1,7 @@
 ---
 title: Inbright
 date: 2018-12-18 12:00:00
-gallery: 2
+gallery: 1
 ---
 ### The tech ventures investment firm
 <p class="lead">

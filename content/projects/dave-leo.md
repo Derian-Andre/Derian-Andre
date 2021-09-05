@@ -25,6 +25,6 @@ Los colores elegidos fueron blanco, dorado y gris. Una combinación sin saturaci
 
 ---
 
-##### Conoce más
+#### Conoce más
 
 [Página web](https://daveleo.com)
