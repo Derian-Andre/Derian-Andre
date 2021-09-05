@@ -1,5 +1,5 @@
 <template>
-	<PageMain class="error">
+	<PageMain class="page-error">
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->

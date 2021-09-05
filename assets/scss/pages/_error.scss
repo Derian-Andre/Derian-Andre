@@ -1,6 +1,91 @@
-main.error {
-	svg {
+main.page-error {
+	figure {
 		width: 100%;
-		max-width: 500px;
+	}
+	svg {
+		width: 100% !important;
+		max-width: 300px;
+		@include media-breakpoint-up(lg) {
+			max-width: 800px;
+		}
+		.eye-left,
+		.eye-right {
+			animation: eyes 12s 3s infinite;
+		}
+		.eyebrow-left {
+			animation: eyebrow-left 8s infinite;
+		}
+		.eyebrow-right {
+			animation: eyebrow-right 10s infinite;
+			transform-origin: center;
+		}
+		.mouth {
+			animation: mouth 12s 4s infinite;
+		}
+		.hand {
+			animation: hand 8s infinite;
+		}
+	}
+}
+
+@keyframes eyes {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-2%);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	75% {
+		transform: translateX(2%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes eyebrow-left {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(5%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes eyebrow-right {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(-2deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+@keyframes mouth {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(2%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes hand {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(0);
 	}
 }

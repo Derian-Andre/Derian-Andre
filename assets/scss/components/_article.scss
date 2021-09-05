@@ -4,6 +4,7 @@ article.article-blog {
 	line-height: 1.75;
 	font-family: $font-family-serif;
 	padding: 0;
+	color: var(--body-color-normal);
 	p:first-child {
 		color: var(--body-color-medium);
 	}
@@ -37,7 +38,14 @@ article.article-blog {
 			margin-right: auto;
 		}
 	}
+	blockquote,
+	pre {
+		@include rs('margin-top',    1.25rem, 2vw, 1.75rem, true);
+		@include rs('margin-bottom', 1.25rem, 2vw, 1.75rem, true);
+		@include rs('margin-left',  2rem, 2vw, 2rem, true);
+		@include rs('margin-right', 2rem, 2vw, 4rem, true);
+	}
 	b, strong {
-		color: var(--body-color-medium)
+		color: var(--body-color-medium);
 	}
 }

@@ -2,15 +2,17 @@ section.page-info {
 	display: flex;
 	width: 100%;
 	height: 100%;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	z-index: 99;
+	border-bottom: 1px solid var(--hr-bg);
 	@include rs('padding-top', 0.95rem, 3vw, 1.5rem);
 	@include rs('padding-bottom', 0.95rem, 3vw, 1.5rem);
 	@include media-breakpoint-up($expand) {
-		flex: 0;
 		position: sticky;
+		flex: 0;
 		top: 0;
 		writing-mode: tb-rl;
+		border: 0;
 	}
 	.title {
 		margin: 0;
@@ -21,6 +23,7 @@ section.page-info {
 		line-height: 1.5;
 		@include rs('font-size', 1.5rem, 2.25vw, 6rem);
 		@include media-breakpoint-up($expand) {
+			order: 1;
 			transform: rotate(180deg);
 			line-height: 1.25;
 			margin-right: 0.5rem;

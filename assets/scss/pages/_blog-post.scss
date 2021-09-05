@@ -24,11 +24,17 @@ main.blog-post {
 	section.blog-content {
 		max-width: 100%;
 		justify-content: flex-start;
-		@media (min-width: 1700px) {
-			margin-left: calc(-1 * (var(--header-width) + var(--info-width)));
+		align-items: center;
+		@media (min-width: $expand-blog) {
+			padding: 0;
+			@include rs('padding-top', 1rem, 1.5vw, 2rem);
+			@include rs('padding-bottom', 1rem, 1.5vw, 2rem);
 		}
 		.article-blog {
-			max-width: 950px;
+			max-width: 1000px;
+			@media (min-width: $expand-blog) {
+				transform: translateX(calc((-1 * var(--info-width)) + 28px));
+			}
 			.article-blog-content {
 				display: flex;
 				flex-direction: column;
