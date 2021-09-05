@@ -1,6 +1,7 @@
 ---
 title: Bryan Fuss
 date: 2018-12-20 12:00:00
+gallery: 1
 ---
 <p class="lead">
 	Bryan es un streamer Mexicano de Tijuana, Baja California, se dedica a los videojuegos de PC, los juegos que más le gustan son los Shooters.

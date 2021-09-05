@@ -1,6 +1,7 @@
 ---
 title: Kalan Combustibles
 date: 2020-10-12 12:00:00
+gallery: 1
 ---
 <p class="lead">
    Empresa mexicana localizada en Guadalajara que tiene como misión la entrega productos de alta calidad en el sector energético de hidrocarburos del país.

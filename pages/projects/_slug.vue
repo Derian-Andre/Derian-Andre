@@ -13,6 +13,9 @@
 		<!-- Side -->
 		<PageSide>
 			<Imagen :src="`img/projects/${project.slug}.png`" :alt="project.title" />
+			<template v-if="gallery > 1">
+				<Imagen v-for="i in gallery-1" :key="i" :src="`img/projects/${project.slug}-${i+1}.png`" :alt="project.title" />
+			</template>
 		</PageSide>
 	</PageMain>
 </template>
@@ -23,7 +26,8 @@
 	export default {
 		data() {
 			return {
-				page: 'projects'
+				page: 'projects',
+				gallery: 1
 			}
 		},
 		head() {
@@ -37,7 +41,8 @@
 		async asyncData({ $content, params }) {
 			const project = await $content('projects', params.slug).fetch()
 			return {
-				project
+				project,
+				gallery: project.gallery ? project.gallery : 1
 			}
 		},
 		computed: {

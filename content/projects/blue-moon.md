@@ -1,6 +1,7 @@
 ---
 title: Blue Moon
 date: 2021-01-13T12:00:00
+gallery: 1
 ---
 <p>
    Tienda completamente en línea basada en Higuera de Zaragoza, localizada en el municipio de Ahome, en el norte de Sinaloa, México.

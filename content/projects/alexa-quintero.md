@@ -1,6 +1,7 @@
 ---
 title: Alexa Quintero
 date: 2018-03-19 12:00:00
+gallery: 3
 ---
 
 Diseño de logo para fotógrafa originaria de Los Mochis, Sinaloa.

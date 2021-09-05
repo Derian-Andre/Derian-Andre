@@ -1,6 +1,7 @@
 ---
 title: Constructora GRAN
 date: 2020-02-25 12:00:00
+gallery: 1
 ---
 <h3>Excavaciones, Demoliciones, Estructuras, Urbanización y más.</h3>
 <p class="lead">

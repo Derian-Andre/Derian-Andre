@@ -1,6 +1,7 @@
 ---
 title: Havoks Gaming
 date: 2016-06-10 12:00:00
+gallery: 2
 ---
 <p class="lead">
 	Havoks Gaming es un equipo profesional de e-Sports, cuentan con equipo de HearthStone y League of Legends. Se cambiaron de nombre a Just Toys Havoks, dicha modificación no la realicé yo.

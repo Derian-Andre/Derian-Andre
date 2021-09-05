@@ -1,6 +1,7 @@
 ---
 title: OCEL Global
 date: 2016-10-22 12:00:00
+gallery: 3
 ---
 ### Innovación y calidad indiscutible, inalienable, inamovible
 OCEL Global a través del compromiso fundado en la prosperidad industrial de México, el sano desarrollo del medio ambiente y el crecimiento rentable y sostenido de la dinámica social ofrece los más altos estándares de la relación calidad, valor y atención en sus productos y servicios.

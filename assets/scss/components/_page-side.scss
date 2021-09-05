@@ -14,5 +14,9 @@ section.page-side {
 	}
 	figure {
 		margin: 0 !important;
+		width: 100%;
+		* {
+			width: 100%;
+		}
 	}
 }

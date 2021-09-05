@@ -1,6 +1,7 @@
 ---
 title: Huitzil
 date: 2018-03-22 12:00:00
+gallery: 2
 ---
 ### Las tendencias desaparecen, el estilo es eterno.
 <p class="lead">

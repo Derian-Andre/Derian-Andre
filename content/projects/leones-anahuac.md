@@ -1,6 +1,7 @@
 ---
 title: Leones Anáhuac
 date: 2020-02-06 12:00:00
+gallery: 3
 ---
 ### Leones Anahuác Querétaro E-sports
 <p class="lead">

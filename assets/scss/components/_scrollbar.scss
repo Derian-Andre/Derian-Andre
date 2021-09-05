@@ -1,19 +1,22 @@
 * {
-	// Verticla width
+	// Verticla
 	::-webkit-scrollbar {
 		width: 14px;
 	}
-	
 	// Track
 	::-webkit-scrollbar-track {
 		background: var(--body-bg);
 	}
-	
 	// Handle
 	::-webkit-scrollbar-thumb {
 		background: var(--body-color-muted);
 		&:hover {
 			background: var(--body-color-normal);
 		}
+	}
+	// Corner
+	::-webkit-scrollbar-corner {
+		background: transparent;
+		border-color: transparent;
 	}
 }

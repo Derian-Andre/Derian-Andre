@@ -2,7 +2,7 @@
 title: El número de Dios, matemáticas y diseño
 date: 2021-03-30 12:00:00
 ---
-<Imagen src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" width="850" height="565">
+<Imagen src="img/blog/el-numero-de-dios-matematicas-y-diseno/pexels-161154.jpg">
 	<a href="https://www.pexels.com/photo/worms-eye-view-of-spiral-stained-glass-decors-through-the-roof-161154/">Worms Eye View of Spiral Stained Glass Decors Through the Roof · Free Stock Photo (pexels.com)</a>
 </Imagen>
 
@@ -24,7 +24,7 @@ Quizás para las personas que desconozcan sobre Diseño, les parecerá que es un
 
 Y bien, te preguntarás **¿Cómo se utiliza esta relación matemática en el diseño?**, te pongo unos ejemplos:
 
-<Imagen src="https://i.pinimg.com/originals/23/f7/0f/23f70f9f69daef96d44fdb8290d25532.jpg" width="750" height="305">
+<Imagen src="img/blog/el-numero-de-dios-matematicas-y-diseno/ejemplo-logos.jpg">
 	Imagen obtenida de <a href="http://ojharper.com/what-makes-a-logo-effective/">ojharper.com</a>
 </Imagen>
 
@@ -36,10 +36,10 @@ El diseño es subjetivo en el sentido de que cada uno tiene una idea de cómo ju
 
 Para terminar te dejo imagenes de la naturaleza donde podemos apreciar esta relación:
 
-<Imagen src="https://derianandre.com/wp-content/uploads/2021/03/images.squarespace-cdn.jpg" width="750" height="500">
+<Imagen src="img/blog/el-numero-de-dios-matematicas-y-diseno/ejemplo-naturaleza.jpg">
 	Imagen de <a href="https://static1.squarespace.com/static/526e93fde4b0825dbf634205/t/55376c19e4b04fa840f0d570/1429695527113/">Totem Learning</a>
 </Imagen>
 
-<Imagen src="https://derianandre.com/wp-content/uploads/2021/03/image-4.png" width="750" height="498">
+<Imagen src="img/blog/el-numero-de-dios-matematicas-y-diseno/ejemplo-naturaleza-2.jpg">
 	<a href="https://www.popicon.com/blogs/iconography/the-golden-spiral-design-found-in-art-and-nature">The Golden Spiral: Design found in art and nature – Popicon</a>
 </Imagen>

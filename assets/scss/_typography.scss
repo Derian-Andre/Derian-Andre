@@ -19,7 +19,7 @@ p.lead {
 blockquote,
 pre {
 	@include media-breakpoint-up($expand) {
-		margin: 2rem 1rem;
+		margin: 2rem 0;
 	}
 }
 
@@ -89,13 +89,4 @@ figure {
 		margin-top: 1rem !important;
 		margin-bottom: 0 !important;
 	}
-}
-
-article p:first-child,
-article p.lead,
-blockquote p,
-pre {
-	line-height: 1.5;
-	transition: all 0.35s ease;
-	@include rs('font-size', 1.1rem, 1.5vw, 1.5rem, true);
 }

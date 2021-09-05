@@ -1,6 +1,7 @@
 ---
 title: The Hive Offices
 date: 2019-01-10 12:00:00
+gallery: 2
 ---
 <p class="lead">
 	The Hive Offices es un HUB de startups y emprendedores de alto rendimiento.

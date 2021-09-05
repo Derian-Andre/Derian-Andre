@@ -1,6 +1,7 @@
 ---
 title: Grupo RESA
 date: 2018-06-14 12:00:00
+gallery: 4
 ---
 <p class="lead">
 	Grupo RESA es una empresa dedicada al reciclaje y venta de llantas de camión, y al rectificado de motores con torno, tienen más de 20 años de experiencia en el mercado y conllevan un compromiso con los transportistas mexicanos.

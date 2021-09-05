@@ -1,6 +1,7 @@
 ---
 title: El Taco Rojo
 date: 2018-02-21 12:00:00
+gallery: 1
 ---
 Taquería estilo Los Mochis, ubicada en Zapopan, Jalisco. ¡Recomendada!
 

@@ -1,0 +1,6 @@
+.embed {
+	margin: 1rem 0;
+	@include media-breakpoint-up($expand) {
+		margin: 2rem;
+	}
+}

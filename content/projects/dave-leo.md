@@ -1,6 +1,7 @@
 ---
 title: Dave Leo
 date: 2019-02-27 12:00:00
+gallery: 1
 ---
 <p class="lead">
 	David Leonardo Castillo es fundador de varias empresas de Silicon Valley y LATAM. Además de emprendedor es asesor y un habilitador de mercado.

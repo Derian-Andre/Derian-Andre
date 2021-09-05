@@ -15,8 +15,8 @@ Una de las cosas más interesantes de estudiar una carrea (no necesariamente en 
 
 Con dichas perspectivas yo puedo analizar de diferentes formas, pongamos un ejemplo con la siguiente imagen:
 
-<Imagen src="https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" width="844" height="563">
-	<a href="https://www.pexels.com/es-es/foto/fotografia-macro-de-arbol-235615/">Fotografía Macro de árbol · Fotos de stock gratuitas (pexels.com)</a>
+<Imagen src="img/blog/perspectivas/pexels-235615.jpg">
+	<a href="https://www.pexels.com/es-es/foto/fotografia-macro-de-arbol-235615/" target="_blank" rel="noopener noreferrer nofollow">Fotografía Macro de árbol</a>
 </Imagen>
 
 - **Física:** ¿Cómo será su composición atómica y química?, ¿Cuáles son sus propiedades ópticas?, etc.
