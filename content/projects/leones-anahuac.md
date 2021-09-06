@@ -26,3 +26,11 @@ Los colores son el café, blanco, narajana y negro respectivos de la identidad d
 > Símbolo de quien templa su carácter y domina sus propios instintos para llevar a cabo el liderazgo de acción positiva.
 >
 > <cite>Red de Universidades Anáhuac</cite>
+
+---
+
+#### Conoce más
+- [Instagram](https://instagram.com/anahuacesports_qro)
+- [Twitch](https://twitch.tv/anahuacesportsqro)
+- [Twitter](https://twitter.com/anahuacesports1)
+- [Youtube](https://youtube.com/channel/UC_xASaTKs88XjaNa5fijfJA)

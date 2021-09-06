@@ -27,4 +27,4 @@ Para los colores, un azul que representan seguridad y confianza y un blanco para
 ---
 
 #### Conoce más
-[Página web](http://paxut.com/)
+- [Página web](http://paxut.com/)

@@ -20,4 +20,4 @@ Los circulos representan atómos y diversidad acomodados en una forma que hace a
 ---
 
 #### Conoce más
-[http://equreka.com](http://equreka.com)
+- [https://equreka.com](http://equreka.com)

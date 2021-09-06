@@ -16,3 +16,9 @@ gallery: 2
 
 #### Justificación
 Basado en el fuego y la pasión, representando esta última por el amor al humanismo y el conocimiento.
+
+---
+
+#### Conoce más
+- [Facebook](https://fb.me/entelequiatertulias/)
+- [Youtube](https://www.youtube.com/channel/UCqhPg7yZeXfbOtS-j1YYOrg)

@@ -24,5 +24,4 @@ El diseño de este logo fue un largo proceso, desde formas hasta mascotas, sin e
 ---
 
 #### Conoce más
-
 - [Facebook](https://www.facebook.com/Red5Gaming)

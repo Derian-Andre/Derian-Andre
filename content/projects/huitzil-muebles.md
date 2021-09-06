@@ -8,6 +8,8 @@ gallery: 2
 	Empresa 100% mexicana basada en Monterrey, que disfruta y celebra el diseño. Dedicada ala venta de mueblería con un excelente presentación.
 </p>
 
+---
+
 #### Trabajo
 - Branding
 - Desarrollo web
@@ -24,5 +26,5 @@ El color morado fue debido a que es un color muy particular y que se puede encon
 ---
 
 #### Conoce más
-[Huitzil Muebles](http://huitzilmuebles.com/)  
-[Facebook](https://www.facebook.com/pg/huitzilmuebles)
+- [Huitzil Muebles](http://huitzilmuebles.com/)  
+- [Facebook](https://www.facebook.com/pg/huitzilmuebles)

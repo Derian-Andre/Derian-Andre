@@ -12,7 +12,7 @@ gallery: 2
 #### Trabajo
 - Re-Branding
 - Redes sociales
-- Página web
+- Desarrollo web
 - Fotografía
 - Audiovisual
 

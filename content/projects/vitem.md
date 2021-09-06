@@ -10,10 +10,16 @@ gallery: 2
 VITEM es una empresa mexicana ubicada en la ciudad de Los Mochis, se dedican a todo lo relacionado con el vidrio templado y el euroalum.
 
 ---
+
 #### Trabajo
 - Branding
 - Desarrollo web
 - Asesoría de imagen
+
+---
+
+#### Justificación
+Al igual que la empresa IDVA hermana de VITEM, se utiliza un diseño parecido con el mismo lenguaje de diseño basado en las propiedades de los materiales.
 
 ---
 

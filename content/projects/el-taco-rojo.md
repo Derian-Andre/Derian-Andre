@@ -17,7 +17,6 @@ gallery: 1
 #### Justificación
 Este diseño está basado en el fuego que se utiliza para preparar la comida y el rojo del adobo de la carne con una tipografía estilo *"Westerm"* y *Sans-serif* combinando lo viejo con lo nuevo.
 
-
 ---
 
 #### Conoce más

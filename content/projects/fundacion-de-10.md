@@ -11,5 +11,19 @@ gallery: 1
 > 
 > Además de capacitar, informar, convocar e incluir a los colonos en las distintas actividades que realizamos; nos convertimos en gestores y facilitadores de necesidades sociales puntuales en temas de infraestructura y servicio social.
 
+---
+
+#### Trabajo
+- Diseño de logo
+- Redes sociales
+- Asesoría de imagen
+
+---
+
+#### Justificación
+Un logo basado en el humanismo representada por la figura central.
+
+---
+
 #### Conoce más
 - [Facebook](https://www.facebook.com/fundaciondediezpormexico/)

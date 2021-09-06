@@ -8,6 +8,7 @@ gallery: 2
 </p>
 
 ---
+
 #### Justificación
 Las dos figuras representan a las personas, la diferencia de colores representa la diversidad entre los voluntarios pero la unión de estas dos figuras representa el objetivo mutuo de su razón de ser.
 

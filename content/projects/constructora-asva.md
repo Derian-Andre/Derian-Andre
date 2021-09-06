@@ -11,7 +11,6 @@ gallery: 4
 ---
 
 ##### Trabajo
-
 - Branding
 	- Logotipo
 	- Hoja membretada
@@ -22,7 +21,6 @@ gallery: 4
 ---
 
 ##### Justificación
-
 El imagotipo representa una construcción sólida, fuerte, que da confianza. El isotipo formado está construido a partir del nombre ASVA, se puede observar con atención todas las letras del nombre.
 
 El azul que da confianza y amarillo para resaltar, colores típicamente usados en el sector pero un tanto saturados que representan una empresa moderna y joven.

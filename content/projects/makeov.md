@@ -15,6 +15,11 @@ Makeov es una empresa dedicada a los servicios de belleza unisex a domicilio, ac
 
 ---
 
+#### Justificación
+Para este concepto se toma encuenta que es un servicio de belleza unisex, representado por una tipografía modificada de estilo "Serif" con toques dorados para representar el estilo.
+
+---
+
 #### Conoce más
-[Página web](http://makeov.com)  
-[Facebook](https://www.fb.me/MakeovGDL/)
+- [Página web](http://makeov.com)  
+- [Facebook](https://www.fb.me/MakeovGDL/)

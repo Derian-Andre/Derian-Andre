@@ -21,4 +21,4 @@ El logo que se realizó contiene las palabras OCEL dentro del mismo, de una form
 ---
 
 #### Conoce más
-[Página web](http://ocelglobal.com)
+- [Página web](http://ocelglobal.com)
