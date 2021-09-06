@@ -96,4 +96,6 @@ sftp.json
 .vscode/
 
 # Assets
-static/assets/*
+static/assets/img/blog/*
+static/assets/img/projects/jpg/*
+static/projects/*

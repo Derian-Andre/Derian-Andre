@@ -22,7 +22,7 @@
 		<hr class="d-lg-none">
 		<!-- Side -->
 		<PageSide class="order-1">
-			<Imagen :src="`img/projects/${page}.png`" :alt="$t(`${this.page}.title`)" />
+			<Imagen :src="`img/projects/${page}.jpg`" :alt="$t(`${this.page}.title`)" />
 		</PageSide>
 	</PageMain>
 </template>
