@@ -44,7 +44,7 @@ Sin duda nos depara un futuro muy intrigante, emocionante y un tanto peligroso, 
 
  Al final sólo queda esperar y confiar en los expertos y rezar que no nos pase lo mismo que pasó con Skynet en Terminator.
 
-<blog-img src="hasta-la-vista.gif" alt="Hasta la vista baby"></blog-img>
+<blog-img src="hasta-la-vista.webp" alt="Hasta la vista baby"></blog-img>
 
 ### ¡Extra, extra!
 
