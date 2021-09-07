@@ -29,9 +29,8 @@
 			this.svg = regexSvg.test(this.src) ? true : false;
 			// If not then check if it's an external image
 			if(this.svg) {
-				if(this.width)  this.style += `width: ${this.width};`;
-				if(this.height) this.style += `height: ${this.height};`;
-				console.log(this.style);
+				if(this.width)  this.style += `max-width: ${this.width};`;
+				if(this.height) this.style += `max-height: ${this.height};`;
 			} else {
 				let regexUrl = /^(https?:\/\/|\/)/i;
 				let isExternal = regexUrl.test(this.src) ? true : false;

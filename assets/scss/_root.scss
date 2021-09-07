@@ -13,8 +13,9 @@ html {
 		--body-color-high:            #{darken($theme-light, 80%)};
 		--body-color-medium:          #{darken($theme-light, 70%)};
 		--body-color-normal:          #{darken($theme-light, 60%)};
-		--body-color-muted:           #{darken($theme-light, 30%)};
-		--body-color-low:             #{darken($theme-light, 10%)};
+		--body-color-low:             #{darken($theme-light, 45%)};
+		--body-color-lower:           #{darken($theme-light, 30%)};
+		--body-color-muted:           #{darken($theme-light, 15%)};
 		--body-color-high-inverted:   #{lighten($theme-dark, 80%)};
 		--body-color-normal-inverted: #{lighten($theme-dark, 60%)};
 		--hr-bg:                      #{darken($theme-light, 20%)};
@@ -30,12 +31,13 @@ html {
 		--acrylic-backdrop-bg:        #{rgba($theme-dark, 0.65)};
 		--acrylic-backdrop:           blur(30px) saturate(1.35);
 		--body-bg:                    #{$theme-dark};
-		--body-bg-muted:              #{lighten($theme-dark, 04%)};
+		--body-bg-muted:              #{lighten($theme-dark, 03%)};
 		--body-color-high:            #{lighten($theme-dark, 80%)};
 		--body-color-medium:          #{lighten($theme-dark, 70%)};
 		--body-color-normal:          #{lighten($theme-dark, 60%)};
-		--body-color-muted:           #{lighten($theme-dark, 30%)};
-		--body-color-low:             #{lighten($theme-dark, 10%)};
+		--body-color-low:             #{lighten($theme-dark, 45%)};
+		--body-color-lower:           #{lighten($theme-dark, 30%)};
+		--body-color-muted:           #{lighten($theme-dark, 15%)};
 		--body-color-high-inverted:   #{darken($theme-light, 80%)};
 		--body-color-normal-inverted: #{darken($theme-light, 60%)};
 		--hr-bg:                      #{lighten($theme-dark, 20%)};

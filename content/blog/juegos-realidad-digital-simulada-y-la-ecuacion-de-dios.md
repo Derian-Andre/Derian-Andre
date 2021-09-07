@@ -1,7 +1,6 @@
 ---
-title: "Juegos, realidad digital simulada y la ecuación de Dios"
+title: Juegos, realidad digital simulada y la ecuación de Dios
 date: 2021-05-10 12:00:00
-draft: true
 ---
 <blog-img src="hero.jpg"></blog-img>
 
@@ -92,7 +91,7 @@ Bastante interesante, ¿no?, por eso retomo la idea que propuse en <blog-link to
 
 ### Metahumans
 
-<blog-embed src="https://www.youtube.com/embed/S3F1vZYpH8c"></blog-embed>
+<blog-embed src="https://www.youtube.com/embed/S3F1vZYpH8c" title="MetaHuman Creator: High-Fidelity Digital Humans Made Easy | Unreal Engine"></blog-embed>
 
 Combinando muchas tecnologías básicamente ya tenemos la capacidad de crear humanos digitales con inteligencia artificial, capacidad reconocimiento de lenguaje y también hablar, poco a poco estamos viendo como la ciencia ficción es una realidad, podemos traer muertos a la vida (como lo que pasó con Paul Walker y la saga de Rápido y Furioso) no es una novedad, en el cine ya hay casos así.
 
@@ -125,7 +124,7 @@ Con estas líneas podemos observar también que las facciones encajan bastante b
 <pre>
 Sin duda aquí también entramos en temas bastante filosóficos. Es fácil hacer una predicción por ejemplo de lo que yo llamo “derechos digitales post-mortem” pero ya me estoy desviando un poco del tema principal.
 Los metahumans muestran la capacidad tecnológica a la que hemos llegado (¡y todavía la que falta!), una herramienta así de poderosa que simula bastante bien las facciones de los humanos, así como también animaciones; todo para acercarnos al tema principal y final de esta entrada.
-<b>PD: Ignoren la forma de la cabeza jajajajaja.</b>
+<strong>PD: Ignoren la forma de la cabeza jajajajaja.</strong>
 </pre>
 
 ## ¿Y la ecuación de Dios?
@@ -151,7 +150,7 @@ La ecuación de Dios (o mejor dicho la teoría del todo) definiría la unión de
 
 <pre>
 Sabiendo todo esto no es tan loco como podrías haberlo pensado antes de leer todo esto, ¿no? ¡¿Ves cómo todo está conectado?! 🤯
-<b>Aquí debo hacer también una nota porque la física cuántica creo que rompe un poco con todo lo determinista, pero vamos... ¿quién sabe concerteza?</b>
+<strong>Aquí debo hacer también una nota porque la física cuántica creo que rompe un poco con todo lo determinista, pero vamos... ¿quién sabe concerteza?</strong>
 </pre>
 
 ## Preguntas, más filosofía, más sobre Dios, y un poco sobre la realidad

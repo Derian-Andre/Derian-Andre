@@ -9,7 +9,6 @@
 		props: ['src', 'alt', 'width', 'height'],
 		created() {
 			this.slug = this.$route.params.slug;
-			console.log(this.slug);
 		},
 	}
 </script>

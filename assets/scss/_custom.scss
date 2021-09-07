@@ -48,13 +48,6 @@ hr {
 	opacity: 1;
 }
 
-ul {
-	list-style: katakana;
-	li::marker {
-		color: var(--body-color-muted);
-	}
-}
-
 .nuxt-content-editor {
 	background: transparent;
 	color: var(--body-color-normal);

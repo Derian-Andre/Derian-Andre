@@ -1,5 +1,5 @@
 ---
-title: "Dialéctica, Dualidad, Yin y yang"
+title: Dialéctica, Dualidad, Yin & Yang
 date: 2021-04-07 12:00:00
 ---
 <blog-img src="yin-yang.svg" width="375px">

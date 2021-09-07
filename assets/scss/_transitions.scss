@@ -32,13 +32,15 @@
 }
 
 // Elements
-.toggler::before,
-p,
+::marker, .toggler::before,
 .bi,
-ul,
-::marker,
-span {
+ul, p, span, strong, b, i {
 	transition: color 0.35s ease;
+}
+
+blockquote,
+pre {
+	transition: background 0.35s ease, border-color 0.35s ease;
 }
 
 svg * {

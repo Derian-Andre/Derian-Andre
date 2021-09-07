@@ -32,7 +32,7 @@ Este ejemplo que te acabo de proponer es más de percepción externa que introsp
 
 **¿Por qué te planteo esto?** *(¿Ves como las preguntas empiezan todo?)* Para introducirte a estas dos cosas, las más fascinantes que el ser humano puede tener.
 
-### Filosofía y ciencia
+## Filosofía y ciencia
 
 > Conjunto de saberes que busca establecer, de manera racional, los principios más generales que organizan y orientan el conocimiento de la realidad, así como el sentido del obrar humano.
 > 

@@ -204,7 +204,7 @@
 		"go_home": "¡Mira otro proyecto!",
 		"not_working": {
 			"title": "Descanse en paz",
-			"description": "Actualmente la empresa o el proyecto <b>ya no está operativa o en función</b>, lamentablemente ... 😢"
+			"description": "Actualmente la empresa o el proyecto <strong>ya no está operativa o en función</strong>, lamentablemente ... 😢"
 		},
 		"construction": {
 			"title": "Página en construcción 😅",
@@ -230,7 +230,7 @@
 	"error": {
 		"title": "Error en la matrix",
 		"subtitle": "No se encontró la estúpida y sensual página",
-		"content": "<p class=\"lead\">Quizás la borré o quién sabe... todo se me olvida o quizás no...</p><p>En fin, si esta página no se encontró, <b>¿por qué existe esta página?</b></p><p><b>¿Como puedo ser una página no encontrada?</b>, si me acabas de encontrar...</p><p>Entonces.. <b>¿soy o no soy?</b></p><p><b>¿Qué es ser?</b></p><p><b>¿Quién eres tú?</b> y... <b>¿qué haces aquí?</b></p><p><b>¿Eres real?</b></p>",
+		"content": "<p class=\"lead\">Quizás la borré o quién sabe... todo se me olvida o quizás no...</p><p>En fin, si esta página no se encontró, <strong>¿por qué existe esta página?</strong></p><p><strong>¿Como puedo ser una página no encontrada?</strong>, si me acabas de encontrar...</p><p>Entonces.. <strong>¿soy o no soy?</strong></p><p><strong>¿Qué es ser?</strong></p><p><strong>¿Quién eres tú?</strong> y... <strong>¿qué haces aquí?</strong></p><p><strong>¿Eres real?</strong></p>",
 		"go_home": "¡Regresa al inicio de la creación!"
 	},
 	"pagination": {

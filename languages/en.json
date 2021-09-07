@@ -204,7 +204,7 @@
 		"go_home":"Check out other project!",
 		"not_working": {
 			"title": "Rest in peace",
-			"description": "Currently the company or the project is <b>no longer in operation or is inactive</b>, unfortunately ... 😢"
+			"description": "Currently the company or the project is <strong>no longer in operation or is inactive</strong>, unfortunately ... 😢"
 		},
 		"construction": {
 			"title": "Page under construcción 😅",
@@ -230,7 +230,7 @@
 	"error": {
 		"title": "Error in the matrix",
 		"subtitle": "The stupid sexy page was not found",
-		"content": "<p class=\"lead\">Maybe I deleted it or who knows ... I forget everything or maybe not ...</p><p>Anyway, if this page was not found ,<b>why does this page exist?</b></p><p><b>How can I be a page not found?</b>, if you just found me ...</ p ><p>So ..<b>Am I or am I not?</b></p><p><b>What is being?</b></p><p><b>Who are you?</b>and ...<b>what are you doing here?</b></p><p><b>Are you real?</b></p>",
+		"content": "<p class=\"lead\">Maybe I deleted it or who knows ... I forget everything or maybe not ...</p><p>Anyway, if this page was not found ,<strong>why does this page exist?</strong></p><p><strong>How can I be a page not found?</strong>, if you just found me ...</ p ><p>So ..<strong>Am I or am I not?</strong></p><p><strong>What is being?</strong></p><p><strong>Who are you?</strong>and ...<strong>what are you doing here?</strong></p><p><strong>Are you real?</strong></p>",
 		"go_home": "Go back to the beginning of creation!"
 	},
 	"pagination": {
