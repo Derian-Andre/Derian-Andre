@@ -2,7 +2,7 @@
 	<PageMain class="blog-post">
 		<div class="heading" v-text="blog.title" />
 		<!-- Info -->
-		<PageInfo :title="blog.title" :subtitle="formatDate(this.blog.date)"/>
+		<PageInfo :title="blog.title" :date="blog.date"/>
 		<!-- Content -->
 		<PageContent class="blog-content">
 			<!-- Article -->
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-	import Utils from '~/utils';
 	import metaSite from '~/utils/metaSite';
 	export default {
 		data() {
@@ -23,8 +22,8 @@
 			}
 		},
 		async asyncData({ $content, params }) {
-			const blog = await $content('blog', params.slug)
-				.fetch()
+			const slug = params.slug;
+			const blog = await $content('blog', slug).fetch()
 			return {
 				blog
 			}
@@ -69,11 +68,6 @@
 				};
 				return metaSite(metadata);
 			},
-		},
-		methods: {
-			formatDate(date) {
-				return Utils.formatDate(this.$i18n.locale, date);
-			}
 		}
 	}
 </script>

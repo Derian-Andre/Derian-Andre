@@ -1,8 +1,6 @@
 <template>
 	<figure>
-		<div class="svg" v-if="svg"
-			v-html="require(`~/static/assets/${src}?raw`)">
-		</div>
+		<div class="svg" v-if="svg" :style="style" v-html="require(`~/static/assets/${src}?raw`)" />
 		<div class="img" v-else>
 			<LazyImg :src="img" :width="width" :height="height" :alt="alt"/>
 		</div>
@@ -18,6 +16,7 @@
 		data() {
 			return {
 				svg: true,
+				style: '',
 				img: '',
 				caption: false
 			}
@@ -29,7 +28,11 @@
 			let regexSvg = /\.(svg)$/i;
 			this.svg = regexSvg.test(this.src) ? true : false;
 			// If not then check if it's an external image
-			if(!this.svg) {
+			if(this.svg) {
+				if(this.width)  this.style += `width: ${this.width};`;
+				if(this.height) this.style += `height: ${this.height};`;
+				console.log(this.style);
+			} else {
 				let regexUrl = /^(https?:\/\/|\/)/i;
 				let isExternal = regexUrl.test(this.src) ? true : false;
 				this.img = isExternal ? this.src : `/assets/${this.src}`;

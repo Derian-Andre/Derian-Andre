@@ -2,8 +2,7 @@
 title: Análisis del "debate" Provida vs Proaborto
 date: 2021-04-19 12:00:00
 ---
-
-Están de moda los "debates" y por esto mismo hablé sobre eso en <blog-link to="debate-dialogo-opinion-y-falacias"></blog-link>Debate, Diálogo, Opinión y Falacias</blog-link>, es más que obvio que el contenido de los *"influencers"* no son debates (o por lo menos buenos), es **una moda que carece de forma, fondo, estructura y realmente es una falacia a lo que significa debatir**.
+Están de moda los "debates" y por esto mismo hablé sobre eso en <blog-link to="debate-dialogo-opinion-y-falacias">Debate, Diálogo, Opinión y Falacias</blog-link>, es más que obvio que el contenido de los *"influencers"* no son debates (o por lo menos buenos), es **una moda que carece de forma, fondo, estructura y realmente es una falacia a lo que significa debatir**.
 
 <blog-embed src="https://www.youtube.com/embed/rHAX-2C3QqE" title="Provida vs. Proaborto | DEBATE"></blog-embed>
 
@@ -11,9 +10,9 @@ Están de moda los "debates" y por esto mismo hablé sobre eso en <blog-link to=
 
 ### Lo bueno
 
-<Imagen src="img/blog/analisis-del-debate-provida-vs-proaborto/pexels-3807770.jpg">
-	<a href="https://www.pexels.com/photo/selective-focus-photo-of-woman-smiling-while-doing-thumbs-up-3807770/" target="_blank" rel="noopener noreferrer nofollow">Selective Focus Photo of Woman Smiling While Doing Thumbs Up</a>
-</Imagen>
+<blog-img src="pexels-3807770.jpg">
+	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/selective-focus-photo-of-woman-smiling-while-doing-thumbs-up-3807770/">Selective Focus Photo of Woman Smiling While Doing Thumbs Up</a>
+</blog-img>
 
 - Utilizan (por fin) su poder social como "influencers" para divulgar y exponer temas de suma relevancia en la sociedad.
 - Las posturas tratan de defender desde lo "positivo" o lo "bueno" (desde sus perspectivas claro está) la problemática, es decir realmente les importa solucionar los problemas (pero desde sus limitaciones, un arma de doble filo).
@@ -28,9 +27,9 @@ Bueno, evidentemente es dialéctica porque esto es parte del debate; desarrollar
 
 ### Lo malo
 
-<Imagen src="img/blog/analisis-del-debate-provida-vs-proaborto/pexels-4629626.jpg">
-	<a href="https://www.pexels.com/photo/silhouette-of-persons-hand-4629626/" target="_blank" rel="noopener noreferrer nofollow">Silhouette of Persons Hand</a>
-</Imagen>
+<blog-img src="pexels-4629626.jpg">
+	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/silhouette-of-persons-hand-4629626/">Silhouette of Persons Hand</a>
+</blog-img>
 
 - El video tiene recortes de edición lo cual *puede* llegar a distorsionar la línea del "debate".
 - Hablan mucho desde la opinión y su narrativa y no crean un punto en común para atacar el problema principal (o las premisas).
@@ -43,9 +42,9 @@ Ej. **minuto 26.50** habla sobre el aborto "arrancar a pedazos a un niño", como
 
 - En ocasiones hace falta la intervención de un moderador ya que no hay una estructura clara para presentar los argumentos y contraargumentos. No hay límites de tiempos definidos para argumentar.
 
-Ej. **minuto 40.00** habla sobre las creencias e ideología como argumento, desde aquí partimos con falacias lógicas, como dije (de nuevo) lo que escribí sobre el <blog-link to="debate-dialogo-opinion-y-falacias">Debate, Diálogo, Opinión y Falacias</blog-link> las creencias no son argumentos pues la misma palabra creer _"Considerar una cosa como verdadera o segura o pensar que existe, **sin tener pruebas de su certeza o un conocimiento directo de la misma**_"_._ Sin embargo, también cabe recalcar (y lo mencionan también más adelante \[~ minuto 43\]) que no se debe de caer falacias _ad homien_, es decir solamente por ser religioso todo el argumento ya no es válido. **Todo argumento sí es si se presenta objetivamente y con bases demostrables es válido, el debate es para atacar a los argumentos no a las personas.** Sin embargo, aquí entra en juego lo que hablé en <blog-link to="mexico-y-religion">México y religión</blog-link>, la religión limita tu visión y su imposición ciega la toma de decisiones.
+Ej. **minuto 40.00** habla sobre las creencias e ideología como argumento, desde aquí partimos con falacias lógicas, como dije (de nuevo) lo que escribí sobre el <blog-link to="debate-dialogo-opinion-y-falacias">Debate, Diálogo, Opinión y Falacias</blog-link> las creencias no son argumentos pues la misma palabra creer *"Considerar una cosa como verdadera o segura o pensar que existe, **sin tener pruebas de su certeza o un conocimiento directo de la misma**_"_.* Sin embargo, también cabe recalcar (y lo mencionan también más adelante \[~ minuto 43\]) que no se debe de caer falacias _ad homien_, es decir solamente por ser religioso todo el argumento ya no es válido. **Todo argumento sí es si se presenta objetivamente y con bases demostrables es válido, el debate es para atacar a los argumentos no a las personas.** Sin embargo, aquí entra en juego lo que hablé en <blog-link to="mexico-y-religion">México y religión</blog-link>, la religión limita tu visión y su imposición ciega la toma de decisiones.
 
-- En ocasiones utilizan muy seguido las falacias _ad hominem_ y no se atacan a los "argumentos".
+- En ocasiones utilizan muy seguido las falacias *ad hominem* y no se atacan a los "argumentos".
 
 Ej. **minuto 53:30** Aquí se contrasta (y contra-argumenta) la premisa sumamente absurda: **"Los hombres deberían de estar excluidos del debate"** y más absurdo es la premisa que utilizan: "hombres, siempre blancos y privilegiados \[...\] tomando decisiones sobre el cuerpo de la mujer". Esto es simplemente intolerante y paradójicamente contrario a su postura porque **aquí están haciendo falacias _ad hominem_.** **El aborto se profundiza desde argumentos sociales, médicos, jurídicos, científicos, biológicos, etc. Es estúpido y ridículo descartar argumentos de expertos hombres solamente por ser hombres.** Hablan sobre historia y la utilizan como argumento y reducen la participación del hombre sobre los derechos de la mujer... en fin, aquí es otro tema de que hablar en otra entrada porque hacen muchas falacias lógicas y se contradicen.
 
@@ -56,9 +55,9 @@ Ej. **minuto 53:30** Aquí se contrasta (y contra-argumenta) la premisa sumament
 
 ### Conclusión
 
-<Imagen src="img/blog/analisis-del-debate-provida-vs-proaborto/pexels-3062524.jpg">
-	<a href="https://www.pexels.com/photo/close-up-photo-of-abstract-painting-3062524/" target="_blank" rel="noopener noreferrer nofollow">Close-Up Photo of Abstract Painting</a>
-</Imagen>
+<blog-img src="pexels-3062524.jpg">
+	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/close-up-photo-of-abstract-painting-3062524/">Close-Up Photo of Abstract Painting</a>
+</blog-img>
 
 #### Sobre una pequeña parte del tema del aborto
 

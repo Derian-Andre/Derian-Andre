@@ -41,10 +41,14 @@ span {
 	transition: color 0.35s ease;
 }
 
-path {
+svg * {
 	transition: fill 0.35s ease;
 }
 
 hr {
 	transition: background 0.35s ease;
+}
+
+img {
+	transition: opacity 0.35s ease;
 }

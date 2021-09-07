@@ -3,14 +3,23 @@
 		<h1 class="title" v-if="title">
 			<span v-html="title" />
 		</h1>
-		<h2 class="subtitle" v-if="subtitle">
-			{{ subtitle }}
-		</h2>
+		<div class="subtitle" v-if="subtitle || date" v-text="date ? formatedDate : subtitle" />
 	</section>
 </template>
 
 <script>
+	import Utils from '~/utils';
 	export default {
-		props: ['title', 'subtitle']
+		props: ['title', 'subtitle', 'date'],
+		methods: {
+			formatDate(date) {
+				return Utils.formatDate(this.$i18n.locale, date);
+			}
+		},
+		computed: {
+			formatedDate() {
+				return this.formatDate(this.date);
+			}
+		}
 	}
 </script>

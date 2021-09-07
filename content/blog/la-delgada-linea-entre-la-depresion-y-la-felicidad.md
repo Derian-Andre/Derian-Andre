@@ -45,9 +45,9 @@ Imagen de la película I Origins (2014)
 
 **¿Qué es la felicidad?, ¿qué te hace feliz?, ¿cuál son los posibles caminos?, ¿vale la pena?**, sólo así podrás encontrar una respuesta, después el camino ya lo buscarás o no. Lo importante es lo que tú quieres, por qué lo quieres y cómo lo harás, que ni tu familia, ni la publicidad, ni tus amigos, ni lo que escribo te formen, crea tu identidad y tu cosmovisión por ti mismo, pensando.
 
-[Cogito ergo sum](http://derianandre.com/2021/cogito-ergo-sum/)
+<blog-link to="cogito-ergo-sum">Cogito ergo sum</blog-link>
 
-Aprovechemos lo que tenemos, pues realmente **somos afortunados de estar en donde estamos** y no te quedes en sólo extremo del espectro sobre lo que es positivo y lo que es negativo, como hablé en [Dialéctica, Dualidad, Yin y Yang](http://derianandre.com/2021/dialectica-dualidad-yin-y-yang/) no podemos ser felices sin el sufrimiento, sigue a tu tiempo, paso a paso, sigue pensando, sigue explorando. **Que quizás ese es el _sentido_ o no...**
+Aprovechemos lo que tenemos, pues realmente **somos afortunados de estar en donde estamos** y no te quedes en sólo extremo del espectro sobre lo que es positivo y lo que es negativo, como hablé en <blog-link to="dialectica-dualidad-yin-y-yang">Dialéctica, Dualidad, Yin y Yang</blog-link> no podemos ser felices sin el sufrimiento, sigue a tu tiempo, paso a paso, sigue pensando, sigue explorando. **Que quizás ese es el *sentido* o no...**
 
 ![](images/i-origins-1.gif)
 

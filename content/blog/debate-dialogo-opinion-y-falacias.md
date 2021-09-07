@@ -2,9 +2,9 @@
 title: Debate, Diálogo, Opinión y Falacias
 date: 2021-04-13 12:00:00
 ---
-<Imagen src="img/blog/debate-dialogo-opinion-y-falacias/pexels-4761598.jpg">
+<blog-img src="pexels-4761598.jpg">
 	<a href="https://www.pexels.com/photo/man-in-black-boxing-gloves-4761598/" target="_blank" rel="noopener noreferrer nofollow">Man in Black Boxing Gloves</a>
-</Imagen>
+</blog-img>
 
 Es un hecho innegable que en el mundo existen diferencias muy marcadas, generalmente por estadística pura, cuando hablamos de debate existen blancos y negros y muy pocos matices y esto es independientemente del nivel socioeconómico o intelectual, (de hecho, el gobierno como tal es un producto de la sociedad, por ello es de vital importancia saber cómo dialogar y/o debatir para llegar a un acuerdo que nos beneficie a todos.
 
@@ -16,15 +16,11 @@ Y realmente en general, casi nadie sabe debatir y no es que yo me crea un intele
 
 **Primero hay que dejar bien clara las definiciones de cada palabra:**
 
-> **Debatir:** Dicho de dos o más personas: Discutir un tema con opiniones diferentes.
-> 
-> **Diálogo:** Plática entre dos o más personas, que alternativamente manifiestan sus ideas o afectos **(Puede ser subjetivo u objetivo, idealmente una u otra, pero no mixta)**
-> 
-> **Opinión**: Juicio o valoración que se forma una persona respecto de algo o de alguien. **(Subjetivo)**
-> 
-> **Hecho:** Acción u obra que realiza una persona. **(Objetivo)**
-> 
-> **Argumento:** Razonamiento para probar o demostrar una proposición, o para convencer de lo que se afirma o se niega. **(Objetivo)**
+> - **Debatir:** Dicho de dos o más personas: Discutir un tema con opiniones diferentes.
+> - **Diálogo:** Plática entre dos o más personas, que alternativamente manifiestan sus ideas o afectos **(Puede ser subjetivo u objetivo, idealmente una u otra, pero no mixta)**
+> - **Opinión**: Juicio o valoración que se forma una persona respecto de algo o de alguien. **(Subjetivo)**
+> - **Hecho:** Acción u obra que realiza una persona. **(Objetivo)**
+> - **Argumento:** Razonamiento para probar o demostrar una proposición, o para convencer de lo que se afirma o se niega. **(Objetivo)**
 > 
 > [Diccionario de la lengua española](https://dle.rae.es/)
 
@@ -32,10 +28,9 @@ Sí, por definición debatir es subjetivo... por ello **explico a continuación 
 
 ### Nope
 
-
-<Imagen src="img/blog/debate-dialogo-opinion-y-falacias/pexels-6484521.jpg">
+<blog-img src="pexels-6484521.jpg">
 	<a href="https://www.pexels.com/photo/woman-in-black-and-white-stripe-shirt-and-green-shorts-lying-on-white-bed-6484521/" target="_blank" rel="noopener noreferrer nofollow">Woman in Black and White Stripe Shirt and Green Shorts Lying on White Bed</a>
-</Imagen>
+</blog-img>
 
 Un debate **NO** debería de dar cavidad a opiniones, las opiniones son sumamente subjetivas y para hacer un debate fructífero se necesita hablar con argumentos, estadísticas, hechos y con la verdad. la verdad es una y única, no existen verdades, sólo la verdad.
 
@@ -58,11 +53,11 @@ Es cuestión de utilizar la lógica y el sentido común. 🥴
 
 ### Falacias
 
-<Imagen src="img/blog/debate-dialogo-opinion-y-falacias/pexels-685674.jpg">
+<blog-img src="pexels-685674.jpg">
 	<a href="https://www.pexels.com/photo/guy-fawkes-mask-685674/" target="_blank" rel="noopener noreferrer nofollow">Guy Fawkes Mask</a>
-</Imagen>
+</blog-img>
 
-En lógica, una falacia (del latín _fallacia_ "engaño") es **un argumento que parece válido, pero realmente no lo es**.​ Algunas falacias se hacen intencionalmente para persuadir o manipular, mientras que otras se cometen sin intención debido a descuidos o ignorancia. **Pueden ser muy sutiles y persuasivas, por lo que se debe analizar lo que se dice para detectarlas y descartarlas.**
+En lógica, una falacia (del latín *fallacia* "engaño") es **un argumento que parece válido, pero realmente no lo es**.​ Algunas falacias se hacen intencionalmente para persuadir o manipular, mientras que otras se cometen sin intención debido a descuidos o ignorancia. **Pueden ser muy sutiles y persuasivas, por lo que se debe analizar lo que se dice para detectarlas y descartarlas.**
 
 **La falacia más común es la falacia _ad hóminen_** (en español: al hombre, a la persona) tipo de falacia que consiste en dar por sentada la falsedad de una afirmación tomando como argumento quién es el emisor de esta.​ Es decir, el **argumento del Peje es inválido porque es el Peje.**
 
@@ -70,8 +65,8 @@ Te recomiendo investigar sobre los tipos de falacias lógicas para que sepas det
 
 ### Conclusión
 
-<Imagen src="img/blog/debate-dialogo-opinion-y-falacias/pexels-4761658.jpg">
+<blog-img src="pexels-4761658.jpg">
 	<a href="https://www.pexels.com/photo/man-in-black-boxing-gloves-4761598/" target="_blank" rel="noopener noreferrer nofollow">Man in Black Boxing Gloves</a>
-</Imagen>
+</blog-img>
 
 La vida, las relaciones (de cualquier tipo), la política, el consenso científico (y en general cualquier discusión) serían mucho, mucho, mucho más fáciles y fructíferos si las personas supieran debatir, dejando de lado la opinión mal fundamentada. N**o es la misma simplemente discutir por opinar a debatir para llegar a la verdad y a un acuerdo.** En fin, este es mi pequeño granito de arena, mi contribución hacia una mejor sociedad.

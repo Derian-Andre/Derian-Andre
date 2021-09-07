@@ -1,22 +1,22 @@
 section.blog-list {
 	max-width: 1100px !important;
 	.header {
+		color: var(--body-color-normal);
 		font-size: 120%;
 		font-weight: bold;
 		text-transform: uppercase;
-		margin-bottom: 1rem;
-		color: var(--body-color-normal)
+		margin: 0;
 	}
 	.post {
 		display: flex;
 		align-items: baseline;
 		color: var(--body-color-normal);
 		text-decoration: none;
-		margin: 0.75rem 0;
 		flex-direction: column;
 		text-decoration: none;
+		@include rs('margin-top', 0.5rem, 1.5vw, 1rem);
+		@include rs('margin-bottom', 0.5rem, 1.5vw, 1rem);
 		@include media-breakpoint-up($expand) {
-			margin: 1rem 0;
 			flex-direction: row;
 		}
 		.title {
@@ -25,7 +25,7 @@ section.blog-list {
 			position: relative;
 			line-height: 1.5;
 			font-weight: bold;
-			@include rs('font-size', 1.25rem, 2.5vw, 1.85rem);
+			@include rs('font-size', 1.25rem, 2.5vw, 1.6rem);
 			&::after { 
 				content: "";
 				background: var(--hr-bg);

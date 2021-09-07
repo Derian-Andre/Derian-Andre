@@ -1,12 +1,14 @@
 <template>
 	<PageMain class="gallery">
-		<NuxtLink class="post" v-for="project in projects" :key="project.slug" :to="{ name: 'projects-slug', params: { slug: project.slug } }">
-			<LazyImg :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title" />
-			<div class="overlay">
-				<h2 class="title">{{ project.title }}</h2>
-				<span class="date">{{ formatDate(project.date) }}</span>
-			</div>
-		</NuxtLink>
+		<template v-for="project in projects">
+			<NuxtLink class="post" :key="project.slug" :to="localePath({ name: 'projects-slug', params: { slug: project.slug } })" v-if="!project.draft && !project.disabled">
+				<LazyImg :src="`/assets/img/projects/${project.slug}.png`" :alt="project.title" />
+				<div class="overlay">
+					<h2 class="title">{{ project.title }}</h2>
+					<span class="date">{{ formatDate(project.date) }}</span>
+				</div>
+			</NuxtLink>
+		</template>
 	</PageMain>
 </template>
 
@@ -29,7 +31,7 @@
 		},
 		async asyncData ({ $content }) {
 			const projects = await $content('projects')
-				.only(['title', 'date', 'slug'])
+				.only(['title', 'date', 'slug', 'draft'])
 				.sortBy('date', 'desc')
 				.fetch();
 			return {

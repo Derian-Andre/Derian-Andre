@@ -7,7 +7,10 @@
 			<!-- Blog-list Title -->
 			<div class="h3 header" v-text="pageNumber == 1 ? $t('blog.recent') : ($t('blog.page') + pageNumber)" />
 			<!-- Post -->
-			<BlogPost v-for="blog in blogs" :key="blog.slug" :slug="blog.slug" :title="blog.title" :date="blog.date" />
+			<template v-for="(blog, i) in blogs">
+				<BlogPost :key="blog.slug" :slug="blog.slug" :title="blog.title" :date="blog.date" v-if="!blog.draft"/>
+				<hr class="my-3" :key="i" v-if="pageNumber == 1 && i == 0">
+			</template>
 			<hr>
 			<!-- Pagination -->
 			<BlogPagination :total="blogsTotal"/>
@@ -20,7 +23,7 @@
 	export default {
 		data() {
 			return {
-				page: 'blog'
+				page: 'blog',
 			}
 		},
 		head() {
@@ -34,9 +37,9 @@
 		async asyncData ({ $content, params, error }) {
 			const blogs = await blogContent($content, params, error);
 			return {
-				pageNumber: params.page,
+				blogs:      blogs.paginatedBlogs,
 				blogsTotal: blogs.allBlogs.length,
-				blogs:      blogs.paginatedBlogs
+				pageNumber: params.page
 			}
 		}
 	}

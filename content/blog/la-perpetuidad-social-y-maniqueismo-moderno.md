@@ -21,7 +21,7 @@ Todos los usamos y está perfecto, yo abogo por la tecnología y las redes socia
 
 Como dije, las redes sociales actualmente viven de puras pendejadas, parece que son útiles pero lo que realmente hacen es poner un curita en una herida que se debe de operar quirúrgicamente. Sí hay empresas y personas que hacen contenido mediamente decente, pero de qué sirve si ese contenido que **solamente es por moda y se olvida realmente lo que es importante**... las modas se acaban, no son una solución, son sólo una ilusión, son parte del problema.
 
-En la entrada anterior [Análisis del “debate” Provida vs Proaborto](https://derianandre.com/2021/analisis-del-debate-provida-vs-proaborto/) expuse el caso de la nueva moda de hacer debates, donde el objetivo de este es banalizado y vandalizado, sí es importante hablar de esos temas y darles exposición, por supuesto, pero hacerlos de la manera correcta.
+En la entrada anterior <blog-link to="analisis-del-debate-provida-vs-proaborto">Análisis del “debate” Provida vs Proaborto</blog-link> expuse el caso de la nueva moda de hacer debates, donde el objetivo de este es banalizado y vandalizado, sí es importante hablar de esos temas y darles exposición, por supuesto, pero hacerlos de la manera correcta.
 
 ![](images/pexels-vlada-karpovich-4050292-1-1-1000x667.jpg)
 
@@ -63,7 +63,7 @@ Sí ya sé, ¿qué tiene que ver una religión con todo esto? a eso voy, tranqui
 
 Los que se pensaban que eran "especiales" y hacían cosas "especiales" como solamente orar, ser vegetarianos y practicar el celibato. **Tras morir ellos "alcanzaban el Reino de la luz".**
 
-O más bien los narcisistas presunciosos egocéntricos... Ahora son los que _influyen_ en las personas de poco criterio propio y que carecen de identidad o tienen la necesidad de sentirse pertenecientes a un grupo (ahora... los oyentes)
+O más bien los narcisistas presunciosos egocéntricos... Ahora son los que *influyen* en las personas de poco criterio propio y que carecen de identidad o tienen la necesidad de sentirse pertenecientes a un grupo (ahora... los oyentes)
 
 ### Los oyentes
 

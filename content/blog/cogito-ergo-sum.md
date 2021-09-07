@@ -8,7 +8,6 @@ Empecemos por el principio.
 > 
 > <cite>René Descartes</cite>
 
-
 Es una frase tan sencilla, pero con una profundidad de pensamiento invaluable en mi opinión. Piensa por un momento, **¿Qué es lo primero que te llega a la mente?**
 
 Esta frase precede a todo. **¿Cómo podemos existir si no pensamos? **Aunque está ligada a la realidad materialista, ya que por ahora, tenemos la noción de que solamente existimos porque hay algo (materia), si no hay, no podemos pensar, por lo tanto no podemos existir.

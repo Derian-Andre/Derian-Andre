@@ -18,16 +18,26 @@ footer.social {
 
 }
 
+
 img {
 	object-fit: cover;
 	object-position: center;
 	height: auto;
+	opacity: var(--img-opacity);
 }
 
 img, 
 svg {
 	height: auto;
 	max-width: 100%;
+	max-height: 100%;
+}
+
+figure {
+	.img,
+	.svg {
+		margin: 0 auto;
+	}
 }
 
 hr {

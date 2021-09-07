@@ -1,7 +1,7 @@
 ---
 title: SVGO
 date: 2021-03-01 12:00:00
-gallery: 1
+gallery: 2
 ---
 <p class="lead">
 	SVG Optimizer (SVGO) es una herramienta basada en Node.js para optimizar archivos de gráficos vectoriales SVG.

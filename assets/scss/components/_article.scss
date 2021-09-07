@@ -44,6 +44,9 @@ article.article-blog {
 		@include rs('margin-bottom', 1.25rem, 2vw, 1.75rem, true);
 		@include rs('margin-left',  2rem, 2vw, 2rem, true);
 		@include rs('margin-right', 2rem, 2vw, 4rem, true);
+		ul {
+			color: var(--body-color-normal);
+		}
 	}
 	b, strong {
 		color: var(--body-color-medium);

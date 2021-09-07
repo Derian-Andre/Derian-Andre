@@ -13,7 +13,7 @@ También conocida como el problema del mal, es un planteamiento bastante interes
 
 Si Dios es omnipresente (que está presente a la vez en todas partes), omnisciente (conocimiento de todas las cosas reales y posibles) y es omnibenevolente (estar siempre preocupado por el bien de los demás) entonces ¿por qué existe el mal? Entonces, si existe el mal (que "existe") Dios no existe o no tiene las una de estas tres cualidades (y hace falta la omnipotencia, pero lo veremos más adelante), por lo tanto, no es Dios.
 
-Digo que "existe" ya que como lo vimos en [Dialéctica, Dualidad, Yin y yang](https://derianandre.com/2021/dialectica-dualidad-yin-y-yang/) el mal es parte del bien y además esto podría argumentarse que son un concepto creado por le humano.
+Digo que "existe" ya que como lo vimos en <blog-link to="dialectica-dualidad-yin-y-yang">Dialéctica, Dualidad, Yin y yang</blog-link> el mal es parte del bien y además esto podría argumentarse que son un concepto creado por le humano.
 
 **Hay dos formas comunes de representar el problema:**
 
@@ -83,11 +83,11 @@ La paradoja se puede simplificar o acomplejar dependiendo de la profundidad con 
 
 Estos planteamientos son clásicos, no son nada nuevos. El punto es que en sí mismo, **estos atributos son simplemente paradójicos por sí solos.** Una respuesta de los teólogos es que **Dios no puede hacer muchas cosas porque reducirían al absurdo los mismos conceptos.** Es decir, **si algo no puede ser, no podrá ser, aunque tengas todo el poder.** Dios no puede hacer un círculo que sea cuadrado y así.
 
-Pero... esto también es absurdo porque entonces rompes con el concepto de "poder que lo abarca todo", se puede ejemplificar todos los conceptos que quieras, el pero siempre habrá. Entonces habría que ver esto desde otro punto y este otro punto es el _redefinir_ la omnipotencia.
+Pero... esto también es absurdo porque entonces rompes con el concepto de "poder que lo abarca todo", se puede ejemplificar todos los conceptos que quieras, el pero siempre habrá. Entonces habría que ver esto desde otro punto y este otro punto es el *redefinir* la omnipotencia.
 
 > Comúnmente se confiesa que Dios es omnipotente, y a pesar de ello, no parece fácil asignar la razón de omnipotencia, ya que caben dudas acerca de qué cosas sean comprendidas en el enunciado "Dios todo lo puede". Sin embargo, bien pensado, como la potencia se refiere a lo posible, cuando se dice que Dios todo lo puede, lo más exacto es entender que puede todo lo posible, y que por esto se le llama omnipotente.
 > 
->  _[Summa Theologiae](https://es.wikipedia.org/wiki/Suma_teol%C3%B3gica)_ de [Tomás de Aquino](https://es.wikipedia.org/wiki/Tom%C3%A1s_de_Aquino) (c. 1225–1274)
+>  *[Summa Theologiae](https://es.wikipedia.org/wiki/Suma_teol%C3%B3gica)* de [Tomás de Aquino](https://es.wikipedia.org/wiki/Tom%C3%A1s_de_Aquino) (c. 1225–1274)
 
 ![](images/St-thomas-aquinas.jpg)
 
@@ -95,7 +95,7 @@ En este caso por ejemplos sería cambiar el significado a su conveniencia, la om
 
 Esto es el problema de la imparcialidad ideológica ya que usarás todos los recursos a tu alcance para poder defender tu postura, tanto así que puedes deformas un concepto (en este caso la omnipotencia) a tu preferencia para explicar una falla en su lógica. Y claro que así, la paradoja desaparece porque no es hacer todo si no todo lo posible porque lo imposible no es posible ergo no tiene sentido y Dios no puede hacer lo que no es posible. Conveniente... ¿No?
 
-Y aquí llego yo a una reflexión interesante: el ser humano si sobrevive a todo lo posible, si evoluciona todo lo posible, si es capaz de entender todo lo posible... ¿puede entonces llegar a ser Dios?, es decir al fin y al cabo teóricamente es posible porque esa es la premisa _**todo lo posible**_ (que lleve miles o millones de años no le quita de ser posible), entonces... Dios no sería el único Dios, puede haber más Dioses bajo esa lógica ¿no?... la respuesta forzosamente es sí, si aplicamos su lógica (de Tomás de Aquino) entonces puede haber más Dioses, poruqe es posible y nosotros también podemos llegar hacerlo, pero prosigamos con lo demás.
+Y aquí llego yo a una reflexión interesante: el ser humano si sobrevive a todo lo posible, si evoluciona todo lo posible, si es capaz de entender todo lo posible... ¿puede entonces llegar a ser Dios?, es decir al fin y al cabo teóricamente es posible porque esa es la premisa ***todo lo posible*** (que lleve miles o millones de años no le quita de ser posible), entonces... Dios no sería el único Dios, puede haber más Dioses bajo esa lógica ¿no?... la respuesta forzosamente es sí, si aplicamos su lógica (de Tomás de Aquino) entonces puede haber más Dioses, poruqe es posible y nosotros también podemos llegar hacerlo, pero prosigamos con lo demás.
 
 **Déjame hacerte unas preguntas.**
 
@@ -118,7 +118,7 @@ Estas paradojas y planteamientos son extremadamente interesantes, a mí personal
 
 Y si me lo preguntas a mi... si existe Dios probablemente está en los números (y no es un ser antropomórfico), pues a través de ellos podemos entender el universo, o al menos una parte (hasta donde hemos llegado), ya que el universo o Dios no tiene por qué (necesariamente) tener lógica para nosotros, es decir podemos entrar en singularidades en la física, pero nuestra capacidad intelectual está limitada físicamente (o sea nuestro cuerpo biológico) ... Pero esto ya es otro tema también bastante complejo...
 
-Todo es tan simple o complicado como lo quieras ver, es cuestión de analizarlo desde diferentes... [perspectivas](https://derianandre.com/2021/perspectivas/) 😉
+Todo es tan simple o complicado como lo quieras ver, es cuestión de analizarlo desde diferentes... <blog-link to="perspectivas">perspectivas</blog-link> 😉
 
 ## Ad finem
 
@@ -143,4 +143,4 @@ Digo "reales" porque si aceptas algo (como creencia) entonces para ti es "real" 
 Sí, sigamos indagando en estos temas **ya que es parte de entender y comprender el cosmos**, pero siendo objetivos y no entrar en ideologías que nos cieguen o nos hagan imparciales. No me parece sano desvivirnos en interrogantes así si no producimos valor o compartimos estas cuestiones y conocimientos, porque para mí, si existe un objetivo en esta vida, es compartir.
 
 Pero ya esto es una opinión, ¡tú la puedes tomar o dejar! 😁
-El **chiste siempre es pensar e indagar, no sólo en posturas en contra si no a favor también ([dialéctica](https://derianandre.com/2021/dialectica-dualidad-yin-y-yang/))** 🧠🫀
+El **chiste siempre es pensar e indagar, no sólo en posturas en contra si no a favor también (<blog-link to="dialectica-dualidad-yin-y-yang">dialéctica</blog-link>)** 🧠🫀

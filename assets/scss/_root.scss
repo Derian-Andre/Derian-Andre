@@ -14,10 +14,12 @@ html {
 		--body-color-medium:          #{darken($theme-light, 70%)};
 		--body-color-normal:          #{darken($theme-light, 60%)};
 		--body-color-muted:           #{darken($theme-light, 30%)};
+		--body-color-low:             #{darken($theme-light, 10%)};
 		--body-color-high-inverted:   #{lighten($theme-dark, 80%)};
 		--body-color-normal-inverted: #{lighten($theme-dark, 60%)};
 		--hr-bg:                      #{darken($theme-light, 20%)};
 		--overlay-bg:                 #{rgba($theme-light, 0.45)};
+		--img-opacity:                1;
 	}
 	&.dark {
 		--theme-icon:                 "\f496";
@@ -33,12 +35,11 @@ html {
 		--body-color-medium:          #{lighten($theme-dark, 70%)};
 		--body-color-normal:          #{lighten($theme-dark, 60%)};
 		--body-color-muted:           #{lighten($theme-dark, 30%)};
+		--body-color-low:             #{lighten($theme-dark, 10%)};
 		--body-color-high-inverted:   #{darken($theme-light, 80%)};
 		--body-color-normal-inverted: #{darken($theme-light, 60%)};
 		--hr-bg:                      #{lighten($theme-dark, 20%)};
 		--overlay-bg:                 #{rgba($theme-dark,  0.45)};
-		img {
-			opacity: 0.75;
-		}
+		--img-opacity:                0.775;
 	}
 }

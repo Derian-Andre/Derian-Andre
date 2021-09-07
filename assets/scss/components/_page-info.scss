@@ -48,13 +48,12 @@ section.page-info {
 		}
 	}
 	.subtitle {
-		margin: 0 0 0.35rem 0;
+		margin: 0;
 		font-weight: 300;
 		color: var(--body-color-normal);
 		opacity: 0.75;
 		@include rs('font-size', 1.25rem, 2vw, 2rem);
 		@include media-breakpoint-up($expand) {
-			margin: 0;
 			transform: rotate(-180deg);
 		}
 	}
