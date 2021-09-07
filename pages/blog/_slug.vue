@@ -5,14 +5,11 @@
 		<PageInfo :title="blog.title" :date="blog.date"/>
 		<!-- Content -->
 		<PageContent class="blog-content">
-			<!-- Go back -->
-			<BlogBack class="d-none d-lg-flex"/>
 			<!-- Article -->
 			<article class="article-blog container">
 				<NuxtContent class="article-blog-content" :document="blog"/>
+				<BlogBack/>
 			</article>
-			<!-- Go back -->
-			<BlogBack/>
 		</PageContent>
 	</PageMain>
 </template>

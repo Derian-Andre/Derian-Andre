@@ -13,3 +13,20 @@
 @import "embed";
 @import "pagination";
 @import "table";
+
+header.header,
+footer.social {
+	position: fixed;
+	bottom: 0;
+	mix-blend-mode: difference;
+	z-index: 9999;
+	transition: all 0.35s ease;
+	@include rs('padding', 0.95rem, 3vw, 1.5rem);
+	* {
+		color: white !important;
+	}
+	.toggler,
+	.bi {
+		@include rs('font-size', 1.15rem, 5vw, 1.5rem)
+	}
+}
