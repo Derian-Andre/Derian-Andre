@@ -1,7 +1,7 @@
 <template>
 	<div class="embed">
 		<div class="ratio ratio-16x9">
-			<iframe :src="src" :title="title" allowfullscreen></iframe>
+			<iframe class="lazy lazyload" :data-src="src" :title="title" allowfullscreen></iframe>
 		</div>
 	</div>
 </template>
