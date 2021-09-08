@@ -95,13 +95,14 @@ export default {
 	pwa: {
 		icon: {
 			source: '@/static/',
-			fileName: 'icon.png'
+			fileName: 'derianandre.png'
 		},
 		manifest: {
 			name: 'Derian André',
 			short_name: 'Derian André',
 			description: 'Freelancer: Diseño, Desarrollo y Fotografía',
 			lang: 'es',
+			background_color: '#333333',
 			theme_color: '#333333'
 		},
 		meta: {

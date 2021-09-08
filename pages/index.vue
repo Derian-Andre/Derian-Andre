@@ -23,7 +23,7 @@
 		},
 		head() {
 			return {
-				title: `${this.$t(`${this.page}.title`)} – Derian André`,
+				title: `${this.$t(`${this.page}.title`)} – Derian André – Freelancer Fullstack Designer.`,
 				bodyAttrs: {
 					class: `page page-${this.page}`
 				}
