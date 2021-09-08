@@ -38,7 +38,9 @@ William Higginbotham creó con un osciloscopio y haciendo cálculos de trayector
 
 ### 1972. Pong
 
-<blog-img src="pong.png"></blog-img>
+<blog-img src="pong.png">
+	<a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/Pong#/media/Archivo:Pong.png">Screenshot of PONG from the Atari Arcade Hits #1 software title released Hasbro Interactive - a conversion of the original 1972 Atari Pong – Wikipedia, la enciclopedia libre</a>
+</blog-img>
 
 Uno de los juegos de la primera generación, probablemente lo conozcas ya que fue un juego muy sencillo y popular. Su fecha de lanzamiento fue en 1972 en Estados Unidos. El juego de dos dimensiones simula un tenis de mesa.
 
@@ -150,7 +152,7 @@ La ecuación de Dios (o mejor dicho la teoría del todo) definiría la unión de
 
 <pre>
 Sabiendo todo esto no es tan loco como podrías haberlo pensado antes de leer todo esto, ¿no? ¡¿Ves cómo todo está conectado?! 🤯
-<strong>Aquí debo hacer también una nota porque la física cuántica creo que rompe un poco con todo lo determinista, pero vamos... ¿quién sabe concerteza?</strong>
+<strong>Aquí debo hacer también una nota porque la física cuántica creo que rompe un poco con todo lo determinista, pero vamos... ��quién sabe concerteza?</strong>
 </pre>
 
 ## Preguntas, más filosofía, más sobre Dios, y un poco sobre la realidad

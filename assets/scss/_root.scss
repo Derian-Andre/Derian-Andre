@@ -9,6 +9,7 @@ html {
 		--acrylic-backdrop-bg:        #{rgba($theme-light, 0.65)};
 		--acrylic-backdrop:           blur(10px) saturate(2);
 		--body-bg:                    #{$theme-light};
+		--body-bg-chat:               #{darken($theme-light, 09%)};
 		--body-bg-muted:              #{darken($theme-light, 04%)};
 		--body-color-high:            #{darken($theme-light, 80%)};
 		--body-color-medium:          #{darken($theme-light, 70%)};
@@ -31,6 +32,7 @@ html {
 		--acrylic-backdrop-bg:        #{rgba($theme-dark, 0.65)};
 		--acrylic-backdrop:           blur(30px) saturate(1.35);
 		--body-bg:                    #{$theme-dark};
+		--body-bg-chat:               #{lighten($theme-dark, 08%)};
 		--body-bg-muted:              #{lighten($theme-dark, 03%)};
 		--body-color-high:            #{lighten($theme-dark, 80%)};
 		--body-color-medium:          #{lighten($theme-dark, 70%)};

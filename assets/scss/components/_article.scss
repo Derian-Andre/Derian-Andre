@@ -21,14 +21,7 @@ article.article-blog {
 		}
 	}
 	h1, h2, h3, h4, h5, h6 {
-		margin: 2.5rem 0 1.5rem;
-	}
-	p {
-		@include rs('font-size', 0.95rem, 1.5vw, 1rem);
-	}
-	p,
-	pre {
-		margin: 1rem 0;
+		@include rs('margin-top', 1rem, 1vw, 2rem);
 	}
 	figure {
 		width: 100%;
@@ -38,25 +31,12 @@ article.article-blog {
 			margin-right: auto;
 		}
 	}
-	blockquote,
-	pre {
-		@include rs('margin-top',    1.25rem, 2vw, 1.75rem, true);
-		@include rs('margin-bottom', 1.25rem, 2vw, 1.75rem, true);
-		@include rs('margin-left',  2rem, 2vw, 2rem, true);
-		@include rs('margin-right', 2rem, 2vw, 4rem, true);
-		ul {
-			color: var(--body-color-normal);
-		}
-	}
-	b, strong {
-		color: var(--body-color-medium);
-	}
 	p:first-child,
 	p.lead,
 	blockquote p,
 	pre {
 		line-height: 1.5;
 		transition: all 0.35s ease;
-		@include rs('font-size', 1.1rem, 1.5vw, 1.5rem, true);
+		@include rs('font-size', 0.95rem, 1.5vw, 1.5rem, true);
 	}
 }

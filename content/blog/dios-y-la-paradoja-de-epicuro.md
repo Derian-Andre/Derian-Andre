@@ -11,7 +11,7 @@ También conocida como el problema del mal, es un planteamiento bastante interes
 Si Dios es omnipresente (que está presente a la vez en todas partes), omnisciente (conocimiento de todas las cosas reales y posibles) y es omnibenevolente (estar siempre preocupado por el bien de los demás) entonces ¿por qué existe el mal? Entonces, si existe el mal (que "existe") Dios no existe o no tiene las una de estas tres cualidades (y hace falta la omnipotencia, pero lo veremos más adelante), por lo tanto, no es Dios.
 
 <pre>
-Digo que "existe" ya que como lo vimos en <blog-link to="dialectica-dualidad-yin-y-yang">Dialéctica, Dualidad, Yin y yang</blog-link> el mal es parte del bien y además esto podría argumentarse que son un concepto creado por le humano.
+Digo que "existe" ya que como lo vimos en <blog-link to="dialectica-dualidad-yin-y-yang">Dialéctica, Dualidad, Yin y yang</blog-link> el mal es parte del bien y además esto podría argumentarse que son un concepto creado por el humano.
 </pre>
 
 **Hay dos formas comunes de representar el problema:**

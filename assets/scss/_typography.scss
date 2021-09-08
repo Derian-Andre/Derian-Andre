@@ -11,14 +11,27 @@ h1, h2, h3, h4, h5, h6 {
 	@include rs('margin-bottom', 1rem, 1vw, 1.5rem);
 }
 
-p.lead {
-	color: var(--body-color-medium);
-	@include rs('font-size', 1.05rem, 1.5vw, 1.25rem, true);
+p {
+	@include rs('font-size',     0.875rem, 2vw, 1rem);
+	@include rs('margin-top',      1rem,   2vw, 1.75rem);
+	@include rs('margin-bottom',   1rem,   2vw, 1.75rem);
+	&.lead {
+		color: var(--body-color-medium);
+		@include rs('font-size', 1.05rem, 2vw, 1.25rem, true);
+	}
 }
+
 
 b,
 strong {
 	font-weight: 700 !important;
+	color: var(--body-color-medium);
+}
+
+small,
+figure figcaption,
+pre::before {
+	@include rs('font-size',     0.8rem, 1vw, 0.875rem);
 }
 
 ul ,ol {
@@ -34,9 +47,22 @@ ul {
 }
 
 blockquote,
+figure,
 pre {
-	@include media-breakpoint-up($expand) {
-		margin: 2rem 0;
+	@include rs('margin-top',    1rem, 2vw, 1.75rem, true);
+	@include rs('margin-bottom', 1rem, 2vw, 1.75rem, true);
+}
+
+blockquote,
+pre {
+	margin-left: 0;
+	margin-right: 0;
+	@include media-breakpoint-up(md) {
+		@include rs('margin-left',  1rem, 1vw, 2rem, true);
+		@include rs('margin-right', 1rem, 1vw, 4rem, true);
+	}
+	ul {
+		color: var(--body-color-normal);
 	}
 }
 
@@ -65,32 +91,35 @@ blockquote {
 }
 
 pre {
-	display: block;
-	margin: 1rem 0;
-	padding: 1.25rem;
+	position: relative;
+	padding: 1.25rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	color: var(--body-color-lower);
 	font-family: $font-family-serif;
 	font-weight: 500;
 	line-height: 1.25;
 	white-space: pre-wrap;
 	overflow: inherit;
-	border-top: 2px dotted var(--body-color-muted);
-	border-bottom: 2px dotted var(--body-color-muted);
-	&::before {
-		display: block;
-		content: "Derian dice:";
-		color: var(--body-color-low);
-		font-family: $font-family-headings;
-		font-weight: bold;
-		font-size: 0.85rem;
-		margin-bottom: 0.5rem;
+	border-top: 1px dotted var(--body-color-muted);
+	border-bottom: 1px dotted var(--body-color-muted);
+	@include media-breakpoint-up($expand) {
+		padding: 1.25rem;
 	}
-}
-
-small,
-figure {
-	figcaption {
-		font-size: 85%;
+	&::before {
+		padding: 0.25rem 0.85rem 0.25rem 0.65rem;
+		margin-bottom: 0.75rem;
+		content: "🧔🏻 Derian André te está hablando";
+		color: var(--body-color-normal);
+		background: var(--body-bg-chat);
+		font-family: $font-family-headings;
+		font-weight: 500;
+		border-radius: 0 0.5rem 0.5rem 0.75rem;
+		transition: all 0.35s ease;
+		@include media-breakpoint-up($expand) {
+			margin-left: -1.25rem;
+		}
 	}
 }
 
@@ -99,28 +128,32 @@ figure {
 	text-align: center;
 	max-width: 100%;
 	user-select: none;
-	margin: 1.5rem 0;
 	figcaption {
-		margin-top: 2rem !important;
 		margin-bottom: 0 !important;
-		padding: 0.65rem 0;
 		position: relative;
 		font-style: italic;
 		display: block;
 		text-align: center !important;
+		@include rs('padding-top', 0.35rem, 1vw, 0.65rem, true);
+		@include rs('padding-bottom', 0.35rem, 1vw, 0.65rem, true);
+		@include rs('margin-top', 1rem, 1.5vw, 2rem, true);
 		&::before {
 			position: absolute;
 			top: 0;
-			bottom: 0;
+			bottom: -0.25rem;
 			left: 50%;
-			width: 15%;
+			width: 45%;
 			display: block;
 			content: "";
 			border-top: 1px dotted var(--body-color-muted);
 			border-bottom: 1px dotted var(--body-color-muted);
 			transform: translateX(-50%);
-			z-index: -1;
-		}	
+			user-select: none;
+			pointer-events: none;
+			@include media-breakpoint-up($expand) {
+				width: 15%;
+			}
+		}
 	}
 }
 
