@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/derianandre
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://derianandre.com
+  * I am derianandre (https://keybase.io/derianandre) on keybase.
+  * I have a public key ASC79W6tFqP9VC-ItQpnArHcvNy18oM6axTrOwtIJGuzgQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d6c392c5514c2635a4d7d7ee9d68fe86a5e8f647ab1d7cf0df3f7cce2abf74d60a",
+      "host": "keybase.io",
+      "kid": "0120bbf56ead16a3fd542f88b50a6702b1dcbcdcb5f2833a6b14eb3b0b48246bb3810a",
+      "uid": "4be3851b441195ca9fa5434e496a7e19",
+      "username": "derianandre"
+    },
+    "merkle_root": {
+      "ctime": 1624480512,
+      "hash": "a7ee62fb2af16ea6b3f417caf69b624421c57cb39635f0bfaefc7e80c5c767a6c672f4777bdd8ddb24a71e966cfcd0a7f319561ba665cb0e67cd8f5946952702",
+      "hash_meta": "5970d1d17a59f8c89d91d26c6fdd62ffca5717f9d87d8f7039e8474af505ba1e",
+      "seqno": 20244889
+    },
+    "service": {
+      "entropy": "EEkmoOJDhPuPp/ILByeYOyYn",
+      "hostname": "derianandre.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.7.0"
+  },
+  "ctime": 1624480622,
+  "expire_in": 504576000,
+  "prev": "30ef5a6c66d5c17bd76eaa05c43c28957be40d246cdf22bbcd52bb79fc45a23e",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgu/VurRaj/VQviLUKZwKx3LzctfKDOmsU6zsLSCRrs4EKp3BheWxvYWTESpcCCMQgMO9abGbVwXvXbqoFxDwolXvkDSRs3yK7zVK7efxFoj7EIBRzh33yquiVnkfG1/m+WqJaIJy2JPN7kXlAEspTc4NAAgHCo3NpZ8RAPp0pHiv77kTGEcZTkjkuxTeULFzfDKjVzPJK7NYG1SoAJuE+q1xR35BY7haPcNVpNMt4LcWkmQKzP9zrZAcrDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPWhHl60HhHV21ypkb1k/5J5UsuwsBllslN/zh4mvzgXo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/derianandre
+
+==================================================================

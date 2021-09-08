@@ -152,7 +152,7 @@ La ecuación de Dios (o mejor dicho la teoría del todo) definiría la unión de
 
 <pre>
 Sabiendo todo esto no es tan loco como podrías haberlo pensado antes de leer todo esto, ¿no? ¡¿Ves cómo todo está conectado?! 🤯
-<strong>Aquí debo hacer también una nota porque la física cuántica creo que rompe un poco con todo lo determinista, pero vamos... ��quién sabe concerteza?</strong>
+<strong>Aquí debo hacer también una nota porque la física cuántica creo que rompe un poco con todo lo determinista, pero vamos... ¿quién sabe concerteza?</strong>
 </pre>
 
 ## Preguntas, más filosofía, más sobre Dios, y un poco sobre la realidad
