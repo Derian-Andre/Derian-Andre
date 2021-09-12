@@ -28,7 +28,7 @@ jobs:
         run: npm install
       - name: Build project
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
-        run: npm run generate && npm run start
+        run: npm run generate
         env:
           SITE_URL: ${{ steps.project.outputs.site-url }}
           CI: true

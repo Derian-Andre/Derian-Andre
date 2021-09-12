@@ -1,12 +1,12 @@
+// Generate Routes for Blog
 import fs from 'fs';
 const path = require('path')
-
-function getPaths(lang, type) {
+function generateRoutes(lang, type) {
 	let initial = lang
 	return fs.readdirSync(path.resolve(__dirname, 'content', `${type}`))
 		.filter(filename => path.extname(filename) === '.md')
 		.map(filename => `${initial}/${type}/${path.parse(filename).name}`)
- }
+}
 
 export default {
 	// Config
@@ -103,11 +103,11 @@ export default {
 	generate: {
 		fallback: true,
 		routes: [
-			'/es', '404'
-		 ]
-		 .concat(getPaths('es', 'blog'))
-		 .concat(getPaths('en', 'blog'))
-	 },
+			'/es', '/en', '404'
+		]
+		.concat(generateRoutes('es', 'blog'))
+		.concat(generateRoutes('en', 'blog'))
+	},
 
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
 	pwa: {
