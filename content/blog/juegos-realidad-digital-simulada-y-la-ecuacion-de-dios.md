@@ -23,7 +23,7 @@ Del latín automăta y este del griego αὐτόματος autómatos, “espont
 ### 1912. El ajedrecista, el precedente
 
 <blog-img src="ajedrecista.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/El_Ajedrecista#/media/Archivo:Ajedrecista_segundo2.JPG">El Ajedrecista – Wikipedia, la enciclopedia libre</a>
+	<blog-ext to="https://es.wikipedia.org/wiki/El_Ajedrecista#/media/Archivo:Ajedrecista_segundo2.JPG">El Ajedrecista – Wikipedia, la enciclopedia libre</blog-ext>
 </blog-img>
 
 Un autómata que era capaz de jugar ajedrez y se considera el primero en su clase, construido por Leonardo Torres Quevedo en 1912 haciendo debut en 1914 en la Feria de París donde por seguro impresionó a todo mundo.
@@ -31,7 +31,7 @@ Un autómata que era capaz de jugar ajedrez y se considera el primero en su clas
 ### 1958. Tennis for two
 
 <blog-img src="tennis-for-two.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/Tennis_for_Two#/media/Archivo:Tennis_For_Two_on_a_DuMont_Lab_Oscilloscope_Type_304-A.jpg">Tennis For Two on a DuMont Lab Oscilloscope Type 304-A – Tennis for Two – Wikipedia, la enciclopedia libre</a>
+	<blog-ext to="https://es.wikipedia.org/wiki/Tennis_for_Two#/media/Archivo:Tennis_For_Two_on_a_DuMont_Lab_Oscilloscope_Type_304-A.jpg">Tennis For Two on a DuMont Lab Oscilloscope Type 304-A – Tennis for Two – Wikipedia, la enciclopedia libre</blog-ext>
 </blog-img>
 
 William Higginbotham creó con un osciloscopio y haciendo cálculos de trayectoria un simulador de tenis de mesa. Este videojuego fue el primero en permitir el juego entre dos jugadores humanos.
@@ -39,7 +39,7 @@ William Higginbotham creó con un osciloscopio y haciendo cálculos de trayector
 ### 1972. Pong
 
 <blog-img src="pong.png">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/Pong#/media/Archivo:Pong.png">Screenshot of PONG from the Atari Arcade Hits #1 software title released Hasbro Interactive - a conversion of the original 1972 Atari Pong – Wikipedia, la enciclopedia libre</a>
+	<blog-ext to="https://es.wikipedia.org/wiki/Pong#/media/Archivo:Pong.png">Screenshot of PONG from the Atari Arcade Hits #1 software title released Hasbro Interactive - a conversion of the original 1972 Atari Pong – Wikipedia, la enciclopedia libre</blog-ext>
 </blog-img>
 
 Uno de los juegos de la primera generación, probablemente lo conozcas ya que fue un juego muy sencillo y popular. Su fecha de lanzamiento fue en 1972 en Estados Unidos. El juego de dos dimensiones simula un tenis de mesa.
@@ -47,7 +47,7 @@ Uno de los juegos de la primera generación, probablemente lo conozcas ya que fu
 ### 1974. Maze War
 
 <blog-img src="maze-war.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/Maze_War#/media/Archivo:Maze_war.jpg">Maze War – Wikipedia, la enciclopedia libre</a>
+	<blog-ext to="https://es.wikipedia.org/wiki/Maze_War#/media/Archivo:Maze_war.jpg">Maze War – Wikipedia, la enciclopedia libre</blog-ext>
 </blog-img>
 
 Uno de los primeros (o el primero) videojuegos en usar 3D fue Maze War que fue creado por Steve Colley en 1974, que consistía en caminar por un laberinto buscando jugadores para dispararles y obtener puntos.
@@ -55,7 +55,7 @@ Uno de los primeros (o el primero) videojuegos en usar 3D fue Maze War que fue c
 ### 1993\. Doom
 
 <blog-img src="freedoom.png">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://commons.wikimedia.org/wiki/File:Freedoom001_01.png">Doom – Wikimedia Commons</a>
+	<blog-ext to="https://commons.wikimedia.org/wiki/File:Freedoom001_01.png">Doom – Wikimedia Commons</blog-ext>
 </blog-img>
 
 Ha sido una franquicia muy famosa de videojuegos de First Person Shooters (FPS), considerado uno de los videojuegos pioneros en primera persona, que generó una revolución expandiéndose por comics hasta películas.
@@ -86,7 +86,7 @@ Bastante interesante, ¿no?, por eso retomo la idea que propuse en <blog-link to
 ## Era digital hiperrealista
 
 <blog-img src="metahumans-stephane.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://metahuman.unrealengine.com/">MetaHuman Creator (unrealengine.com)</a>
+	<blog-ext to="https://metahuman.unrealengine.com/">MetaHuman Creator (unrealengine.com)</blog-ext>
 </blog-img>
 
 Últimamente se han realizado muchos anuncios muy interesantes en el mundo de los juegos, las computadoras, básicamente todo lo digital. Cada vez hay más avances en muchos ámbitos sumamente interesantes como la inteligencia artificial, computadoras cuánticas, videojuegos hiperrealistas y un sinfín más de cosas. Recientemente se anunció la creación de Metahumans de Epic Games, este básicamente es un creador de avatares humanos hiperrealistas a la disposición de todos.
@@ -158,7 +158,7 @@ Sabiendo todo esto no es tan loco como podrías haberlo pensado antes de leer to
 ## Preguntas, más filosofía, más sobre Dios, y un poco sobre la realidad
 
 <blog-img src="pexels-3344325.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/es-es/foto/foto-de-silueta-de-persona-bajo-el-cielo-estrellado-3344325/">Foto De Silueta De Persona Bajo El Cielo Estrellado · Fotos de stock gratuitas (pexels.com)</a>
+	<blog-ext to="https://www.pexels.com/es-es/foto/foto-de-silueta-de-persona-bajo-el-cielo-estrellado-3344325/">Foto De Silueta De Persona Bajo El Cielo Estrellado · Fotos de stock gratuitas (pexels.com)</blog-ext>
 </blog-img>
 
 Aquí es donde entramos en la parte más interesante de todas, el cuestionarnos sobre qué somos, de donde vinimos, y bueno, un sinfín de preguntas.

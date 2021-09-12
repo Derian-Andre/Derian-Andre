@@ -4,10 +4,10 @@
 		<!-- Info -->
 		<PageInfo :title="blog.title" :date="blog.date"/>
 		<!-- Content -->
-		<PageContent class="blog-content">
+		<PageContent class="content-blog">
 			<!-- Article -->
 			<article class="article-blog container">
-				<NuxtContent class="article-blog-content" :document="blog"/>
+				<NuxtContent class="article article-blog-content" :document="blog"/>
 				<BlogBack/>
 			</article>
 		</PageContent>
@@ -47,7 +47,7 @@
 					},
 					{
 						property: 'article:tag',
-						content:  this.blog.tags ? this.blog.tags.toString() : '',
+						content:  this.blog.tags ? this.blog.tags.toString() : 'blog, filosofía, arte, ciencia, relfexión',
 					},
 				],
 				link: [
@@ -65,7 +65,8 @@
 					type:        'article',
 					title:       this.blog.title,
 					description: this.blog.description,
-					url:         `${this.$config.baseUrl}/blog/${this.$route.params.slug}`
+					hero:        `${this.$config.baseUrl}/_nuxt/assets/img/blog/${this.blog.slug}/${this.blog.hero}`,
+					url:         `${this.$config.baseUrl}/es/blog/${this.blog.slug}`
 				};
 				return metaSite(metadata);
 			},

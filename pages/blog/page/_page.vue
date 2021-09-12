@@ -3,7 +3,7 @@
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
-		<PageContent class="blog-list">
+		<PageContent class="content-blog-list">
 			<!-- Blog-list Title -->
 			<div class="h3 header" v-text="pageNumber == 1 ? $t('blog.recent') : ($t('blog.page') + pageNumber)" />
 			<!-- Post -->

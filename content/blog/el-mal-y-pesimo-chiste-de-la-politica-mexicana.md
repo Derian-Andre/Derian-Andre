@@ -3,7 +3,7 @@ title: El mal y pésimo chiste de la política mexicana
 date: 2021-04-06 12:00:00
 ---
 <blog-img src="pexels-7399410.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/white-skull-on-brown-clay-pot-7399410/">White Skull on Brown Clay Pot</a>
+	<blog-ext to="https://www.pexels.com/photo/white-skull-on-brown-clay-pot-7399410/">White Skull on Brown Clay Pot</blog-ext>
 </blog-img>
 
 No es posible resumir todo en una sola entrada, quizás haga más, pero por ahora quiero hablar de un tema en específico que son las redes sociales y la política.

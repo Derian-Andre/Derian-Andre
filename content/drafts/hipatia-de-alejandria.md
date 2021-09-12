@@ -1,8 +1,8 @@
 ---
 title: Hipatia de Alejandría
-date: 2021-09-08 08:00:00
+date: 2021-09-08 21:00:00
 draft: true
 ---
 <blog-img src="sanzio-hipatia.jpg">
-	Detalle identificado con Hipatia en <a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/La_escuela_de_Atenas">La escuela de Atenas</a> <a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/Rafael_Sanzio">Rafael Sanzio</a>. Wikipedia
+	Detalle identificado con Hipatia en <blog-ext to="https://es.wikipedia.org/wiki/La_escuela_de_Atenas">La escuela de Atenas</blog-ext> <blog-ext to="https://es.wikipedia.org/wiki/Rafael_Sanzio">Rafael Sanzio</blog-ext>. Wikipedia
 </blog-img>

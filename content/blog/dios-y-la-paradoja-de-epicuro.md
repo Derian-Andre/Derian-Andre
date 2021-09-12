@@ -46,7 +46,7 @@ Esta versión busca mostrar que la existencia del mal, aun si es lógicamente co
 
 ### De una forma más visual y bonita
 
-<blog-img src="paradoja-de-epicuro.svg" width="700px">
+<blog-img src="paradoja-de-epicuro.svg" max-width="700px">
 	Ilustración hecha artesanalmente por su servidor
 </blog-img>
 
@@ -76,7 +76,7 @@ Pero... esto también es absurdo porque entonces rompes con el concepto de "pode
 > 
 > <cite>[Summa Theologiae](https://es.wikipedia.org/wiki/Suma_teol%C3%B3gica) de [Tomás de Aquino](https://es.wikipedia.org/wiki/Tom%C3%A1s_de_Aquino) (c. 1225–1274)</cite>
 
-<blog-img src="tomas-aquino.jpg" width="300px">
+<blog-img src="tomas-aquino.jpg" max-width="300px">
 	<a rel="nofollow noopener noreferrer" target="_blank" href="https://es.wikipedia.org/wiki/Archivo:St-thomas-aquinas.jpg">Carlo Crivelli: Saint Thomas Aquinas</a>
 </blog-img>
 
@@ -105,7 +105,7 @@ En un mundo de incertidumbre, la paz se genera a través de lo predecible. Pero 
 
 ## Derian... ¿a qué quieres llegar?
 
-<blog-img src="the-thinker.jpg" width="700px">
+<blog-img src="the-thinker.jpg" max-width="700px">
 	<a rel="nofollow noopener noreferrer" target="_blank" href="https://www.maxpixel.net/Paris-The-Thinker-Rodin-Museum-Bronze-Sculpture-692959">Paris The Thinker Rodin Museum Bronze Sculpture</a>
 </blog-img>
 
@@ -121,7 +121,7 @@ Todo es tan simple o complicado como lo quieras ver, es cuestión de analizarlo 
 
 ## Ad finem
 
-<blog-img src="pexels-2156881.jpg" width="700px">
+<blog-img src="pexels-2156881.jpg" max-width="700px">
 	<a rel="nofollow noopener noreferrer" target="_blank" href="https://www.pexels.com/es-es/foto/pintura-abstracta-2156881/">Pintura Abstracta</a>
 </blog-img>
 

@@ -12,7 +12,7 @@
 		</PageContent>
 		<!-- Side -->
 		<PageSide>
-			<Imagen src="img/emoji.svg" />
+			<Figure src="emoji.svg" inline="true"/>
 		</PageSide>
 	</PageMain>
 </template>

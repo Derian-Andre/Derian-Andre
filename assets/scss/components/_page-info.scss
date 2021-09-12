@@ -19,13 +19,10 @@ section.page-info {
 		display: block;
 		position: relative;
 		font-weight: 900;
-		overflow: hidden;
-		line-height: 1.5;
 		@include rs('font-size', 1.5rem, 2.25vw, 6rem);
 		@include media-breakpoint-up($expand) {
 			order: 1;
 			transform: rotate(180deg);
-			line-height: 1.25;
 			margin-right: 0.5rem;
 			span {
 				padding-bottom: 1rem;
@@ -54,7 +51,7 @@ section.page-info {
 		opacity: 0.75;
 		@include rs('font-size', 1.25rem, 2vw, 2rem);
 		@include media-breakpoint-up($expand) {
-			transform: rotate(-180deg);
+			transform: rotate(-180deg) translate(10%, 0);
 		}
 	}
 }

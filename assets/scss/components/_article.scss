@@ -1,10 +1,5 @@
 // Article
-article.article-blog {
-	overflow: hidden;
-	line-height: 1.75;
-	font-family: $font-family-serif;
-	padding: 0;
-	color: var(--body-color-normal);
+.article {
 	p:first-child {
 		color: var(--body-color-medium);
 	}
@@ -20,6 +15,14 @@ article.article-blog {
 			margin-bottom: 0 !important;
 		}
 	}
+}
+
+article.article-blog {
+	overflow: hidden;
+	line-height: 1.75;
+	font-family: $font-family-serif;
+	padding: 0;
+	color: var(--body-color-normal);
 	h1, h2, h3, h4, h5, h6 {
 		@include rs('margin-top', 1rem, 1vw, 2rem);
 	}

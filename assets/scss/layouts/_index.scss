@@ -1,13 +1,8 @@
-#__nuxt {
-	color: var(--body-color-normal);
-	background-color: var(--body-bg);
-	transition: background-color 0.35s ease;
-}
-
 .layout {
-	position:         relative;
-	display:          flex;
-	flex-wrap:        nowrap;
-	flex-direction:   column;
+	position:       relative;
+	display:        flex;
+	flex-wrap:      nowrap;
+	flex-direction: column;
+	min-height:     100vh;
 	// Removed `overflow` as it causes `position: sticky` to not work
 }

@@ -1,20 +1,23 @@
 ---
 title: El número de Dios, matemáticas y diseño
 date: 2021-03-30 12:00:00
+hero: pexels-161154.jpg
 ---
 <blog-img src="pexels-161154.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/worms-eye-view-of-spiral-stained-glass-decors-through-the-roof-161154/">Worms Eye View of Spiral Stained Glass Decors Through the Roof · Free Stock Photo (pexels.com)</a>
+	<blog-ext to="https://www.pexels.com/photo/worms-eye-view-of-spiral-stained-glass-decors-through-the-roof-161154/">Worms Eye View of Spiral Stained Glass Decors Through the Roof · Free Stock Photo (pexels.com)</blog-ext>
 </blog-img>
 
 > El número áureo también conocido como el número de Dios, se trata de un número algebraico irracional (**su representación decimal es infinita y no tiene periodo**) que posee **muchas propiedades interesantes** y que fue descubierto en la Antigüedad, no como una expresión aritmética, sino como** relación o proporción entre dos segmentos de una recta**.
 >
-> <cite><a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo">Wikipedia, la enciclopedia libre</a></cite>
+> <cite><blog-ext to="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo/">Número áureo - Wikipedia, la enciclopedia libre</blog-ext></cite>
 
 **El valor del número áureo aproximadamente es:**
 
-<blog-img src="numero-aureo.svg"></blog-img>
+<blog-img src="numero-aureo.svg" max-width="450px">
+	<blog-ext to="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo/">Número áureo - Wikipedia, la enciclopedia libre</blog-ext>
+</blog-img>
 
-Sí te interesa leer más información concreta acerca de este famoso número, lo puedes hacer en la vieja confiable: <a target="_blank" rel="noopener noreferrer nofollow" href="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo">Wikipedia, la enciclopedia libre</a>.
+Sí te interesa leer más información concreta acerca de este famoso número, lo puedes hacer en la vieja confiable: <blog-ext to="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo">Wikipedia, la enciclopedia libre</blog-ext>.
 
 Quizás para las personas que desconozcan sobre Diseño, les parecerá que es un arte sumamente subjetivo, cuando realmente existen diferentes reglas que **podemos** seguir, una de estas reglas implícitas es el diseño a través del número áureo, pues lo podemos utilizar para generar **estructuras orgánicas** a través de diferentes métodos.
 
@@ -25,7 +28,7 @@ Quizás para las personas que desconozcan sobre Diseño, les parecerá que es un
 Y bien, te preguntarás **¿Cómo se utiliza esta relación matemática en el diseño?**, te pongo unos ejemplos:
 
 <blog-img src="ejemplo-logos.jpg">
-	Imagen obtenida de <a target="_blank" rel="noopener noreferrer nofollow" href="http://ojharper.com/what-makes-a-logo-effective/">ojharper.com</a>
+	Imagen obtenida de <blog-ext to="http://ojharper.com/what-makes-a-logo-effective/">ojharper.com</blog-ext>
 </blog-img>
 
 Estos son algunas de las marcas que todos conocemos que tienen **fundamentos matemáticos para justificar la forma en la que están estructuradas sus formas geométricas**, pero el número áureo se puede aplicar en **cualquier campo del arte y más allá**, lo podemos encontrar en pinturas, fotografías, en la arquitectura, en la naturaleza y en muchos lados más.
@@ -37,9 +40,9 @@ El diseño es subjetivo en el sentido de que cada uno tiene una idea de cómo ju
 Para terminar te dejo imagenes de la naturaleza donde podemos apreciar esta relación:
 
 <blog-img src="ejemplo-naturaleza.jpg">
-	Imagen de <a target="_blank" rel="noopener noreferrer nofollow" href="https://static1.squarespace.com/static/526e93fde4b0825dbf634205/t/55376c19e4b04fa840f0d570/1429695527113/">Totem Learning</a>
+	Imagen de <blog-ext to="https://static1.squarespace.com/static/526e93fde4b0825dbf634205/t/55376c19e4b04fa840f0d570/1429695527113/">Totem Learning</blog-ext>
 </blog-img>
 
 <blog-img src="ejemplo-naturaleza-2.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.popicon.com/blogs/iconography/the-golden-spiral-design-found-in-art-and-nature">The Golden Spiral: Design found in art and nature – Popicon</a>
+	<blog-ext to="https://www.popicon.com/blogs/iconography/the-golden-spiral-design-found-in-art-and-nature/">The Golden Spiral: Design found in art and nature – Popicon</blog-ext>
 </blog-img>

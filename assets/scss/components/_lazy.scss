@@ -1,0 +1,24 @@
+.lazy {
+	opacity: 0;
+	transition: opacity 0.35s ease;
+	&.lazyloaded {
+		opacity: var(--img-opacity);
+	}
+	&:not(.lazyloaded):not(.ls-is-cached) {
+		opacity: 1;
+		background: radial-gradient(circle, transparent, var(--body-color-lower) 55%);
+		background-repeat: no-repeat;
+		background-origin: center center;
+		background-position: center;
+		animation: loading 1s ease-in-out infinite alternate;
+	}
+}
+
+@keyframes loading {
+	0% {
+		background-size: 150% 150%;
+	}
+	100% {
+		background-size: 800% 800%;
+	}
+}

@@ -1,6 +1,7 @@
 ---
 title: Análisis del "debate" Provida vs Proaborto
 date: 2021-04-19 12:00:00
+hero: pexels-3807770.jpg
 ---
 Están de moda los "debates" y por esto mismo hablé sobre eso en <blog-link to="debate-dialogo-opinion-y-falacias">Debate, Diálogo, Opinión y Falacias</blog-link>, es más que obvio que el contenido de los *"influencers"* no son debates (o por lo menos buenos), es **una moda que carece de forma, fondo, estructura y realmente es una falacia a lo que significa debatir**.
 
@@ -10,8 +11,8 @@ Están de moda los "debates" y por esto mismo hablé sobre eso en <blog-link to=
 
 ## Lo bueno
 
-<blog-img src="pexels-3807770.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/selective-focus-photo-of-woman-smiling-while-doing-thumbs-up-3807770/">Selective Focus Photo of Woman Smiling While Doing Thumbs Up</a>
+<blog-img src="pexels-3807770.jpg" alt="Selective Focus Photo of Woman Smiling While Doing Thumbs Up">
+	<blog-ext to="https://www.pexels.com/photo/selective-focus-photo-of-woman-smiling-while-doing-thumbs-up-3807770/">Selective Focus Photo of Woman Smiling While Doing Thumbs Up</blog-ext>
 </blog-img>
 
 - Utilizan (por fin) su poder social como "influencers" para divulgar y exponer temas de suma relevancia en la sociedad.
@@ -29,8 +30,8 @@ Bueno, evidentemente es dialéctica porque esto es parte del debate; desarrollar
 
 ## Lo malo
 
-<blog-img src="pexels-4629626.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/silhouette-of-persons-hand-4629626/">Silhouette of Persons Hand</a>
+<blog-img src="pexels-4629626.jpg" alt="Silhouette of Persons Hand">
+	<blog-ext to="https://www.pexels.com/photo/silhouette-of-persons-hand-4629626/">Silhouette of Persons Hand</blog-ext>
 </blog-img>
 
 - El video tiene recortes de edición lo cual *puede* llegar a distorsionar la línea del "debate".
@@ -68,11 +69,11 @@ Hablan sobre historia y la utilizan como argumento y reducen la participación d
 
 ## Conclusión
 
-<blog-img src="pexels-3062524.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/close-up-photo-of-abstract-painting-3062524/">Close-Up Photo of Abstract Painting</a>
+<blog-img src="pexels-3062524.jpg" alt="Close-Up Photo of Abstract Painting">
+	<blog-ext to="https://www.pexels.com/photo/close-up-photo-of-abstract-painting-3062524/">Close-Up Photo of Abstract Painting</blog-ext>
 </blog-img>
 
-#### Sobre una pequeña parte del tema del aborto
+### Sobre una pequeña parte del tema del aborto
 
 Me adentré a este tema porque es un buen ejemplo para la entrada, pero es un tema sumamente complejo y profundo pues primero hay que definir conceptos extremadamente complejos como que es una vida y cuando se define un ser humano, un bebé, un niño, etc. **No podemos profundizar si no existe una base sólida.** Es un debate para días que se deben de tomar en cuenta muchas variables y factores, no se puede generalizar llanamente y alargaría mucho la entrada. **En este caso no puede haber una postura binaria pues aquí los matices importan ya que hablamos de personas, vidas y repercusiones sociales.**
 
@@ -104,10 +105,8 @@ Vuelvo a lo mismo sobre la dualidad de las cosas, en este caso, la posibilidad *
 
 ---
 
-### Recomendación final
+## Recomendación final
 
 Mira este video que también realiza un **análisis sobre el debate desde una perspectiva médica**, objetivo y una postura pulcra sin ideologías, hechos y con fundamentos sólidos científicos que avalan lo que el experto dice (algo que en el "debate" no hay).
 
-<blog-embed src="https://www.youtube.com/embed/NkeTeJZH71A" title="MÉDICO REACCIONA A KIKA NIETO: PROVIDA VS PROABORTO | DEBATE
-"></blog-embed>
-
+<blog-embed src="https://www.youtube.com/embed/NkeTeJZH71A" title="MÉDICO REACCIONA A KIKA NIETO: PROVIDA VS PROABORTO | DEBATE"></blog-embed>

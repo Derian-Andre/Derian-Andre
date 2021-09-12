@@ -3,12 +3,12 @@ title: México y religión
 date: 2021-03-29 12:00:00
 ---
 <blog-img src="pexels-977659.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/grayscale-photo-of-the-crucifix-977659/">Grayscale Photo Of The Crucifix</a>
+	<blog-ext to="https://www.pexels.com/photo/grayscale-photo-of-the-crucifix-977659/">Grayscale Photo Of The Crucifix</blog-ext>
 </blog-img>
 
 > El 25 de enero se dieron a conocer los resultados del Censo de Población y Vivienda 2020. Las primeras cifras que llamaron más la atención en materia de religión fueron las comparaciones entre 2010 y 2020: un **menor porcentaje** de fieles de la iglesia católica (de 82.7 a 77.7 %), un **mayor porcentaje** de fieles de las iglesias protestantes y evangélicas (de 7.5 a 11.2 %) y, sobre todo, un **mayor porcentaje de personas sin religión** (de 4.7 a 8.1 %, con un 2.5 adicional de personas sin adscripción religiosa).
 > 
-> <cite><a target="_blank" rel="noopener noreferrer nofollow" href="https://datos.nexos.com.mx/que-nos-dice-el-censo-2020-sobre-religion-en-mexico/">¿Qué nos dice el Censo 2020 sobre religión en México? | Taller de datos (nexos.com.mx)</a></cite>
+> <cite><blog-ext to="https://datos.nexos.com.mx/que-nos-dice-el-censo-2020-sobre-religion-en-mexico/">¿Qué nos dice el Censo 2020 sobre religión en México? | Taller de datos (nexos.com.mx)</blog-ext></cite>
 
 Probablemente alrededor del 90% de las personas en México nacieron bajo una cuna religiosa, como podemos ver en los datos, alrededor de un 80% de estas personas serán católicos, 11% protestantes y evangélicas y el resto sin religión.
 
@@ -22,9 +22,9 @@ Afortunadamente, en mi caso, mi madre es católica y mi padre es ateo, crecí co
 
 Es innegable la duda y la rebeldía que pasan todos los humanos, es estresante, da mucho miedo y es doloroso quitarse esa semilla con la que nacemos y que va creciendo mientras crecemos, es muy difícil deshacerte desde las raíces ese pensamiento y ese es el problema. **No cualquiera puede desprenderse de ideas tan antiguas, que van pasando de generación en generación.**
 
-<Imagen src="img/blog/mexico-y-religion/pexels-1024900.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/close-up-photograph-of-person-praying-in-front-lined-candles-1024900/">Close Up Photograph of Person Praying in Front Lined Candles</a>
-</Imagen>
+<blog-img src="pexels-1024900.jpg">
+	<blog-ext to="https://www.pexels.com/photo/close-up-photograph-of-person-praying-in-front-lined-candles-1024900/">Close Up Photograph of Person Praying in Front Lined Candles</blog-ext>
+</blog-img>
 
 Las ideologías, los dogmas, doctrinas o cualquier cosmovisión son vehículos que conducimos en nuestras vidas, algunos cambian, algunos no, pero realmente es importante plantearnos el porque estamos manejando dicho carro, quizás haya uno mejor o quizás no, pero **¿Cómo puedes decir que no te gusta la nieve de menta si nunca la haz probado?** Lo mismo podemos aplicarlo en cualquier otra cosa… **intenta, busca, explora, prueba lo demás.**
 

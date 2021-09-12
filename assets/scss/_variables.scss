@@ -14,8 +14,8 @@ $gray:     hsl(220, 10%, 40%);
 
 // Color scheme
 $primary: hsl(000, 00%, 20%);
-$light:   hsl(220, 10%, 95%);
-$dark:    hsl(220, 10%, 05%);
+$light:   hsl(220, 20%, 90%);
+$dark:    hsl(220, 23%, 05%);
 
 
 // Theme
@@ -87,5 +87,7 @@ $btn-border-width:     2px;
 // Text
 $text-high:   var(--body-color-high);
 $text-medium: var(--body-color-medium);
-$text-color:  var(--body-color-normal);
+$text-normal: var(--body-color-normal);
+$text-low:    var(--body-color-low);
+$text-lower:  var(--body-color-lower);
 $text-muted:  var(--body-color-muted);

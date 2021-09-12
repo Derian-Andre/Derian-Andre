@@ -3,4 +3,7 @@
 	@include media-breakpoint-up($expand) {
 		margin: 2rem;
 	}
+	.lazy {
+		transition: opacity 0.35s ease;
+	}
 }

@@ -13,8 +13,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	@include rs('font-size',     0.875rem, 2vw, 1rem);
-	@include rs('margin-top',      1rem,   2vw, 1.75rem);
-	@include rs('margin-bottom',   1rem,   2vw, 1.75rem);
+	@include rs('margin-top',      0.5rem, 1vw, 1rem);
+	@include rs('margin-bottom',   0.5rem, 1vw, 1rem);
 	&.lead {
 		color: var(--body-color-medium);
 		@include rs('font-size', 1.05rem, 2vw, 1.25rem, true);
@@ -110,7 +110,7 @@ pre {
 	&::before {
 		padding: 0.25rem 0.85rem 0.25rem 0.65rem;
 		margin-bottom: 0.75rem;
-		content: "🧔🏻 Derian André te está hablando";
+		content: "🧔🏻 Derian te está hablando";
 		color: var(--body-color-normal);
 		background: var(--body-bg-chat);
 		font-family: $font-family-headings;

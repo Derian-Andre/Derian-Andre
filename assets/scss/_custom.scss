@@ -27,20 +27,12 @@ hr {
 	opacity: 1;
 }
 
-.nuxt-content-editor {
-	background: transparent;
-	color: var(--body-color-normal);
-	border: 1px solid var(--hr-bg) !important;
-	border-radius: 0;
-	outline: 0;
-	font-size: 0.95rem;
-	padding: 1rem !important;
-	height: 95vh !important;
+code {
+	border-radius: 0.25rem;
+	padding: 0.15rem 0.3rem;
+	background-color: var(--body-bg-chat);
 }
 
-.lazy {
-	opacity: 0;
-	&.lazyloaded {
-		opacity: var(--img-opacity);
-	}
+em {
+	font-family: $font-family-serif;
 }

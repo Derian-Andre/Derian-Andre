@@ -1,0 +1,18 @@
+section.content-projects {
+	max-width: 100% !important;
+	.gallery {
+		grid-gap: 2rem;
+		grid-auto-rows: auto;
+		@media (min-width: 1950px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	.card {
+		background: var(--body-bg-muted);
+		overflow: hidden;
+		.lazy {
+			height: 100%;
+			max-height: 350px;
+		}
+	}
+}

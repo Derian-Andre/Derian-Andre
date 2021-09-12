@@ -39,10 +39,10 @@
 					}
 				},
 				menu: [
-					{ slug: 'home', to: '/' },
+					{ slug: 'home', to: '/home/' },
 					{ slug: 'blog', to: '/blog/' },
+					{ slug: 'about', to: '/about/' },
 					{ slug: 'services', to: '/services/' },
-					{ slug: 'curriculum', to: '/curriculum/' },
 				]
 			}
 		},
@@ -64,7 +64,8 @@
 				root.style.setProperty('--info-width',   `${pageInfoWidth}px`);
 			},
 			changeLanguage() {
-				this.$i18n.locale = this.$i18n.locale === 'es' ? 'en' : 'es';
+				let locale = this.$i18n.locale === 'es' ? 'en' : 'es';
+				this.$router.replace(this.switchLocalePath(locale));
 			},
 			changeTheme() {
 				this.$colorMode.preference = this.$colorMode.value === 'dark' ? 'light' : 'dark';

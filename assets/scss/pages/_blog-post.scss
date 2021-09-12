@@ -22,7 +22,7 @@ main.blog-post {
 		transition: all 0.35s ease;
 		@include rs('font-size', 7rem, 11vw, 12.5rem);
 	}
-	section.blog-content {
+	section.content-blog {
 		max-width: 100%;
 		justify-content: flex-start;
 		align-items: center;

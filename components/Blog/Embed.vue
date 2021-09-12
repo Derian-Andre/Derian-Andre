@@ -1,9 +1,5 @@
 <template>
-	<div class="embed">
-		<div class="ratio ratio-16x9">
-			<iframe class="lazy lazyload" :data-src="src" :title="title" allowfullscreen></iframe>
-		</div>
-	</div>
+	<LazyEmbed :src="src" :title="title"/>
 </template>
 
 <script>

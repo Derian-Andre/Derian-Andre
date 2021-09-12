@@ -86,6 +86,7 @@ header.header {
 			background: white;
 			opacity: 0;
 		}
+		&.nuxt-link-active,
 		&:hover {
 			&::after {
 				width: 100%;

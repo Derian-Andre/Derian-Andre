@@ -15,6 +15,9 @@ section.content-curriculum {
 	h5 {
 		@include rs('font-size', 1rem, 1vw, 1.25rem);
 	}
+	p {
+		margin-top: 0;
+	}
 	figure {
 		margin: 2.5rem 0 1.5rem !important;
 		display: block;

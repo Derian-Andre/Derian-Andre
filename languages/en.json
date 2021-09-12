@@ -2,6 +2,7 @@
 	"header": {
 		"home": "Home",
 		"blog": "Blog",
+		"about": "Ego",
 		"services": "Services",
 		"curriculum": "CV",
 		"dark": "Dark",
@@ -11,6 +12,7 @@
 		"instagram": "My Instagram profile",
 		"linkedin": "My Linkedin profile",
 		"github": "My Github profile",
+		"github_repo": "This Github Repo",
 		"mail": "Send me an e-mail!",
 		"whatsapp": "Send me a Whatsapp message!",
 		"whatsapp_api": "Hello, I am contacting myself from your portfolio!"
@@ -25,6 +27,29 @@
 		"recent": "Recent posts",
 		"page": "Page ",
 		"go_back": "Go back to blog"
+	},
+	"about": {
+		"title": "Who am I?",
+		"subtitle": "Ego",
+		"lead": "While this is a <strong><em>philosophically extremely complex question</em></strong>, I will try to summarize what others can perceive (quickly) from me",
+		"where": "I was born in a small city called <em>Los Mochis in Mexico</em>, there I studied until high school and I went to <em>Guadalajara</em> to study university at ITESO",
+		"summary": {
+			"title": "Summary",
+			"content": "I consider myself a simple person, there is nothing more interesting than learning and having new experiences, as this leads me to acquire new and different <a href=\"./blog/perspectivas\">perspectives</a>, which broaden and improve my worldview",
+			"list": {
+				"1": "Inveterate self-taught",
+				"2": "Lover of art, science and philosophy",
+				"3": "Nanotechnology Engineer",
+				"4": "Mechatronic technician",
+				"5": "Fullstack Developer",
+				"6": "Designer",
+				"7": "Photographer"
+			}
+		},
+		"more": {
+			"title": "A little more about me",
+			"content": "If you are interested in knowing me a little more, I invite you to review my curriculum, my projects and you can also see the source code of this portfolio"
+		}
 	},
 	"services": {
 		"title": "Services",
@@ -160,71 +185,32 @@
 				"date": "2018 January - May",
 				"description": "Property qualification system according to the quality of your information, management of MySQL and MongoDB databases, management of server through SSH tunneling, Python programming"
 			}
-			},
-			"projects": {
-			"title": "Personal projects",
-			"orcatools": {
-				"image": "derianandre.svg",
-				"title": "ORCA Tools",
-				"subtitle": "An open-source web application",
-				"date": "2015",
-				"description": "Tool for the analysis of<code>.out</code>files of the ab initio quantum chemistry program package",
-				"url": "Use the tools for ORCA"
-			},
-			"minimalw": {
-				"image": "derianandre.svg",
-				"title": "Minimal W",
-				"subtitle": "A free skin for VLC",
-				"date": "2017",
-				"description": "Skin of the VLC media player program with a style inspired by the design of Windows 10 (in its first versions) giving it a native style of the operating system",
-				"url": "Download the skin for VLC Minimal W"
-			},
-			"phoenixvg": {
-				"image": "phoenixvg.png",
-				"title": "Phoenix.vg",
-				"subtitle": "An open-source multi-system emulator",
-				"date": "2017",
-				"description": "Phoenix is ​​an open-source, multi-system (video game) emulator designed to be powerful and easy to use. Developed with Qt 5 and Libretro. I contributed with all the design, both the identity, web and user interface",
-				"url": "Check out the Phoenix.vg offical page"
-			},
-			"picotorrent": {
-				"image": "picotorrent.svg",
-				"title": "PicoTorrent",
-				"subtitle": "An open-source torrent client",
-				"date": "2021",
-				"description": "Hackable, lightweight and open-source torrent client with a native style designed for Windows. I contribute in the visual part of the development: identity, web and interface design",
-				"url": "Visit the official PicoTorrent page"
 			}
-			}
+		}
+	},
+	"work": {
+		"title": "Jobs",
+		"subtitle": "The most recent work",
+		"go_home": "Look at another of my works!",
+		"not_working": {
+			"title": "Rest in peace",
+			"description": "Currently the company or the project <strong> is no longer operational or in function </strong>, unfortunately ... 😢"
 		}
 	},
 	"projects": {
-		"title": "Projects",
-		"subtitle": "Here are some of my projects",
-		"go_home":"Check out other project!",
+		"title": "Personal Projects",
+		"subtitle": "The most recent projects",
+		"go_home": "Check out another of my projects!",
+		"learn_more": "Learn more about this project",
 		"not_working": {
 			"title": "Rest in peace",
-			"description": "Currently the company or the project is <strong>no longer in operation or is inactive</strong>, unfortunately ... 😢"
+			"description": "Currently the project <strong> is no longer being maintained </strong>, unfortunately ... 😢"
 		},
-		"construction": {
-			"title": "Page under construcción 😅",
-			"description": " I have not finished writing this page yet, try it a few days later 🤙🏻"
-		}
-	},
-	"minimal-w": {
-		"title": "Minimal W",
-		"subtitle": "Windows 10-style VLC",
-		"version": "Version",
-		"description": "Skin of the VLC multimedia player program with a style inspired by the design of Windows 10 (in its first versions) giving it a native style of the operating system",
-		"download": {
-			"title": "Download",
-			"description": "This skin is completely free and always will be, enjoy it",
-			"url": "Download Minimal W (latest version)"
-		},
-		"donate": {
-			"title": "Donate",
-			"description": "If you liked this project, you can help with a donation, motivation is always welcome",
-			"url": "Make a donation through Paypal"
+		"sponsor": {
+			"title": "Did you like this project?",
+			"description": "If so, you can help with a donation or by being a github sponsor, motivation is always welcome!",
+			"github": "Be a Github sponsor",
+			"paypal": "Make a donation with Paypal"
 		}
 	},
 	"error": {
@@ -233,6 +219,13 @@
 		"content": "<p class=\"lead\">Maybe I deleted it or who knows ... I forget everything or maybe not ...</p><p>Anyway, if this page was not found ,<strong>why does this page exist?</strong></p><p><strong>How can I be a page not found?</strong>, if you just found me ...</ p ><p>So ..<strong>Am I or am I not?</strong></p><p><strong>What is being?</strong></p><p><strong>Who are you?</strong>and ...<strong>what are you doing here?</strong></p><p><strong>Are you real?</strong></p>",
 		"go_home": "Go back to the beginning of creation!"
 	},
+	"page": {
+		"go_home": "Go back to home",
+		"construction": {
+			"title": "Page under construcción 😅",
+			"description": "I have not finished writing this page yet, try it a few days later 🤙🏻"
+		}
+	},
 	"pagination": {
 		"label": "Blog pagination",
 		"page": "Page ",
@@ -240,8 +233,5 @@
 		"next": "Next",
 		"previous": "Previous",
 		"last": "Latest"
-	},
-	"page": {
-
 	}
 }

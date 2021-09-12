@@ -61,5 +61,5 @@ Fragmento de la película I Origins (2014)
 ## Bonus
 
 <pre>
-<strong>Te recomiendo ver la película <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.imdb.com/title/tt2884206/"><i>I Origins</i></a></strong>, una de mis películas favoritas que se puede ver desde una perspectiva filosófica sobre lo que he estado hablando en el blog sobre diversos temas como la dialéctica, religión, ideología, felicidad.
+<strong>Te recomiendo ver la película <blog-ext to="https://www.imdb.com/title/tt2884206/"><i>I Origins</i></blog-ext></strong>, una de mis películas favoritas que se puede ver desde una perspectiva filosófica sobre lo que he estado hablando en el blog sobre diversos temas como la dialéctica, religión, ideología, felicidad.
 </pre>

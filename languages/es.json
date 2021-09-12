@@ -2,6 +2,7 @@
 	"header": {
 		"home": "Inicio",
 		"blog": "Blog",
+		"about": "Ego",
 		"services": "Servicios",
 		"curriculum": "CV",
 		"dark": "Oscuro",
@@ -11,6 +12,7 @@
 		"instagram": "Mi perfil de Instagram",
 		"linkedin": "Mi perfil de Linkedin",
 		"github": "Mi perfil de Github",
+		"github_repo": "Repo en github",
 		"mail": "¡Mándame un correo!",
 		"whatsapp": "¡Mándame un mensaje por Whatsapp!",
 		"whatsapp_api": "¡Hola, me contacto desde tu portafolio!"
@@ -25,6 +27,29 @@
 		"recent": "Más reciente",
 		"page": "Página ",
 		"go_back": "Volver al blog"
+	},
+	"about": {
+		"title": "¿Quién soy yo?",
+		"subtitle": "Ego",
+		"lead": "Si bien esa es una pregunta <strong><em>filosoficamente extremadamente compleja</em></strong>, trataré de resumir lo que los demás pueden percibir (de manera rápida) de mi",
+		"where": "Nací en una pequeña ciudad llamada <em>Los Mochis en México</em>, ahí estudié hasta la preparatoria y me fui a <em>Guadalajara</em> estudiar la universidad en el ITESO",
+		"summary": {
+			"title": "Resumen",
+			"content": "Me considero una persona sencilla, no hay nada más interesante que aprender y tener experiencias nuevas, pues esto me lleva a adquirir nuevas y diferentes <a href=\"./blog/perspectivas\">perspectivas</a>, que amplían y mejoran mi cosmovisión",
+			"list": {
+				"1": "Autodidacta empedernido",
+				"2": "Amante del arte, la ciencia y la filosofía",
+				"3": "Ingeniero en Nanotecnología",
+				"4": "Técnico mecatrónico",
+				"5": "Desarrollador Fullstack",
+				"6": "Diseñador",
+				"7": "Fotográfo"
+			}
+		},
+		"more": {
+			"title": "Un poco más sobre mi",
+			"content": "Si te interesa conocerme un poco más, te invito a que revises mi curriculum, mis proyectos y también puedes ver el código fuente de este portafolio"
+		}
 	},
 	"services": {
 		"title": "Servicios",
@@ -105,126 +130,87 @@
 		"experience": {
 			"title": "Experiencia",
 			"jobs": {
-			"xolvex": {
-				"title": "Xolvex",
-				"position": "Desarrollador Front-end líder",
-				"date": "2019 Enero - Actual",
-				"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web (principalmente front-end)"
-			},
-			"inbright": {
-				"title": "Inbright",
-				"position": "Desarrollador Front-end líder",
-				"date": "2018 Noviembre − 2019 Enero",
-				"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos"
-			},
-			"uxlon": {
-				"title": "Uxlon",
-				"position": "Desarrollador Front-end líder",
-				"date": "2018 Noviembre − 2019 Enero",
-				"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain"
-			},
-			"derianandre": {
-				"heading": "Experiencia como Independiente",
-				"title": "Independiente",
-				"position": "Diseño, Desarrollo & Fotografía",
-				"date": "2015 Agosto − Actual",
-				"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos"
-			}
+				"xolvex": {
+					"title": "Xolvex",
+					"position": "Desarrollador Front-end líder",
+					"date": "2019 Enero - Actual",
+					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web (principalmente front-end)"
+				},
+				"inbright": {
+					"title": "Inbright",
+					"position": "Desarrollador Front-end líder",
+					"date": "2018 Noviembre − 2019 Enero",
+					"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos"
+				},
+				"uxlon": {
+					"title": "Uxlon",
+					"position": "Desarrollador Front-end líder",
+					"date": "2018 Noviembre − 2019 Enero",
+					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain"
+				},
+				"derianandre": {
+					"heading": "Experiencia como Independiente",
+					"title": "Independiente",
+					"position": "Diseño, Desarrollo & Fotografía",
+					"date": "2015 Agosto − Actual",
+					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos"
+				}
 			},
 			"education": {
-			"title": "Educación",
-			"iteso": {
-				"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
-				"subtitle": "Ingeniería en nanotecnología",
-				"date": "2013 − 2018",
-				"description": "Manejo del laboratorio de nanotecnología: equipos SEM, XPS, AFM y Sputtering. Simulación de sistemas moleculares y partículas con Python y ORCA. Síntesis y caracterización de nanomateriales: nanotubos de carbono, nanopartículas de plata y cobre, etc. Programación: Python, PHP, C, CSS, HTML, Bases de datos (MySQL)"
-			},
-			"cbtis": {
-				"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
-				"subtitle": "Técnico mecatrónico",
-				"date": "2010 − 2013",
-				"description": "Programación de PLC. Diseño CAD (AutoCAD) y 3D (SolidWorks) para diseño de mecanismos y piezas. Diseño e impresión de circuitos en PCB. Manejo de equipos como el torno y la fresadora"
-			}
+				"title": "Educación",
+				"iteso": {
+					"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
+					"subtitle": "Ingeniería en nanotecnología",
+					"date": "2013 − 2018",
+					"description": "Manejo del laboratorio de nanotecnología: equipos SEM, XPS, AFM y Sputtering. Simulación de sistemas moleculares y partículas con Python y ORCA. Síntesis y caracterización de nanomateriales: nanotubos de carbono, nanopartículas de plata y cobre, etc. Programación: Python, PHP, C, CSS, HTML, Bases de datos (MySQL)"
+				},
+				"cbtis": {
+					"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
+					"subtitle": "Técnico mecatrónico",
+					"date": "2010 − 2013",
+					"description": "Programación de PLC. Diseño CAD (AutoCAD) y 3D (SolidWorks) para diseño de mecanismos y piezas. Diseño e impresión de circuitos en PCB. Manejo de equipos como el torno y la fresadora"
+				}
 			},
 			"practices": {
-			"title": "Professional Practices",
-			"cinvestav": {
-				"title": "UDG - CINVESTAV",
-				"subtitle": "Simulaciones de sistemas moleculares organometálicos y desarrollo deaplicación web para análisis y manejo de datos",
-				"date": "2018 Agosto − Diciembre",
-				"description": "Simulaciones de diferentes sistemas moleculares organometálicos de C<sub>n</sub>H<sub>n</sub> (n = 4 – 6) con Sc, Ti y V para absorción de hidrógeno molecular y el efecto de ligantes (H, OH, NH<sub>2</sub>, CH<sub>3</sub> y F) con el software ORCA ab initio. Desarollo de aplicación web para el análisis de los archivos “.out” obtenido de las simulaciones: comparación de geometrías iniciales y ﬁnales en diferentes sistemas, gráﬁca de energías orbitales, comparación de datos entre diferentes simulaciones, detección de optimización, visualización del modelo 3D, generador de tablas comparativasentre simulaciones del mismo tipo, entre otras funciones"
-			},
-			"casasyterrenos": {
-				"title": "Casa y Terrenos",
-				"subtitle": "Programa de modelación matemática para el desarrollo de planes y proyectos de negocio utilizando machine learning",
-				"date": "2018 Enero − Mayo",
-				"description": "Sistema de caliﬁcación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por tunelaje SSH, programación en Python"
-			}
-			},
-			"projects": {
-			"title": "Personal projects",
-			"minimalw": {
-				"image": "derianandre.svg",
-				"title": "Minimal W",
-				"subtitle": "Una skin gratuita para VLC",
-				"date": "2014",
-				"description": "Skin del programa para reproductor multimedia VLC con un estilo inspirado en el diseño de Windows 10 (en sus primeras versiones) dándole un estilo nativo del sistema operativo",
-				"url": "Descarga el skin para VLC Minimal W"
-			},
-			"orcatools": {
-				"image": "derianandre.svg",
-				"title": "ORCA Tools",
-				"subtitle": "Una aplicación web de código abierto",
-				"date": "2015",
-				"description": "Herramienta para el análisis de archivos <code> .out </code> del paquete del programa de química cuántica ab initio",
-				"url": "Utilice las herramientas para ORCA"
-			},
-			"phoenixvg": {
-				"image": "phoenixvg.png",
-				"title": "Phoenix.vg",
-				"subtitle": "Un emulador multisistema de código abierto",
-				"date": "2017",
-				"description": "Phoenix es un emulador de código abierto, multi-sistema (videojuego) diseñado para ser poderoso y fácil de usar. Desarrollado con Qt 5 y Libretro. Contribuí con todo el diseño, tanto la identidad, la web e interfaz de usuario ",
-				"url": "Consulte la página oficial de Phoenix.vg"
-			},
-			"picotorrent": {
-				"image": "picotorrent.svg",
-				"title": "PicoTorrent",
-				"subtitle": "Un cliente de torrents de código abierto",
-				"date": "2020",
-				"description": "Cliente torrent hackable, liviano y de código abierto con un estilo nativo diseñado para Windows. Contribuyo en la parte visual del desarrollo: diseño de identidad, web e interfaz",
-				"url": "Visite la página oficial de PicoTorrent"
-			}
+				"title": "Professional Practices",
+				"cinvestav": {
+					"title": "UDG - CINVESTAV",
+					"subtitle": "Simulaciones de sistemas moleculares organometálicos y desarrollo deaplicación web para análisis y manejo de datos",
+					"date": "2018 Agosto − Diciembre",
+					"description": "Simulaciones de diferentes sistemas moleculares organometálicos de C<sub>n</sub>H<sub>n</sub> (n = 4 – 6) con Sc, Ti y V para absorción de hidrógeno molecular y el efecto de ligantes (H, OH, NH<sub>2</sub>, CH<sub>3</sub> y F) con el software ORCA ab initio. Desarollo de aplicación web para el análisis de los archivos “.out” obtenido de las simulaciones: comparación de geometrías iniciales y ﬁnales en diferentes sistemas, gráﬁca de energías orbitales, comparación de datos entre diferentes simulaciones, detección de optimización, visualización del modelo 3D, generador de tablas comparativasentre simulaciones del mismo tipo, entre otras funciones"
+				},
+				"casasyterrenos": {
+					"title": "Casa y Terrenos",
+					"subtitle": "Programa de modelación matemática para el desarrollo de planes y proyectos de negocio utilizando machine learning",
+					"date": "2018 Enero − Mayo",
+					"description": "Sistema de caliﬁcación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por tunelaje SSH, programación en Python"
+				}
 			}
 		}
 	},
-	"projects": {
-		"title": "Proyectos",
+	"work": {
+		"title": "Trabajos",
 		"subtitle": "Lo más reciente",
-		"go_home": "¡Mira otro proyecto!",
+		"go_home": "¡Mira otro de mis trabajos!",
 		"not_working": {
 			"title": "Descanse en paz",
 			"description": "Actualmente la empresa o el proyecto <strong>ya no está operativa o en función</strong>, lamentablemente ... 😢"
-		},
-		"construction": {
-			"title": "Página en construcción 😅",
-			"description": "Todavía no he terminado de redactar está página, intentalo unos días después 🤙🏻"
 		}
 	},
-	"minimal-w": {
-		"title": "Minimal W",
-		"version": "Versión",
-		"subtitle": "VLC al estilo de Windows 10",
-		"description": "Skin del programa para reproductor multimedia VLC con un estilo inspirado en el diseño de Windows 10 (en sus primeras versiones) dándole un estilo nativo del sistema operativo",
-		"download": {
-			"title": "Descargar",
-			"description": "Esta skin es completamente gratuita y siempre lo será, disfrútala",
-			"url": "Descargar Minimal W (última versión)"
+	"projects": {
+		"title": "Proyectos personales",
+		"subtitle": "Lo más reciente",
+		"go_home": "¡Mira otro de mis proyectos!",
+		"learn_more": "Conoce más sobre el proyecto",
+		"not_working": {
+			"title": "Descanse en paz",
+			"description": "Actualmente el proyecto <strong>ya no está siendo mantenido</strong>, lamentablemente ... 😢"
 		},
-		"donate": {
-			"title": "Donar",
-			"description": "Si te gustó este proyecto, puedes ayudar con una donación, la motivación siempre es bienvenida",
-			"url": "Hacer una donación por Paypal"
+		"sponsor": {
+			"title": "¿Te gustó este proyecto?",
+			"description": "Si es así, puedes ayudar con una donación o siendo un patrocinador de github, ¡la motivación siempre es bienvenida!",
+			"github": "Sé un sponsor de Github",
+			"paypal": "Hacer una donación por Paypal"
 		}
 	},
 	"error": {
@@ -233,6 +219,13 @@
 		"content": "<p class=\"lead\">Quizás la borré o quién sabe... todo se me olvida o quizás no...</p><p>En fin, si esta página no se encontró, <strong>¿por qué existe esta página?</strong></p><p><strong>¿Como puedo ser una página no encontrada?</strong>, si me acabas de encontrar...</p><p>Entonces.. <strong>¿soy o no soy?</strong></p><p><strong>¿Qué es ser?</strong></p><p><strong>¿Quién eres tú?</strong> y... <strong>¿qué haces aquí?</strong></p><p><strong>¿Eres real?</strong></p>",
 		"go_home": "¡Regresa al inicio de la creación!"
 	},
+	"page": {
+		"go_home": "Regresa al inicio",
+		"construction": {
+			"title": "Página en construcción 😅",
+			"description": "Todavía no he terminado de redactar está página, intentalo unos días después 🤙🏻"
+		}
+	},
 	"pagination": {
 		"label": "Paginación del blog",
 		"page": "Página ",
@@ -240,8 +233,5 @@
 		"next": "Siguiente",
 		"previous": "Anterior",
 		"last": "Últimos"
-	},
-	"page": {
-
 	}
 }

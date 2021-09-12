@@ -1,14 +1,28 @@
 <template>
-	<Imagen :src="`img/blog/${slug}/${src}`" :alt="alt" :width="width" :height="height">
+	<Figure :src="`blog/${slug}/${src}`" :inline="inline" :alt="imgAlt" :max-width="maxWidth" :max-height="maxHeight">
 		<slot />
-	</Imagen>
+	</Figure>
 </template>
 <script>
 	export default {
 		name: 'blog-img',
-		props: ['src', 'alt', 'width', 'height'],
-		created() {
-			this.slug = this.$route.params.slug;
+		props: {
+			src: String,
+			alt: String,
+			inline: {
+				type: Boolean,
+				default: true
+			},
+			maxWidth: String,
+			maxHeight: String,
 		},
+		computed: {
+			slug() {
+				return this.$route.params.slug;
+			},
+			imgAlt() {
+				return this.alt || this.slug;
+			}
+		}
 	}
 </script>

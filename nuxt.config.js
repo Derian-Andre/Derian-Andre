@@ -64,32 +64,41 @@ export default {
 		// https://go.nuxtjs.dev/content
 		'@nuxt/content',
 		// https://go.nuxtjs.dev/i18n
-		'nuxt-i18n'
+		'nuxt-i18n',
+		// https://image.nuxtjs.org/getting-started/installation
+		'@nuxt/image',
+		// https://github.com/moritzsternemann/vue-plausible - https://plausible.io
+		'vue-plausible'
 	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
 		extend (config, { isDev, isClient, loaders: { vue } }) {
-		if (isClient) {
-			vue.transformAssetUrls.img = ['data-src', 'src']
-			vue.transformAssetUrls.source = ['data-srcset', 'srcset']
-		}
-		},
-		loaders: {
-		vue: {
-			compilerOptions: {
-				whitespace:         'condense',
-				preserveWhitespace: false
+			if (isClient) {
+				vue.transformAssetUrls.img = ['data-src', 'src']
+				vue.transformAssetUrls.source = ['data-srcset', 'srcset']
 			}
 		},
-		sass: {
-			implementation: require('sass')
-		},
-		scss: {
-			implementation: require('sass')
-		}
+		loaders: {
+			vue: {
+				compilerOptions: {
+					whitespace:         'condense',
+					preserveWhitespace: false
+				}
+			},
+			sass: {
+				implementation: require('sass')
+			},
+			scss: {
+				implementation: require('sass')
+			}
 		}
 	},
+
+	// Nuxt.js Generate configuration
+	generate: {
+		fallback: true
+	 },
 
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
 	pwa: {
@@ -100,7 +109,7 @@ export default {
 		manifest: {
 			name: 'Derian André',
 			short_name: 'Derian André',
-			description: 'Freelancer: Diseño, Desarrollo y Fotografía',
+			description: 'Freelancer Fullstack Designer',
 			lang: 'es',
 			background_color: '#333333',
 			theme_color: '#333333'
@@ -160,4 +169,8 @@ export default {
 			}
 		}
 	},
+
+	plausible: {
+		domain: 'derianandre.com'
+	}
 }

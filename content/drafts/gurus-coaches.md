@@ -1,6 +1,6 @@
 ---
 title: Gurús, coaches, influencers y demás
-date: 2021-09-08 08:00:00
+date: 2021-09-08 21:00:00
 draft: true
 ---
 Siempre han existido esas personas que **creen ser capaces de saber qué es lo que quieres y cómo lograrlo**, aquellos que de denominan expertos en materia, aquellos cuyo narcisismo y excentricismo es tan evidente que su complejo de mesías va más allá de la norma.

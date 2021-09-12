@@ -1,8 +1,9 @@
 ---
 title: Dialéctica, Dualidad, Yin & Yang
 date: 2021-04-07 12:00:00
+hero: pexels-6369352.jpg
 ---
-<blog-img src="yin-yang.svg" width="375px">
+<blog-img src="yin-yang.svg" max-width="375px">
 	El taijitu, la forma más conocida de representar el concepto del yin y el yang.
 </blog-img>
 
@@ -17,7 +18,7 @@ Y te preguntarás quizás porque empiezo con el yin-yang, pues bien prosigamos c
 ## ¿Dualidad?
 
 <blog-img src="pexels-6369352.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/photo/half-of-moon-shining-on-dark-sky-6369352/">Half of moon shining on dark sky</a>
+	<blog-ext to="https://www.pexels.com/photo/half-of-moon-shining-on-dark-sky-6369352/">Half of moon shining on dark sky</blog-ext>
 </blog-img>
 
 Podemos argumentar que el "bien" (陽) no puede existir sin el "mal" (陰), que en el bien también puede haber mal y en el mal también puede haber bien, lo que es bueno puede hacerse malo y lo que es malo puede hacerse bueno.
@@ -34,7 +35,7 @@ Dado este ejemplo podemos entonces definir la dialéctica (del griego διαλε
 ## ¿De qué nos sirve la dialéctica y por qué es tan importante?
 
 <blog-img src="pexels-2723450.jpg">
-	<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pexels.com/es-es/foto/foto-en-escala-de-grises-de-esculturas-2723450/">Foto en escala de grises de esculturas</a>
+	<blog-ext to="https://www.pexels.com/es-es/foto/foto-en-escala-de-grises-de-esculturas-2723450/">Foto en escala de grises de esculturas</blog-ext>
 </blog-img>
 
 Nos sirve para **poder llegar a acuerdos** mediante el contraste de ideas, viendo pros y contras, cuando vivimos en un mundo bastante egocéntrico y narcisista (que interfiere con la objetividad de los diálogos) es de vital importancia poder estar en la misma línea con otras personas para poder discutir en armonía y así impulsar el progreso.

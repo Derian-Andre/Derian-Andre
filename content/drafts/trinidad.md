@@ -1,6 +1,6 @@
 ---
 title: Mi santísima trinidad
-date: 2021-09-08 08:00:00
+date: 2021-09-08 21:00:00
 draft: true
 ---
 En mi primera entrada terminé diciendo que la filosofía es el arte de preguntar y la ciencia el arte de responder, entonces el arte la defino como la capacidad de crear o re-crear y estas se complementan así mismo.
