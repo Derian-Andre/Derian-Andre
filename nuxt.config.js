@@ -1,11 +1,10 @@
 // Generate Routes for Blog
 import fs from 'fs';
-const path = require('path')
+const path = require('path');
 function generateRoutes(lang, type) {
-	let initial = lang
 	return fs.readdirSync(path.resolve(__dirname, 'content', `${type}`))
 		.filter(filename => path.extname(filename) === '.md')
-		.map(filename => `${initial}/${type}/${path.parse(filename).name}`)
+		.map(filename => `${lang}/${type}/${path.parse(filename).name}`)
 }
 
 export default {
@@ -13,6 +12,12 @@ export default {
 	publicRuntimeConfig: {
 		baseUrl: process.env.BASE_URL || 'https://derianandre.com',
 	},
+	
+	// Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+	ssr: false,
+
+	// Target: https://go.nuxtjs.dev/config-target
+	target: 'static',
 
 	// Server
 	server: {
