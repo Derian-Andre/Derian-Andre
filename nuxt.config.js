@@ -6,7 +6,7 @@ function generateRoutes(lang, type, subfolder = false) {
 	const fileType = '.md';
 	return fs.readdirSync(path.resolve(__dirname, 'content', content))
 		.filter(filename => path.extname(filename) === fileType)
-		.map(filename => `${lang}/${type}/${path.parse(filename).name}`)
+		.map(filename => `/${lang}/${type}/${path.parse(filename).name}`)
 }
 
 export default {
@@ -32,7 +32,7 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: 'Freelancer: Diseño, Desarrollo y Fotografía' }
+			{ hid: 'description', name: 'description', content: 'Soy un freelancer, diseñador, desarollador full-stack y fótografo, con especialización en desarrollo front-end, me encanta diseñar, tomar fotos y crear cosas hermosas con una buena experiencia para el usuario.' }
 		],
 		link: [
 			{ rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
@@ -107,15 +107,13 @@ export default {
 	// Nuxt.js Generate configuration
 	generate: {
 		fallback: true,
-		routes: [
-			'/es', '/en', '404'
-		]
-		.concat(generateRoutes('es', 'blog'))
-		.concat(generateRoutes('en', 'blog'))
-		.concat(generateRoutes('es', 'work'))
-		.concat(generateRoutes('en', 'work'))
-		.concat(generateRoutes('es', 'projects', true))
-		.concat(generateRoutes('en', 'projects', true))
+		routes: ['/es', '/en', '404']
+			.concat(generateRoutes('es', 'blog'))
+			.concat(generateRoutes('en', 'blog'))
+			.concat(generateRoutes('es', 'work'))
+			.concat(generateRoutes('en', 'work'))
+			.concat(generateRoutes('es', 'projects', true))
+			.concat(generateRoutes('en', 'projects', true))
 	},
 
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -127,13 +125,13 @@ export default {
 		manifest: {
 			name: 'Derian André',
 			short_name: 'Derian André',
-			description: 'Freelancer Fullstack Designer',
+			description: 'Freelancer Full-stack Designer',
 			lang: 'es',
-			background_color: '#333333',
-			theme_color: '#333333'
+			background_color: '#1D1F26',
+			theme_color: '#1D1F26'
 		},
 		meta: {
-			theme_color: '#333333'
+			theme_color: '#1D1F26'
 		},
 	},
 

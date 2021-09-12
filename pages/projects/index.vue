@@ -1,11 +1,13 @@
 <template>
 	<PageMain>
+		<!-- Head -->
+		<Head :page="page" />
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
 		<PageContent class="content-projects">
 			<div class="gallery">
-				<ProjectsPost v-for="item in projects" :key="item.slug" :data="item" />
+				<ProjectsPost v-for="item in posts" :key="item.slug" :data="item" />
 			</div>
 		</PageContent>
 	</PageMain>
@@ -13,26 +15,15 @@
 
 <script>
 	export default {
-		data() {
-			return {
-				page: 'projects'
-			}
-		},
-		head () {
-			return {
-				title: `${this.$t(`${this.page}.title`)} – Derian André`,
-				bodyAttrs: {
-					class: `page page-${this.page}`
-				}
-			}
-		},
 		async asyncData(context) {
-			const { $content, app } = context;
-			const projects = await $content(`projects/${app.i18n.locale}`)
-				.sortBy('date', 'desc')
-				.fetch();
+			const { $content, app } = context,
+					page = 'projects',
+					posts = await $content(`${page}/${app.i18n.locale}`)
+						.sortBy('date', 'desc')
+						.fetch();
 			return {
-				projects
+				page,
+				posts
 			}
 		}
 	}

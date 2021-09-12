@@ -1,5 +1,7 @@
 <template>
 	<PageMain>
+		<!-- Head -->
+		<Head :page="page" />
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
@@ -139,14 +141,6 @@
 					'cinvestav',
 					'casasyterrenos'
 				]
-			}
-		},
-		head() {
-			return {
-				title: `${this.$t(`${this.page}.title`)} – Derian André`,
-				bodyAttrs: {
-					class: `page page-${this.page}`
-				}
 			}
 		},
 	}

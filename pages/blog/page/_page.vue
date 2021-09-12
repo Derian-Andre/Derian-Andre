@@ -1,5 +1,7 @@
 <template>
 	<PageMain>
+		<!-- Head -->
+		<Head :page="page" />
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
@@ -21,22 +23,11 @@
 <script>
 	import blogContent from '@/utils/blogContent';
 	export default {
-		data() {
-			return {
-				page: 'blog',
-			}
-		},
-		head() {
-			return {
-				title: `${this.$t(`${this.page}.page`) + this.pageNumber} – ${this.$t(`${this.page}.title`)} – Derian André`,
-				bodyAttrs: {
-					class: `page page-${this.page}`
-				}
-			}
-		},
 		async asyncData ({ $content, params, error }) {
-			const blogs = await blogContent($content, params, error);
+			const page = 'blog',
+					blogs = await blogContent($content, params, error);
 			return {
+				page,
 				blogs:      blogs.paginatedBlogs,
 				blogsTotal: blogs.allBlogs.length,
 				pageNumber: params.page

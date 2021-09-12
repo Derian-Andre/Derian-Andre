@@ -1,4 +1,7 @@
 {
+	"head": {
+		"description": "Soy un freelancer, diseñador, desarollador full-stack y fótografo, con especialización en desarrollo front-end, me encanta diseñar, tomar fotos y crear cosas hermosas con una buena experiencia para el usuario."
+	},
 	"header": {
 		"home": "Inicio",
 		"blog": "Blog",
@@ -18,7 +21,7 @@
 		"whatsapp_api": "¡Hola, me contacto desde tu portafolio!"
 	},
 	"home": {
-		"title": "Inicio",
+		"title": "Freelancer en Diseño, Desarrollo Full-stack y Fotografía",
 		"subtitle": "Mi portafolio"
 	},
 	"blog": {

@@ -1,4 +1,7 @@
 {
+	"head": {
+		"description": "I am a freelancer, designer, full-stack developer and photographer, specializing in front-end development, I love designing, taking photos and creating beautiful things with a good user experience"
+	},
 	"header": {
 		"home": "Home",
 		"blog": "Blog",
@@ -18,7 +21,7 @@
 		"whatsapp_api": "Hello, I am contacting myself from your portfolio!"
 	},
 	"home": {
-		"title": "Home",
+		"title": "Freelancer in Design, Full-stack Development and Photography",
 		"subtitle": "My portfolio"
 	},
 	"blog": {

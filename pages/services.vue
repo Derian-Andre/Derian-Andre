@@ -1,5 +1,7 @@
 <template>
 	<PageMain>
+		<!-- Head -->
+		<Head :page="page" />
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->

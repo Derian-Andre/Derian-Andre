@@ -1,5 +1,7 @@
 <template>
 	<PageMain>
+		<!-- Head -->
+		<Head :page="page" />
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
@@ -38,28 +40,11 @@
 </template>
 
 <script>
-	import metaSite from '~/utils/metaSite';
 	export default {
 		data() {
 			return {
 				page: 'about'
 			}
 		},
-		head () {
-			return {
-				title: `${this.$t(`${this.page}.title`)} – Ego sum, Derian André`,
-				bodyAttrs: {
-					class: `page page-${this.page}`
-				},
-				meta: [
-					...this.meta
-				]
-			}
-		},
-		computed: {
-			meta() {
-				return metaSite();
-			},
-		}
 	}
 </script>

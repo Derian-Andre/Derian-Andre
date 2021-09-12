@@ -1,10 +1,12 @@
 <template>
 	<PageMain>
+		<!-- Head -->
+		<Head :page="page" :post="post" />
 		<!-- Info -->
-		<PageInfo :title="project.title" :subtitle="project.subtitle"/>
+		<PageInfo :title="post.title" :subtitle="post.subtitle"/>
 		<!-- Content -->
 		<PageContent>
-			<NuxtContent :document="project"/>
+			<NuxtContent :document="post"/>
 			<hr>
 			<h3>{{ $t('projects.sponsor.title') }}</h3>
 			<p>{{ $t('projects.sponsor.description') }}</p>
@@ -20,8 +22,8 @@
 			</div>
 		</PageContent>
 		<!-- Side -->
-		<PageSide class="order-1" v-if="project.hero">
-			<Figure :src="`projects/${project.hero}`" :alt="project.title" />
+		<PageSide v-if="post.hero">
+			<Figure :src="`${page}/${slug}/${post.hero}`" :alt="post.title" />
 		</PageSide>
 	</PageMain>
 </template>
@@ -29,19 +31,14 @@
 <script>
 	export default {
 		async asyncData(context) {
-			const { $content, app, params } = context;
-			const slug = params.slug;
-			const project = await $content(`projects/${app.i18n.locale}`, slug).fetch();
+			const { $content, app, params } = context,
+					page = 'projects',
+					slug = params.slug,
+					post = await $content(`${page}/${app.i18n.locale}`, slug).fetch();
 			return {
-				project
-			}
-		},
-		head () {
-			return {
-				title: `${this.project.title} - ${this.$t('projects.title')} – Derian André`,
-				bodyAttrs: {
-					class: `page page-${this.project.slug}`
-				}
+				page,
+				slug,
+				post
 			}
 		}
 	}
