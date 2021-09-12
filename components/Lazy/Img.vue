@@ -18,12 +18,13 @@
 				return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=';
 			},
 			dataSrc() {
+				let dataSrc = this.lazySrc;
 				if(this.src)  {
 					const regexUrl = /^(https?:\/\/|\/)/i;
 					const isExternal = regexUrl.test(this.src) ? true : false;
-					return isExternal ? this.src : require(`~/assets/img/${this.src}`);
+					dataSrc = isExternal ? this.src : require(`~/assets/img/${this.src}`);
 				}
-				return this.lazySrc;
+				return dataSrc;
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 <template>
-	<Figure :src="`blog/${slug}/${src}`" :inline="inline" :alt="imgAlt" :max-width="maxWidth" :max-height="maxHeight">
+	<Figure :src="imgSrc" :inline="inline" :alt="imgAlt" :max-width="maxWidth" :max-height="maxHeight">
 		<slot />
 	</Figure>
 </template>
@@ -19,6 +19,9 @@
 		computed: {
 			slug() {
 				return this.$route.params.slug;
+			},
+			imgSrc() {
+				return `blog/${this.slug}/${this.src}`;
 			},
 			imgAlt() {
 				return this.alt || this.slug;

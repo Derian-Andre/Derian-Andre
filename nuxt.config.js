@@ -12,7 +12,7 @@ function generateRoutes(lang, type, subfolder = false) {
 export default {
 	// Config
 	publicRuntimeConfig: {
-		baseUrl: process.env.BASE_URL || 'https://derianandre.com',
+		baseUrl: process.env.NODE_ENV === 'production' ? 'https://derianandre.com' : 'http://localhost:3000',
 	},
 
 	// Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
