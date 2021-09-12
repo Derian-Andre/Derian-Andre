@@ -1,15 +1,19 @@
+import fs from 'fs';
+const path = require('path')
+
+function getPaths(lang, type) {
+	let initial = lang
+	return fs.readdirSync(path.resolve(__dirname, 'content', `${type}`))
+		.filter(filename => path.extname(filename) === '.md')
+		.map(filename => `${initial}/${type}/${path.parse(filename).name}`)
+ }
+
 export default {
 	// Config
 	publicRuntimeConfig: {
-		baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+		baseUrl: process.env.BASE_URL || 'https://derianandre.com',
 	},
 
-	// Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-	ssr: false,
-
-	// Target: https://go.nuxtjs.dev/config-target
-	target: 'static',
-	
 	// Server
 	server: {
 		host: '0.0.0.0'
@@ -97,7 +101,12 @@ export default {
 
 	// Nuxt.js Generate configuration
 	generate: {
-		fallback: true
+		fallback: true,
+		routes: [
+			'/es', '404'
+		 ]
+		 .concat(getPaths('es', 'blog'))
+		 .concat(getPaths('en', 'blog'))
 	 },
 
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
