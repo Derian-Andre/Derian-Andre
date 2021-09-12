@@ -49,11 +49,12 @@ $font-family-serif:		"Lora", "Cambria", Times, "Times New Roman", serif;
 $font-family-base:		$font-family-sans-serif;
 
 // Card
-$card-bg:            $white;
-$card-spacer-y:      1.5rem;
-$card-spacer-x:      1.5rem;
-$card-border-width:  0;
-$card-border-radius: 0.75rem;
+$card-bg:                  $white;
+$card-spacer-y:            1.5rem;
+$card-spacer-x:            1.5rem;
+$card-border-width:        0;
+$card-border-radius:       0;
+$card-inner-border-radius: 0;
 
 // Table
 $table-th-bg:          $secondary;

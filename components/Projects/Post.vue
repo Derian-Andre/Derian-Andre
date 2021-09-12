@@ -3,9 +3,10 @@
 		<LazyImg class="card-img-top" :src="data.hero ? `projects/${data.hero}` : false" :alt="data.title"/>
 		<div class="card-body d-flex flex-column">
 			<h3 class="h4 mb-2">{{ data.title }}</h3>
-			<em class="m-0 text-low">{{ formatDate(data.date) }}</em>
-			<p class="mb-4 text-normal" v-if="data.description" v-html="data.description" />
-			<NuxtLink class="btn btn-outline-link stretched-link mt-auto" :to="localePath(`/about/projects/${data.slug}`)">
+			<em class="m-0 text-low text-italic">{{ formatDate(data.date) }}</em>
+			<hr class="my-4">
+			<p class="mt-0 mb-4 text-normal" v-if="data.description" v-html="data.description" />
+			<NuxtLink class="btn btn-outline-link stretched-link mt-auto" :to="localePath(`/projects/${data.slug}`)">
 				{{ $t('projects.learn_more')}}
 			</NuxtLink>
 		</div>

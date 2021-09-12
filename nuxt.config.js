@@ -1,9 +1,11 @@
 // Generate Routes for Blog
 import fs from 'fs';
 const path = require('path');
-function generateRoutes(lang, type) {
-	return fs.readdirSync(path.resolve(__dirname, 'content', `${type}`))
-		.filter(filename => path.extname(filename) === '.md')
+function generateRoutes(lang, type, subfolder = false) {
+	const content = subfolder ? `${type}/${lang}` : type;
+	const fileType = '.md';
+	return fs.readdirSync(path.resolve(__dirname, 'content', content))
+		.filter(filename => path.extname(filename) === fileType)
 		.map(filename => `${lang}/${type}/${path.parse(filename).name}`)
 }
 
@@ -12,7 +14,7 @@ export default {
 	publicRuntimeConfig: {
 		baseUrl: process.env.BASE_URL || 'https://derianandre.com',
 	},
-	
+
 	// Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
 	ssr: false,
 
@@ -74,8 +76,6 @@ export default {
 		'@nuxt/content',
 		// https://go.nuxtjs.dev/i18n
 		'nuxt-i18n',
-		// https://image.nuxtjs.org/getting-started/installation
-		'@nuxt/image',
 		// https://github.com/moritzsternemann/vue-plausible - https://plausible.io
 		'vue-plausible'
 	],
@@ -112,6 +112,10 @@ export default {
 		]
 		.concat(generateRoutes('es', 'blog'))
 		.concat(generateRoutes('en', 'blog'))
+		.concat(generateRoutes('es', 'work'))
+		.concat(generateRoutes('en', 'work'))
+		.concat(generateRoutes('es', 'projects', true))
+		.concat(generateRoutes('en', 'projects', true))
 	},
 
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -184,6 +188,7 @@ export default {
 		}
 	},
 
+	// Plausible.io
 	plausible: {
 		domain: 'derianandre.com'
 	}
