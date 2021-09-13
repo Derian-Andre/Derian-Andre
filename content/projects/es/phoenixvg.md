@@ -18,3 +18,4 @@ Contribuí con todo el diseño, tanto la identidad, la web e interfaz de usuario
 
 ### Conoce más
 - [Consulte la página oficial de Phoenix.vg](https://phoenix.vg)
+- [Repo de Github](https://github.com/team-phoenix)

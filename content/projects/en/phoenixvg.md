@@ -18,3 +18,4 @@ I contributed with all the design, both the identity, web and user interface
 
 ### Learn more
 - [Check out the Phoenix.vg offical page](https://phoenix.vg)
+- [Github repo](https://github.com/team-phoenix)

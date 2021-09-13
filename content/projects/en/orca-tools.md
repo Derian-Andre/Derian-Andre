@@ -1,7 +1,7 @@
 ---
 title: ORCA Tools
 subtitle: Open-source WebApp
-description: Tool for the analysis of <code>.out</code> files of the ab initio quantum chemistry program package
+description: Tool for the analysis of .out files of the ab initio quantum chemistry program package ORCA
 date: 2019-07-05 12:00:00
 hero: orca-tools.jpg
 ---
@@ -17,6 +17,5 @@ When I was studying at university, specifically doing homework for a course on m
 ---
 
 ### Learn more
-<a class="btn btn-outline-link" href="https://github.com/DerianAndre/orca-tools" rel="nofollow noopener noreferrer" target="_blank">
-	Check out the Github repo
-</a>
+- [Official ORCA website](https://orcaforum.kofo.mpg.de/app.php/portal)
+- [Github repo](https://github.com/DerianAndre/orca-tools)

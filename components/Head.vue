@@ -145,9 +145,9 @@
 				return 'Derian André'
 			},
 			metaDescription() {
-				let metaDescription = this.description ? this.description : this.$t('head.description');
-				if(this.post && this.post.summary) {
-					metaDescription = this.post.summary;
+				let metaDescription = this.$t('head.description');
+				if(this.post && this.post.description || this.post.summary) {
+					metaDescription = this.post.summary || this.post.description;
 				}
 				// Override
 				if(this.description) {

@@ -17,4 +17,5 @@ I contribute in the visual part of the development: identity, web and interface 
 ---
 
 ### Learn more
-[Visit the official PicoTorrent page](https://picotorrent.org)
+- [PicoTorrrent official website](https://picotorrent.org)
+- [Github repo](https://github.com/picotorrent/website)
