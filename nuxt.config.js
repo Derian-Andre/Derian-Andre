@@ -25,7 +25,6 @@ export default {
 	server: {
 		host: '0.0.0.0'
 	},
-
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
 		title: 'Derian André',
@@ -45,21 +44,28 @@ export default {
 			{ src: 'https://polyfill.io/v3/polyfill.min.js?features=es6', body: true },
 		]
 	},
-
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
 		'@/assets/scss/style.scss',
 	],
-
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
 		{ src: '~/plugins/bootstrap.client.js' },
 		{ src: '~/plugins/lazysizes.client.js' }
 	],
-
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
-
+	// Modules: https://go.nuxtjs.dev/config-modules
+	modules: [
+		// https://go.nuxtjs.dev/content
+		'@nuxt/content',
+		// https://go.nuxtjs.dev/i18n
+		'@nuxtjs/i18n',
+		// https://go.nuxtjs.dev/pwa
+		'@nuxtjs/pwa',
+		// https://github.com/moritzsternemann/vue-plausible - https://plausible.io
+		'vue-plausible'
+	],
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
 		// https://color-mode.nuxtjs.org/
@@ -67,19 +73,6 @@ export default {
 		// https://github.com/nuxt-community/svg-module
 		'@nuxtjs/svg',
 	],
-
-	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [
-		// https://go.nuxtjs.dev/pwa
-		'@nuxtjs/pwa',
-		// https://go.nuxtjs.dev/content
-		'@nuxt/content',
-		// https://go.nuxtjs.dev/i18n
-		'nuxt-i18n',
-		// https://github.com/moritzsternemann/vue-plausible - https://plausible.io
-		'vue-plausible'
-	],
-
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
 		extend (config, { isDev, isClient, loaders: { vue } }) {
@@ -103,7 +96,6 @@ export default {
 			}
 		}
 	},
-
 	// Nuxt.js Generate configuration
 	generate: {
 		fallback: true,
@@ -115,40 +107,24 @@ export default {
 			.concat(generateRoutes('es', 'projects', true))
 			.concat(generateRoutes('en', 'projects', true))
 	},
-
-	// PWA module configuration: https://go.nuxtjs.dev/pwa
-	pwa: {
-		icon: {
-			source: '@/static/',
-			fileName: 'derianandre.png'
-		},
-		manifest: {
-			name: 'Derian André',
-			short_name: 'Derian André',
-			description: 'Freelancer Full-stack Designer',
-			lang: 'es',
-			background_color: '#1D1F26',
-			theme_color: '#1D1F26'
-		},
-		meta: {
-			theme_color: '#1D1F26'
-		},
+	// Custom modules configuration
+	// @nuxt/content https://go.nuxtjs.dev/config-content
+	content: {
+		
 	},
-
-	// Content module configuration: https://go.nuxtjs.dev/config-content
-	content: {},
-
-	// Color mode configuration: https://color-mode.nuxtjs.org/
+	// @nuxtjs/color-mode https://color-mode.nuxtjs.org/
 	colorMode: {
 		preference:    'system',
 		fallback:      'light',
 		classPrefix:   '',
 		classSuffix:   '',
 	},
-
-	// Internationalization (nuxt-i18n)
+	// nuxt-i18n https://i18n.nuxtjs.org/options-reference/
 	i18n: {
 		strategy: 'prefix',
+		defaultLocale: 'es',
+		lazy:          true,
+		langDir:       '@/languages/',
 		locales: [
 			{
 				code: 'en',
@@ -163,9 +139,6 @@ export default {
 				name: 'Español'
 			}
 		],
-		defaultLocale: 'es',
-		lazy:          true,
-		langDir:       '@/languages/',
 		detectBrowserLanguage: {
 			useCookie: true,
 			onlyOnRoot: true,
@@ -185,9 +158,26 @@ export default {
 			}
 		}
 	},
-
 	// Plausible.io
 	plausible: {
 		domain: 'derianandre.com'
-	}
+	},
+	// @nuxtjs/pwa https://go.nuxtjs.dev/pwa
+	pwa: {
+		icon: {
+			source: '@/static/',
+			fileName: 'derianandre.png'
+		},
+		manifest: {
+			name: 'Derian André',
+			short_name: 'Derian André',
+			description: 'Freelancer Full-stack Designer',
+			lang: 'es',
+			background_color: '#1D1F26',
+			theme_color: '#1D1F26'
+		},
+		meta: {
+			theme_color: '#1D1F26'
+		},
+	},
 }
