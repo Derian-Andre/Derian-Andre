@@ -12,7 +12,7 @@ gallery: 1
 
 #### Trabajo
 - Identidad
-- Redes sociales
+- Templates para redes sociales
 
 ---
 

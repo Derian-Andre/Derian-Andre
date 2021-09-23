@@ -12,7 +12,8 @@
 		async asyncData ({ $content }) {
 			const page = 'home',
 					posts = await $content('work')
-						.only(['title', 'hero', 'date', 'slug', 'draft', 'disabled'])
+						.only(['title', 'hero', 'date', 'slug', 'draft'])
+						.where({ draft: { $ne: false}, disabled: { $ne: true } })
 						.sortBy('date', 'desc')
 						.fetch();
 			return {

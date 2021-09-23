@@ -46,7 +46,7 @@ export default {
 	},
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
-		'@/assets/scss/style.scss',
+		'~/assets/scss/style.scss',
 	],
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
@@ -124,7 +124,7 @@ export default {
 		strategy: 'prefix',
 		defaultLocale: 'es',
 		lazy:          true,
-		langDir:       '@/languages/',
+		langDir:       '~/languages/',
 		locales: [
 			{
 				code: 'en',
@@ -165,7 +165,7 @@ export default {
 	// @nuxtjs/pwa https://go.nuxtjs.dev/pwa
 	pwa: {
 		icon: {
-			source: '@/static/',
+			source: '~/static/',
 			fileName: 'derianandre.png'
 		},
 		manifest: {

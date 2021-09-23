@@ -19,6 +19,7 @@ export default async ($content, params, error) => {
 	};
 	const paginatedBlogs = await $content(blogContent)
 		.only(blogOnly)
+		.where({ draft: { $ne: false}, disabled: { $ne: true } })
 		.sortBy('date', blogSort)
 		.limit(perPage)
 		.skip(skipNumber())

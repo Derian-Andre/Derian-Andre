@@ -41,7 +41,9 @@ $custom-colors: (
 );
 
 // Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors:     map-merge($theme-colors, $colors);
+$theme-colors:     map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 // Fonts
 $font-family-headings:	"Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

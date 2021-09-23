@@ -19,6 +19,7 @@
 			const { $content, app } = context,
 					page = 'projects',
 					posts = await $content(`${page}/${app.i18n.locale}`)
+						.where({ draft: { $ne: false}, disabled: { $ne: true } })
 						.sortBy('date', 'desc')
 						.fetch();
 			return {

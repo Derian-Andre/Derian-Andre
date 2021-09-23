@@ -12,7 +12,10 @@
 					<!-- Introducción -->
 					<section id="intro">
 						<h4>{{ $t('curriculum.about.intro.title') }}</h4>
-						<h5 class="intro">{{ $t('curriculum.about.intro.subtitle') }}</h5>
+						<h5 class="intro mb-4">{{ $t('curriculum.about.intro.subtitle') }}</h5>
+						<NuxtLink class="btn btn-outline-link h6 small text-uppercase px-4 m-0" :to="localePath('/projects/')">
+							{{ $t('projects.title') }}
+						</NuxtLink>
 					</section>
 					<hr>
 					<!-- Contacto -->

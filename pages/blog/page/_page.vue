@@ -10,7 +10,7 @@
 			<div class="h3 header" v-text="pageNumber == 1 ? $t('blog.recent') : ($t('blog.page') + pageNumber)" />
 			<!-- Post -->
 			<template v-for="(blog, i) in blogs">
-				<BlogPost :key="blog.slug" :slug="blog.slug" :title="blog.title" :date="blog.date" v-if="!blog.draft"/>
+				<BlogPost :key="blog.slug" :slug="blog.slug" :title="blog.title" :date="blog.date"/>
 				<hr class="my-3" :key="i" v-if="pageNumber == 1 && i == 0">
 			</template>
 			<hr>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-	import blogContent from '@/utils/blogContent';
+	import blogContent from '~/utils/blogContent';
 	export default {
 		async asyncData ({ $content, params, error }) {
 			const page = 'blog',
