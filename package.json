@@ -11,6 +11,7 @@
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
+		"generate": "nuxt generate",
 		"gen": "nuxt generate",
 		"gen:dev": "set NODE_ENV=dev&& nuxt generate",
 		"gen:pro": "set NODE_ENV=production&& nuxt generate"

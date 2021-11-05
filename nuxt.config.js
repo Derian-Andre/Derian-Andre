@@ -31,7 +31,6 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: 'Soy un freelancer, diseñador, desarollador full-stack y fótografo, con especialización en desarrollo front-end, me encanta diseñar, tomar fotos y crear cosas hermosas con una buena experiencia para el usuario.' }
 		],
 		link: [
 			{ rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
@@ -173,8 +172,8 @@ export default {
 			short_name: 'Derian André',
 			description: 'Freelancer Full-stack Designer',
 			lang: 'es',
+			theme_color: '#1D1F26',
 			background_color: '#1D1F26',
-			theme_color: '#1D1F26'
 		},
 		meta: {
 			theme_color: '#1D1F26'

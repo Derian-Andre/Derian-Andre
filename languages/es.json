@@ -137,26 +137,26 @@
 					"title": "Xolvex",
 					"position": "Desarrollador Front-end líder",
 					"date": "2019 Enero - Actual",
-					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web (principalmente front-end)"
+					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web front-end."
 				},
 				"inbright": {
 					"title": "Inbright",
 					"position": "Desarrollador Front-end líder",
 					"date": "2018 Noviembre − 2019 Enero",
-					"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos"
+					"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos."
 				},
 				"uxlon": {
 					"title": "Uxlon",
 					"position": "Desarrollador Front-end líder",
 					"date": "2018 Noviembre − 2019 Enero",
-					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain"
+					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain."
 				},
 				"derianandre": {
 					"heading": "Experiencia como Independiente",
 					"title": "Independiente",
 					"position": "Diseño, Desarrollo & Fotografía",
 					"date": "2015 Agosto − Actual",
-					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos"
+					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos."
 				}
 			},
 			"education": {
@@ -165,28 +165,28 @@
 					"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
 					"subtitle": "Ingeniería en nanotecnología",
 					"date": "2013 − 2018",
-					"description": "Manejo del laboratorio de nanotecnología: equipos SEM, XPS, AFM y Sputtering. Simulación de sistemas moleculares y partículas con Python y ORCA. Síntesis y caracterización de nanomateriales: nanotubos de carbono, nanopartículas de plata y cobre, etc. Programación: Python, PHP, C, CSS, HTML, Bases de datos (MySQL)"
+					"description": "Manejo del laboratorio de nanotecnología: equipos SEM, XPS, AFM y Sputtering. Simulación de sistemas moleculares y partículas con Python y ORCA. Síntesis y caracterización de nanomateriales: nanotubos de carbono, nanopartículas de plata y cobre, etc. Programación: Python, PHP, C, CSS, HTML, Bases de datos."
 				},
 				"cbtis": {
 					"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
 					"subtitle": "Técnico mecatrónico",
 					"date": "2010 − 2013",
-					"description": "Programación de PLC. Diseño CAD (AutoCAD) y 3D (SolidWorks) para diseño de mecanismos y piezas. Diseño e impresión de circuitos en PCB. Manejo de equipos como el torno y la fresadora"
+					"description": "Programación de PLC. Diseño CAD (AutoCAD) y 3D (SolidWorks) para diseño de mecanismos y piezas. Diseño e impresión de circuitos en PCB. Manejo de equipos como el torno y la fresadora."
 				}
 			},
 			"practices": {
-				"title": "Professional Practices",
+				"title": "Prácticas Profesionales",
 				"cinvestav": {
 					"title": "UDG - CINVESTAV",
 					"subtitle": "Simulaciones de sistemas moleculares organometálicos y desarrollo deaplicación web para análisis y manejo de datos",
 					"date": "2018 Agosto − Diciembre",
-					"description": "Simulaciones de diferentes sistemas moleculares organometálicos de C<sub>n</sub>H<sub>n</sub> (n = 4 – 6) con Sc, Ti y V para absorción de hidrógeno molecular y el efecto de ligantes (H, OH, NH<sub>2</sub>, CH<sub>3</sub> y F) con el software ORCA ab initio. Desarollo de aplicación web para el análisis de los archivos “.out” obtenido de las simulaciones: comparación de geometrías iniciales y ﬁnales en diferentes sistemas, gráﬁca de energías orbitales, comparación de datos entre diferentes simulaciones, detección de optimización, visualización del modelo 3D, generador de tablas comparativasentre simulaciones del mismo tipo, entre otras funciones"
+					"description": "Simulaciones de diferentes sistemas moleculares organometálicos de C<sub>n</sub>H<sub>n</sub> (n = 4 – 6) con Sc, Ti y V para absorción de hidrógeno molecular y el efecto de ligantes (H, OH, NH<sub>2</sub>, CH<sub>3</sub> y F) con el software ORCA ab initio. Desarollo de aplicación web para el análisis de los archivos “.out” obtenido de las simulaciones: comparación de geometrías iniciales y ﬁnales en diferentes sistemas, gráﬁca de energías orbitales, comparación de datos entre diferentes simulaciones, detección de optimización, visualización del modelo 3D, generador de tablas comparativasentre simulaciones del mismo tipo, entre otras funciones."
 				},
 				"casasyterrenos": {
 					"title": "Casa y Terrenos",
 					"subtitle": "Programa de modelación matemática para el desarrollo de planes y proyectos de negocio utilizando machine learning",
 					"date": "2018 Enero − Mayo",
-					"description": "Sistema de caliﬁcación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por tunelaje SSH, programación en Python"
+					"description": "Sistema de calificación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por SSH, programación en Python."
 				}
 			}
 		}

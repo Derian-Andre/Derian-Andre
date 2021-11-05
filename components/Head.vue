@@ -44,39 +44,39 @@
 						hid: 'description',
 						name: 'description',
 						content: this.metaDescription 
-					},
-					// Open Graph
-					{
-						hid: 'og:title',
-						property: 'og:title',
-						content: this.metaTitle
-					},
-					{
-						hid: 'og:site_name',
-						property: 'og:site_name',
-						content: this.metaSiteName
-					},
-					{
-						hid: 'og:description',
-						property: 'og:description',
-						content: this.metaDescription
-					},
-					{
+					}, {
+						hid: 'fb:app_id',
+						property: 'fb:app_id',
+						content: this.metaFbAppId
+					},  {
 						hid: 'og:type',
 						property: 'og:type',
 						content: this.metaType
-					},
-					{
+					}, {
+						hid: 'og:title',
+						property: 'og:title',
+						content: this.metaTitle
+					}, {
+						hid: 'og:description',
+						property: 'og:description',
+						content: this.metaDescription
+					}, {
+						hid: 'og:url',
+						property: 'og:url',
+						content: this.metaUrl
+					}, {
+						hid: 'og:site_name',
+						property: 'og:site_name',
+						content: this.metaSiteName
+					}, {
 						hid: 'og:image',
 						property: 'og:image',
 						content: this.metaImage
-					},
-					{
+					}, {
 						hid: 'og:image:secure_url',
 						property: 'og:image:secure_url',
 						content: this.metaImage
-					},
-					{
+					}, {
 						hid: 'og:image:alt',
 						property: 'og:image:alt',
 						content: this.metaTitle
@@ -88,28 +88,23 @@
 						hid: 'twitter:title',
 						name: 'twitter:title',
 						content: this.metaTitle
-					},
-					{
+					}, {
 						hid: 'twitter:description',
 						name: 'twitter:description',
 						content: this.metaDescription
-					},
-					{
+					}, {
 						hid: 'twitter:site',
 						name: 'twitter:site',
 						content: this.metaTwitterSite
-					},
-					{
+					}, {
 						hid: 'twitter:creator',
 						name: 'twitter:creator',
 						content: this.metaTwitterCreator
-					},
-					{
+					}, {
 						hid: 'twitter:image',
 						name: 'twitter:image',
 						content: this.metaImage
-					},
-					{
+					}, {
 						hid: 'twitter:image:alt',
 						name: 'twitter:image:alt',
 						content: this.metaTitle
@@ -229,6 +224,10 @@
 				} else {
 					return [];
 				}
+			},
+			metaFbAppId() {
+				let metaFbAppId = '1012868526203584';
+				return metaFbAppId;
 			},
 			metaTwitterSite() {
 				let metaTwitterSite = '@DerianAndre';
