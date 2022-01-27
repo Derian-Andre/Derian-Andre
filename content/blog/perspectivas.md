@@ -38,7 +38,7 @@ Este es un ejemplo muy básico de como podemos analizar de diferentes formas, en
 
 Lo que importa de la frase es como la interpretamos, que tanto nos hace pensar; en este caso nos damos cuenta de cuan realmente importa la perspectiva, porque todos adquirimos diferentes y es dado que dependemos del contexto, de nuestra familia, amigos, escuela (regreso a lo mismo de la <blog-link to="cogito-ergo-sum">entrada anterior</blog-link>).
 
-Yo siempre digo que **nosotros no somos quienes somos porque nosotros decidimos ser así** (claro que esto es hasta cierto punto) y es aquí donde entra de lleno la filosofía, es un parte aguas para alguien que desconoce de ella. Aquí es dónde podemos adquirir una** verdadera conciencia de lo que somos, que queremos y por qué vivimos, de nuestras perspectivas, nuestra forma de ver el mundo.**
+Yo siempre digo que **nosotros no somos quienes somos porque nosotros decidimos ser así** (claro que esto es hasta cierto punto) y es aquí donde entra de lleno la filosofía, es un parte aguas para alguien que desconoce de ella. Aquí es dónde podemos adquirir una **verdadera conciencia de lo que somos, que queremos y por qué vivimos, de nuestras perspectivas, nuestra forma de ver el mundo.**
 
 <pre>
 Siéntete libre de mandarme un mensaje, me encantaría saber que es lo que piensas y ojalá esta entrada haya evolucionado tu perspectiva.
