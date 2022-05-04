@@ -5,7 +5,7 @@
 		<!-- Info -->
 		<PageInfo :title="$t(`${page}.title`)" :subtitle="$t(`${page}.subtitle`)"/>
 		<!-- Content -->
-		<PageContent style="max-width: 800px !important">
+		<PageContent>
 			<div class="row row-cols-1 row-cols-md-2 gx-5">
 				<template v-for="item in services">
 					<section class="col d-flex flex-column" :id="item" :key="item">
@@ -45,3 +45,9 @@
 		}
 	}
 </script>
+
+<style lang="scss" scoped>
+	.page-content {
+		max-width: 800px !important
+	}
+</style>

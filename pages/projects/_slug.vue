@@ -6,10 +6,17 @@
 		<PageInfo :title="post.title" :subtitle="post.subtitle"/>
 		<!-- Content -->
 		<PageContent>
+			<em class="mb-2 text-low text-italic">
+				<Time :date="post.date" />
+			</em>
 			<NuxtContent :document="post"/>
 			<hr>
-			<h3>{{ $t('projects.sponsor.title') }}</h3>
-			<p>{{ $t('projects.sponsor.description') }}</p>
+			<h3>
+				{{ $t('projects.sponsor.title') }}
+			</h3>
+			<p>
+				{{ $t('projects.sponsor.description') }}
+			</p>
 			<div class="hstack gap-3 flex-wrap">
 				<a target="_blank" rel="noreferrer nofollow noopener" href="https://github.com/sponsors/derianandre" class="btn btn-outline-link">
 					<i class="bi bi-github me-2"></i>

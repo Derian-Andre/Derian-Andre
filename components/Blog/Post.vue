@@ -1,7 +1,11 @@
 <template>
 	<NuxtLink class="post" :to="localePath({ name: 'blog-slug', params: { slug: slug } })">
-		<h3 class="title" v-text="title"/>
-		<h4 class="date" v-text="formatedDate" />
+		<h3 class="title">
+			{{ title }}
+		</h3>
+		<h4 class="date">
+			<Time :date="date" />
+		</h4>
 	</NuxtLink>
 </template>
 

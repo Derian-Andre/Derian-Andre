@@ -89,10 +89,16 @@ Sin duda el alcance y la exposición que se dan sobre los temas es una cuestión
 
 ## Mi crítica constructiva
 
-<ul style="font-size:110%">
-<li class="mb-4"><strong>Primero que nada, esto no fue un debate</strong>, fue una ronda de opiniones y un diálogo vagamente estructurado y algunos que otros argumentos decentes, pero se cometen falacias, se habla desde la narrativa y bueno, los puntos negativos hablan por sí mismos.</li>
-<li class="mb-4">Segundo, volvemos al caso de la <blog-link to="dialectica-dualidad-yin-y-yang">dualidad y la dialéctica</blog-link> y su importancia, contrastar los puntos no significa pelearse, al contrario, es para poder tomar las mejores decisiones posibles, tomando en cuenta los argumentos y las estadísticas, el chiste es ese, <strong>para llegar a la verdad y solucionar el problema se necesitan dos posturas contrarias que se atacan desde la objetividad y NO hacía las personas.</strong></li>
-<li>Tercero, si realmente quieren llegar a una solución real, tienen que prepararse y no sólo hacer "debates" por hacer "debates", son temas muy serios, delicados, profundos, complejos y muy muy muy pesados, creo que tienen una buena intención, pero en muchas ocasiones las premisas no se abarcan de la mejor manera. Los debates <strong>no son solamente por moda o tendencias, o vistas de YouTube si no porque el punto es llegar a soluciones.</strong></li>
+<ul>
+	<li class="mb-4">
+		<strong>Primero que nada, esto no fue un debate</strong>, fue una ronda de opiniones y un diálogo vagamente estructurado y algunos que otros argumentos decentes, pero se cometen falacias, se habla desde la narrativa y bueno, los puntos negativos hablan por sí mismos.
+	</li>
+	<li class="mb-4">
+		Segundo, volvemos al caso de la <blog-link to="dialectica-dualidad-yin-y-yang">dualidad y la dialéctica</blog-link> y su importancia, contrastar los puntos no significa pelearse, al contrario, es para poder tomar las mejores decisiones posibles, tomando en cuenta los argumentos y las estadísticas, el chiste es ese, <strong>para llegar a la verdad y solucionar el problema se necesitan dos posturas contrarias que se atacan desde la objetividad y NO hacía las personas.</strong>
+	</li>
+	<li>
+		Tercero, si realmente quieren llegar a una solución real, tienen que prepararse y no sólo hacer "debates" por hacer "debates", son temas muy serios, delicados, profundos, complejos y muy muy muy pesados, creo que tienen una buena intención, pero en muchas ocasiones las premisas no se abarcan de la mejor manera. Los debates <strong>no son solamente por moda o tendencias, o vistas de YouTube si no porque el punto es llegar a soluciones.</strong>
+	</li>
 </ul>
 
 <pre>

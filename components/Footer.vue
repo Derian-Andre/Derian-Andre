@@ -1,5 +1,5 @@
 <template>
-	<footer class="social vstack gap-1">
+	<footer class="social vstack gap-1" aria-label="Footer">
 		<a target="_blank" rel="noopener noreferrer" v-for="item in social" :key="item.slug" :href="item.link" :title="$t(`social.${item.slug}`)">
 			<i class="bi" :class="`bi-${item.icon}`"></i>
 		</a>

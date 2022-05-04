@@ -29,15 +29,10 @@ export default {
 	head: {
 		title: 'Derian André',
 		meta: [
-			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 		],
 		link: [
 			{ rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
-			{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-			{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap' },
-			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,500;1,600;1,700&display=swap' },
 		],
 		script: [
 			{ src: 'https://polyfill.io/v3/polyfill.min.js?features=es6', body: true },
@@ -62,6 +57,10 @@ export default {
 		'@nuxtjs/i18n',
 		// https://go.nuxtjs.dev/pwa
 		'@nuxtjs/pwa',
+		// https://html-validator.nuxtjs.org/
+		'@nuxtjs/html-validator',
+		// https://google-fonts.nuxtjs.org/
+		'@nuxtjs/google-fonts',
 		// https://github.com/moritzsternemann/vue-plausible - https://plausible.io
 		'vue-plausible'
 	],
@@ -179,4 +178,39 @@ export default {
 			theme_color: '#1D1F26'
 		},
 	},
+	// Google fonts
+	googleFonts: {
+		families: {
+			Montserrat:  {
+				wght: [300, 400, 500, 600, 700, 800, 900]
+			},
+			Lora: {
+				ital: [400, 500, 600, 700],
+				wght: [400, 500, 600, 700]
+			}
+		}
+	},
+	// HTML Validator
+	htmlValidator: {
+    usePrettier: false,
+    failOnError: false,
+    options: {
+      extends: [
+        'html-validate:document',
+        'html-validate:recommended',
+        'html-validate:standard'
+      ],
+      rules: {
+        'svg-focusable': 'off',
+        'no-unknown-elements': 'error',
+        // Conflict with Nuxt defaults
+        'require-sri': 'off',
+        'attribute-boolean-style': 'off',
+        'doctype-style': 'off',
+				'element-permitted-content': 'off',
+        // Unreasonable rule
+        'no-inline-style': 'off'
+      }
+    }
+  }
 }

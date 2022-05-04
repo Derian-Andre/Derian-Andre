@@ -15,7 +15,7 @@
 				<NuxtContent class="article article-content-post" :document="post"/>
 			</article>
 			<!-- Draft -->
-			<PageConstruction style="margin: auto 0 !important" v-else />
+			<PageConstruction class="my-auto mx-0" v-else />
 		</PageContent>
 		<!-- Side -->
 		<PageSide v-if="!post.draft">

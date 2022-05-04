@@ -1,5 +1,5 @@
 <template>
-	<img class="lazy lazyload" :alt="alt" :data-src="dataSrc" :src="lazySrc"/>
+	<img class="lazy lazyload" :alt="alt" :data-src="dataSrc" :src="lazySrc" loading="lazy"/>
 </template>
 
 <script>

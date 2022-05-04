@@ -7,7 +7,7 @@
 			</NuxtLink>
 		</div>
 		<div class="center">
-			<nav>
+			<nav role="navigation" aria-label="Menu">
 				<NuxtLink class="item" v-for="item in menu" :key="item.slug" :to="localePath(item.to)">
 					{{ $t(`header.${item.slug}`) }}
 				</NuxtLink>

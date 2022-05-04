@@ -2,7 +2,9 @@
 	<NuxtLink class="item" :to="localePath({ name: 'work-slug', params: { slug: data.slug } })" v-if="show">
 		<div class="overlay">
 			<h2 class="title">{{ data.title }}</h2>
-			<span class="date">{{ date }}</span>
+			<span class="date">
+				<Time :date="data.date" />
+			</span>
 		</div>
 		<LazyImg :src="`work/${data.slug}/${hero}`" :alt="data.title" />
 	</NuxtLink>
@@ -13,9 +15,6 @@
 	export default {
 		props: ['data'],
 		computed: {
-			date() {
-				return Utils.formatDate(this.$i18n.locale, this.data.date);
-			},
 			show() {
 				let	show = true;
 						show = this.data.draft ? false : show,
