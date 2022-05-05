@@ -205,6 +205,7 @@ export default {
         'no-unknown-elements': 'error',
         // Conflict with Nuxt defaults
         'require-sri': 'off',
+				'attribute-empty-style': 'off',
         'attribute-boolean-style': 'off',
         'doctype-style': 'off',
 				'element-permitted-content': 'off',

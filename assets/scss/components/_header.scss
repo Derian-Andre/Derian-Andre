@@ -87,7 +87,8 @@ header.header {
 			opacity: 0;
 		}
 		&.nuxt-link-active,
-		&:hover {
+		&:hover,
+		&:focus {
 			&::after {
 				width: 100%;
 				opacity: 1;

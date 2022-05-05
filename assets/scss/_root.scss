@@ -1,8 +1,9 @@
 html {
-	scroll-behavior: smooth;
+	@supports (scroll-behavior: smooth) {
+		scroll-behavior: smooth;
+	}
 	&.light {
 		--theme-icon:                 "\f1d2";
-		--theme-name:                 "Claro";
 		--theme-loader:               "~assets/img/loader-white.svg";
 		--theme-lightness:            98%;
 		--theme-lightness-inverted:   05%;
@@ -26,7 +27,6 @@ html {
 	}
 	&.dark {
 		--theme-icon:                 "\f496";
-		--theme-name:                 "Oscuro";
 		--theme-loader:               "~assets/img/loader-dark.svg";
 		--theme-lightness:            07%;
 		--theme-lightness-inverted:   90%;

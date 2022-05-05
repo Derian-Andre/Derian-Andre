@@ -34,8 +34,8 @@
 	"about": {
 		"title": "¿Quién soy yo?",
 		"subtitle": "Ego",
-		"lead": "Si bien esa es una pregunta <strong><em>filosoficamente extremadamente compleja</em></strong>, trataré de resumir lo que los demás pueden percibir (de manera rápida) de mi",
-		"where": "Nací en una pequeña ciudad llamada <em>Los Mochis en México</em>, ahí estudié hasta la preparatoria y me fui a <em>Guadalajara</em> estudiar la universidad en el ITESO",
+		"lead": "Si bien esa es una pregunta <strong><em>filosóficamente muy compleja</em></strong>, trataré de resumir lo que los demás pueden percibir de mi.",
+		"where": "Nací en una pequeña ciudad llamada <em>Los Mochis</em> en <em>México</em>, ahí estudié hasta la preparatoria una carrera técnica (mecatrónica) y me aventuré en <em>Guadalajara</em> a estudiar la universidad en el ITESO (ingeniería en nanotecnología).",
 		"summary": {
 			"title": "Resumen",
 			"content": "Me considero una persona sencilla, no hay nada más interesante que aprender y tener experiencias nuevas, pues esto me lleva a adquirir nuevas y diferentes <a href=\"./blog/perspectivas\">perspectivas</a>, que amplían y mejoran mi cosmovisión",
@@ -46,7 +46,7 @@
 				"4": "Técnico mecatrónico",
 				"5": "Desarrollador Fullstack",
 				"6": "Diseñador",
-				"7": "Fotográfo"
+				"7": "Fotógrafo"
 			}
 		},
 		"more": {
