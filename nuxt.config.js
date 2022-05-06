@@ -62,7 +62,7 @@ export default {
 		// https://google-fonts.nuxtjs.org/
 		'@nuxtjs/google-fonts',
 		// https://github.com/moritzsternemann/vue-plausible - https://plausible.io
-		'vue-plausible'
+		//'vue-plausible'
 	],
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
@@ -156,10 +156,6 @@ export default {
 			}
 		}
 	},
-	// Plausible.io
-	plausible: {
-		domain: 'derianandre.com'
-	},
 	// @nuxtjs/pwa https://go.nuxtjs.dev/pwa
 	pwa: {
 		icon: {
@@ -214,4 +210,8 @@ export default {
       }
     }
   }
+	// Plausible.io
+	//plausible: {
+	//	domain: 'derianandre.com'
+	//},
 }
