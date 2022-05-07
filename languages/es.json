@@ -78,83 +78,82 @@
 		"title": "Curriculum Vitae",
 		"subtitle": "Derian André Castillo Franco",
 		"about": {
-			"intro": {
 			"title": "Perfil",
-			"subtitle": "Ingeniero en nanotecnología con enfoque en desarrollo de aplicaciones, diseño, programación, simulación y modelado matemático, todo con un diseño UX/UI hermoso"
-			},
+			"lead": "Ingeniero en nanotecnología con enfoque en desarrollo de aplicaciones, diseño, programación, simulación y modelado matemático, todo con un diseño UX/UI hermoso",
 			"contact": {
-			"title": "Contacto",
-			"address": "Zapopan, Jalisco, México"
+				"title": "Contacto",
+				"address": "Zapopan, Jalisco, México"
 			},
 			"specialty": {
-			"title": "Área de especialidad",
-			"subtitle": "Diseño, desarrollo, ingeniería e investigación"
+				"title": "Área de especialidad",
+				"subtitle": "Diseño, desarrollo, ingeniería e investigación"
 			},
 			"languages": {
-			"title": "Idiomas",
-			"english": {
-				"title": "Inglés",
-				"level": "Avanzado"
+				"title": "Idiomas",
+				"english": {
+					"title": "Inglés",
+					"level": "Avanzado"
+				},
+				"spanish": {
+					"title": "Español",
+					"level": "Nativo"
+				}
 			},
-			"spanish": {
-				"title": "Español",
-				"level": "Nativo"
-			}
-			},
-			"abilities": {
-			"title": "Habilidades",
-			"design": {
-				"title": "Diseño",
-				"level": "10 años",
-				"abilities": "Ilustrador Photoshop InDesign Figma"
-			},
-			"frontend": {
-				"title": "Front-end",
-				"level": "3 años",
-				"abilities": "HTML CSS SASS JavaScript NuxtJS VueJS jQuery"
-			},
-			"backend": {
-				"title": "Back-end",
-				"level": "2 años",
-				"abilities": "NodeJS ExpressJS MongoDB Mongoose PHP MySQL Python"
-			},
-			"photography": {
-				"title": "Fotografía",
-				"level": "5 años",
-				"abilities": "Retrato Paisaje Producto"
-			},
-			"team": {
-				"title": "Trabajo en equipo",
-				"level": "3 años",
-				"abilities": "Git Slack Trello"
-			}
+			"skills": {
+				"title": "Habilidades",
+				"design": {
+					"title": "Diseño",
+					"level": "10 años",
+					"skills": "Ilustrador Photoshop InDesign Figma"
+				},
+				"frontend": {
+					"title": "Front-end",
+					"level": "3 años",
+					"skills": "HTML CSS SASS JavaScript NuxtJS VueJS jQuery"
+				},
+				"backend": {
+					"title": "Back-end",
+					"level": "2 años",
+					"skills": "NodeJS ExpressJS MongoDB Mongoose PHP MySQL Python"
+				},
+				"photography": {
+					"title": "Fotografía",
+					"level": "5 años",
+					"skills": "Retrato Paisaje Producto"
+				},
+				"team": {
+					"title": "Trabajo en equipo",
+					"level": "3 años",
+					"skills": "Git Slack Trello"
+				}
 			}
 		},
 		"experience": {
 			"title": "Experiencia",
+			"lead": "Mi meta siempre es dar lo mejor de mi, aprender lo que sea necesario y crecer, me encantan los desafíos y aprovecho las oportunidades que aporten para mi evolución. Crear experiencias funcionales, hermosas y accessibles que aporten valor a las personas.",
 			"jobs": {
+				"title": "Trabajos",
 				"xolvex": {
 					"title": "Xolvex",
-					"position": "Diseñador Fullstack",
+					"subtitle": "Diseñador Fullstack",
 					"date": "2019 Enero - Actual",
 					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web front-end."
 				},
 				"inbright": {
 					"title": "Inbright",
-					"position": "Diseñador Fullstack",
+					"subtitle": "Diseñador Fullstack",
 					"date": "2018 Noviembre − 2019 Enero",
 					"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos."
 				},
 				"uxlon": {
 					"title": "Uxlon",
-					"position": "Diseñador Fullstack",
+					"subtitle": "Diseñador Fullstack",
 					"date": "2018 Noviembre − 2019 Enero",
 					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain."
 				},
 				"derianandre": {
-					"heading": "Experiencia como Independiente",
 					"title": "Independiente",
-					"position": "Diseño, Desarrollo & Fotografía",
+					"subtitle": "Diseño, Desarrollo & Fotografía",
 					"date": "2015 Agosto − Actual",
 					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos."
 				}

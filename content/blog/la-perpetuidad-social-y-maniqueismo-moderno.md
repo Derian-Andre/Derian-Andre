@@ -12,11 +12,11 @@ Actualmente disfrutamos de servicios que son aparentemente gratis, ya conocemos 
 
 <figure>
 	<div class="hstack gap-4 gap-md-5 justify-content-center fs-1 text-high">
-		<i class="bi bi-whatsapp"></i>
-		<i class="bi bi-facebook"></i>
-		<i class="bi bi-twitter"></i>
-		<i class="bi bi-instagram"></i>
-		<i class="bi bi-youtube"></i>
+		<Icon name="whatsapp"></Icon>
+		<Icon name="facebook"></Icon>
+		<Icon name="twitter"></Icon>
+		<Icon name="instagram"></Icon>
+		<Icon name="youtube"></Icon>
 	</div>
 </figure>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="heading" v-text="title" />
+	<div class="heading" role="img" v-text="title" />
 </template>
 
 <script>

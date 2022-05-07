@@ -17,7 +17,7 @@ gallery: 1
 ---
 
 #### Justificación
-Para este diseño se utilizó como base la letra “K” que asimismo forma un “circle-check” <i class="bi bi-check2-circle"></i> simbolizando confianza y alta calidad. Asimismo, el color azul con un degradado a un tono más enérgico simboliza además de confianza, flexibilidad y energía.
+Para este diseño se utilizó como base la letra “K” que asimismo forma un “circle-check” <Icon name="check2-circle"/> simbolizando confianza y alta calidad. Asimismo, el color azul con un degradado a un tono más enérgico simboliza además de confianza, flexibilidad y energía.
 
 ---
 

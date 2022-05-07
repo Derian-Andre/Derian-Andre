@@ -1,8 +1,6 @@
 <template>
 	<figure>
-		<div class="svg" :style="style" v-if="isSvg && isInline"
-			v-html="require(`~/assets/img/${src}?raw`)">
-		</div>
+		<div class="svg" :style="style" v-if="isSvg && isInline" v-html="require(`~/assets/img/${src}?raw`)" />
 		<div class="img" :style="style" :class="isSvg ? 'svg' : false" v-else>
 			<LazyImg :src="src" :alt="alt"/>
 		</div>

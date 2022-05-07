@@ -19,11 +19,11 @@
 			</p>
 			<div class="hstack gap-3 flex-wrap">
 				<a target="_blank" rel="noreferrer nofollow noopener" href="https://github.com/sponsors/derianandre" class="btn btn-outline-link">
-					<i class="bi bi-github me-2"></i>
+					<Icon name="github" class="me-2"/>
 					{{ $t('projects.sponsor.github') }}
 				</a>
 				<a target="_blank" rel="noreferrer nofollow noopener" href="https://paypal.me/DerianAndre" class="btn btn-outline-link">
-					<i class="bi bi-heart-fill me-2"></i>
+					<Icon name="heart-fill" class="me-2"/>
 					{{ $t('projects.sponsor.paypal') }}
 				</a>
 			</div>

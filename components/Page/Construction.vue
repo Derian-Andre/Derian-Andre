@@ -2,7 +2,7 @@
 	<article>
 		<hr class="mt-0">
 		<p class="display-1 text-muted mb-4">
-			<i class="bi bi-exclamation-triangle"></i>
+			<Icon name="exclamation-triangle"/>
 		</p>
 		<h3>{{ $t('page.construction.title') }}</h3>
 		<p class="lead mb-5">
