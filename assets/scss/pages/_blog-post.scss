@@ -17,6 +17,7 @@ main.blog-post {
 		text-align: right;
 		z-index: -0;
 		line-height: 1.15;
+		-webkit-user-select: none;
 		user-select: none;
 		pointer-events: none;
 		transition: all 0.35s ease;
