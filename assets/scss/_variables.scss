@@ -13,9 +13,10 @@ $white:    hsl(0, 100%, 100%);
 $gray:     hsl(220, 10%, 40%);
 
 // Color scheme
-$primary: hsl(000, 00%, 20%);
-$light:   hsl(220, 20%, 90%);
-$dark:    hsl(220, 23%, 05%);
+$primary: 	hsl(000, 00%, 20%);
+$secondary: hsl(000, 00%, 10%);
+$light:   	hsl(220, 20%, 90%);
+$dark:    	hsl(220, 23%, 05%);
 
 // Theme
 $colors: (
@@ -39,15 +40,14 @@ $custom-colors: (
 	"secondary":	$secondary,
 );
 
-// Merge the maps
 $theme-colors:     map-merge($theme-colors, $colors);
 $theme-colors:     map-merge($theme-colors, $custom-colors);
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 // Fonts
 $font-family-headings:	"Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-serif:		"Lora", "Cambria", Times, "Times New Roman", serif;
-$font-family-base:		$font-family-sans-serif;
+$font-family-serif:			"Lora", "Cambria", Times, "Times New Roman", serif;
+$font-family-base:			$font-family-sans-serif;
 
 // Card
 $card-bg:                  $white;
@@ -93,3 +93,6 @@ $text-normal: var(--body-color-normal);
 $text-low:    var(--body-color-low);
 $text-lower:  var(--body-color-lower);
 $text-muted:  var(--body-color-muted);
+
+// Pagination
+$pagination-margin-start: 0; // This prevents an error when using `nuxt generate` (Bootstrap 5.2.0-beta1)

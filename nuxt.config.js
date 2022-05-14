@@ -209,7 +209,7 @@ export default {
         'no-inline-style': 'off'
       }
     }
-  }
+  },
 	// Plausible.io
 	//plausible: {
 	//	domain: 'derianandre.com'
