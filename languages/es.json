@@ -133,10 +133,16 @@
 			"lead": "Mi meta siempre es dar lo mejor de mi, aprender lo que sea necesario y crecer, me encantan los desafíos y aprovecho las oportunidades que aporten para mi evolución. Crear experiencias funcionales, hermosas y accessibles que aporten valor a las personas.",
 			"jobs": {
 				"title": "Trabajos",
+				"blueoptima": {
+					"title": "BlueOptima",
+					"subtitle": "Associate Frontend Software Engineer",
+					"date": "2022 Mayo - Actual",
+					"description": "BlueOptima introduce métricas transparentes para administrar los recursos de desarrollo de software con automatización, estandarización y objetividad por primera vez. Formo parte del equipo que desarrolla la interfaz de usuario para todos los productos de la plataforma que permite a los usuarios ver cómo trabajan sus desarrolladores y cómo se desempeñan."
+				},
 				"xolvex": {
 					"title": "Xolvex",
 					"subtitle": "Diseñador Fullstack",
-					"date": "2019 Enero - Actual",
+					"date": "2019 Enero - 2022 Mayo",
 					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web front-end."
 				},
 				"inbright": {

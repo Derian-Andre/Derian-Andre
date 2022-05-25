@@ -35,7 +35,7 @@ main.blog-post {
 		.article-blog {
 			max-width: 1000px;
 			@media (min-width: $expand-blog) {
-				transform: translateX(calc((-1 * var(--info-width)) + 28px));
+				transform: translateX(calc((-1 * var(--page-info-width)) + 28px));
 			}
 			.article-blog-content {
 				display: flex;

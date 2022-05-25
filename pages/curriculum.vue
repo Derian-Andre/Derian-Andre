@@ -106,6 +106,7 @@
 					{
 						slug: "jobs",
 						items: [
+							"blueoptima",
 							"xolvex",
 							"inbright",
 							"derianandre",

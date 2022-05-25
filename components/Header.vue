@@ -1,5 +1,5 @@
 <template>
-	<header id="header" class="header">
+	<header ref="header" id="header" class="header">
 		<div class="top">
 			<NuxtLink class="logo" :to="localePath('/')">
 				<h1>Derian André Castillo Franco</h1>
@@ -42,6 +42,7 @@
 					{ slug: 'home', to: '/home/' },
 					{ slug: 'blog', to: '/blog/' },
 					{ slug: 'about', to: '/about/' },
+					{ slug: 'curriculum', to: '/curriculum/' },
 					{ slug: 'services', to: '/services/' },
 				]
 			}
@@ -53,15 +54,15 @@
 		methods: {
 			rootVariables() {
 				// Constants
-				const	root    	=	document.documentElement,
-						header  	=	document.querySelector('#header') || null,
-						pageInfo	=	document.querySelector('#page-info') || null;
+				const	root			=	document.documentElement,
+							header		= document.getElementById('header')			|| null,
+							pageInfo	=	document.getElementById('page-info')	|| null;
 				// Variables
-				var	headerWidth		= header ? header.offsetWidth : 92,
-						pageInfoWidth	= pageInfo ? pageInfo.offsetWidth : 130;
+				var	headerWidth		= header		? header.offsetWidth		: 92,
+						pageInfoWidth	= pageInfo	? pageInfo.offsetWidth	: 130;
 				// Root variables
-				root.style.setProperty('--header-width', `${headerWidth}px`);
-				root.style.setProperty('--info-width',   `${pageInfoWidth}px`);
+				if(header)		root.style.setProperty('--header-width',		`${headerWidth}px`);
+				if(pageInfo)	root.style.setProperty('--page-info-width',	`${pageInfoWidth}px`);
 			},
 			changeLanguage() {
 				let locale = this.$i18n.locale === 'es' ? 'en' : 'es';
