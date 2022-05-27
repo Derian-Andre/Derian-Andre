@@ -6,7 +6,7 @@ section.content-curriculum {
 	}
 	h2 {
 		@include rs('font-size', 1.5rem, 1vw, 1.75rem);
-	}	
+	}
 	h3 {
 		@include rs('font-size', 1.25rem, 1vw, 1.5rem);
 	}
@@ -17,6 +17,9 @@ section.content-curriculum {
 		margin: 2.5rem 0 1.5rem !important;
 		display: block;
 		text-align: left;
+		.img, .svg {
+			margin: 0 !important;
+		}
 		img, svg {
 			width: auto;
 			max-width: 100%;
@@ -68,7 +71,7 @@ section.content-curriculum {
 			@media (min-width: 1000px) {
 				margin-top: 0;
 			}
-		}		
+		}
 		h3 {
 			margin-bottom: 1rem;
 			@include rs('font-size', 1.75rem, 1vw, 2rem);
@@ -76,7 +79,7 @@ section.content-curriculum {
 		h4 {
 			color: var(--body-color-normal);
 			@include rs('font-size', 0.85rem, 0.75vw, 1.2rem);
-		}		
+		}
 		h5 {
 			@include rs('font-size', 1rem, 1vw, 1.25rem);
 		}

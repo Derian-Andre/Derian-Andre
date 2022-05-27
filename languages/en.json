@@ -193,6 +193,53 @@
 					"date": "2018 January - May",
 					"description": "Property qualification system according to the quality of your information, management of MySQL and MongoDB databases, management of server through SSH tunneling, Python programming"
 				}
+			},
+			"certifications": {
+				"title": "Certifications",
+				"btn": "View certification",
+				"items": {
+					"hackerrank": {
+						"title": "HackerRank",
+						"items": {
+							"css": {
+								"title": "CSS",
+								"subtitle": "CSS Certification",
+								"description": "Covering topics like cascading and inheritance, exploring the fundamentals of text styling, understanding how to use layouts in CSS, understanding boxed elements in CSS, and more."
+							},
+							"javascript-basic": {
+								"title": "JavaScript (Basic)",
+								"subtitle": "JavaScript Certification",
+								"description": "Covers topics like functions, currying, hoisting, scoping, inheritance, events, and error handling."
+							},
+							"javascript-intermediate": {
+								"title": "JavaScript (Intermediate)",
+								"subtitle": "JavaScript Certification",
+								"description": "Covering topics such as design patterns, memory management, the concurrency model, and event loops, among others."
+							},
+							"problem-solving-basic": {
+								"title": "Troubleshooting (Basic)",
+								"subtitle": "Troubleshooting Certification",
+								"description": "Covers basic data structures (such as arrays, strings) and algorithms (such as sorting and searching)."
+							}
+						}
+					}
+				}
+			},
+			"courses": {
+				"title": "Courses",
+				"btn": "View course",
+				"items": {
+					"frontend-masters": {
+						"title": "Frontend Masters",
+						"items": {
+							"complete-intro-to-react-v7": {
+								"title": "Complete Introduction to React, v7",
+								"subtitle": "React Course",
+								"description": "Learn how to build real-world apps using modern React! Much more than an introduction, you'll start from scratch and start using the latest React features, including hooks, effects, context, and portals. Throughout course, you'll bring together tools from across the React ecosystem such as Parcel, ESLint, TailwindCSS, and React Router."
+							}
+						}
+					}
+				}
 			}
 		}
 	},

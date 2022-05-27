@@ -193,6 +193,53 @@
 					"date": "2018 Enero − Mayo",
 					"description": "Sistema de calificación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por SSH, programación en Python."
 				}
+			},
+			"certifications": {
+				"title": "Certificaciones",
+				"btn": "Ver certificado",
+				"items": {
+					"hackerrank": {
+						"title": "HackerRank",
+						"items": {
+							"css": {
+								"title": "CSS",
+								"subtitle": "Certificación de CSS",
+								"description": "Abarca temas como la cascading y la herencia, la exploración de los fundamentos del estilo del texto, la comprensión del uso de diseños en CSS, la comprensión de los elementos en caja en CSS, entre otros."
+							},
+							"javascript-basic": {
+								"title": "JavaScript (Básico)",
+								"subtitle": "Certificación de JavaScript",
+								"description": "Cubre temas como funciones, currying, elevación, alcance, herencia, eventos y manejo de errores."
+							},
+							"javascript-intermediate": {
+								"title": "JavaScript (Intermedio)",
+								"subtitle": "Certificación de JavaScript",
+								"description": "Abarca temas como patrones de diseño, gestión de memoria, modelo de concurrencia y bucles de eventos, entre otros."
+							},
+							"problem-solving-basic": {
+								"title": "Resolución de problemas (Básico)",
+								"subtitle": "Certificación de resolución de problemas",
+								"description": "Cubre temas básicos de estructuras de datos (como matrices, cadenas) y algoritmos (como clasificación y búsqueda)."
+							}
+						}
+					}
+				}
+			},
+			"courses": {
+				"title": "Cursos",
+				"btn": "Ver curso",
+				"items": {
+					"frontend-masters": {
+						"title": "Frontend Masters",
+						"items": {
+							"complete-intro-to-react-v7": {
+								"title": "Introducción completa a React, v7",
+								"subtitle": "Curso de React",
+								"description": "¡Aprenda a crear aplicaciones del mundo real utilizando React moderno! Mucho más que una introducción, comenzará desde cero y comenzará a utilizar las funciones más recientes de React, incluidos ganchos, efectos, contexto y portales. A lo largo del curso, reunirá herramientas de todo el ecosistema de React como Parcel, ESLint, TailwindCSS y React Router."
+							}
+						}
+					}
+				}
 			}
 		}
 	},

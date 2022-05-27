@@ -45,7 +45,7 @@
 					<CurriculumAboutSection name="specialty">
 						<h4>
 							{{ $t('curriculum.about.specialty.subtitle') }}
-						</h4>						
+						</h4>
 						<NuxtLink class="btn btn-outline-link h6 small text-uppercase px-4 m-0" :to="localePath('/projects/')">
 							{{ $t('projects.title') }}
 						</NuxtLink>
@@ -80,6 +80,20 @@
 							<CurriculumExperienceItem v-for="item in section.items" :key="item" :name="item" :type="section.slug" />
 						</CurriculumExperienceSection>
 					</template>
+					<!-- Certifications -->
+					<CurriculumExperienceSection name="certifications">
+						<template v-for="certification in certifications">
+							<Figure :src="`curriculum/${certification.slug}.svg`" max-width="150px"/>
+							<CurriculumExperienceExtra type="certifications" v-for="item in certification.items" :key="item.slug" :company="certification.slug" :data="item" />
+						</template>
+					</CurriculumExperienceSection>
+					<!-- Course -->
+					<CurriculumExperienceSection name="courses">
+						<template v-for="course in courses">
+							<Figure :src="`curriculum/${course.slug}.svg`" max-width="150px"/>
+							<CurriculumExperienceExtra type="courses" v-for="item in course.items" :key="item.slug" :company="course.slug" :data="item" />
+						</template>
+					</CurriculumExperienceSection>
 				</div>
 			</div>
 		</PageContent>
@@ -124,8 +138,49 @@
 							"casasyterrenos",
 						]
 					}
+				],
+				certifications: [
+					{
+						slug: "hackerrank",
+						items: [
+							{
+								slug: "css",
+								date: "2022-05-25",
+								id: "6ee76af9c694",
+								url: "https://www.hackerrank.com/certificates/6ee76af9c694"
+							}, {
+								slug: "javascript-basic",
+								date: "2022-05-25",
+								id: "65c6789e94d0",
+								url: "https://www.hackerrank.com/certificates/65c6789e94d0"
+							}, {
+								slug: "javascript-intermediate",
+								date: "2022-05-25",
+								id: "fb3ac1cfe596",
+								url: "https://www.hackerrank.com/certificates/fb3ac1cfe596"
+							}, {
+								slug: "problem-solving-basic",
+								date: "2022-05-25",
+								id: "8e534883069e",
+								url: "https://www.hackerrank.com/certificates/8e534883069e"
+							},
+						]
+					},
+				],
+				courses: [
+					{
+						slug: "frontend-masters",
+						items: [
+							{
+								slug: "complete-intro-to-react-v7",
+								date: "2022-05-27",
+								id: null,
+								url: "https://frontendmasters.com/courses/complete-react-v7/"
+							},
+						]
+					}
 				]
 			};
     },
-	}	
+	}
 </script>
