@@ -145,22 +145,22 @@
 						items: [
 							{
 								slug: "css",
-								date: "2022-05-25",
+								date: "2022-05-25T15:00:00.000Z",
 								id: "6ee76af9c694",
 								url: "https://www.hackerrank.com/certificates/6ee76af9c694"
 							}, {
 								slug: "javascript-basic",
-								date: "2022-05-25",
+								date: "2022-05-25T15:00:00.000Z",
 								id: "65c6789e94d0",
 								url: "https://www.hackerrank.com/certificates/65c6789e94d0"
 							}, {
 								slug: "javascript-intermediate",
-								date: "2022-05-25",
+								date: "2022-05-25T18:00:00.000Z",
 								id: "fb3ac1cfe596",
 								url: "https://www.hackerrank.com/certificates/fb3ac1cfe596"
 							}, {
 								slug: "problem-solving-basic",
-								date: "2022-05-25",
+								date: "2022-05-25T15:00:00.000Z",
 								id: "8e534883069e",
 								url: "https://www.hackerrank.com/certificates/8e534883069e"
 							},
@@ -173,7 +173,7 @@
 						items: [
 							{
 								slug: "complete-intro-to-react-v7",
-								date: "2022-05-27",
+								date: "2022-05-27T15:00:00.000Z",
 								id: null,
 								url: "https://frontendmasters.com/courses/complete-react-v7/"
 							},
