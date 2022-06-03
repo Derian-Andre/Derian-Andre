@@ -1,4 +1,4 @@
-{
+export default {
 	"head": {
 		"description": "Soy un freelancer, diseñador, desarollador full-stack y fótografo, con especialización en desarrollo front-end, me encanta diseñar, tomar fotos y crear cosas hermosas con una buena experiencia para el usuario."
 	},
@@ -131,6 +131,7 @@
 		"experience": {
 			"title": "Experiencia",
 			"lead": "Mi meta siempre es dar lo mejor de mi, aprender lo que sea necesario y crecer, me encantan los desafíos y aprovecho las oportunidades que aporten para mi evolución. Crear experiencias funcionales, hermosas y accessibles que aporten valor a las personas.",
+			"in-progress": "En progreso",
 			"jobs": {
 				"title": "Trabajos",
 				"blueoptima": {
@@ -197,28 +198,38 @@
 			"certifications": {
 				"title": "Certificaciones",
 				"btn": "Ver certificado",
+				"types": {
+					"react": "Certificación de React",
+					"node": "Certificación de Node",
+					"javascript": "Certificación de JavaScript",
+					"css": "Certificación de CSS",
+					"html": "Certificación de HTML",
+					"git": "Certificación de Git",
+					"python": "Certificación de Python",
+					"sql": "Certificación de SQL",
+					"php": "Certificación de PHP",
+					"c": "Certificación de C",
+					"c++": "Certificación de C++",
+					"troubleshooting": "Certificación de Resolución de Problemas",
+				},
 				"items": {
 					"hackerrank": {
 						"title": "HackerRank",
 						"items": {
 							"css": {
 								"title": "CSS",
-								"subtitle": "Certificación de CSS",
 								"description": "Abarca temas como la cascading y la herencia, la exploración de los fundamentos del estilo del texto, la comprensión del uso de diseños en CSS, la comprensión de los elementos en caja en CSS, entre otros."
 							},
 							"javascript-basic": {
 								"title": "JavaScript (Básico)",
-								"subtitle": "Certificación de JavaScript",
 								"description": "Cubre temas como funciones, currying, elevación, alcance, herencia, eventos y manejo de errores."
 							},
 							"javascript-intermediate": {
 								"title": "JavaScript (Intermedio)",
-								"subtitle": "Certificación de JavaScript",
 								"description": "Abarca temas como patrones de diseño, gestión de memoria, modelo de concurrencia y bucles de eventos, entre otros."
 							},
 							"problem-solving-basic": {
 								"title": "Resolución de problemas (Básico)",
-								"subtitle": "Certificación de resolución de problemas",
 								"description": "Cubre temas básicos de estructuras de datos (como matrices, cadenas) y algoritmos (como clasificación y búsqueda)."
 							}
 						}
@@ -228,14 +239,38 @@
 			"courses": {
 				"title": "Cursos",
 				"btn": "Ver curso",
+				"types": {
+					"react": "Curso de React",
+					"node": "Curso de Node",
+					"javascript": "Curso de JavaScript",
+					"css": "Curso de CSS",
+					"html": "Curso de HTML",
+					"git": "Curso de Git",
+					"python": "Curso de Python",
+					"sql": "Curso de SQL",
+					"php": "Curso de PHP",
+					"c": "Curso de C",
+					"c++": "Curso de C++",
+				},
 				"items": {
 					"frontend-masters": {
 						"title": "Frontend Masters",
 						"items": {
 							"complete-intro-to-react-v7": {
 								"title": "Introducción completa a React, v7",
-								"subtitle": "Curso de React",
-								"description": "¡Aprenda a crear aplicaciones del mundo real utilizando React moderno! Mucho más que una introducción, comenzará desde cero y comenzará a utilizar las funciones más recientes de React, incluidos ganchos, efectos, contexto y portales. A lo largo del curso, reunirá herramientas de todo el ecosistema de React como Parcel, ESLint, TailwindCSS y React Router."
+								"description": "Mucho más que una introducción, construirás con las últimas características de React, incluidos ganchos, efectos, contexto y portales. Aprende a crear aplicaciones del mundo real desde cero usando las últimas herramientas de React ecosistema, como Parcel, ESLint, Prettier y React Router!"
+							},
+							"intermediate-react-v4": {
+								"title": "React intermedio, v7",
+								"description": "Cree aplicaciones React escalables mientras aprende en profundidad los ganchos de React, CSS-in-JS con TailwindCSS, aumente el rendimiento con la división de código y la representación del lado del servidor"
+							},
+							"pure-react-state": {
+								"title": "Gestión de estados en React puro, v2",
+								"description": "Cree ganchos personalizados, use reductores, agregue enrutamiento y luego aprenda formas de hacer técnicas de administración de estado de reacción más complicadas, como usar la Context API"
+							},
+							"css-variables": {
+								"title": "CSS dinámico con propiedades personalizadas (también conocidas como variables de CSS)",
+								"description": "Cree componentes reutilizables sin necesidad de dependencias de JavaScript, ¡solo con CSS estándar! Domine las propiedades personalizadas de CSS, también conocidas como variables CSS"
 							}
 						}
 					}

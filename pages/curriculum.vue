@@ -75,25 +75,31 @@
 						{{ $t(`curriculum.experience.lead`) }}
 					</p>
 					<hr>
-					<template v-for="section in experience">
-						<CurriculumExperienceSection :name="section.slug" :key="section.slug">
-							<CurriculumExperienceItem v-for="item in section.items" :key="item" :name="item" :type="section.slug" />
-						</CurriculumExperienceSection>
-					</template>
-					<!-- Certifications -->
-					<CurriculumExperienceSection name="certifications">
-						<template v-for="certification in certifications">
-							<Figure :src="`curriculum/${certification.slug}.svg`" max-width="150px"/>
-							<CurriculumExperienceExtra type="certifications" v-for="item in certification.items" :key="item.slug" :company="certification.slug" :data="item" />
-						</template>
-					</CurriculumExperienceSection>
-					<!-- Course -->
-					<CurriculumExperienceSection name="courses">
-						<template v-for="course in courses">
-							<Figure :src="`curriculum/${course.slug}.svg`" max-width="150px"/>
-							<CurriculumExperienceExtra type="courses" v-for="item in course.items" :key="item.slug" :company="course.slug" :data="item" />
-						</template>
-					</CurriculumExperienceSection>
+					<div class="row experience">
+						<div class="col">
+							<template v-for="section in experience">
+								<CurriculumExperienceSection :name="section.slug" :key="section.slug">
+									<CurriculumExperienceItem v-for="item in section.items" :key="item" :name="item" :type="section.slug" />
+								</CurriculumExperienceSection>
+							</template>
+						</div>
+						<div class="col">
+							<!-- Certifications -->
+							<CurriculumExperienceSection name="certifications">
+								<template v-for="certification in certifications">
+									<Figure :src="`curriculum/${certification.slug}.svg`" max-width="150px"/>
+									<CurriculumExperienceExtra type="certifications" v-for="item in certification.items" :key="item.slug" :company="certification.slug" :data="item" />
+								</template>
+							</CurriculumExperienceSection>
+							<!-- Course -->
+							<CurriculumExperienceSection name="courses">
+								<template v-for="course in courses">
+									<Figure :src="`curriculum/${course.slug}.svg`" max-width="150px"/>
+									<CurriculumExperienceExtra type="courses" v-for="item in course.items" :key="item.slug" :company="course.slug" :data="item" />
+								</template>
+							</CurriculumExperienceSection>
+						</div>
+					</div>
 				</div>
 			</div>
 		</PageContent>
@@ -144,21 +150,25 @@
 						slug: "hackerrank",
 						items: [
 							{
+								type: "css",
 								slug: "css",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "6ee76af9c694",
 								url: "https://www.hackerrank.com/certificates/6ee76af9c694"
 							}, {
+								type: "javascript",
 								slug: "javascript-basic",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "65c6789e94d0",
 								url: "https://www.hackerrank.com/certificates/65c6789e94d0"
 							}, {
+								type: "javascript",
 								slug: "javascript-intermediate",
 								date: "2022-05-25T18:00:00.000Z",
 								id: "fb3ac1cfe596",
 								url: "https://www.hackerrank.com/certificates/fb3ac1cfe596"
 							}, {
+								type: "troubleshooting",
 								slug: "problem-solving-basic",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "8e534883069e",
@@ -172,11 +182,30 @@
 						slug: "frontend-masters",
 						items: [
 							{
+								type: "react",
 								slug: "complete-intro-to-react-v7",
 								date: "2022-05-27T15:00:00.000Z",
 								id: null,
 								url: "https://frontendmasters.com/courses/complete-react-v7/"
-							},
+							}, {
+								type: "react",
+								slug: "intermediate-react-v4",
+								date: "2022-06-01T15:00:00.000Z",
+								id: null,
+								url: "https://frontendmasters.com/courses/intermediate-react-v4/"
+							},  {
+								type: "react",
+								slug: "pure-react-state",
+								date: "2022-06-02T15:00:00.000Z",
+								id: null,
+								url: "https://frontendmasters.com/courses/pure-react-state/"
+							}, {
+								type: "css",
+								slug: "css-variables",
+								date: "2022-06-03T18:30:00.000Z",
+								id: null,
+								url: "https://frontendmasters.com/courses/css-variables/"
+							}
 						]
 					}
 				]

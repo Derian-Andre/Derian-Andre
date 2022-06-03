@@ -1,4 +1,4 @@
-{
+export default {
 	"head": {
 		"description": "I am a freelancer, designer, full-stack developer and photographer, specializing in front-end development, I love designing, taking photos and creating beautiful things with a good user experience"
 	},
@@ -131,6 +131,7 @@
 		"experience": {
 			"title": "Experience",
 			"lead": "My goal is always to give my best, learn what is necessary and grow, I love challenges and I take advantage of the opportunities that makes me evolve. Create functional, beautiful and accessible experiences that add value to people.",
+			"in-progress": "In progress",
 			"jobs": {
 				"title": "Jobs",
 				"blueoptima": {
@@ -197,28 +198,38 @@
 			"certifications": {
 				"title": "Certifications",
 				"btn": "View certification",
+				"types": {
+					"react": "React Certification",
+					"node": "Node Certification",
+					"javascript": "JavaScript Certification",
+					"css": "CSS Certification",
+					"html": "HTML Certification",
+					"git": "Git Certification",
+					"python": "Python Certification",
+					"sql": "SQL Certification",
+					"php": "PHP Certification",
+					"c": "C Certification",
+					"c++": "C++ Certification",
+					"troubleshooting": "Troubleshooting Certification",
+				},
 				"items": {
 					"hackerrank": {
 						"title": "HackerRank",
 						"items": {
 							"css": {
 								"title": "CSS",
-								"subtitle": "CSS Certification",
 								"description": "Covering topics like cascading and inheritance, exploring the fundamentals of text styling, understanding how to use layouts in CSS, understanding boxed elements in CSS, and more."
 							},
 							"javascript-basic": {
 								"title": "JavaScript (Basic)",
-								"subtitle": "JavaScript Certification",
 								"description": "Covers topics like functions, currying, hoisting, scoping, inheritance, events, and error handling."
 							},
 							"javascript-intermediate": {
 								"title": "JavaScript (Intermediate)",
-								"subtitle": "JavaScript Certification",
 								"description": "Covering topics such as design patterns, memory management, the concurrency model, and event loops, among others."
 							},
 							"problem-solving-basic": {
 								"title": "Troubleshooting (Basic)",
-								"subtitle": "Troubleshooting Certification",
 								"description": "Covers basic data structures (such as arrays, strings) and algorithms (such as sorting and searching)."
 							}
 						}
@@ -228,14 +239,38 @@
 			"courses": {
 				"title": "Courses",
 				"btn": "View course",
+				"types": {
+					"react": "React Course",
+					"node": "Node Course",
+					"javascript": "JavaScript Course",
+					"css": "CSS Course",
+					"html": "HTML Course",
+					"git": "Git Course",
+					"python": "Python Course",
+					"sql": "SQL Course",
+					"php": "PHP Course",
+					"c": "C Course",
+					"cplusplus": "C++ Course",
+				},
 				"items": {
 					"frontend-masters": {
 						"title": "Frontend Masters",
 						"items": {
 							"complete-intro-to-react-v7": {
 								"title": "Complete Introduction to React, v7",
-								"subtitle": "React Course",
-								"description": "Learn how to build real-world apps using modern React! Much more than an introduction, you'll start from scratch and start using the latest React features, including hooks, effects, context, and portals. Throughout course, you'll bring together tools from across the React ecosystem such as Parcel, ESLint, TailwindCSS, and React Router."
+								"description": "Much more than an intro, you’ll build with the latest features in React, including hooks, effects, context, and portals. Learn to build real-world apps from the ground up using the latest tools in the React ecosystem, like Parcel, ESLint, Prettier, and React Router!",
+							},
+							"intermediate-react-v4": {
+								"title": "React intermedio, v7",
+								"description": "Build scalable React applications while learning React hooks in-depth, CSS-in-JS with TailwindCSS, increase performance with code splitting and server-side rendering.",
+							},
+							"pure-react-state": {
+								"title": "Gestión de estados en React puro, v2",
+								"description": "Create custom hooks, use reducers, add routing, and then learn ways to do more complicated react state management techniques such as using the Context API.",
+							},
+							"css-variables": {
+								"title": "Dynamic CSS with Custom Properties (aka CSS Variables)",
+								"description": "Create reusable components without any JavaScript dependencies needed – with only vanilla CSS! Master CSS custom properties AKA CSS variables.",
 							}
 						}
 					}

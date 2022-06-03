@@ -108,7 +108,7 @@ export default {
 	// Custom modules configuration
 	// @nuxt/content https://go.nuxtjs.dev/config-content
 	content: {
-		
+
 	},
 	// @nuxtjs/color-mode https://color-mode.nuxtjs.org/
 	colorMode: {
@@ -127,13 +127,13 @@ export default {
 			{
 				code: 'en',
 				iso:  'en-US',
-				file: 'en.json',
+				file: 'en.js',
 				name: 'English'
 			},
 			{
 				code: 'es',
 				iso:  'es-MX',
-				file: 'es.json',
+				file: 'es.js',
 				name: 'Español'
 			}
 		],
