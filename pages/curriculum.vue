@@ -135,7 +135,7 @@
 					}, {
 						slug: "frontend",
 						years: 4,
-						items: ['html5', 'css', 'sass', 'javascript', 'typescript', 'nuxt', 'vue', 'react', 'jquery'],
+						items: ['html', 'css', 'sass', 'javascript', 'typescript', 'nuxt', 'vue', 'react', 'jquery'],
 					}, {
 						slug: "backend",
 						years: 2,
