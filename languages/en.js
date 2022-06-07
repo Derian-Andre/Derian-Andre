@@ -104,27 +104,22 @@ export default {
 				"design": {
 					"title": "Design",
 					"level": "10 years",
-					"skills": "Illustrator Photoshop InDesign Figma"
 				},
 				"frontend": {
 					"title": "Front-end",
 					"level": "3 years",
-					"skills": "HTML CSS SASS JavaScript NuxtJS VueJS jQuery"
 				},
 				"backend": {
 					"title": "Back-end",
 					"level": "2 years",
-					"skills": "NodeJS ExpressJS MongoDB Mongoose PHP MySQL Python"
 				},
 				"photography": {
 					"title": "Photography",
 					"level": "5 years",
-					"skills": "Portrait Landscape Product"
 				},
 				"team": {
 					"title": "Teamwork",
 					"level": "3 years",
-					"skills": "Git Slack Trello"
 				}
 			}
 		},

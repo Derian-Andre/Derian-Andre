@@ -19,25 +19,9 @@
 					<!-- Contact -->
 					<CurriculumAboutSection name="contact">
 						<ul class="list-unstyled">
-							<li>
-								<Icon name="geo-alt-fill" class="me-3"/>
-								<a target="_blank" rel="noopener norefereer nofollow" href="https://goo.gl/maps/resBeWvWuGR1VFwB6">{{ $t('curriculum.about.contact.address') }}</a>
-							</li>
-							<li>
-								<Icon name="phone-fill" class="me-3"/>
-								<a target="_blank" rel="noopener noreferrer nofollow" href="tel:+523312781411">+52 33 1278 1411</a>
-							</li>
-							<li>
-								<Icon name="envelope-fill" class="me-3"/>
-								<a target="_blank" rel="noopener noreferrer nofollow" href="mailto:hola@derianandre.com">hola@derianandre.com</a>
-							</li>
-							<li>
-								<Icon name="github" class="me-3"/>
-								<a target="_blank" rel="noopener noreferrer nofollow" href="http://github.com/derianandre">Github</a>
-							</li>
-							<li>
-								<Icon name="linkedin" class="me-3"/>
-								<a target="_blank" rel="noopener noreferrer nofollow" href="http://linkedin.com/in/derianandre">Linkedin</a>
+							<li v-for="item in contact" :key="item.icon">
+								<Icon :name="item.icon" class="me-3"/>
+								<a target="_blank" rel="noopener norefereer nofollow" :href="item.url">{{ item.title }}</a>
 							</li>
 						</ul>
 					</CurriculumAboutSection>
@@ -46,9 +30,6 @@
 						<h4>
 							{{ $t('curriculum.about.specialty.subtitle') }}
 						</h4>
-						<NuxtLink class="btn btn-outline-link h6 small text-uppercase px-4 m-0" :to="localePath('/projects/')">
-							{{ $t('projects.title') }}
-						</NuxtLink>
 					</CurriculumAboutSection>
 					<!-- Languages -->
 					<CurriculumAboutSection name="languages">
@@ -63,7 +44,7 @@
 					</CurriculumAboutSection>
 					<!-- Skills -->
 					<CurriculumAboutSection name="skills">
-						<CurriculumAboutSkill class="mb-4" v-for="item in skills" :key="item" :name="item"/>
+						<CurriculumAboutSkill class="mb-4" v-for="item in skills" :key="item.slug" :data="item"/>
 					</CurriculumAboutSection>
 				</div>
 				<!-- Experiece -->
@@ -71,9 +52,17 @@
 					<h2>
 						{{ $t(`curriculum.experience.title`) }}
 					</h2>
-					<p class="intro">
+					<p class="intro mb-4">
 						{{ $t(`curriculum.experience.lead`) }}
 					</p>
+					<div class="hstack gap-2">
+						<NuxtLink class="btn btn-outline-link small text-uppercase px-4" :to="localePath('/projects/')">
+							{{ $t('projects.title') }}
+						</NuxtLink>
+						<NuxtLink class="btn btn-outline-link small text-uppercase px-4" :to="localePath('/blog/')">
+							{{ $t('blog.title') }}
+						</NuxtLink>
+					</div>
 					<hr>
 					<div class="row experience">
 						<div class="col">
@@ -111,16 +100,51 @@
     data() {
 			return {
 				page: "curriculum",
+				contact: [
+					{
+						title: "Zapopan, Jalisco, México",
+						icon: "geo-alt-fill",
+						url: "https://goo.gl/maps/resBeWvWuGR1VFwB6",
+					}, {
+						title: "+52 33 1278 1411",
+						icon: "phone-fill",
+						url: "tel:+523312781411",
+					}, {
+						title: "hola@derianandre.com",
+						icon: "envelope-fill",
+						url: "mailto:hola@derianandre.com",
+					}, {
+						title: "Github",
+						icon: "github",
+						url: "http://github.com/derianandre",
+					}, {
+						title: "Linkedin",
+						icon:	"linkedin",
+						url:	"http://linkedin.com/in/derianandre",
+					},
+				],
 				languages: [
 					"spanish",
 					"english",
 				],
 				skills: [
-					"design",
-					"frontend",
-					"backend",
-					"photography",
-					"team",
+					{
+						slug: "design",
+						years: 10,
+						items: ['adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma'],
+					}, {
+						slug: "frontend",
+						years: 4,
+						items: ['html5', 'css', 'sass', 'javascript', 'typescript', 'nuxt', 'vue', 'react', 'jquery'],
+					}, {
+						slug: "backend",
+						years: 2,
+						items: ['node', 'express', 'mongodb', 'mongoose', 'mysql', 'php', 'python'],
+					}, {
+						slug: "team",
+						years: 4,
+						items: ['git', 'github', 'jira', 'bitbucket', 'gitlab', 'slack', 'trello'],
+					},
 				],
 				experience: [
 					{

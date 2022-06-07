@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-<style type="text/css">
-	.head {fill:#FFCB4C;}
-	.hand {fill:#F19020;}
-	.s {fill:#65471B;}
-</style>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+	<style type="text/css">
+		.head {fill:#FFCB4C;}
+		.hand {fill:#F19020;}
+		.s {fill:#65471B;}
+	</style>
 	<circle class="head" cx="25" cy="25" r="17"/>
 	<ellipse class="eye-left s" cx="20.1" cy="19.2" rx="2.1" ry="2.7"/>
 	<ellipse class="eye-right s" cx="31.4" cy="20.2" rx="2.1" ry="2.7"/>

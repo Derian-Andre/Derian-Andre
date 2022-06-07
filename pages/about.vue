@@ -20,13 +20,13 @@
 			<h4 class="mb-0">{{ $t('about.more.title') }}</h4>
 			<p>{{ $t('about.more.content') }}</p>
 			<div class="hstack flex-wrap gap-3 mt-2">
-				<NuxtLink class="btn btn-outline-link h6 small text-uppercase px-4 m-0" :to="localePath('/curriculum/')">
+				<NuxtLink class="btn btn-outline-link small text-uppercase px-4 m-0" :to="localePath('/curriculum/')">
 					{{ $t('curriculum.title') }}
 				</NuxtLink>
-				<NuxtLink class="btn btn-outline-link h6 small text-uppercase px-4 m-0" :to="localePath('/projects/')">
+				<NuxtLink class="btn btn-outline-link small text-uppercase px-4 m-0" :to="localePath('/projects/')">
 					{{ $t('projects.title') }}
 				</NuxtLink>
-				<a class="btn btn-outline-link h6 small text-uppercase px-5 m-0" href="https://github.com/Derian-Andre/Derian-Andre">
+				<a class="btn btn-outline-link small text-uppercase px-5 m-0" href="https://github.com/Derian-Andre/Derian-Andre">
 					{{ $t('social.github_repo') }}
 				</a>
 			</div>

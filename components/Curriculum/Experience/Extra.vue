@@ -14,7 +14,7 @@
       {{ date }}
     </h6>
     <p class="description" v-if="description" v-html="description" />
-    <a :href="data.url" v-if="data.url" target="_blank" class="btn btn-outline-link h6 small text-uppercase">
+    <a :href="data.url" v-if="data.url" target="_blank" class="btn btn-outline-link small text-uppercase">
       {{ $t(`curriculum.experience.${type}.btn`) }}
       <i class="bi bi-box-arrow-up-right ms-1" />
     </a>

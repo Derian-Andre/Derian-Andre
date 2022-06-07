@@ -2,11 +2,16 @@
 .btn {
 	transition: all 0.35s ease;
 	align-self: flex-start;
+	.bi {
+		transition: all 0s ease;
+	}
 	&.btn-outline-link {
 		color: var(--body-color-normal);
 		background: transparent;
 		border-color: var(--body-color-normal);
 		text-decoration: none;
+		font-family: $font-family-headings;
+		font-weight: bold;
 		&:hover {
 			background: var(--body-color-normal);
 			color: var(--body-bg);
