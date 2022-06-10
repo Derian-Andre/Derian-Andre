@@ -101,26 +101,12 @@ export default {
 			},
 			"skills": {
 				"title": "Skills",
-				"design": {
-					"title": "Design",
-					"level": "10 years",
-				},
-				"frontend": {
-					"title": "Front-end",
-					"level": "3 years",
-				},
-				"backend": {
-					"title": "Back-end",
-					"level": "2 years",
-				},
-				"photography": {
-					"title": "Photography",
-					"level": "5 years",
-				},
-				"team": {
-					"title": "Teamwork",
-					"level": "3 years",
-				}
+				"years": "{years} years",
+				"design": "Design",
+				"frontend": "Front-end",
+				"backend": "Back-end",
+				"photography": "Photography",
+				"team": "Teamwork",
 			}
 		},
 		"experience": {
@@ -166,7 +152,7 @@ export default {
 					"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
 					"subtitle": "Nanotechnology engineering",
 					"date": "2013 - 2018",
-					"description": "Nanotechnology laboratory management: SEM, XPS, AFM and Sputtering equipment. Simulation of molecular systems and particles with Python and ORCA. Synthesis and characterization of nanomaterials: carbon nanotubes, silver and copper nanoparticles, etc. Programming : Python, PHP, C, CSS, HTML, Databases (MySQL) "
+					"description": "Nanotechnology laboratory management: SEM, XPS, AFM and Sputtering equipment. Simulation of molecular systems and particles with Python and ORCA. Synthesis and characterization of nanomaterials: carbon nanotubes, silver and copper nanoparticles, etc."
 				},
 				"cbtis": {
 					"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",

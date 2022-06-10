@@ -55,7 +55,7 @@
 					<p class="intro mb-4">
 						{{ $t(`curriculum.experience.lead`) }}
 					</p>
-					<div class="hstack gap-2">
+					<div class="hstack gap-2 flex-wrap">
 						<NuxtLink class="btn btn-outline-link small text-uppercase px-4" :to="localePath('/projects/')">
 							{{ $t('projects.title') }}
 						</NuxtLink>
@@ -68,7 +68,7 @@
 						<div class="col">
 							<template v-for="section in experience">
 								<CurriculumExperienceSection :name="section.slug" :key="section.slug">
-									<CurriculumExperienceItem v-for="item in section.items" :key="item" :name="item" :type="section.slug" />
+									<CurriculumExperienceItem v-for="item in section.items" :key="item.slug" :data="item" :type="section.slug" />
 								</CurriculumExperienceSection>
 							</template>
 						</div>
@@ -76,14 +76,14 @@
 							<!-- Certifications -->
 							<CurriculumExperienceSection name="certifications">
 								<template v-for="certification in certifications">
-									<Figure :src="`curriculum/${certification.slug}.svg`" max-width="150px"/>
+									<Figure class="figure-logo" :src="`curriculum/${certification.slug}.svg`" max-width="150px"/>
 									<CurriculumExperienceExtra type="certifications" v-for="item in certification.items" :key="item.slug" :company="certification.slug" :data="item" />
 								</template>
 							</CurriculumExperienceSection>
 							<!-- Course -->
 							<CurriculumExperienceSection name="courses">
 								<template v-for="course in courses">
-									<Figure :src="`curriculum/${course.slug}.svg`" max-width="150px"/>
+									<Figure class="figure-logo" :src="`curriculum/${course.slug}.svg`" max-width="150px"/>
 									<CurriculumExperienceExtra type="courses" v-for="item in course.items" :key="item.slug" :company="course.slug" :data="item" />
 								</template>
 							</CurriculumExperienceSection>
@@ -143,29 +143,29 @@
 					}, {
 						slug: "team",
 						years: 4,
-						items: ['git', 'github', 'jira', 'bitbucket', 'gitlab', 'slack', 'trello'],
+						items: ['git', 'github', 'jira', 'bitbucket', 'confluence', 'gitlab', 'discord', 'slack', 'trello', 'meistertask'],
 					},
 				],
 				experience: [
 					{
 						slug: "jobs",
 						items: [
-							"blueoptima",
-							"xolvex",
-							"inbright",
-							"derianandre",
+							{ slug: "blueoptima", stack: ['react', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'figma'] },
+							{ slug: "xolvex", stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'slack', 'trello',] },
+							{ slug: "inbright", stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'discord', 'slack', 'trello', 'meistertask'] },
+							{ slug: "derianandre", stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'node', 'express', 'mongoose', 'mongodb', 'mysql', 'php', 'git', 'github', 'gitlab', 'bitbucket', 'discord', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma'] },
 						],
 					}, {
 						slug: "education",
 						items: [
-							"iteso",
-							"cbtis",
+							{ slug: "iteso", stack: ['ssh', 'php', 'python', 'html', 'css', 'mysql'] },
+							{ slug: "cbtis", },
 						],
 					}, {
 						slug: "practices",
 						items: [
-							"cinvestav",
-							"casasyterrenos",
+							{ slug: "cinvestav", stack: ['javascript', 'html', 'sass', 'php',] },
+							{ slug: "casasyterrenos", stack: ['ssh', 'python', 'mysql', 'mongodb'] },
 						]
 					}
 				],

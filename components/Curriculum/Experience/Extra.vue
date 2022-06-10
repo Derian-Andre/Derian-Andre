@@ -1,6 +1,6 @@
 <template>
   <section :id="`${company}-${data.slug}`" class="mb-4">
-    <Figure :src="`curriculum/icons/${data.type}.svg`" />
+    <Figure class="figure-logo" :src="`curriculum/icons/${data.type}.svg`" />
     <h4 class="subtitle">
       {{ subtitle }}
     </h4>

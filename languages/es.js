@@ -101,26 +101,12 @@ export default {
 			},
 			"skills": {
 				"title": "Habilidades",
-				"design": {
-					"title": "Diseño",
-					"level": "10 años",
-				},
-				"frontend": {
-					"title": "Front-end",
-					"level": "3 años",
-				},
-				"backend": {
-					"title": "Back-end",
-					"level": "2 años",
-				},
-				"photography": {
-					"title": "Fotografía",
-					"level": "5 años",
-				},
-				"team": {
-					"title": "Trabajo en equipo",
-					"level": "3 años",
-				}
+				"years": "{years} años",
+				"design": "Diseño",
+				"frontend": "Front-end",
+				"backend": "Back-end",
+				"photography": "Fotografía",
+				"team": "Trabajo en equipo",
 			}
 		},
 		"experience": {
@@ -157,7 +143,7 @@ export default {
 					"title": "Independiente",
 					"subtitle": "Diseño, Desarrollo & Fotografía",
 					"date": "2015 Agosto − Actual",
-					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de imágenes corporativas, hasta solucionrd full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, entre muchos otros trabajos."
+					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de marcas y edición de video, hasta soluciones full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, plataformas, tiendas, entre muchos otros trabajos."
 				}
 			},
 			"education": {
@@ -166,7 +152,7 @@ export default {
 					"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
 					"subtitle": "Ingeniería en nanotecnología",
 					"date": "2013 − 2018",
-					"description": "Manejo del laboratorio de nanotecnología: equipos SEM, XPS, AFM y Sputtering. Simulación de sistemas moleculares y partículas con Python y ORCA. Síntesis y caracterización de nanomateriales: nanotubos de carbono, nanopartículas de plata y cobre, etc. Programación: Python, PHP, C, CSS, HTML, Bases de datos."
+					"description": "Manejo del laboratorio de nanotecnología: equipos SEM, XPS, AFM y Sputtering. Simulación de sistemas moleculares y partículas con Python y ORCA. Síntesis y caracterización de nanomateriales: nanotubos de carbono, nanopartículas de plata y cobre, etc."
 				},
 				"cbtis": {
 					"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
