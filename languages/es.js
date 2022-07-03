@@ -113,36 +113,36 @@ export default {
 			"title": "Experiencia",
 			"lead": "Mi meta siempre es dar lo mejor de mi, aprender lo que sea necesario y crecer, me encantan los desafíos y aprovecho las oportunidades que aporten para mi evolución. Crear experiencias funcionales, hermosas y accessibles que aporten valor a las personas.",
 			"in-progress": "En progreso",
+			"current": "Actual",
+			"years": "{n} año | {n} años",
+			"months": "{n} mes | {n} meses",
+			"days": "{n} día | {n} días",
+			"expedition": "Expedición: ",
 			"jobs": {
 				"title": "Trabajos",
 				"blueoptima": {
 					"title": "BlueOptima",
 					"subtitle": "Associate Frontend Software Engineer",
-					"date": "2022 Mayo - Actual",
 					"description": "BlueOptima introduce métricas transparentes para administrar los recursos de desarrollo de software con automatización, estandarización y objetividad por primera vez. Formo parte del equipo que desarrolla la interfaz de usuario para todos los productos de la plataforma que permite a los usuarios ver cómo trabajan sus desarrolladores y cómo se desempeñan."
 				},
 				"xolvex": {
 					"title": "Xolvex",
 					"subtitle": "Diseñador Fullstack",
-					"date": "2019 Enero - 2022 Mayo",
 					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web front-end."
 				},
 				"inbright": {
 					"title": "Inbright",
 					"subtitle": "Diseñador Fullstack",
-					"date": "2018 Noviembre − 2019 Enero",
 					"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos."
 				},
 				"uxlon": {
 					"title": "Uxlon",
 					"subtitle": "Diseñador Fullstack",
-					"date": "2018 Noviembre − 2019 Enero",
 					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain."
 				},
 				"derianandre": {
 					"title": "Independiente",
 					"subtitle": "Diseño, Desarrollo & Fotografía",
-					"date": "2015 Agosto − Actual",
 					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de marcas y edición de video, hasta soluciones full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, plataformas, tiendas, entre muchos otros trabajos."
 				}
 			},
@@ -179,6 +179,7 @@ export default {
 			"certifications": {
 				"title": "Certificaciones",
 				"btn": "Ver certificado",
+				"of": "Certificatión de {0}",
 				"types": {
 					"react": "Certificación de React",
 					"node": "Certificación de Node",
@@ -220,39 +221,43 @@ export default {
 			"courses": {
 				"title": "Cursos",
 				"btn": "Ver curso",
-				"types": {
-					"react": "Curso de React",
-					"node": "Curso de Node",
-					"javascript": "Curso de JavaScript",
-					"css": "Curso de CSS",
-					"html": "Curso de HTML",
-					"git": "Curso de Git",
-					"python": "Curso de Python",
-					"sql": "Curso de SQL",
-					"php": "Curso de PHP",
-					"c": "Curso de C",
-					"c++": "Curso de C++",
-				},
+				"of": "Curso de {0}",
 				"items": {
 					"frontend-masters": {
 						"title": "Frontend Masters",
 						"items": {
+							"js-fundamentals-functional-v2": {
+								"title": "JavaScript: De los fundamentos al JS funcional, v2",
+								"description": "Aprenda funciones de orden superior, cierres, alcance, métodos funcionales de clave maestra como mapear, reducir y filtrar y promesas y JavaScript asíncrono ES6+",
+							},
+							"javascript-hard-parts-v2": {
+								"title": "JavaScript: Las partes difíciles, v2",
+								"description": "Lleva tu JavaScript al siguiente nivel. Obtenga una comprensión de las devoluciones de llamada, funciones de orden superior, cierre, JavaScript asíncrono y orientado a objetos.",
+							},
+							"deep-javascript-v3": {
+								"title": "JavaScript: Fundamentos profundos, v3",
+								"description": "Sumérjase en las características del lenguaje central de JavaScript: tipos y coerción, alcance y cierres, y el sistema orientado a objetos de JavaScript.",
+							},
 							"complete-intro-to-react-v7": {
 								"title": "Introducción completa a React, v7",
 								"description": "Mucho más que una introducción, construirás con las últimas características de React, incluidos ganchos, efectos, contexto y portales. Aprende a crear aplicaciones del mundo real desde cero usando las últimas herramientas de React ecosistema, como Parcel, ESLint, Prettier y React Router!"
 							},
 							"intermediate-react-v4": {
 								"title": "React intermedio, v7",
-								"description": "Cree aplicaciones React escalables mientras aprende en profundidad los ganchos de React, CSS-in-JS con TailwindCSS, aumente el rendimiento con la división de código y la representación del lado del servidor"
+								"description": "Cree aplicaciones React escalables mientras aprende en profundidad los ganchos de React, CSS-in-JS con TailwindCSS, aumente el rendimiento con la división de código y la representación del lado del servidor",
 							},
 							"pure-react-state": {
 								"title": "Gestión de estados en React puro, v2",
-								"description": "Cree ganchos personalizados, use reductores, agregue enrutamiento y luego aprenda formas de hacer técnicas de administración de estado de reacción más complicadas, como usar la Context API"
+								"description": "Cree ganchos personalizados, use reductores, agregue enrutamiento y luego aprenda formas de hacer técnicas de administración de estado de reacción más complicadas, como usar la Context API",
 							},
 							"css-variables": {
 								"title": "CSS dinámico con propiedades personalizadas (también conocidas como variables de CSS)",
-								"description": "Cree componentes reutilizables sin necesidad de dependencias de JavaScript, ¡solo con CSS estándar! Domine las propiedades personalizadas de CSS, también conocidas como variables CSS"
-							}
+								"description": "Cree componentes reutilizables sin necesidad de dependencias de JavaScript, ¡solo con CSS estándar! Domine las propiedades personalizadas de CSS, también conocidas como variables CSS",
+							},
+							"customize-vs-code": {
+								"title": "¿Visual Studio Code puede hacer eso?",
+								"description": "Sumérgete en VS Code para personalizar tu editor, refactorizar y depurar código. Aprende a trabajar con datos y git... ¡todo dentro del mismo editor!",
+							},
 						}
 					}
 				}
@@ -265,7 +270,7 @@ export default {
 		"go_home": "¡Mira otro de mis trabajos!",
 		"not_working": {
 			"title": "Descanse en paz",
-			"description": "Actualmente la empresa o el proyecto <strong>ya no está operativa o en función</strong>, lamentablemente ... 😢"
+			"description": "Actualmente la empresa o el proyecto <strong>ya no está operativa o en función</strong>, lamentablemente ... 😢",
 		}
 	},
 	"projects": {
@@ -275,26 +280,26 @@ export default {
 		"learn_more": "Conoce más sobre el proyecto",
 		"not_working": {
 			"title": "Descanse en paz",
-			"description": "Actualmente el proyecto <strong>ya no está siendo mantenido</strong>, lamentablemente ... 😢"
+			"description": "Actualmente el proyecto <strong>ya no está siendo mantenido</strong>, lamentablemente ... 😢",
 		},
 		"sponsor": {
 			"title": "¿Te gustó este proyecto?",
 			"description": "Si es así, puedes ayudar con una donación o siendo un patrocinador de github, ¡la motivación siempre es bienvenida!",
 			"github": "Sé un sponsor de Github",
-			"paypal": "Hacer una donación por Paypal"
+			"paypal": "Hacer una donación por Paypal",
 		}
 	},
 	"error": {
 		"title": "Error en la matrix",
 		"subtitle": "No se encontró la estúpida y sensual página",
 		"content": "<p class=\"lead\">Quizás la borré o quién sabe... todo se me olvida o quizás no...</p><p>En fin, si esta página no se encontró, <strong>¿por qué existe esta página?</strong></p><p><strong>¿Como puedo ser una página no encontrada?</strong>, si me acabas de encontrar...</p><p>Entonces.. <strong>¿soy o no soy?</strong></p><p><strong>¿Qué es ser?</strong></p><p><strong>¿Quién eres tú?</strong> y... <strong>¿qué haces aquí?</strong></p><p><strong>¿Eres real?</strong></p>",
-		"go_home": "¡Regresa al inicio de la creación!"
+		"go_home": "¡Regresa al inicio de la creación!",
 	},
 	"page": {
 		"go_home": "Regresa al inicio",
 		"construction": {
 			"title": "Página en construcción 😅",
-			"description": "Todavía no he terminado de redactar está página, intentalo unos días después 🤙🏻"
+			"description": "Todavía no he terminado de redactar está página, intentalo unos días después 🤙🏻",
 		}
 	},
 	"pagination": {
@@ -303,6 +308,6 @@ export default {
 		"first": "Recientes",
 		"next": "Siguiente",
 		"previous": "Anterior",
-		"last": "Últimos"
+		"last": "Últimos",
 	}
 }

@@ -1,6 +1,11 @@
 <template>
   <time :datetime="date">
-    {{ formatedDate }}
+    <template v-if="$slots.default">
+      <slot/>
+    </template>
+    <template v-else>
+      {{ formatedDate }}
+    </template>
   </time>
 </template>
 
@@ -13,11 +18,16 @@
         required: true
       }
     },
+    methods: {
+      hasSlot() {
+        return this.$slots.default ? true : false;
+      },
+    },
     computed: {
       formatedDate() {
-        let locale = this.$i18n.locale,
-            date = this.date;
-        return Utils.formatDate(locale, date);
+        const date = this.date;
+        const locale = this.$i18n.locale;
+        return Utils.formatDate(date, locale);
       }
     }
   }

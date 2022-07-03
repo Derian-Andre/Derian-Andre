@@ -77,14 +77,14 @@
 							<CurriculumExperienceSection name="certifications">
 								<template v-for="certification in certifications">
 									<Figure class="figure-logo" :src="`curriculum/${certification.slug}.svg`" max-width="150px"/>
-									<CurriculumExperienceExtra type="certifications" v-for="item in certification.items" :key="item.slug" :company="certification.slug" :data="item" />
+									<CurriculumExperienceExtra type="certifications" v-for="item in certification.items" :key="item.slug" :company="certification" :data="item" />
 								</template>
 							</CurriculumExperienceSection>
 							<!-- Course -->
 							<CurriculumExperienceSection name="courses">
 								<template v-for="course in courses">
 									<Figure class="figure-logo" :src="`curriculum/${course.slug}.svg`" max-width="150px"/>
-									<CurriculumExperienceExtra type="courses" v-for="item in course.items" :key="item.slug" :company="course.slug" :data="item" />
+									<CurriculumExperienceExtra type="courses" v-for="item in course.items" :key="item.slug" :company="course" :data="item" />
 								</template>
 							</CurriculumExperienceSection>
 						</div>
@@ -150,53 +150,84 @@
 					{
 						slug: "jobs",
 						items: [
-							{ slug: "blueoptima", stack: ['react', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'figma'] },
-							{ slug: "xolvex", stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'slack', 'trello',] },
-							{ slug: "inbright", stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'discord', 'slack', 'trello', 'meistertask'] },
-							{ slug: "derianandre", stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'node', 'express', 'mongoose', 'mongodb', 'mysql', 'php', 'git', 'github', 'gitlab', 'bitbucket', 'discord', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma'] },
+							{
+								slug: "blueoptima",
+								dateEnd: null,
+								dateStart: "2022-05-16T09:00:00.000Z",
+								stack: ['react', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'figma']
+							}, {
+								slug: "xolvex",
+								dateEnd: "2022-05-13T18:00:00.000Z",
+								dateStart: "2019-01-03T10:00:00.000Z",
+								stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'slack', 'trello',]
+							}, {
+								slug: "inbright",
+								dateEnd: "2019-01-01T10:00:00.000Z",
+								dateStart: "2018-11-23T10:00:00.000Z",
+								stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'discord', 'slack', 'trello', 'meistertask']
+							}, {
+								slug: "derianandre",
+								dateEnd: null,
+								dateStart: "2015-04-08T09:00:00.000Z",
+								stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'node', 'express', 'mongoose', 'mongodb', 'mysql', 'php', 'git', 'github', 'gitlab', 'bitbucket', 'discord', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma']
+							},
 						],
 					}, {
 						slug: "education",
 						items: [
-							{ slug: "iteso", stack: ['ssh', 'php', 'python', 'html', 'css', 'mysql'] },
-							{ slug: "cbtis", },
+							{
+								slug: "iteso",
+								dateEnd: "2018-12-06T10:00:00.000Z",
+								dateStart: "2013-05-01T18:00:00.000Z",
+								stack: ['ssh', 'php', 'python', 'html', 'css', 'mysql']
+							}, {
+								slug: "cbtis",
+								dateEnd: "2013-07-05T10:00:00.000Z",
+								dateStart: "2010-08-02T18:00:00.000Z",
+							},
 						],
 					}, {
 						slug: "practices",
 						items: [
-							{ slug: "cinvestav", stack: ['javascript', 'html', 'sass', 'php',] },
-							{ slug: "casasyterrenos", stack: ['ssh', 'python', 'mysql', 'mongodb'] },
+							{ slug: "cinvestav",
+								dateEnd: "2018-12-03T18:00:00.000Z",
+								dateStart: "2018-05-13T08:00:00.000Z",
+								stack: ['javascript', 'html', 'sass', 'php',]
+							}, {
+								slug: "casasyterrenos",
+								dateEnd: "2018-05-10T18:00:00.000Z",
+								dateStart: "2018-01-01T08:00:00.000Z",
+								stack: ['ssh', 'python', 'mysql', 'mongodb']
+							},
 						]
 					}
 				],
 				certifications: [
 					{
 						slug: "hackerrank",
+						home: "https://www.hackerrank.com/",
+						validator: "https://www.hackerrank.com/certificates/",
 						items: [
 							{
 								type: "css",
 								slug: "css",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "6ee76af9c694",
-								url: "https://www.hackerrank.com/certificates/6ee76af9c694"
 							}, {
 								type: "javascript",
 								slug: "javascript-basic",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "65c6789e94d0",
-								url: "https://www.hackerrank.com/certificates/65c6789e94d0"
 							}, {
 								type: "javascript",
 								slug: "javascript-intermediate",
 								date: "2022-05-25T18:00:00.000Z",
 								id: "fb3ac1cfe596",
-								url: "https://www.hackerrank.com/certificates/fb3ac1cfe596"
 							}, {
 								type: "troubleshooting",
 								slug: "problem-solving-basic",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "8e534883069e",
-								url: "https://www.hackerrank.com/certificates/8e534883069e"
 							},
 						]
 					},
@@ -204,31 +235,57 @@
 				courses: [
 					{
 						slug: "frontend-masters",
+						home: "https://frontendmasters.com/",
+						validator: "https://frontendmasters.com/courses/",
 						items: [
 							{
+								type: "javascript",
+								slug: "js-fundamentals-functional-v2",
+								date: "2022-06-14T15:00:00.000Z",
+								author: "Bianca Gandolfo",
+								id: null,
+							}, {
+								type: "javascript",
+								slug: "javascript-hard-parts-v2",
+								date: "2022-06-22T15:00:00.000Z",
+								author: "Will Sentance",
+								id: null,
+							}, {
+								type: "javascript",
+								slug: "deep-javascript-v3",
+								date: "2022-07-01T15:00:00.000Z",
+								author: "Kyle Simpson",
+								id: null,
+							}, {
 								type: "react",
 								slug: "complete-intro-to-react-v7",
 								date: "2022-05-27T15:00:00.000Z",
+								author: "Brian Holt",
 								id: null,
-								url: "https://frontendmasters.com/courses/complete-react-v7/"
 							}, {
 								type: "react",
 								slug: "intermediate-react-v4",
 								date: "2022-06-01T15:00:00.000Z",
+								author: "Brian Holt",
 								id: null,
-								url: "https://frontendmasters.com/courses/intermediate-react-v4/"
 							},  {
 								type: "react",
 								slug: "pure-react-state",
 								date: "2022-06-02T15:00:00.000Z",
+								author: "Steve Kinney",
 								id: null,
-								url: "https://frontendmasters.com/courses/pure-react-state/"
 							}, {
 								type: "css",
 								slug: "css-variables",
 								date: "2022-06-03T18:30:00.000Z",
+								author: "Lea Verou",
 								id: null,
-								url: "https://frontendmasters.com/courses/css-variables/"
+							}, {
+								type: "vscode",
+								slug: "customize-vs-code",
+								date: "2022-07-01T15:00:00.000Z",
+								author: "Burke Holland",
+								id: null,
 							}
 						]
 					}

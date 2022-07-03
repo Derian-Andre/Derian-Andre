@@ -113,6 +113,11 @@ export default {
 			"title": "Experience",
 			"lead": "My goal is always to give my best, learn what is necessary and grow, I love challenges and I take advantage of the opportunities that makes me evolve. Create functional, beautiful and accessible experiences that add value to people.",
 			"in-progress": "In progress",
+			"current": "Current",
+			"years": "{n} year | {n} years",
+			"months": "{n} month | {n} months",
+			"days": "{n} day | {n} days",
+			"expedition": "Expedition: ",
 			"jobs": {
 				"title": "Jobs",
 				"blueoptima": {
@@ -179,6 +184,7 @@ export default {
 			"certifications": {
 				"title": "Certifications",
 				"btn": "View certification",
+				"of": "Certification of {0}",
 				"types": {
 					"react": "React Certification",
 					"node": "Node Certification",
@@ -220,6 +226,7 @@ export default {
 			"courses": {
 				"title": "Courses",
 				"btn": "View course",
+				"of": "Cuourse of {0}",
 				"types": {
 					"react": "React Course",
 					"node": "Node Course",
@@ -237,6 +244,18 @@ export default {
 					"frontend-masters": {
 						"title": "Frontend Masters",
 						"items": {
+							"js-fundamentals-functional-v2": {
+								"title": "JavaScript: From Fundamentals to Functional JS, v2",
+								"description": "Learn higher-order functions, closures, scope, master key functional methods like map, reduce and filter and promises and ES6+ asynchronous JavaScript.",
+							},
+							"javascript-hard-parts-v2": {
+								"title": "JavaScript: The Hard Parts, v2",
+								"description": "Take your JavaScript to the next level. Gain an understanding of callbacks, higher order functions, closure, asynchronous and object-oriented JavaScript!",
+							},
+							"deep-javascript-v3": {
+								"title": "Deep JavaScript Foundations, v3",
+								"description": "Dive into JavaScript's core language features: types & coercion, scope & closure, and JavaScript's object oriented system.",
+							},
 							"complete-intro-to-react-v7": {
 								"title": "Complete Introduction to React, v7",
 								"description": "Much more than an intro, you’ll build with the latest features in React, including hooks, effects, context, and portals. Learn to build real-world apps from the ground up using the latest tools in the React ecosystem, like Parcel, ESLint, Prettier, and React Router!",
@@ -252,7 +271,11 @@ export default {
 							"css-variables": {
 								"title": "Dynamic CSS with Custom Properties (aka CSS Variables)",
 								"description": "Create reusable components without any JavaScript dependencies needed – with only vanilla CSS! Master CSS custom properties AKA CSS variables.",
-							}
+							},
+							"customize-vs-code": {
+								"title": "Visual Studio Code Can Do That?",
+								"description": "Dive into VS Code to customize your editor, refactor and debug code. Learn how to work with data and git …all within the same editor!",
+							},
 						}
 					}
 				}
@@ -265,7 +288,7 @@ export default {
 		"go_home": "Look at another of my works!",
 		"not_working": {
 			"title": "Rest in peace",
-			"description": "Currently the company or the project <strong> is no longer operational or in function </strong>, unfortunately ... 😢"
+			"description": "Currently the company or the project <strong> is no longer operational or in function </strong>, unfortunately ... 😢",
 		}
 	},
 	"projects": {
@@ -275,26 +298,26 @@ export default {
 		"learn_more": "Learn more about this project",
 		"not_working": {
 			"title": "Rest in peace",
-			"description": "Currently the project <strong> is no longer being maintained </strong>, unfortunately ... 😢"
+			"description": "Currently the project <strong> is no longer being maintained </strong>, unfortunately ... 😢",
 		},
 		"sponsor": {
 			"title": "Did you like this project?",
 			"description": "If so, you can help with a donation or by being a github sponsor, motivation is always welcome!",
 			"github": "Be a Github sponsor",
-			"paypal": "Make a donation with Paypal"
+			"paypal": "Make a donation with Paypal",
 		}
 	},
 	"error": {
 		"title": "Error in the matrix",
 		"subtitle": "The stupid sexy page was not found",
 		"content": "<p class=\"lead\">Maybe I deleted it or who knows ... I forget everything or maybe not ...</p><p>Anyway, if this page was not found ,<strong>why does this page exist?</strong></p><p><strong>How can I be a page not found?</strong>, if you just found me ...</ p ><p>So ..<strong>Am I or am I not?</strong></p><p><strong>What is being?</strong></p><p><strong>Who are you?</strong>and ...<strong>what are you doing here?</strong></p><p><strong>Are you real?</strong></p>",
-		"go_home": "Go back to the beginning of creation!"
+		"go_home": "Go back to the beginning of creation!",
 	},
 	"page": {
 		"go_home": "Go back to home",
 		"construction": {
 			"title": "Page under construcción 😅",
-			"description": "I have not finished writing this page yet, try it a few days later 🤙🏻"
+			"description": "I have not finished writing this page yet, try it a few days later 🤙🏻",
 		}
 	},
 	"pagination": {
@@ -303,6 +326,6 @@ export default {
 		"first": "Recent",
 		"next": "Next",
 		"previous": "Previous",
-		"last": "Latest"
+		"last": "Latest",
 	}
 }

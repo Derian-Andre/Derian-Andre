@@ -20,7 +20,9 @@
 		props: ['title', 'subtitle', 'date'],
 		computed: {
 			formatedDate() {
-				return Utils.formatDate(this.$i18n.locale, this.date);
+				const date = this.date;
+				const locale = this.$i18n.locale;
+				return Utils.formatDate(date, locale);
 			}
 		}
 	}

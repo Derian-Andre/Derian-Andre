@@ -1,6 +1,6 @@
 const Utils = {
-	formatDate(locale = 'en', date) {
-		const options = { 
+	formatDate(date, locale) {
+		const options = {
 			year:  'numeric',
 			month: 'long',
 			day:   'numeric'

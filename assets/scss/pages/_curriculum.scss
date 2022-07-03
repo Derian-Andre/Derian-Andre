@@ -146,3 +146,22 @@ section.content-curriculum {
 		}
 	}
 }
+
+@media print {
+	@page {
+		margin: 2cm;
+		size: 40cm 70cm landscape;
+	}
+	header.header {
+		display: none !important;
+	}
+	main.page-main {
+		padding: 0 !important;
+	}
+	section.page-info {
+		padding-top: 0 !important;
+	}
+	hr {
+		display: none !important;
+	}
+}
