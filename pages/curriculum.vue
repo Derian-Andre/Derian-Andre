@@ -258,8 +258,14 @@
 								id: null,
 							}, {
 								type: "javascript",
-								slug: "javascript-new-hard-parts",
+								slug: "js-recent-parts",
 								date: "2022-07-12T15:00:00.000Z",
+								author: "Kyle Simpson",
+								id: null,
+							},  {
+								type: "javascript",
+								slug: "javascript-new-hard-parts",
+								date: "2022-07-14T15:00:00.000Z",
 								author: "Will Sentance",
 								id: null,
 							}, {
