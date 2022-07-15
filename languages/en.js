@@ -256,16 +256,24 @@ export default {
 								"title": "Deep JavaScript Foundations, v3",
 								"description": "Dive into JavaScript's core language features: types & coercion, scope & closure, and JavaScript's object oriented system.",
 							},
+							"js-recent-parts": {
+								"title": "JavaScript: The Recent Parts",
+								"description": "Get up to speed with new object destructuring JavaScript features like tagged template literals, destructuring, iterators, generators, and async-await. Learn more!",
+							},
+							"javascript-new-hard-parts": {
+								"title": "JavaScript: The New Hard Parts",
+								"description": "Develop an intuitive understanding of the new features of JavaScript in ES6+: iterators, generators, promises, and async/await!",
+							},
 							"complete-intro-to-react-v7": {
 								"title": "Complete Introduction to React, v7",
 								"description": "Much more than an intro, you’ll build with the latest features in React, including hooks, effects, context, and portals. Learn to build real-world apps from the ground up using the latest tools in the React ecosystem, like Parcel, ESLint, Prettier, and React Router!",
 							},
 							"intermediate-react-v4": {
-								"title": "React intermedio, v7",
+								"title": "Intermediate React, v7",
 								"description": "Build scalable React applications while learning React hooks in-depth, CSS-in-JS with TailwindCSS, increase performance with code splitting and server-side rendering.",
 							},
 							"pure-react-state": {
-								"title": "Gestión de estados en React puro, v2",
+								"title": "State Management in Pure React, v2",
 								"description": "Create custom hooks, use reducers, add routing, and then learn ways to do more complicated react state management techniques such as using the Context API.",
 							},
 							"css-variables": {

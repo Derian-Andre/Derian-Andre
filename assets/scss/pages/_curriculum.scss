@@ -20,6 +20,7 @@ section.content-curriculum {
 
 	.hstack-skills {
 		color: var(--body-color-high, #2D2E2F) !important;
+		display: inline-flex;
 		figure {
 			margin: 0 !important;
 			img, svg {
@@ -138,7 +139,7 @@ section.content-curriculum {
 		.row.experience {
 			.col {
 				flex: 1 1 100%;
-				@media (min-width: $content-breakpoint + 1px) {
+				@media (min-width: #{$content-breakpoint + 1px}) {
 					flex: 1 1 50%;
 					max-width: 50%;
 				}

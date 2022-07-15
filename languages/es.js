@@ -238,6 +238,14 @@ export default {
 								"title": "JavaScript: Fundamentos profundos, v3",
 								"description": "Sumérjase en las características del lenguaje central de JavaScript: tipos y coerción, alcance y cierres, y el sistema orientado a objetos de JavaScript.",
 							},
+							"js-recent-parts": {
+								"title": "JavaScript: Las partes recientes",
+								"description": "Póngase al día con las nuevas funciones de JavaScript de desestructuración de objetos, como literales de plantillas etiquetadas, desestructuración, iteradores, generadores y espera asincrónica. ¡Aprende más!",
+							},
+							"javascript-new-hard-parts": {
+								"title": "JavaScript: Las nuevas partes difíciles",
+								"description": "Desarrolla una comprensión intuitiva de las nuevas características de JavaScript en ES6+: iteradores, generadores, promesas y async/await!",
+							},
 							"complete-intro-to-react-v7": {
 								"title": "Introducción completa a React, v7",
 								"description": "Mucho más que una introducción, construirás con las últimas características de React, incluidos ganchos, efectos, contexto y portales. Aprende a crear aplicaciones del mundo real desde cero usando las últimas herramientas de React ecosistema, como Parcel, ESLint, Prettier y React Router!"

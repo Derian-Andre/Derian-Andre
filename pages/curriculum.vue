@@ -154,7 +154,7 @@
 								slug: "blueoptima",
 								dateEnd: null,
 								dateStart: "2022-05-16T09:00:00.000Z",
-								stack: ['react', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'figma']
+								stack: ['react', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence', 'figma']
 							}, {
 								slug: "xolvex",
 								dateEnd: "2022-05-13T18:00:00.000Z",
@@ -178,7 +178,7 @@
 							{
 								slug: "iteso",
 								dateEnd: "2018-12-06T10:00:00.000Z",
-								dateStart: "2013-05-01T18:00:00.000Z",
+								dateStart: "2013-08-01T18:00:00.000Z",
 								stack: ['ssh', 'php', 'python', 'html', 'css', 'mysql']
 							}, {
 								slug: "cbtis",
@@ -255,6 +255,12 @@
 								slug: "deep-javascript-v3",
 								date: "2022-07-01T15:00:00.000Z",
 								author: "Kyle Simpson",
+								id: null,
+							}, {
+								type: "javascript",
+								slug: "javascript-new-hard-parts",
+								date: "2022-07-12T15:00:00.000Z",
+								author: "Will Sentance",
 								id: null,
 							}, {
 								type: "react",
