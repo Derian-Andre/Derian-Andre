@@ -210,6 +210,10 @@ export default {
 								"title": "JavaScript (Intermedio)",
 								"description": "Abarca temas como patrones de diseño, gestión de memoria, modelo de concurrencia y bucles de eventos, entre otros."
 							},
+							"react-basic": {
+								"title": "React (Básico)",
+								"description": "Abarca temas como enrutamiento básico, elementos de representación, gestión de estado (estado de componente interno), gestión de eventos, ES6 y JavaScript y validación de formularios."
+							},
 							"problem-solving-basic": {
 								"title": "Resolución de problemas (Básico)",
 								"description": "Cubre temas básicos de estructuras de datos (como matrices, cadenas) y algoritmos (como clasificación y búsqueda)."

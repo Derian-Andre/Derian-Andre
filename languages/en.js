@@ -215,6 +215,10 @@ export default {
 								"title": "JavaScript (Intermediate)",
 								"description": "Covering topics such as design patterns, memory management, the concurrency model, and event loops, among others."
 							},
+							"react-basic": {
+								"title": "React (Basic)",
+								"description": "Covers topics like Basic Routing, Rendering Elements,State Management (Internal Component State), Handling Events, ES6 and JavaScript and Form Validation."
+							},
 							"problem-solving-basic": {
 								"title": "Troubleshooting (Basic)",
 								"description": "Covers basic data structures (such as arrays, strings) and algorithms (such as sorting and searching)."

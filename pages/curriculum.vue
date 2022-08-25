@@ -209,11 +209,6 @@
 						validator: "https://www.hackerrank.com/certificates/",
 						items: [
 							{
-								type: "css",
-								slug: "css",
-								date: "2022-05-25T15:00:00.000Z",
-								id: "6ee76af9c694",
-							}, {
 								type: "javascript",
 								slug: "javascript-basic",
 								date: "2022-05-25T15:00:00.000Z",
@@ -223,6 +218,16 @@
 								slug: "javascript-intermediate",
 								date: "2022-05-25T18:00:00.000Z",
 								id: "fb3ac1cfe596",
+							}, {
+								type: "react",
+								slug: "react-basic",
+								date: "2022-08-25T18:00:00.000Z",
+								id: "b076b0edec7f",
+							}, {
+								type: "css",
+								slug: "css",
+								date: "2022-05-25T15:00:00.000Z",
+								id: "6ee76af9c694",
 							}, {
 								type: "troubleshooting",
 								slug: "problem-solving-basic",
