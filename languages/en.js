@@ -122,32 +122,22 @@ export default {
 				"title": "Jobs",
 				"blueoptima": {
 					"title": "BlueOptima",
-					"subtitle": "Associate Frontend Software Engineer",
-					"date": "2022 May - Actual",
+					"subtitle": "Frontend Software Engineer",
 					"description": "BlueOptima introduces transparent metrics to manage software development resources with automation, standardisation and objectivity for the first time. I am part of the team that develops the UI for all the platform products that allows the users to see how their developers are working and how they are performing."
 				},
 				"xolvex": {
 					"title": "Xolvex",
-					"subtitle": "Fullstack Designer",
-					"date": "2019 January - 2022 May",
+					"subtitle": "Frontend Software Engineer",
 					"description": "In charge of the image of any project, in any aspect: graphic design, interface design, user experience and web development (mainly front-end)"
 				},
 				"inbright": {
 					"title": "Inbright",
-					"subtitle": "Fullstack Designer",
-					"date": "2018 November − 2019 January",
+					"subtitle": "Frontend Software Engineer",
 					"description": "Lead member of the team responsible for general development, graphic design in general, user interface design, user experience and full-stack development (mainly front-end) for the various in-house and external projects"
-				},
-				"uxlon": {
-					"title": "Uxlon",
-					"subtitle": "Fullstack Designer",
-					"date": "2018 November − 2019 January",
-					"description": "Uxlon is owned by Inbright. Main member of the team responsible for the design and user experience for the Uxlon platform, ICO frontpage and the Company's website as a service provider with Blockchain technology"
 				},
 				"derianandre": {
 					"title": "Freelancer",
-					"subtitle": "Design, Development & Photography",
-					"date": "2015 August − Actual",
+					"subtitle": "Fullstack Software Engineer / Designer",
 					"description": "Through the years I have been in charge of various projects, from corporate image redesign, to full-stack solutions for SMEs; a complete and professional solution for your digital adoption needs, improving the structure of your company through projects such as online inventory management, among many other jobs"
 				}
 			},

@@ -122,27 +122,22 @@ export default {
 				"title": "Trabajos",
 				"blueoptima": {
 					"title": "BlueOptima",
-					"subtitle": "Associate Frontend Software Engineer",
+					"subtitle": "Frontend Software Engineer",
 					"description": "BlueOptima introduce métricas transparentes para administrar los recursos de desarrollo de software con automatización, estandarización y objetividad por primera vez. Formo parte del equipo que desarrolla la interfaz de usuario para todos los productos de la plataforma que permite a los usuarios ver cómo trabajan sus desarrolladores y cómo se desempeñan."
 				},
 				"xolvex": {
 					"title": "Xolvex",
-					"subtitle": "Diseñador Fullstack",
+					"subtitle": "Frontend Software Engineer",
 					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web front-end."
 				},
 				"inbright": {
 					"title": "Inbright",
-					"subtitle": "Diseñador Fullstack",
+					"subtitle": "Frontend Software Engineer",
 					"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos."
-				},
-				"uxlon": {
-					"title": "Uxlon",
-					"subtitle": "Diseñador Fullstack",
-					"description": "Uxlon es una empresa perteneciente a  Inbright. Miembro principal del equipo responsable del diseño y experiencia de usuario para la plataforma de Uxlon, ICO frontpage y la web de la Empresa como prestadora de servicios con tecnología Blockchain."
 				},
 				"derianandre": {
 					"title": "Independiente",
-					"subtitle": "Diseño, Desarrollo & Fotografía",
+					"subtitle": "Fullstack Software Engineer / Designer",
 					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de marcas y edición de video, hasta soluciones full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, plataformas, tiendas, entre muchos otros trabajos."
 				}
 			},

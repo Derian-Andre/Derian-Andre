@@ -93,9 +93,7 @@ blockquote {
 pre {
 	position: relative;
 	padding: 1.25rem 0;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+	display: block;
 	color: var(--body-color-lower);
 	font-family: $font-family-serif;
 	font-weight: 500;
@@ -108,9 +106,11 @@ pre {
 		padding: 1.25rem;
 	}
 	&::before {
+		content: "🧔🏻 Derian te está hablando";
+		display: block;
+		width: fit-content;
 		padding: 0.25rem 0.85rem 0.25rem 0.65rem;
 		margin-bottom: 0.75rem;
-		content: "🧔🏻 Derian te está hablando";
 		color: var(--body-color-normal);
 		background: var(--body-bg-chat);
 		font-family: $font-family-headings;
