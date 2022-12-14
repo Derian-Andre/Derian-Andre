@@ -154,7 +154,7 @@
 								slug: "blueoptima",
 								dateEnd: null,
 								dateStart: "2022-05-16T09:00:00.000Z",
-								stack: ['react', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence', 'figma']
+								stack: ['react', 'angular', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence', 'figma']
 							}, {
 								slug: "xolvex",
 								dateEnd: "2022-05-13T18:00:00.000Z",
