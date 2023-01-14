@@ -134,12 +134,12 @@
 						items: ['adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma'],
 					}, {
 						slug: "frontend",
-						years: 4,
-						items: ['html', 'css', 'sass', 'javascript', 'typescript', 'nuxt', 'vue', 'react', 'jquery'],
+						years: 5,
+						items: ['javascript', 'react', 'next', 'vue', 'nuxt', 'html', 'css', 'sass', 'typescript', 'jquery', 'bootstrap'],
 					}, {
 						slug: "backend",
 						years: 2,
-						items: ['node', 'express', 'mongodb', 'mongoose', 'mysql', 'php', 'python'],
+						items: ['node', 'express', 'mongodb', 'mongoose', 'mysql',],
 					}, {
 						slug: "team",
 						years: 4,
@@ -152,24 +152,24 @@
 						items: [
 							{
 								slug: "blueoptima",
-								dateEnd: null,
+								dateEnd: "2023-01-14T12:00:00.000Z",
 								dateStart: "2022-05-16T09:00:00.000Z",
-								stack: ['react', 'angular', 'javascript', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence', 'figma']
+								stack: ['javascript', 'react', 'jest', 'angular', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence', 'figma']
 							}, {
 								slug: "xolvex",
 								dateEnd: "2022-05-13T18:00:00.000Z",
 								dateStart: "2019-01-03T10:00:00.000Z",
-								stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'slack', 'trello',]
+								stack: ['javascript', 'vue', 'nuxt', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'slack', 'trello',]
 							}, {
 								slug: "inbright",
 								dateEnd: "2019-01-01T10:00:00.000Z",
 								dateStart: "2018-11-23T10:00:00.000Z",
-								stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'discord', 'slack', 'trello', 'meistertask']
+								stack: ['javascript', 'vue', 'nuxt', 'html', 'sass', 'css', 'github', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma', 'discord', 'slack', 'trello', 'meistertask']
 							}, {
 								slug: "derianandre",
 								dateEnd: null,
 								dateStart: "2015-04-08T09:00:00.000Z",
-								stack: ['nuxt', 'vue', 'javascript', 'html', 'sass', 'css', 'node', 'express', 'mongoose', 'mongodb', 'mysql', 'php', 'git', 'github', 'gitlab', 'bitbucket', 'discord', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma']
+								stack: ['javascript', 'react', 'next', 'vue', 'nuxt', 'html', 'sass', 'css', 'node', 'express', 'mongoose', 'mongodb', 'mysql', 'php', 'git', 'github', 'gitlab', 'bitbucket', 'discord', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma']
 							},
 						],
 					}, {
@@ -179,11 +179,12 @@
 								slug: "iteso",
 								dateEnd: "2018-12-06T10:00:00.000Z",
 								dateStart: "2013-08-01T18:00:00.000Z",
-								stack: ['ssh', 'php', 'python', 'html', 'css', 'mysql']
+								stack: ['ssh', 'php', 'python', 'html', 'css', 'mysql', 'c']
 							}, {
 								slug: "cbtis",
 								dateEnd: "2013-07-05T10:00:00.000Z",
 								dateStart: "2010-08-02T18:00:00.000Z",
+								stack: ['c']
 							},
 						],
 					}, {

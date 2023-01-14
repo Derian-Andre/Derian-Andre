@@ -79,7 +79,7 @@ export default {
 		"subtitle": "Derian Castillo",
 		"about": {
 			"title": "Profile",
-			"lead": "Nanotechnology engineer with a focus on application development, design, programming, simulation, and mathematical modeling, all with beautiful UX / UI design",
+			"lead": "Frontend Software Engineer with a focus on beautiful UX/UI.",
 			"contact": {
 				"title": "Contact",
 				"address": "Zapopan, Jalisco, Mexico"

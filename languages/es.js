@@ -79,7 +79,7 @@ export default {
 		"subtitle": "Derian André Castillo Franco",
 		"about": {
 			"title": "Perfil",
-			"lead": "Ingeniero en nanotecnología con enfoque en desarrollo de aplicaciones, diseño, programación, simulación y modelado matemático, todo con un diseño UX/UI hermoso",
+			"lead": "Ingeniero de Software Frontend con un enfoque en UX/UI hermoso",
 			"contact": {
 				"title": "Contacto",
 				"address": "Zapopan, Jalisco, México"
