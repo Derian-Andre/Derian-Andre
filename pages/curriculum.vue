@@ -220,6 +220,11 @@
 								date: "2022-05-25T18:00:00.000Z",
 								id: "fb3ac1cfe596",
 							}, {
+								type: "node",
+								slug: "node-intermediate",
+								date: "2023-01-17T18:00:00.000Z",
+								id: "e54592a5f6ac",
+							},  {
 								type: "react",
 								slug: "react-basic",
 								date: "2022-08-25T18:00:00.000Z",
@@ -305,7 +310,20 @@
 								author: "Burke Holland",
 								id: null,
 							}
-						]
+						],
+					},
+					{
+						slug: "udemy",
+						home: "https://udemy.com/",
+						validator: "https://udemy.com/courses/",
+						items: [{
+								type: "typescript",
+								slug: "typescript-guia-completa",
+								date: "2023-01-22T15:00:00.000Z",
+								author: "Fernando Herrera",
+								id: null,
+							},
+						],
 					}
 				]
 			};

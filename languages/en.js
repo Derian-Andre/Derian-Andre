@@ -123,17 +123,17 @@ export default {
 				"blueoptima": {
 					"title": "BlueOptima",
 					"subtitle": "Frontend Software Engineer",
-					"description": "BlueOptima introduces transparent metrics to manage software development resources with automation, standardisation and objectivity for the first time. I am part of the team that develops the UI for all the platform products that allows the users to see how their developers are working and how they are performing."
+					"description": "I was part of the team that develops the UI for all the platform products that allows the users to see how their developers are working and how they are performing. My role was as much as analysis of new features, documentation, time estimates and creation/delegation of tasks and implementation in code. Bug fixing, technical support for client-specific bugs, maintaining angular legacy code, unit testing, code reviews."
 				},
 				"xolvex": {
 					"title": "Xolvex",
 					"subtitle": "Frontend Software Engineer",
-					"description": "In charge of the image of any project, in any aspect: graphic design, interface design, user experience and web development (mainly front-end)"
+					"description": "Xolvex is a daughter company of Inbright and I had the same role as the previous one. In charge of the frontend architecture of projects and code implementation, lead a team with backend members to bring ideas to reality. Analysis, time estimates and tasks."
 				},
 				"inbright": {
 					"title": "Inbright",
 					"subtitle": "Frontend Software Engineer",
-					"description": "Lead member of the team responsible for general development, graphic design in general, user interface design, user experience and full-stack development (mainly front-end) for the various in-house and external projects"
+					"description": "In charge of the frontend architecture of projects and code implementation, lead a team with backend members to bring ideas to reality. Analysis, time estimates and tasks."
 				},
 				"derianandre": {
 					"title": "Freelancer",
@@ -175,20 +175,6 @@ export default {
 				"title": "Certifications",
 				"btn": "View certification",
 				"of": "Certification of {0}",
-				"types": {
-					"react": "React Certification",
-					"node": "Node Certification",
-					"javascript": "JavaScript Certification",
-					"css": "CSS Certification",
-					"html": "HTML Certification",
-					"git": "Git Certification",
-					"python": "Python Certification",
-					"sql": "SQL Certification",
-					"php": "PHP Certification",
-					"c": "C Certification",
-					"c++": "C++ Certification",
-					"troubleshooting": "Troubleshooting Certification",
-				},
 				"items": {
 					"hackerrank": {
 						"title": "HackerRank",
@@ -205,8 +191,12 @@ export default {
 								"title": "JavaScript (Intermediate)",
 								"description": "Covering topics such as design patterns, memory management, the concurrency model, and event loops, among others."
 							},
+							"node-intermediate": {
+								"title": "Node.js (Intermediate)",
+								"description": "Understand the concepts behind an Event-Driven Architecture and Concurrency."
+							},
 							"react-basic": {
-								"title": "React (Basic)",
+								"title": "React.js (Basic)",
 								"description": "Covers topics like Basic Routing, Rendering Elements,State Management (Internal Component State), Handling Events, ES6 and JavaScript and Form Validation."
 							},
 							"problem-solving-basic": {
@@ -221,19 +211,6 @@ export default {
 				"title": "Courses",
 				"btn": "View course",
 				"of": "Cuourse of {0}",
-				"types": {
-					"react": "React Course",
-					"node": "Node Course",
-					"javascript": "JavaScript Course",
-					"css": "CSS Course",
-					"html": "HTML Course",
-					"git": "Git Course",
-					"python": "Python Course",
-					"sql": "SQL Course",
-					"php": "PHP Course",
-					"c": "C Course",
-					"cplusplus": "C++ Course",
-				},
 				"items": {
 					"frontend-masters": {
 						"title": "Frontend Masters",
@@ -278,6 +255,15 @@ export default {
 								"title": "Visual Studio Code Can Do That?",
 								"description": "Dive into VS Code to customize your editor, refactor and debug code. Learn how to work with data and git …all within the same editor!",
 							},
+						}
+					},
+					"udemy": {
+						"title": "Udemy",
+						"items": {
+							"typescript-guia-completa": {
+								"title": "TypeScript: Your complete guide and handbook.",
+								"description": "The solid foundation you need to work with TypeScript.",
+							}
 						}
 					}
 				}

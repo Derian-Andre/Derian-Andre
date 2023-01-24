@@ -123,17 +123,17 @@ export default {
 				"blueoptima": {
 					"title": "BlueOptima",
 					"subtitle": "Frontend Software Engineer",
-					"description": "BlueOptima introduce métricas transparentes para administrar los recursos de desarrollo de software con automatización, estandarización y objetividad por primera vez. Formo parte del equipo que desarrolla la interfaz de usuario para todos los productos de la plataforma que permite a los usuarios ver cómo trabajan sus desarrolladores y cómo se desempeñan."
+					"description": "Formé parte del equipo que desarrolla la interfaz de usuario para todos los productos de la plataforma que permite a los usuarios ver cómo están trabajando sus desarrolladores y cómo se están desempeñando. Mi función era tanto de análisis de nuevas funcionalidades, documentación, estimación de tiempos y creación/delegación de tareas e implementación en código. Corrección de errores, soporte técnico para errores específicos del cliente, mantenimiento del código heredado angular, pruebas unitarias, revisiones de código."
 				},
 				"xolvex": {
 					"title": "Xolvex",
 					"subtitle": "Frontend Software Engineer",
-					"description": "Encargado de la imágen de cualquier proyecto, en cualquier aspecto: diseño gráfico, diseño de interfaces, experiencia de usuario y desarrollo web front-end."
+					"description": "Xolvex es una empresa hija de Inbright y yo tenía el mismo rol que la anterior. A cargo de la arquitectura frontend de los proyectos y la implementación del código, lidere un equipo con miembros backend para hacer realidad las ideas. Análisis, estimaciones de tiempos y tareas."
 				},
 				"inbright": {
 					"title": "Inbright",
 					"subtitle": "Frontend Software Engineer",
-					"description": "Miembro principal del equipo responsable del desarrollo general, diseño gráfico en general, diseño de interfaces de usuario, experiencia de usuario y desarrollo full-stack (principalmente front-end) para los diversos proyectos in-house y externos."
+					"description": "A cargo de la arquitectura frontend de los proyectos y la implementación del código, lidere un equipo con miembros backend para hacer realidad las ideas. Análisis, estimaciones de tiempos y tareas."
 				},
 				"derianandre": {
 					"title": "Independiente",
@@ -174,21 +174,7 @@ export default {
 			"certifications": {
 				"title": "Certificaciones",
 				"btn": "Ver certificado",
-				"of": "Certificatión de {0}",
-				"types": {
-					"react": "Certificación de React",
-					"node": "Certificación de Node",
-					"javascript": "Certificación de JavaScript",
-					"css": "Certificación de CSS",
-					"html": "Certificación de HTML",
-					"git": "Certificación de Git",
-					"python": "Certificación de Python",
-					"sql": "Certificación de SQL",
-					"php": "Certificación de PHP",
-					"c": "Certificación de C",
-					"c++": "Certificación de C++",
-					"troubleshooting": "Certificación de Resolución de Problemas",
-				},
+				"of": "Certificación de {0}",
 				"items": {
 					"hackerrank": {
 						"title": "HackerRank",
@@ -205,8 +191,12 @@ export default {
 								"title": "JavaScript (Intermedio)",
 								"description": "Abarca temas como patrones de diseño, gestión de memoria, modelo de concurrencia y bucles de eventos, entre otros."
 							},
+							"node-intermediate": {
+								"title": "Node.js (Intermedio)",
+								"description": "Comprender los conceptos detrás de una arquitectura impulsada por eventos y concurrencia."
+							},
 							"react-basic": {
-								"title": "React (Básico)",
+								"title": "React.js (Básico)",
 								"description": "Abarca temas como enrutamiento básico, elementos de representación, gestión de estado (estado de componente interno), gestión de eventos, ES6 y JavaScript y validación de formularios."
 							},
 							"problem-solving-basic": {
@@ -265,6 +255,15 @@ export default {
 								"title": "¿Visual Studio Code puede hacer eso?",
 								"description": "Sumérgete en VS Code para personalizar tu editor, refactorizar y depurar código. Aprende a trabajar con datos y git... ¡todo dentro del mismo editor!",
 							},
+						}
+					},
+					"udemy": {
+						"title": "Udemy",
+						"items": {
+							"typescript-guia-completa": {
+								"title": "TypeScript: Tu completa guía y manual de mano.",
+								"description": "La base sólida que necesitas para trabajar con TypeScript.",
+							}
 						}
 					}
 				}

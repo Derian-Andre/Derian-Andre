@@ -44,11 +44,14 @@ export default {
 	data() {
 		return {
 			stack: {
-				"react": "React",
-				"node": "Node",
 				"javascript": "JavaScript",
-				"css": "CSS",
+				"typescript": "TypeScript",
+				"react": "React.js",
+				"react": "Vue.js",
+				"node": "Node.js",
+				"nest": "Nest.js",
 				"html": "HTML",
+				"css": "CSS",
 				"git": "Git",
 				"python": "Python",
 				"sql": "SQL",
