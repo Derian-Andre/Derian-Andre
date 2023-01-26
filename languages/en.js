@@ -204,6 +204,15 @@ export default {
 								"description": "Covers basic data structures (such as arrays, strings) and algorithms (such as sorting and searching)."
 							}
 						}
+					},
+					"udemy": {
+						"title": "Udemy",
+						"items": {
+							"typescript-guia-completa": {
+								"title": "TypeScript: Your complete guide and handbook.",
+								"description": "The solid foundation you need to work with TypeScript.",
+							}
+						}
 					}
 				}
 			},

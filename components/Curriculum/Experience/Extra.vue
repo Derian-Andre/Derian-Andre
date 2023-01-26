@@ -1,26 +1,26 @@
 <template>
-	<section :id="`${company.slug}-${data.slug}`" class="mb-4">
-		<Figure class="figure-logo" :src="`curriculum/icons/${data.type}.svg`" />
-		<h4 class="subtitle" v-if="subtitle">
+	<section :id="`${company.slug}-${data.slug}`" class="mb-3">
+		<Figure class="figure-logo figure-small" :src="`curriculum/icons/${data.type}.svg`" />
+		<h4 class="subtitle" v-if="subtitle && false">
 			{{ subtitle }}
 		</h4>
-		<h5 class="title" v-if="title">
+		<h5 class="title mb-1" v-if="title">
 			{{ title }}
 			<small class="opacity-50" v-if="data.id"> [{{ data.id }}] </small>
 		</h5>
-		<h6 class="date" v-if="date">
+		<h6 class="date mb-1" v-if="date">
 			{{ $t(`curriculum.experience.expedition`)}} <Time :date="date" />
 		</h6>
-		<p class="description" v-if="description" v-html="description" />
+		<p class="description mb-2" v-if="description" v-html="description" />
 		<a
-			class="btn btn-outline-link small text-uppercase"
+			class="btn btn-outline-link btn-external btn-sm text-uppercase"
 			target="_blank"
 			rel="noopener nofollow noreferrer"
 			:href="url"
 			v-if="url"
 		>
 			{{ $t(`curriculum.experience.${type}.btn`) }}
-			<i class="bi bi-box-arrow-up-right ms-1" />
+			<i class="bi bi-caret-right-fill ms-1" />
 		</a>
 	</section>
 </template>
@@ -47,7 +47,7 @@ export default {
 				"javascript": "JavaScript",
 				"typescript": "TypeScript",
 				"react": "React.js",
-				"react": "Vue.js",
+				"vue": "Vue.js",
 				"node": "Node.js",
 				"nest": "Nest.js",
 				"html": "HTML",

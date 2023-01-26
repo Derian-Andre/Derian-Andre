@@ -1,13 +1,13 @@
 <template>
   <section :id="`${type}-${name}`">
     <Figure class="figure-logo" :src="`curriculum/${name}.svg`" />
-    <h4 class="title">
+    <h4 class="title mb-1">
       {{ $t(`curriculum.experience.${type}.${name}.title`) }}
     </h4>
-    <h5 class="subtitle">
+    <h5 class="subtitle mb-1">
       {{ $t(`curriculum.experience.${type}.${name}.subtitle`) }}
     </h5>
-    <h6 class="date">
+    <h6 class="date mb-2">
       <Time :date="dateStart" v-if="dateStart"/>
       —
       <Time :date="dateEnd" v-if="dateEnd"/>
@@ -19,7 +19,7 @@
     <p class="description mb-2"
       v-html="$t(`curriculum.experience.${type}.${name}.description`)">
     </p>
-    <div class="hstack-skills hstack-skills-experience hstack gap-2 flex-wrap mb-5" v-if="stack">
+    <div class="hstack-skills hstack-skills-experience hstack gap-2 flex-wrap mb-4" v-if="stack">
       <template v-for="item in stack">
         <Figure :src="`curriculum/icons/${item}.svg`" :title="item"/>
       </template>

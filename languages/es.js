@@ -204,6 +204,15 @@ export default {
 								"description": "Cubre temas básicos de estructuras de datos (como matrices, cadenas) y algoritmos (como clasificación y búsqueda)."
 							}
 						}
+					},
+					"udemy": {
+						"title": "Udemy",
+						"items": {
+							"typescript-guia-completa": {
+								"title": "TypeScript: Tu completa guía y manual de mano.",
+								"description": "La base sólida que necesitas para trabajar con TypeScript.",
+							}
+						}
 					}
 				}
 			},

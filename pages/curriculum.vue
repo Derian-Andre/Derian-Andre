@@ -135,7 +135,7 @@
 					}, {
 						slug: "frontend",
 						years: 5,
-						items: ['javascript', 'react', 'next', 'vue', 'nuxt', 'html', 'css', 'sass', 'typescript', 'jquery', 'bootstrap'],
+						items: ['javascript', 'react', 'next', 'vue', 'nuxt', 'html', 'css', 'sass', 'typescript', 'jest', 'bootstrap', 'jquery'],
 					}, {
 						slug: "backend",
 						years: 2,
@@ -206,8 +206,8 @@
 				certifications: [
 					{
 						slug: "hackerrank",
-						home: "https://www.hackerrank.com/",
-						validator: "https://www.hackerrank.com/certificates/",
+						home: "https://hackerrank.com/",
+						validator: "https://hackerrank.com/certificates/",
 						items: [
 							{
 								type: "javascript",
@@ -239,6 +239,18 @@
 								slug: "problem-solving-basic",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "8e534883069e",
+							},
+						]
+					}, {
+						slug: "udemy",
+						home: "https://udemmy.com/",
+						validator: "https://udemy.com/certificate/",
+						items: [
+							{
+								type: "typescript",
+								slug: "typescript-guia-completa",
+								date: "2023-01-25T19:00:00.000Z",
+								id: "UC-e8fb2cff-ebc4-409f-9411-be051374f9fe",
 							},
 						]
 					},
@@ -311,15 +323,14 @@
 								id: null,
 							}
 						],
-					},
-					{
+					}, {
 						slug: "udemy",
 						home: "https://udemy.com/",
 						validator: "https://udemy.com/courses/",
 						items: [{
 								type: "typescript",
 								slug: "typescript-guia-completa",
-								date: "2023-01-22T15:00:00.000Z",
+								date: "2023-01-25T19:00:00.000Z",
 								author: "Fernando Herrera",
 								id: null,
 							},

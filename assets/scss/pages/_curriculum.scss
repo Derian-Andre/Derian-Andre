@@ -114,7 +114,7 @@ section.content-curriculum {
 			@include rs('font-size', 0.8rem, 0.5vw, 1rem);
 		}
 		.figure-logo {
-			margin: 2.5rem 0 1.5rem !important;
+			margin: 2rem 0 1rem !important;
 			display: block;
 			text-align: left;
 			.img, .svg {
@@ -124,6 +124,17 @@ section.content-curriculum {
 				width: auto;
 				height: 26px;
 			}
+			&.figure-small {
+				margin: 1.5rem 0 1rem !important;
+				height: 16px;
+				.img, .svg {
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+		.btn-external {
+			font-size: .65rem;
 		}
 		hr {
 			max-width: 45%;
@@ -142,6 +153,16 @@ section.content-curriculum {
 				@media (min-width: #{$content-breakpoint + 1px}) {
 					flex: 1 1 50%;
 					max-width: 50%;
+				}
+			}
+			.certifications,
+			.courses {
+				h5 {
+					@include rs('font-size', 0.85rem, 1vw, 1rem);
+				}
+				p.description {
+					line-height: 1;
+					@include rs('font-size', 0.75rem, 1vw, 0.9rem);
 				}
 			}
 		}

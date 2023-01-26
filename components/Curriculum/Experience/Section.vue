@@ -1,5 +1,5 @@
 <template>
-  <section :id="name">
+  <section :id="name" :class="name">
     <h3>
       {{ $t(`curriculum.experience.${name}.title`) }}
     </h3>
