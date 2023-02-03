@@ -92,7 +92,7 @@ export default {
 				"title": "Idiomas",
 				"english": {
 					"title": "Inglés",
-					"level": "Avanzado"
+					"level": "EF SET C2 Proficient"
 				},
 				"spanish": {
 					"title": "Español",
@@ -123,22 +123,47 @@ export default {
 				"blueoptima": {
 					"title": "BlueOptima",
 					"subtitle": "Frontend Software Engineer",
-					"description": "Formé parte del equipo que desarrolla la interfaz de usuario para todos los productos de la plataforma que permite a los usuarios ver cómo están trabajando sus desarrolladores y cómo se están desempeñando. Mi función era tanto de análisis de nuevas funcionalidades, documentación, estimación de tiempos y creación/delegación de tareas e implementación en código. Corrección de errores, soporte técnico para errores específicos del cliente, mantenimiento del código heredado angular, pruebas unitarias, revisiones de código."
+					"description": `
+						<ul>
+							<li>Lideré funciones llevadas a producción sin ningún bug importante, desde el análisis, la documentación hasta la implementación, proporcionando estimaciones de tiempo precisas y código de alta calidad.</li>
+							<li>Se resolvieron con éxito errores importantes de interrupción de la producción y se evitaron errores críticos.</li>
+							<li>Proporcioné soporte técnico para errores específicos del cliente y mantuve el código legacy de angular.</li>
+							<li>Utilicé pruebas unitarias y revisiones de código para garantizar un código de alta calidad y mantener el cumplimiento de los estándares de la industria.</li>
+						</ul>
+					`
 				},
 				"xolvex": {
 					"title": "Xolvex",
 					"subtitle": "Frontend Software Engineer",
-					"description": "Xolvex es una empresa hija de Inbright y yo tenía el mismo rol que la anterior. A cargo de la arquitectura frontend de los proyectos y la implementación del código, lidere un equipo con miembros backend para hacer realidad las ideas. Análisis, estimaciones de tiempos y tareas."
+					"description": `
+						<ul>
+							<li>Lideré un equipo multifuncional en el desarrollo e implementación de la arquitectura front-end.</li>
+							<li>Gestioné el análisis y la delegación de tareas, asegurando la entrega a tiempo y el cumplimiento del presupuesto.</li>
+							<li>Colaboré ​​con los miembros del back-end para hacer realidad las ideas, lo que resultó en el exitoso lanzamiento de varios productos nuevos.</li>
+						</ul>
+					`
 				},
 				"inbright": {
 					"title": "Inbright",
 					"subtitle": "Frontend Software Engineer",
-					"description": "A cargo de la arquitectura frontend de los proyectos y la implementación del código, lidere un equipo con miembros backend para hacer realidad las ideas. Análisis, estimaciones de tiempos y tareas."
+					"description": `
+						<ul>
+							<li>Lideré un equipo multifuncional en el desarrollo e implementación de la arquitectura front-end.</li>
+							<li>Gestioné el análisis y la delegación de tareas, asegurando la entrega a tiempo y el cumplimiento del presupuesto.</li>
+							<li>Colaboré ​​con los miembros del back-end para hacer realidad las ideas, lo que resultó en el exitoso lanzamiento de varios productos nuevos.</li>
+						</ul>
+					`
 				},
 				"derianandre": {
 					"title": "Independiente",
 					"subtitle": "Fullstack Software Engineer / Designer",
-					"description": "A través de los años me encargado de varios proyectos, desde re-diseños de marcas y edición de video, hasta soluciones full-stack para PyMEs; proporcionando una solución completa y profesional para sus necesidades de adopción digital, mejorando la estructura de su empresa a través de proyectos como manejo de inventario en línea, plataformas, tiendas, entre muchos otros trabajos."
+					"description": `
+						<ul>
+							<li>Desarrollé una cartera diversa de clientes, desde pequeñas empresas emergentes hasta grandes empresas nacionales e internacionales.</li>
+							<li>Proporcioné soluciones de desarrollo de pila completa, desde el diseño hasta la implementación, lo que resultó en el lanzamiento exitoso de muchos proyectos.</li>
+							<li>Dirigí equipos pequeños cuando fue necesario, asegurando la entrega a tiempo y el cumplimiento del presupuesto.</li>
+						</ul>
+					`
 				}
 			},
 			"education": {
@@ -147,13 +172,25 @@ export default {
 					"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
 					"subtitle": "Ingeniería en nanotecnología",
 					"date": "2013 − 2018",
-					"description": "Manejo del laboratorio de nanotecnología: equipos SEM, XPS, AFM y Sputtering. Simulación de sistemas moleculares y partículas con Python y ORCA. Síntesis y caracterización de nanomateriales: nanotubos de carbono, nanopartículas de plata y cobre, etc."
+					"description": `
+						<ul>
+							<li>Gestioné con éxito un laboratorio de nanotecnología, utilizando equipos como SEM, XPS, AFM y Sputtering.</li>
+							<li>Usé Python y ORCA ab initio para simular sistemas moleculares y partículas.</li>
+							<li>Sinteticé y caractericé una variedad de nanomateriales, incluidos nanotubos de carbono, plata y nanopartículas de cobre.</li>
+						</ul>
+					`
 				},
 				"cbtis": {
 					"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
 					"subtitle": "Técnico mecatrónico",
 					"date": "2010 − 2013",
-					"description": "Programación de PLC. Diseño CAD (AutoCAD) y 3D (SolidWorks) para diseño de mecanismos y piezas. Diseño e impresión de circuitos en PCB. Manejo de equipos como el torno y la fresadora."
+					"description": `
+						<ul>
+							<li>Experto en diseño CAD/3D para diseño de mecanismos y piezas.</li>
+							<li>Experto en programación de PLC y diseño e impresión de circuitos de PCB.</li>
+							<li>Experiencia en el manejo de equipos como tornos y fresadoras.</li>
+						</ul>
+					`
 				}
 			},
 			"practices": {
@@ -162,13 +199,25 @@ export default {
 					"title": "UDG - CINVESTAV",
 					"subtitle": "Simulaciones de sistemas moleculares organometálicos y desarrollo deaplicación web para análisis y manejo de datos",
 					"date": "2018 Agosto − Diciembre",
-					"description": "Simulaciones de diferentes sistemas moleculares organometálicos de C<sub>n</sub>H<sub>n</sub> (n = 4 – 6) con Sc, Ti y V para absorción de hidrógeno molecular y el efecto de ligantes (H, OH, NH<sub>2</sub>, CH<sub>3</sub> y F) con el software ORCA ab initio. Desarollo de aplicación web para el análisis de los archivos “.out” obtenido de las simulaciones: comparación de geometrías iniciales y ﬁnales en diferentes sistemas, gráﬁca de energías orbitales, comparación de datos entre diferentes simulaciones, detección de optimización, visualización del modelo 3D, generador de tablas comparativasentre simulaciones del mismo tipo, entre otras funciones."
+					"description":`
+						<ul>
+							<li>Simulaciones de sistemas moleculares organometálicos y desarrollo de aplicaciones web para el análisis de datos.</li>
+							<li>Realización de simulaciones de sistemas moleculares organometálicos utilizando el software ORCA ab initio.</li>
+							<li>Desarrollé una aplicación web para el análisis de datos de las simulaciones, que incluía funcionalidades como: comparación de geometrías inicial y final, visualización de energías orbitales, detección de optimización y generación de tablas comparativas entre simulaciones.</li>
+						</ul>
+					`
 				},
 				"casasyterrenos": {
 					"title": "Casa y Terrenos",
 					"subtitle": "Programa de modelación matemática para el desarrollo de planes y proyectos de negocio utilizando machine learning",
 					"date": "2018 Enero − Mayo",
-					"description": "Sistema de calificación de propiedades según la calidad de su información, manejo de bases de datos MySQL y MongoDB, manejo de servidor por SSH, programación en Python."
+					"description": `
+						<ul>
+							<li>Desarrollé una solución para el desarrollo de planes y proyectos de negocios utilizando técnicas de aprendizaje automático.</li>
+							<li>Implementé un sistema de calificación de propiedades basado en la calidad de los datos.</li>
+							<li>Manejé Bases de datos MySQL y MongoDB, programación de scripts en Python y uso de servidor mediante SSH.</li>
+						</ul>
+					`
 				}
 			},
 			"certifications": {
@@ -202,6 +251,10 @@ export default {
 							"problem-solving-basic": {
 								"title": "Resolución de problemas (Básico)",
 								"description": "Cubre temas básicos de estructuras de datos (como matrices, cadenas) y algoritmos (como clasificación y búsqueda)."
+							},
+							"problem-solving-intermediate": {
+								"title": "Resolución de problemas (Intermedio)",
+								"description": "Cubre temas básicos de estructuras de datos (como matrices, cadenas) y algoritmos (como clasificación y búsqueda)."
 							}
 						}
 					},
@@ -209,8 +262,12 @@ export default {
 						"title": "Udemy",
 						"items": {
 							"typescript-guia-completa": {
-								"title": "TypeScript: Tu completa guía y manual de mano.",
+								"title": "TypeScript: Tu completa guía y manual de mano",
 								"description": "La base sólida que necesitas para trabajar con TypeScript.",
+							},
+							"principios-solid-y-clean-code": {
+								"title": "Principios SOLID y Clean Code",
+								"description": "Fundamentos de la arquitectura y desarrollo de software.",
 							}
 						}
 					}
@@ -272,6 +329,10 @@ export default {
 							"typescript-guia-completa": {
 								"title": "TypeScript: Tu completa guía y manual de mano.",
 								"description": "La base sólida que necesitas para trabajar con TypeScript.",
+							},
+							"principios-solid-y-clean-code": {
+								"title": "Principios SOLID y Clean Code",
+								"description": "Fundamentos de la arquitectura y desarrollo de software.",
 							}
 						}
 					}

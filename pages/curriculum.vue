@@ -130,7 +130,7 @@
 				skills: [
 					{
 						slug: "design",
-						years: 10,
+						years: 7,
 						items: ['adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma'],
 					}, {
 						slug: "frontend",
@@ -239,6 +239,11 @@
 								slug: "problem-solving-basic",
 								date: "2022-05-25T15:00:00.000Z",
 								id: "8e534883069e",
+							}, {
+								type: "troubleshooting",
+								slug: "problem-solving-intermediate",
+								date: "2022-05-31T15:00:00.000Z",
+								id: "e54592a5f6ac",
 							},
 						]
 					}, {
@@ -251,6 +256,11 @@
 								slug: "typescript-guia-completa",
 								date: "2023-01-25T19:00:00.000Z",
 								id: "UC-e8fb2cff-ebc4-409f-9411-be051374f9fe",
+							}, {
+								type: "troubleshooting",
+								slug: "principios-solid-y-clean-code",
+								date: "2023-01-31T19:00:00.000Z",
+								id: "UC-517b49e2-905a-4b4c-9f5e-7d311a735765",
 							},
 						]
 					},
@@ -327,10 +337,17 @@
 						slug: "udemy",
 						home: "https://udemy.com/",
 						validator: "https://udemy.com/courses/",
-						items: [{
+						items: [
+							{
 								type: "typescript",
 								slug: "typescript-guia-completa",
 								date: "2023-01-25T19:00:00.000Z",
+								author: "Fernando Herrera",
+								id: null,
+							}, {
+								type: "troubleshooting",
+								slug: "principios-solid-y-clean-code",
+								date: "2023-01-31T19:00:00.000Z",
 								author: "Fernando Herrera",
 								id: null,
 							},

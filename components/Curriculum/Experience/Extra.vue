@@ -1,13 +1,12 @@
 <template>
-	<section :id="`${company.slug}-${data.slug}`" class="mb-3">
-		<Figure class="figure-logo figure-small" :src="`curriculum/icons/${data.type}.svg`" />
-		<h4 class="subtitle" v-if="subtitle && false">
-			{{ subtitle }}
-		</h4>
-		<h5 class="title mb-1" v-if="title">
-			{{ title }}
-			<small class="opacity-50" v-if="data.id"> [{{ data.id }}] </small>
-		</h5>
+	<section :id="`${company.slug}-${data.slug}`" class="mb-4">
+		<div class="d-flex mb-1">
+			<Figure class="figure-logo figure-small" :src="`curriculum/icons/${data.type}.svg`" />
+			<h5 class="title mb-0" v-if="title">
+				{{ title }}
+				<small class="opacity-50" v-if="data.id"> [{{ data.id }}] </small>
+			</h5>
+		</div>
 		<h6 class="date mb-1" v-if="date">
 			{{ $t(`curriculum.experience.expedition`)}} <Time :date="date" />
 		</h6>

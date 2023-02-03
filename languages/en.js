@@ -92,7 +92,7 @@ export default {
 				"title": "Languages",
 				"english": {
 					"title": "English",
-					"level": "Advanced"
+					"level": "EF SET C2 Proficient"
 				},
 				"spanish": {
 					"title": "Spanish",
@@ -123,22 +123,47 @@ export default {
 				"blueoptima": {
 					"title": "BlueOptima",
 					"subtitle": "Frontend Software Engineer",
-					"description": "I was part of the team that develops the UI for all the platform products that allows the users to see how their developers are working and how they are performing. My role was as much as analysis of new features, documentation, time estimates and creation/delegation of tasks and implementation in code. Bug fixing, technical support for client-specific bugs, maintaining angular legacy code, unit testing, code reviews."
+					"description": `
+						<ul>
+							<li>Led features to made into production with any major bug, from analysis, documentation to implementation, providing accurate time estimates and top-quality code.</li>
+							<li>Successfully resolved major breaking-production bugs and prevented critical bugs.</li>
+							<li>Provided technical support for client-specific bugs and maintained angular legacy code.</li>
+							<li>Utilized unit testing and code reviews to ensure high-quality code and maintain compliance with industry standards.</li>
+						</ul>
+					`
 				},
 				"xolvex": {
-					"title": "Xolvex",
+					"title": "Xolvex (Inbright)",
 					"subtitle": "Frontend Software Engineer",
-					"description": "Xolvex is a daughter company of Inbright and I had the same role as the previous one. In charge of the frontend architecture of projects and code implementation, lead a team with backend members to bring ideas to reality. Analysis, time estimates and tasks."
+					"description": `
+						<ul>
+							<li>Led a cross-functional team in the development and implementation of front-end architecture.</li>
+							<li>Managed the analysis and task delegation, ensuring on-time delivery and budget adherence.</li>
+							<li>Collaborated with backend members to bring ideas to reality, resulting in the successful launch of several new products.</li>
+						</ul>
+					`
 				},
 				"inbright": {
 					"title": "Inbright",
 					"subtitle": "Frontend Software Engineer",
-					"description": "In charge of the frontend architecture of projects and code implementation, lead a team with backend members to bring ideas to reality. Analysis, time estimates and tasks."
+					"description": `
+						<ul>
+							<li>Led a cross-functional team in the development and implementation of front-end architecture.</li>
+							<li>Managed the analysis and task delegation, ensuring on-time delivery and budget adherence.</li>
+							<li>Collaborated with backend members to bring ideas to reality, resulting in the successful launch of several new products.</li>
+						</ul>
+					`
 				},
 				"derianandre": {
 					"title": "Freelancer",
 					"subtitle": "Fullstack Software Engineer / Designer",
-					"description": "Through the years I have been in charge of various projects, from corporate image redesign, to full-stack solutions for SMEs; a complete and professional solution for your digital adoption needs, improving the structure of your company through projects such as online inventory management, among many other jobs"
+					"description": `
+						<ul>
+							<li>Built a diverse portfolio of clients, ranging from small startups to large national and international companies.</li>
+							<li>Provided full-stack development solutions, from design to implementation, resulting in the successful launch of several new products.</li>
+							<li>Led small teams when needed, ensuring on-time delivery and budget adherence.</li>
+						</ul>
+					`
 				}
 			},
 			"education": {
@@ -147,13 +172,25 @@ export default {
 					"title": "Instituto Tecnológico y de Estudios Superiores de Occidente",
 					"subtitle": "Nanotechnology engineering",
 					"date": "2013 - 2018",
-					"description": "Nanotechnology laboratory management: SEM, XPS, AFM and Sputtering equipment. Simulation of molecular systems and particles with Python and ORCA. Synthesis and characterization of nanomaterials: carbon nanotubes, silver and copper nanoparticles, etc."
+					"description": `
+						<ul>
+							<li>Successfully managed a nanotechnology laboratory, utilizing equipment such as SEM, XPS, AFM, and Sputtering.</li>
+							<li>Utilized Python and ORCA ab initio to simulate molecular systems and particles.</li>
+							<li>Synthesized and characterized a variety of nanomaterials, including carbon nanotubes, silver, and copper nanoparticles.</li>
+						</ul>
+					`
 				},
 				"cbtis": {
 					"title": "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
 					"subtitle": "Mechatronic technician",
 					"date": "2010 - 2013",
-					"description": "PLC programming. CAD (AutoCAD) and 3D (SolidWorks) design for mechanism and part design. PCB circuit design and printing. Handling of equipment such as lathe and milling machine"
+					"description": `
+						<ul>
+							<li>Expert in CAD/3D design for mechanism and part design.</li>
+							<li>Skilled in PLC programming and, PCB circuit design and printing.</li>
+							<li>Experienced in operating equipment such as lathes and milling machines.</li>
+						</ul>
+					`
 				}
 			},
 			"practices": {
@@ -162,13 +199,25 @@ export default {
 					"title": "UDG - CINVESTAV",
 					"subtitle": "Simulations of organometallic molecular systems and development of web application for analysis and data management",
 					"date": "2018 August - December",
-					"description": "Simulations of different organometallic molecular systems of C<sub>n</sub>H<sub>n</sub>(n = 4 - 6) with Sc, Ti and V for absorption of molecular hydrogen and the effect of binders (H, OH, NH<sub>2</sub>, CH<sub>3</sub>and F) with the ORCA ab initio software Development of a web application for the analysis of “.out files ”Obtained from the simulations: comparison of initial and final geometries in different systems, graph of orbital energies, comparison of data between different simulations, detection of optimization, visualization of the 3D model, generator of comparative tables between simulations of the same type, among other functions"
+					"description": `
+						<ul>
+							<li>Simulations of organometallic molecular systems and web-app development for data analysis.</li>
+							<li>Conducted simulations of organometallic molecular systems using the ORCA ab initio software.</li>
+							<li>Developed a web application for data analysis of the simulations, which included features such as: comparison of initial and final geometries, visualization of orbital energies, detection of optimization, and generation of comparative tables between simulations.</li>
+						</ul>
+					`
 				},
 				"casasyterrenos": {
 					"title": "Casa y Terrenos",
 					"subtitle": "Mathematical modeling program for the development of business plans and projects using machine learning",
 					"date": "2018 January - May",
-					"description": "Property qualification system according to the quality of your information, management of MySQL and MongoDB databases, management of server through SSH tunneling, Python programming"
+					"description": `
+						<ul>
+							<li>Developed a solution for the development of business plans and projects using machine learning techniques.</li>
+							<li>Implemented a property qualification system based on the quality of the data.</li>
+							<li>Managed MySQL and MongoDB databases, programming scripts in Python and using the server through SSH.</li>
+						</ul>
+					`
 				}
 			},
 			"certifications": {
@@ -200,8 +249,12 @@ export default {
 								"description": "Covers topics like Basic Routing, Rendering Elements,State Management (Internal Component State), Handling Events, ES6 and JavaScript and Form Validation."
 							},
 							"problem-solving-basic": {
-								"title": "Troubleshooting (Basic)",
+								"title": "Problem Solving (Basic)",
 								"description": "Covers basic data structures (such as arrays, strings) and algorithms (such as sorting and searching)."
+							},
+							"problem-solving-intermediate": {
+								"title": "Problem Solving (Intermediate)",
+								"description": "Abarca temas de estructuras de datos (como HashMaps, pilas y colas) y algoritmos (como soluciones óptimas)."
 							}
 						}
 					},
@@ -211,6 +264,10 @@ export default {
 							"typescript-guia-completa": {
 								"title": "TypeScript: Your complete guide and handbook.",
 								"description": "The solid foundation you need to work with TypeScript.",
+							},
+							"principios-solid-y-clean-code": {
+								"title": "SOLID Principles and Clean Code",
+								"description": "Fundamentals of software architecture and development.",
 							}
 						}
 					}
@@ -272,6 +329,10 @@ export default {
 							"typescript-guia-completa": {
 								"title": "TypeScript: Your complete guide and handbook.",
 								"description": "The solid foundation you need to work with TypeScript.",
+							},
+							"principios-solid-y-clean-code": {
+								"title": "SOLID Principles and Clean Code",
+								"description": "Fundamentals of software architecture and development.",
 							}
 						}
 					}

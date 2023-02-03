@@ -125,11 +125,15 @@ section.content-curriculum {
 				height: 26px;
 			}
 			&.figure-small {
-				margin: 1.5rem 0 1rem !important;
+				margin: 0 !important;
 				height: 16px;
 				.img, .svg {
 					width: auto;
 					height: 100%;
+				}
+				img, svg {
+					margin-top: -0.7rem;
+					margin-right: 0.5rem;
 				}
 			}
 		}
