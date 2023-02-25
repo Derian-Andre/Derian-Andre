@@ -286,6 +286,21 @@ export default {
 								description:
 									"Fundamentals of software architecture and development.",
 							},
+							"mastering-cleancode-in-javascript": {
+								title: "Mastering Clean Code in JavaScript",
+								description:
+									"Learning the JavaScript framework is good and cleaner JavaScript is even better.",
+							},
+							"javascript-fernando-herrera": {
+								title: "Modern JavaScript: A Guide to Mastering the Language",
+								description:
+									"Webpack, Classes, Private Properties, ESNext, Node, Npm, Babel, Hot Reload, CRUD, File Upload and more!",
+							},
+							"optimizing-web-performance-and-critical-rendering-path": {
+								title: "Optimizing web performance and critical rendering path",
+								description:
+									"Learn about the impact that CSS has on website performance.",
+							},
 						},
 					},
 				},

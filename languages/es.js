@@ -286,6 +286,21 @@ export default {
 								description:
 									"Fundamentos de la arquitectura y desarrollo de software.",
 							},
+							"mastering-cleancode-in-javascript": {
+								title: "Dominando el Clean Code en JavaScript",
+								description:
+									"Aprender el marco de JavaScript es bueno y JavaScript más limpio es aún mejor.",
+							},
+							"javascript-fernando-herrera": {
+								title: "JavaScript Moderno: Guía para dominar el lenguaje",
+								description:
+									"Webpack, Clases, Propiedades privadas, ESNext, Node, Npm, Babel, Hot Reaload, CRUD, Carga de archivos y más!",
+							},
+							"optimizing-web-performance-and-critical-rendering-path": {
+								title: "Optimización del rendimiento web y la ruta de representación crítica",
+								description:
+									"Conoce sobre el impacto que tiene CSS en el rendimiento del sitio web.",
+							},
 						},
 					},
 				},
