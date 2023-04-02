@@ -155,6 +155,12 @@ export default {
 					slug: "jobs",
 					items: [
 						{
+							slug: "pwc",
+							dateEnd: null,
+							dateStart: "2023-03-27T00:00:00.000Z",
+							stack: ['javascript', 'react', 'jest', 'node', 'express', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence']
+						},
+						{
 							slug: "blueoptima",
 							dateEnd: "2023-01-13T24:00:00.000Z",
 							dateStart: "2022-05-16T00:00:00.000Z",

@@ -126,6 +126,18 @@ export default {
 			expedition: "Expedición: ",
 			jobs: {
 				title: "Trabajos",
+				pwc: {
+					title: "PwC México",
+					subtitle: "Senior Fullstack Software Engineer",
+					description: `
+						<ul>
+							<li>Aplicar desarrollo fullstack con la comodidad y familiaridad de las herramientas de CD/CI.</li>
+							<li>Aplicación de optimización de algoritmos, seguridad del sistema y computación distribuida.</li>
+							<li>Realización de revisiones de código para servicios comerciales de back-end y asistencia en los esfuerzos de interfaz de usuario de front-end.</li>
+							<li>Actuar como miembro del equipo para generar una visión, establecer una dirección, motivar a los miembros, crear una atmósfera de confianza, aprovechar diversos puntos de vista, entrenar al personal y fomentar la mejora y la innovación.</li>
+						</ul>
+					`,
+				},
 				blueoptima: {
 					title: "BlueOptima",
 					subtitle: "Frontend Software Engineer",

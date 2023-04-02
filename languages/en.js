@@ -126,6 +126,18 @@ export default {
 			expedition: "Expedition: ",
 			jobs: {
 				title: "Jobs",
+				pwc: {
+					title: "PwC México",
+					subtitle: "Senior Fullstack Software Engineer",
+					description: `
+						<ul>
+							<li>Applying full stack development with comfort and familiarity of continuous integration tooling.</li>
+							<li>Applying algorithm optimization, system security, and distributed computing.</li>
+							<li>Performing code reviews for backend business services and assist in front end UI efforts.</li>
+							<li>Performing as a team member to generate a vision, establishing direction, motivating members, creating an atmosphere of trust, leveraging diverse views, coaching staff, and encouraging improvement and innovation.</li>
+						</ul>
+					`,
+				},
 				blueoptima: {
 					title: "BlueOptima",
 					subtitle: "Frontend Software Engineer",
