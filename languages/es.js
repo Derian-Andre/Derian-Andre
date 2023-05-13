@@ -315,6 +315,41 @@ export default {
 							},
 						},
 					},
+					linkedin: {
+						title: "LinkedIn",
+						items: {
+							"javascript-best-practices-for-code-formatting": {
+								title: "JavaScript: Mejores prácticas para el formato de código",
+								description:
+									"Obtenga información sobre detalles de formato como comentarios, puntuación y espaciado para maximizar la capacidad de su código para viajar y prosperar.",
+							},
+							"power-bi-cuadros-de-mando-para-principiantes": {
+								title: "Power BI: Cuadros de mando para principiantes",
+								description:
+									"Descubre en este curso las opciones, propiedades y recursos integrados en Power BI para superar los retos y desafíos que surgen en el diseño de informes analíticos.",
+							},
+						},
+					},
+					veracode: {
+						title: "Veracode",
+						items: {
+							"level-1-developer-security-fundamentals": {
+								title: "Nivel 1: Fundamentos de seguridad para desarrolladores",
+								description:
+									"Curso introductorio de Veracode para desarrolladores que cubre riesgos comunes, codificación segura, autenticación y autorización, y solución de vulnerabilidades en el código. Mejora la calidad y seguridad del software desarrollado.",
+							},
+							"level-2-verified-team-security-champion": {
+								title: "Nivel 2: Campeón verificado de seguridad del equipo",
+								description:
+									"Dirigido a miembros del equipo de desarrollo, este curso utiliza las herramientas avanzadas de Veracode para analizar la seguridad de las aplicaciones. Capacita en interpretación de resultados, colaboración con otros equipos y mejores prácticas de seguridad en todo el ciclo de vida del desarrollo.",
+							},
+							"level-3-verified-continuous-security-champion": {
+								title: "Nivel 3: Campeón verificad de seguridad continua",
+								description:
+									"Enfocado en la implementación de seguridad continua en el desarrollo de software, el curso abarca integración de pruebas de seguridad en flujos ágiles/DevOps, automatización, establecimiento de políticas y uso de informes y métricas para mejorar la postura de seguridad de las aplicaciones.",
+							},
+						},
+					},
 				},
 			},
 			courses: {

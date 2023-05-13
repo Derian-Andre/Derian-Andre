@@ -289,7 +289,51 @@ export default {
 							id: "UC-9af7f58a-15fc-4131-bff3-4b208e817405",
 						},
 					]
-				},
+				}, {
+					slug: "linkedin-learning",
+					home: "https://www.linkedin.com/learning/",
+					validator: "https://www.linkedin.com/learning/certificate/",
+					items: [
+						{
+							type: "javascript",
+							slug: "javascript-best-practices-for-code-formatting",
+							date: "2023-04-10T23:48:00.000Z",
+							id: "AUFTD-X91nwBcVnbN122zjwxVbXi",
+							url: null,
+						}, {
+							type: "power-bi",
+							slug: "power-bi-cuadros-de-mando-para-principiantes",
+							date: "2023-04-20T22:22:00.000Z",
+							id: "AamegkyfHHRTu0k1juABH__X64Wl",
+							url: null,
+						},
+					]
+				}, {
+					slug: "veracode",
+					home: "https://veracode.com/",
+					validator: "https://veracode.com/certificate/",
+					items: [
+						{
+							type: "security",
+							slug: "level-1-developer-security-fundamentals",
+							date: "2023-04-25T23:48:00.000Z",
+							id: null,
+							url: null,
+						}, {
+							type: "security",
+							slug: "level-2-verified-team-security-champion",
+							date: "2023-04-27T23:48:00.000Z",
+							id: null,
+							url: null,
+						}, {
+							type: "security",
+							slug: "level-3-verified-continuous-security-champion",
+							date: "2023-05-28T23:48:00.000Z",
+							id: null,
+							url: null,
+						},
+					]
+				}
 			],
 			courses: [
 				{

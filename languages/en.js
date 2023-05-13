@@ -315,6 +315,41 @@ export default {
 							},
 						},
 					},
+					"linkedin-learning": {
+						title: "LinkedIn",
+						items: {
+							"javascript-best-practices-for-code-formatting": {
+								title: "JavaScript: Best Practices for Code Formatting",
+								description:
+									"Learn about formatting details like comments, punctuation, and spacing to maximize your code's ability to travel and thrive.",
+							},
+							"power-bi-cuadros-de-mando-para-principiantes": {
+								title: "Power BI: Dashboards for Beginners",
+								description:
+									"Discover the options, properties, and built-in resources in Power BI to overcome challenges that arise in designing analytical reports.",
+							},
+						},
+					},
+					veracode: {
+						title: "Veracode",
+						items: {
+							"level-1-developer-security-fundamentals": {
+								title: "Level 1: Developer Security Fundamentals",
+								description:
+									"Veracode's introductory course for developers covering common risks, secure coding, authentication and authorization, and vulnerability resolution in code. Improves the quality and security of developed software.",
+							},
+							"level-2-verified-team-security-champion": {
+								title: "Level 2: Verified Team Security Champion",
+								description:
+									"Targeting development team members, this course utilizes Veracode's advanced tools to analyze application security. Provides training in result interpretation, collaboration with other teams, and best security practices throughout the development lifecycle.",
+							},
+							"level-3-verified-continuous-security-champion": {
+								title: "Level 3: Verified Continuous Security Champion",
+								description:
+									"Focusing on the implementation of continuous security in software development, this course covers security testing integration in agile/DevOps workflows, automation, policy establishment, and use of reports and metrics to enhance application security posture.",
+							},
+						},
+					},
 				},
 			},
 			courses: {

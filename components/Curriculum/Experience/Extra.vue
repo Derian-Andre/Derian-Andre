@@ -8,16 +8,11 @@
 			</h5>
 		</div>
 		<h6 class="date mb-1" v-if="date">
-			{{ $t(`curriculum.experience.expedition`)}} <Time :date="date" />
+			{{ $t(`curriculum.experience.expedition`) }} <Time :date="date" />
 		</h6>
 		<p class="description mb-2" v-if="description" v-html="description" />
-		<a
-			class="btn btn-outline-link btn-external btn-sm text-uppercase"
-			target="_blank"
-			rel="noopener nofollow noreferrer"
-			:href="url"
-			v-if="url"
-		>
+		<a class="btn btn-outline-link btn-external btn-sm text-uppercase" target="_blank" rel="noopener nofollow noreferrer"
+			:href="url" v-if="url">
 			{{ $t(`curriculum.experience.${type}.btn`) }}
 			<i class="bi bi-caret-right-fill ms-1" />
 		</a>
@@ -59,6 +54,7 @@ export default {
 				"c++": "C++",
 				"vscode": "Visual Studio Code",
 				"troubleshooting": "Trouble Shooting",
+				"power-bi": "Power BI"
 			},
 		};
 	},
@@ -88,6 +84,7 @@ export default {
 			return this.company.home;
 		},
 		url() {
+			if (this.data.url === null) return null;
 			const slug = "" || this.data.id || this.data.slug;
 			return this.company.validator + slug;
 		},
