@@ -131,9 +131,10 @@ export default {
 					subtitle: "Senior Fullstack Software Engineer",
 					description: `
 						<ul>
-							<li>Aplicar desarrollo fullstack con la comodidad y familiaridad de las herramientas de CD/CI.</li>
+							<li>Aplicar el desarrollo de pila completa con la comodidad y familiaridad de las herramientas de integración continua para múltiples proyectos.</li>
 							<li>Aplicación de optimización de algoritmos, seguridad del sistema y computación distribuida.</li>
-							<li>Realización de revisiones de código para servicios comerciales de back-end y asistencia en los esfuerzos de interfaz de usuario de front-end.</li>
+							<li>Análisis de negocio, arquitectura y/o código para desarrollar documentación nueva o faltante.</li>
+							<li>Realización de revisiones de código para frontend y backend.</li>
 							<li>Actuar como miembro del equipo para generar una visión, establecer una dirección, motivar a los miembros, crear una atmósfera de confianza, aprovechar diversos puntos de vista, entrenar al personal y fomentar la mejora y la innovación.</li>
 						</ul>
 					`,

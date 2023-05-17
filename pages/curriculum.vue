@@ -147,7 +147,7 @@ export default {
 				}, {
 					slug: "team",
 					years: 4,
-					items: ['git', 'github', 'jira', 'bitbucket', 'confluence', 'gitlab', 'discord', 'slack', 'trello', 'meistertask'],
+					items: ['git', 'github', 'azure-devops', 'jira', 'bitbucket', 'confluence', 'gitlab', 'discord', 'slack', 'trello', 'meistertask'],
 				},
 			],
 			experience: [
@@ -158,7 +158,7 @@ export default {
 							slug: "pwc",
 							dateEnd: null,
 							dateStart: "2023-03-27T00:00:00.000Z",
-							stack: ['javascript', 'react', 'jest', 'node', 'express', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence']
+							stack: ['javascript', 'typescript', 'react', 'jest', 'node', 'express', 'mongodb', 'html', 'sass', 'css', 'azure-devops', 'jira', 'confluence']
 						},
 						{
 							slug: "blueoptima",

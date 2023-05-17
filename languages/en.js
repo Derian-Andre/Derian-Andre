@@ -131,9 +131,10 @@ export default {
 					subtitle: "Senior Fullstack Software Engineer",
 					description: `
 						<ul>
-							<li>Applying full stack development with comfort and familiarity of continuous integration tooling.</li>
+							<li>Applying full stack development with comfort and familiarity of continuous integration tooling for multiple projects.</li>
 							<li>Applying algorithm optimization, system security, and distributed computing.</li>
-							<li>Performing code reviews for backend business services and assist in front end UI efforts.</li>
+							<li>Business, architecture and/or code analysis to develop new or missing documentation.</li>
+							<li>Performing code reviews for frontend and backend.</li>
 							<li>Performing as a team member to generate a vision, establishing direction, motivating members, creating an atmosphere of trust, leveraging diverse views, coaching staff, and encouraging improvement and innovation.</li>
 						</ul>
 					`,
