@@ -142,12 +142,12 @@ export default {
 					items: ['javascript', 'react', 'next', 'vue', 'nuxt', 'typescript', 'tailwind', 'chakraui', 'sass', 'css', 'html', 'jest', 'bootstrap', 'jquery'],
 				}, {
 					slug: "backend",
-					years: 2,
+					years: 3,
 					items: ['node', 'express', 'mongodb', 'mongoose', 'mysql',],
 				}, {
 					slug: "team",
-					years: 4,
-					items: ['git', 'github', 'azure-devops', 'jira', 'bitbucket', 'confluence', 'gitlab', 'discord', 'slack', 'trello', 'meistertask'],
+					years: 5,
+					items: ['git', 'github', 'microsoft-teams', 'microsoft-azure-devops', 'microsoft-yammer', 'atlassian-jira', 'atlassian-bitbucket', 'atlassian-confluence', 'gitlab', 'discord', 'slack', 'trello', 'meistertask'],
 				},
 			],
 			experience: [
@@ -158,13 +158,13 @@ export default {
 							slug: "pwc",
 							dateEnd: null,
 							dateStart: "2023-03-27T00:00:00.000Z",
-							stack: ['javascript', 'typescript', 'react', 'jest', 'node', 'express', 'mongodb', 'html', 'sass', 'css', 'azure-devops', 'jira', 'confluence']
+							stack: ['javascript', 'typescript', 'react', 'jest', 'node', 'express', 'mongodb', 'html', 'sass', 'css', 'microsoft-azure-devops', 'microsoft-yammer', 'atlassian-jira', 'atlassian-confluence']
 						},
 						{
 							slug: "blueoptima",
 							dateEnd: "2023-01-13T24:00:00.000Z",
 							dateStart: "2022-05-16T00:00:00.000Z",
-							stack: ['javascript', 'react', 'jest', 'angular', 'html', 'sass', 'css', 'jira', 'bitbucket', 'confluence', 'figma']
+							stack: ['javascript', 'react', 'jest', 'angular', 'html', 'sass', 'css', 'atlassian-jira', 'atlassian-bitbucket', 'atlassian-confluence', 'figma']
 						}, {
 							slug: "xolvex",
 							dateEnd: "2022-05-13T18:00:00.000Z",
@@ -179,7 +179,7 @@ export default {
 							slug: "derianandre",
 							dateEnd: null,
 							dateStart: "2015-04-08T09:00:00.000Z",
-							stack: ['javascript', 'react', 'next', 'vue', 'nuxt', 'html', 'sass', 'css', 'node', 'express', 'mongoose', 'mongodb', 'mysql', 'php', 'git', 'github', 'gitlab', 'bitbucket', 'discord', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma']
+							stack: ['javascript', 'react', 'next', 'vue', 'nuxt', 'html', 'sass', 'css', 'node', 'express', 'mongoose', 'mongodb', 'mysql', 'php', 'git', 'github', 'gitlab', 'atlassian-bitbucket', 'discord', 'adobe-illustrator', 'adobe-photoshop', 'adobe-indesign', 'hitfilm-express', 'figma']
 						},
 					],
 				}, {
