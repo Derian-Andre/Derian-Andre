@@ -152,7 +152,7 @@ export default {
 					`,
 				},
 				xolvex: {
-					title: "Xolvex (Inbright)",
+					title: "Xolvex (An Inbright company)",
 					subtitle: "Frontend Software Engineer",
 					description: `
 						<ul>
@@ -282,7 +282,7 @@ export default {
 							"problem-solving-intermediate": {
 								title: "Problem Solving (Intermediate)",
 								description:
-									"Abarca temas de estructuras de datos (como HashMaps, pilas y colas) y algoritmos (como soluciones óptimas).",
+									"Covers topics of data structures (such as HashMaps, stacks, and queues) and algorithms (such as optimal solutions).",
 							},
 						},
 					},

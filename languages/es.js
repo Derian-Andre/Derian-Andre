@@ -131,7 +131,7 @@ export default {
 					subtitle: "Senior Fullstack Software Engineer",
 					description: `
 						<ul>
-							<li>Aplicar el desarrollo de pila completa con la comodidad y familiaridad de las herramientas de integración continua para múltiples proyectos.</li>
+							<li>Aplicación de desarrollo full-stack con herramientas de integración continua para múltiples proyectos.</li>
 							<li>Aplicación de optimización de algoritmos, seguridad del sistema y computación distribuida.</li>
 							<li>Análisis de negocio, arquitectura y/o código para desarrollar documentación nueva o faltante.</li>
 							<li>Realización de revisiones de código para frontend y backend.</li>
@@ -152,7 +152,7 @@ export default {
 					`,
 				},
 				xolvex: {
-					title: "Xolvex",
+					title: "Xolvex (Una empresa de Inbright)",
 					subtitle: "Frontend Software Engineer",
 					description: `
 						<ul>
