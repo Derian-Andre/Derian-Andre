@@ -131,11 +131,11 @@ export default {
 					subtitle: "Senior Fullstack Software Engineer",
 					description: `
 						<ul>
-							<li>Applying full stack development with comfort and familiarity of continuous integration tooling for multiple projects.</li>
-							<li>Applying algorithm optimization, system security, and distributed computing.</li>
-							<li>Business, architecture and/or code analysis to develop new or missing documentation.</li>
-							<li>Performing code reviews for frontend and backend.</li>
-							<li>Performing as a team member to generate a vision, establishing direction, motivating members, creating an atmosphere of trust, leveraging diverse views, coaching staff, and encouraging improvement and innovation.</li>
+							<li>Proficient in full stack development, emphasizing code maintainability, quality, best practices and performance.</li>
+							<li>Addressing VeraCode and SonarQube issues and implementing best solutions for code quality.</li>
+							<li>Conduct thorough code reviews, enhancing readability and efficiency in frontend and backend services.</li>
+							<li>Committed to improving code maintainability through strategic refactoring and optimizations.</li>
+							<li>Actively contribute to team collaboration, guiding a clear vision and encouraging innovation and growth.</li>
 						</ul>
 					`,
 				},
