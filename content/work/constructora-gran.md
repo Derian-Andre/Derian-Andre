@@ -22,3 +22,9 @@ Construido a partir de líneas, este logo representó un desafío personal para 
 La elección de colores fue a partir del concreto y los materiales que se utilizan más dentro del sector, negro y gris. Representando el concreto, metales, mezclas, etc. Combinados de una forma para resaltar de una una forma llamativa; paradójicamente, sin tratar de llamar la atención.
 
 Las líneas se utilizan dentro de la identidad como adornos. Estas son una representación minimalista de paredes.
+
+---
+
+#### Mención de mejor diseño
+La tarjeta de presentación de Constructora GRAN ha sido mencionada como de los mejores diseños en la página de DesignRush, puedes saber más sobre DesignRush en el siguiente enlace:
+https://www.designrush.com/best-designs/print/business-cards
