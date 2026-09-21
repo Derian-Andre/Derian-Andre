@@ -1,0 +1,52 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "transit": {
+      "dependsOn": ["^transit"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "env": ["PUBLIC_*"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"],
+      "outputs": ["dist/**"]
+    },
+    "check": {
+      "dependsOn": ["transit"],
+      "outputs": []
+    },
+    "check-types": {
+      "dependsOn": ["transit"],
+      "outputs": []
+    },
+    "lint": {
+      "dependsOn": ["transit"],
+      "outputs": []
+    },
+    "format": {
+      "cache": false,
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["transit"],
+      "outputs": ["coverage/**"]
+    },
+    "verify": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "preview": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "persistent": true
+    },
+    "deploy": {
+      "cache": false,
+      "dependsOn": ["build"]
+    }
+  }
+}

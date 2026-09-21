@@ -1,0 +1,61 @@
+---
+import Footer from "@/components/Footer.astro"
+import PageInfo from "@/components/PageInfo.astro"
+import type { Locale } from "@/i18n"
+import BaseLayout from "./BaseLayout.astro"
+
+interface Props {
+  locale: Locale
+  page: string
+  title: string
+  subtitle?: string
+  date?: Date | string
+  description?: string
+  image?: string
+  type?: "website" | "article"
+  publishedTime?: Date | string
+  modifiedTime?: Date | string
+  contentClass?: string
+  mainClass?: string
+  showFooter?: boolean
+  noindex?: boolean
+}
+
+const {
+  locale,
+  page,
+  title,
+  subtitle,
+  date,
+  description,
+  image,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  contentClass = "",
+  mainClass = "",
+  showFooter = false,
+  noindex = false,
+} = Astro.props
+---
+
+<BaseLayout
+  {locale}
+  {title}
+  {description}
+  {image}
+  {type}
+  {publishedTime}
+  {modifiedTime}
+  {noindex}
+  bodyClass={`page page-${page}`}
+>
+  <main id="main-content" class:list={["page-main", mainClass]}>
+    <PageInfo {title} {subtitle} {date} {locale} />
+    <section class:list={["page-content", contentClass]}>
+      <slot />
+    </section>
+    <slot name="side" />
+    {showFooter && <Footer {locale} />}
+  </main>
+</BaseLayout>

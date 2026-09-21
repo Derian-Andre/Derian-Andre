@@ -1,0 +1,243 @@
+---
+import { type CurriculumCredentialProvider, curriculumData } from "../../data/curriculum"
+import { getTranslations, type Locale, localizedPath } from "../../i18n"
+import "../../styles/curriculum.css"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const translations = getTranslations(locale)
+const copy = translations.curriculum
+
+interface ExperienceItemCopy {
+  title: string
+  subtitle: string
+  description: string
+}
+
+interface ExperienceSectionCopy {
+  title: string
+  [slug: string]: string | ExperienceItemCopy
+}
+
+interface CredentialItemCopy {
+  title: string
+  description: string
+}
+
+interface CredentialProviderCopy {
+  title?: string
+  items?: Record<string, CredentialItemCopy>
+}
+
+interface CredentialSectionCopy {
+  title: string
+  btn: string
+  items: Record<string, CredentialProviderCopy>
+}
+
+const experienceCopy = copy.experience as unknown as Record<string, unknown>
+const sectionCopy = (slug: string) => experienceCopy[slug] as ExperienceSectionCopy
+const credentialCopy = (type: "certifications" | "courses") =>
+  experienceCopy[type] as CredentialSectionCopy
+
+const contactMarks: Record<string, string> = {
+  "geo-alt-fill": "⌖",
+  "phone-fill": "☎",
+  "envelope-fill": "@",
+  github: "GH",
+  linkedin: "in",
+}
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat(locale, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(value))
+
+const pluralize = (template: string, value: number) => {
+  const variants = template.split("|").map((variant) => variant.trim())
+  return (value === 1 ? variants[0] : (variants[1] ?? variants[0]))
+    .replaceAll("{n}", String(value))
+    .replaceAll("{years}", String(value))
+}
+
+const duration = (dateStart: string, dateEnd: string | null) => {
+  const start = new Date(dateStart)
+  const end = dateEnd ? new Date(dateEnd) : new Date()
+  const daysTotal = Math.ceil(Math.abs(end.getTime() - start.getTime()) / 86_400_000)
+  const years = Math.floor(daysTotal / 365.25)
+  const remainingDays = Math.floor(daysTotal - years * 365.25)
+  const months = Math.floor((remainingDays / 365.25) * 12)
+  const days = Math.ceil(daysTotal - (years * 365.25 + (months / 12) * 365.25))
+  const parts = [
+    years > 0 ? pluralize(copy.experience.years, years) : null,
+    months > 0 ? pluralize(copy.experience.months, months) : null,
+    days > 0 ? pluralize(copy.experience.days, days) : null,
+  ].filter(Boolean)
+
+  return parts.length > 0 ? ` · ${parts.join(" ")}` : ""
+}
+
+const providers = (items: readonly CurriculumCredentialProvider[]) =>
+  items.map((provider) => ({
+    ...provider,
+    items: [...provider.items].sort((a, b) => Date.parse(b.date) - Date.parse(a.date)),
+  }))
+
+const providerCopy = (type: "certifications" | "courses", slug: string): CredentialProviderCopy => {
+  const collection = credentialCopy(type).items
+  return collection[slug] ?? collection[slug.replace("-learning", "")] ?? {}
+}
+---
+
+<main id="main-content" class="cv-page" aria-labelledby="curriculum-title">
+	<header class="cv-title-rail">
+		<h1 id="curriculum-title">{copy.title}</h1>
+		<p>{copy.subtitle}</p>
+	</header>
+
+	<section class="cv-content">
+		<div class="cv-columns">
+			<aside class="cv-about" aria-labelledby="cv-profile-heading">
+				<h2 id="cv-profile-heading">{copy.about.title}</h2>
+				<p class="cv-intro">{copy.about.lead}</p>
+				<hr />
+
+				<section>
+					<h3>{copy.about.contact.title}</h3>
+					<ul class="cv-contact-list">
+						{curriculumData.contact.map((item) => (
+							<li>
+								<span aria-hidden="true">{contactMarks[item.icon] ?? "·"}</span>
+								<a href={item.url} target={item.url.startsWith("http") ? "_blank" : undefined} rel={item.url.startsWith("http") ? "noopener noreferrer nofollow" : undefined}>
+									{item.title}
+								</a>
+							</li>
+						))}
+					</ul>
+					<hr />
+				</section>
+
+				<section>
+					<h3>{copy.about.specialty.title}</h3>
+					<h4>{copy.about.specialty.subtitle}</h4>
+					<hr />
+				</section>
+
+				<section>
+					<h3>{copy.about.languages.title}</h3>
+					{curriculumData.languages.map((language) => (
+						<h4>
+							{copy.about.languages[language].title}
+							<small>{copy.about.languages[language].level}</small>
+						</h4>
+					))}
+					<hr />
+				</section>
+
+				<section>
+					<h3>{copy.about.skills.title}</h3>
+					{curriculumData.skills.map((skill) => (
+						<div class="cv-skill-group">
+							<h4>
+								{copy.about.skills[skill.slug]}
+								<small>{pluralize(copy.about.skills.years, skill.years)}</small>
+							</h4>
+							<div class="cv-skill-icons">
+								{skill.items.map((name) => (
+									<img src={`/img/curriculum/icons/${name}.svg`} alt="" title={name} loading="lazy" />
+								))}
+							</div>
+						</div>
+					))}
+				</section>
+			</aside>
+
+			<div class="cv-experience">
+				<h2>{copy.experience.title}</h2>
+				<p class="cv-intro">{copy.experience.lead}</p>
+				<nav class="cv-actions" aria-label={locale === "es" ? "Enlaces del currículum" : "Curriculum links"}>
+					<a class="cv-action" href={localizedPath(locale, "/projects")}>{translations.projects.title}</a>
+					<a class="cv-action" href={localizedPath(locale, "/blog")}>{translations.blog.title}</a>
+				</nav>
+				<hr />
+
+				<div class="cv-experience-columns">
+					<div>
+						{curriculumData.experience.map((section) => (
+							<section aria-labelledby={`cv-${section.slug}`}>
+								<h3 id={`cv-${section.slug}`}>{sectionCopy(section.slug).title}</h3>
+								{section.items.map((item) => {
+									const itemCopy = sectionCopy(section.slug)[item.slug] as ExperienceItemCopy;
+									return (
+										<article class="cv-entry">
+											<img class="cv-entry-logo" src={`/img/curriculum/${item.slug}.svg`} alt="" loading="lazy" />
+											<h4>{itemCopy.title}</h4>
+											<h5>{itemCopy.subtitle}</h5>
+											<h6>
+												<time datetime={item.dateStart}>{formatDate(item.dateStart)}</time>
+												{" — "}
+												{item.dateEnd ? <time datetime={item.dateEnd}>{formatDate(item.dateEnd)}</time> : <span>{copy.experience.current}</span>}
+												{duration(item.dateStart, item.dateEnd)}
+											</h6>
+											<div class="cv-entry-description" set:html={itemCopy.description} />
+											<div class="cv-entry-stack">
+												{item.stack.map((name) => (
+													<img src={`/img/curriculum/icons/${name}.svg`} alt="" title={name} loading="lazy" />
+												))}
+											</div>
+										</article>
+									);
+								})}
+								<hr />
+							</section>
+						))}
+					</div>
+
+					<div>
+						{(["certifications", "courses"] as const).map((type) => {
+							const source = type === "certifications" ? curriculumData.certifications : curriculumData.courses;
+							return (
+								<section aria-labelledby={`cv-${type}`}>
+									<h3 id={`cv-${type}`}>{credentialCopy(type).title}</h3>
+									{providers(source).map((provider) => {
+										const providerTranslations = providerCopy(type, provider.slug);
+										return (
+											<div>
+												<img class="cv-provider-logo" src={`/img/curriculum/${provider.slug}.svg`} alt={providerTranslations.title ?? provider.slug} loading="lazy" />
+												{provider.items.map((item) => {
+													const itemCopy: Partial<CredentialItemCopy> = providerTranslations.items?.[item.slug] ?? {};
+													const url = item.url === null ? null : `${provider.validator}${item.id || item.slug}`;
+													return (
+														<article class="cv-extra">
+															<div class="cv-extra-heading">
+																<img src={`/img/curriculum/icons/${item.type}.svg`} alt="" loading="lazy" />
+																<h5>
+																	{itemCopy.title ?? item.slug}
+																	{item.id && <small> [{item.id}]</small>}
+																</h5>
+															</div>
+															<h6>{copy.experience.expedition}<time datetime={item.date}>{formatDate(item.date)}</time></h6>
+															{itemCopy.description && <p class="cv-extra-description" set:html={itemCopy.description} />}
+																	{url && <a class="cv-action" href={url} target="_blank" rel="noopener noreferrer nofollow">{credentialCopy(type).btn}</a>}
+														</article>
+													);
+												})}
+											</div>
+										);
+									})}
+									<hr />
+								</section>
+							);
+						})}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>

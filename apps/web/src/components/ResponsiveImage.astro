@@ -1,0 +1,20 @@
+---
+interface Props {
+  src: string
+  alt?: string
+  class?: string
+  loading?: "eager" | "lazy"
+  fetchpriority?: "high" | "low" | "auto"
+}
+
+const { src, alt = "", class: className, loading = "lazy", fetchpriority = "auto" } = Astro.props
+---
+
+<img
+  class={className}
+  src={src}
+  alt={alt}
+  loading={loading}
+  decoding="async"
+  fetchpriority={fetchpriority}
+/>

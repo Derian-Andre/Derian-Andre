@@ -1,0 +1,48 @@
+---
+import ResponsiveImage from "@/components/ResponsiveImage.astro"
+import { getLocaleStaticPaths } from "@/components/site"
+import { type Locale, localizedPath } from "@/i18n"
+import PageLayout from "@/layouts/PageLayout.astro"
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths()
+}
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const copy =
+  locale === "es"
+    ? {
+        title: "No se encontró la página",
+        description: "La página solicitada no existe o fue movida.",
+        message: "La página que buscas no está aquí. Puede que haya cambiado de dirección.",
+        action: "Volver al inicio",
+      }
+    : {
+        title: "Page not found",
+        description: "The requested page does not exist or has moved.",
+        message: "The page you are looking for is not here. Its address may have changed.",
+        action: "Back home",
+      }
+---
+
+<PageLayout
+  {locale}
+  page="error"
+  title={copy.title}
+  subtitle="Error 404"
+  description={copy.description}
+  mainClass="page-error"
+  noindex
+>
+  <p>{copy.message}</p>
+  <p class="error-code" aria-hidden="true">42</p>
+  <a class="button" href={localizedPath(locale, "/")}>{copy.action}</a>
+
+  <section slot="side" class="page-side">
+    <ResponsiveImage src="/img/emoji.svg" alt="" />
+  </section>
+</PageLayout>

@@ -1,0 +1,23 @@
+---
+import { type Locale, localizedPath } from "@/i18n"
+import ResponsiveImage from "./ResponsiveImage.astro"
+import { formatDate } from "./site"
+
+interface Props {
+  locale: Locale
+  slug: string
+  title: string
+  date: Date | string
+  hero?: string
+}
+
+const { locale, slug, title, date, hero = `${slug}.png` } = Astro.props
+---
+
+<a class="gallery-item" href={localizedPath(locale, `/work/${slug}/`)}>
+  <span class="gallery-item__overlay">
+    <strong class="gallery-item__title">{title}</strong>
+    <time datetime={new Date(date).toISOString()}>{formatDate(date, locale)}</time>
+  </span>
+  <ResponsiveImage src={`/img/work/${slug}/${hero}`} alt={title} />
+</a>

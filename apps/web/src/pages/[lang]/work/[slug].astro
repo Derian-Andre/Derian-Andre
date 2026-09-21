@@ -1,0 +1,77 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content"
+import LegacyContent from "@/components/LegacyContent.astro"
+import ResponsiveImage from "@/components/ResponsiveImage.astro"
+import { isPublished, splitEntryId } from "@/components/site"
+import { getTranslations, type Locale } from "@/i18n"
+import PageLayout from "@/layouts/PageLayout.astro"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("work")
+
+  return entries.flatMap((entry) => {
+    const identity = splitEntryId(entry.id)
+    if (!identity || !isPublished(entry.data)) return []
+
+    return [
+      { params: { lang: identity.locale, slug: identity.slug }, props: { entry, ...identity } },
+    ]
+  })
+}
+
+interface Props {
+  entry: CollectionEntry<"work">
+  locale: Locale
+  slug: string
+}
+
+const { entry, locale, slug } = Astro.props
+const translations = getTranslations(locale)
+const { Content } = await render(entry)
+const hero = entry.data.hero ?? `${slug}.png`
+const heroPath = `/img/work/${slug}/${hero}`
+---
+
+<PageLayout
+  locale={locale}
+  page="work"
+  title={entry.data.title}
+  date={entry.data.date}
+  description={entry.data.description ?? translations.head.description}
+  image={heroPath}
+  type="article"
+  publishedTime={entry.data.date}
+  noindex={entry.data.draft}
+>
+  {
+    entry.data.draft ? (
+      <section class="construction-notice">
+        <h2>{translations.page.construction.title}</h2>
+        <p>{translations.page.construction.description}</p>
+      </section>
+    ) : (
+      <>
+        {!entry.data.working && (
+          <blockquote>
+            <h2>{translations.work.not_working.title}</h2>
+            <p set:html={translations.work.not_working.description}></p>
+          </blockquote>
+        )}
+        <LegacyContent class="article">
+          <Content />
+        </LegacyContent>
+      </>
+    )
+  }
+
+  {
+    !entry.data.draft && (
+      <section slot="side" class="page-side work-gallery">
+        <ResponsiveImage src={heroPath} alt={entry.data.title} loading="eager" fetchpriority="high" />
+        {Array.from({ length: Math.max(entry.data.gallery - 1, 0) }, (_, index) => index + 2).map((number) => (
+          <ResponsiveImage src={`/img/work/${slug}/${slug}-${number}.png`} alt={entry.data.title} />
+        ))}
+      </section>
+    )
+  }
+</PageLayout>

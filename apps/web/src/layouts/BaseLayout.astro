@@ -1,0 +1,150 @@
+---
+import { getAbsoluteLocaleUrl } from "astro:i18n"
+import Header from "@/components/Header.astro"
+import {
+  defaultLocale,
+  getTranslations,
+  type Locale,
+  localeMetadata,
+  locales,
+  stripLocalePrefix,
+} from "@/i18n"
+import "@/styles/global.css"
+
+interface Props {
+  locale?: Locale
+  title?: string
+  description?: string
+  image?: string
+  type?: "website" | "article"
+  publishedTime?: Date | string
+  modifiedTime?: Date | string
+  noindex?: boolean
+  bodyClass?: string
+}
+
+const {
+  locale = defaultLocale,
+  title,
+  description = getTranslations(locale).head.description,
+  image = "/img/derianandre.png",
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  noindex = false,
+  bodyClass = "",
+} = Astro.props
+
+const siteName = "Derian André"
+const pageTitle = title && title !== siteName ? `${title} – ${siteName}` : siteName
+const withoutTrailingSlash = (pathname: string) => pathname.replace(/\/$/, "") || "/"
+const canonicalURL = new URL(
+  withoutTrailingSlash(Astro.url.pathname),
+  Astro.site ?? "https://derianandre.com",
+)
+const imageURL = new URL(image, canonicalURL)
+const pathWithoutLocale = stripLocalePrefix(Astro.url.pathname).replace(/^\/|\/$/g, "")
+const alternateURLs = locales.map((alternateLocale) => ({
+  locale: alternateLocale,
+  url: new URL(
+    withoutTrailingSlash(
+      new URL(
+        pathWithoutLocale
+          ? getAbsoluteLocaleUrl(alternateLocale, pathWithoutLocale)
+          : getAbsoluteLocaleUrl(alternateLocale),
+      ).pathname,
+    ),
+    Astro.site ?? "https://derianandre.com",
+  ),
+}))
+const localeTag = localeMetadata[locale].openGraphLocale
+const alternateLocaleTags = locales
+  .filter((alternateLocale) => alternateLocale !== locale)
+  .map((alternateLocale) => localeMetadata[alternateLocale].openGraphLocale)
+
+const toIsoDate = (value: Date | string | undefined) => {
+  if (!value) return undefined
+  const date = new Date(value)
+  return Number.isNaN(date.valueOf()) ? undefined : date.toISOString()
+}
+---
+
+<!doctype html>
+<html lang={locale} class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0d0f14" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="description" content={description} />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href={canonicalURL} />
+    {
+      alternateURLs.map(({ locale: alternateLocale, url }) => (
+        <link rel="alternate" hreflang={alternateLocale} href={url} />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={alternateURLs.find(({ locale }) => locale === "es")?.url} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300..900&display=swap"
+    />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:alt" content={title ?? siteName} />
+    <meta property="og:locale" content={localeTag} />
+    {
+      alternateLocaleTags.map((alternateLocaleTag) => (
+        <meta property="og:locale:alternate" content={alternateLocaleTag} />
+      ))
+    }
+    {type === "article" && toIsoDate(publishedTime) && <meta property="article:published_time" content={toIsoDate(publishedTime)} />}
+    {type === "article" && toIsoDate(modifiedTime) && <meta property="article:modified_time" content={toIsoDate(modifiedTime)} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@DerianAndre" />
+    <meta name="twitter:creator" content="@DerianAndre" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <title>{pageTitle}</title>
+    <slot name="head" />
+
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const stored = localStorage.getItem("theme");
+        const theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        root.classList.remove("no-js", "light", "dark");
+        root.classList.add(theme);
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+      })();
+    </script>
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main-content">{locale === "es" ? "Saltar al contenido" : "Skip to content"}</a>
+    <div class="site-layout">
+      <Header locale={locale} />
+      <slot />
+    </div>
+  </body>
+</html>

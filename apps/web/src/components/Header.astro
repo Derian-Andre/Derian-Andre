@@ -1,0 +1,109 @@
+---
+import {
+  getTranslations,
+  type Locale,
+  localeMetadata,
+  locales,
+  localizedPath,
+  stripLocalePrefix,
+} from "@/i18n"
+import BrandMark from "./BrandMark.astro"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const translations = getTranslations(locale)
+const currentPath = Astro.url.pathname
+const pathWithoutLocale = stripLocalePrefix(currentPath)
+const alternateLocales = locales.filter((candidate) => candidate !== locale)
+const menu = [
+  { key: "home", path: "/" },
+  { key: "blog", path: "/blog/" },
+  { key: "about", path: "/about/" },
+  { key: "curriculum", path: "/curriculum/" },
+  { key: "services", path: "/services/" },
+] as const
+---
+
+<header class="site-header" data-site-header>
+  <div class="site-header__top">
+    <a class="site-logo" href={localizedPath(locale, "/")} aria-label="Derian André">
+      <span class="sr-only">Derian André Castillo Franco</span>
+      <BrandMark />
+    </a>
+  </div>
+
+  <nav class="site-navigation" aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"}>
+    {
+      menu.map((item) => {
+        const href = localizedPath(locale, item.path);
+        const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
+        const normalizedHref = href.replace(/\/$/, "") || "/";
+        const active =
+          item.path === "/"
+            ? normalizedCurrent === normalizedHref
+            : normalizedCurrent === normalizedHref || normalizedCurrent.startsWith(`${normalizedHref}/`);
+
+        return (
+          <a class="site-navigation__item" href={href} aria-current={active ? "page" : undefined}>
+            {translations.header[item.key]}
+          </a>
+        );
+      })
+    }
+    {
+      alternateLocales.map((alternateLocale) => (
+        <a
+          class="site-navigation__item site-navigation__language"
+          href={localizedPath(alternateLocale, pathWithoutLocale)}
+          hreflang={alternateLocale}
+          lang={alternateLocale}
+          aria-label={localeMetadata[alternateLocale].switchLabel}
+        >
+          {alternateLocale}
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="site-header__bottom">
+    <button
+      class="theme-toggle"
+      type="button"
+      data-theme-toggle
+      aria-label={locale === "es" ? "Cambiar tema de color" : "Change color theme"}
+      aria-pressed="false"
+    >
+      <svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+      </svg>
+      <svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<script>
+  const themeButtons = document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]");
+
+  for (const button of themeButtons) {
+    const updateState = () => {
+      button.setAttribute("aria-pressed", String(document.documentElement.dataset.theme === "dark"));
+    };
+
+    updateState();
+    button.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
+      document.documentElement.classList.remove("light", "dark");
+      document.documentElement.classList.add(nextTheme);
+      document.documentElement.style.colorScheme = nextTheme;
+      localStorage.setItem("theme", nextTheme);
+      updateState();
+    });
+  }
+</script>

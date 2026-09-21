@@ -1,0 +1,23 @@
+---
+import Curriculum from "@/components/curriculum/Curriculum.astro"
+import { getTranslations, isLocale, type Locale, locales } from "@/i18n"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }))
+}
+
+const rawLocale = Astro.params.lang ?? "es"
+if (!isLocale(rawLocale)) {
+  return Astro.redirect("/es/curriculum", 302)
+}
+
+const locale: Locale = rawLocale
+const translations = getTranslations(locale)
+const title = translations.curriculum.title
+const description = translations.curriculum.about.lead
+---
+
+<BaseLayout {locale} {title} {description} bodyClass="page page-curriculum">
+	<Curriculum {locale} />
+</BaseLayout>

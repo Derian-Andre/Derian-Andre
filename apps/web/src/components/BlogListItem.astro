@@ -1,0 +1,18 @@
+---
+import { type Locale, localizedPath } from "@/i18n"
+import { formatDate } from "./site"
+
+interface Props {
+  locale: Locale
+  slug: string
+  title: string
+  date: Date | string
+}
+
+const { locale, slug, title, date } = Astro.props
+---
+
+<a class="blog-list-item" href={localizedPath(locale, `/blog/${slug}/`)}>
+  <h2>{title}</h2>
+  <time datetime={new Date(date).toISOString()}>{formatDate(date, locale)}</time>
+</a>

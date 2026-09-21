@@ -1,0 +1,17 @@
+---
+import RedirectPage from "@/components/RedirectPage.astro"
+import { getLocaleStaticPaths } from "@/components/site"
+import { type Locale, localizedPath } from "@/i18n"
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths()
+}
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+---
+
+<RedirectPage {locale} to={localizedPath(locale, "/blog/page/1/")} />

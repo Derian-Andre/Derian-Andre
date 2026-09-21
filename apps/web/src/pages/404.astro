@@ -1,0 +1,23 @@
+---
+import ResponsiveImage from "@/components/ResponsiveImage.astro"
+import { localizedPath } from "@/i18n"
+import PageLayout from "@/layouts/PageLayout.astro"
+---
+
+<PageLayout
+  locale="es"
+  page="error"
+  title="No se encontró la página"
+  subtitle="Error 404"
+  description="La página solicitada no existe o fue movida."
+  mainClass="page-error"
+  noindex
+>
+  <p>La página que buscas no está aquí. Puede que haya cambiado de dirección.</p>
+  <p class="error-code" aria-hidden="true">42</p>
+  <a class="button" href={localizedPath("es", "/")}>Volver al inicio</a>
+
+  <section slot="side" class="page-side">
+    <ResponsiveImage src="/img/emoji.svg" alt="" />
+  </section>
+</PageLayout>

@@ -1,0 +1,109 @@
+<svg id="pde-da" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 695 620">
+  <title>La Paradoja de Epicuro - Derian Castillo</title>
+  <style>
+    #pde-da * {
+      font-family: "Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+
+    #pde-da path {
+      fill: none;
+      stroke: var(--body-color-muted, #9DA3AF);
+      stroke-miterlimit: 10;
+      stroke-width: 5px
+    }
+
+    #pde-da .muted {
+      fill: var(--body-color-muted, #9DA3AF);
+    }
+
+    #pde-da .normal {
+      fill: var(--body-color-normal, #505662);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    #pde-da .high {
+      fill: var(--body-color-high, #22252A);
+    }
+
+    #pde-da .small {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    #pde-da .bold {
+      font-weight: 800;
+    }
+
+    #pde-da .black {
+      font-weight: 900;
+    }
+  </style>
+  <text transform="translate(72.86 29.75)">
+    <tspan class="high black" style="font-size:35px;">LA PARADOJA DE EPICURO</tspan>
+    <tspan class="muted small" x="160" y="30">derianandre.com/blog</tspan>
+  </text>
+  <text transform="translate(80 135)">
+    <tspan class="normal black" x="7">PREMISA</tspan>
+    <tspan class="high black" style="font-size:35px;" x="-72.78" y="40">EL MAL EXISTE</tspan>
+    <tspan class="small muted" x="-4" y="80">O ENTONCES...</tspan>
+    <tspan class="normal" x="-65" y="120">¿Dios sabe que existe?</tspan>
+    <tspan class="small muted" x="51.79" y="160">SÍ</tspan>
+    <tspan class="normal" x="-65" y="200">¿Puede eliminar el mal?</tspan>
+    <tspan class="small muted" x="51.79" y="240">SÍ</tspan>
+    <tspan class="normal" x="-25" y="280">¿Quiere hacerlo?</tspan>
+    <tspan class="small muted" x="51.79" y="320">SÍ</tspan>
+    <tspan class="normal" x="-79.58" y="360">¿Entonces por qué existe?</tspan>
+    <tspan class="small muted" x="-10" y="400">LIBRE ALBEDRÍO</tspan>
+    <tspan class="normal">
+      <tspan x="-71" y="440">¿Podría crear un cosmos</tspan>
+      <tspan x="-78" y="480" style="letter-spacing:-.04em">con libre albedrío y sin mal?</tspan>
+    </tspan>
+  </text>
+  <text class="normal" transform="translate(465 175)">
+    <tspan x="0" y="0">
+      Dios no existe
+    </tspan>
+    <tspan x="0" y="80">
+      No es omnisciente
+    </tspan>
+    <tspan x="0" y="160">
+      No es omnipotente
+    </tspan>
+    <tspan x="0" y="240" style="font-size:16px">
+      No es omnibenevolente
+    </tspan>
+  </text>
+  <text class="muted small" transform="translate(355 255)">
+    NO
+  </text>
+  <path d="M295.48 248.8h47M395.48 248.8h48" />
+  <path d="m433.48 238.8 10 10-10 10" />
+  <text class="muted small" transform="translate(355 335)">
+    NO
+  </text>
+  <path d="M295.48 328.8h47M395.48 328.8h48" />
+  <path d="m433.48 318.8 10 10-10 10" />
+  <text class="muted small" transform="translate(355 415)">
+    NO
+  </text>
+  <path d="M295.48 408.8h47M395.48 408.8h48" />
+  <path d="m433.48 398.8 10 10-10 10" />
+  <text class="muted small" transform="translate(360.41 576.54)">
+    SÍ
+  </text>
+  <path d="M295.48 570.05h47" />
+  <path d="M395.48 570.05h134V437.44" />
+  <path d="m519.87 447.44 10-10 10 10" />
+  <text class="muted small" transform="translate(355 615.68)">
+    NO
+  </text>
+  <path d="M295.48 608.53h47" />
+  <path d="M638.48 383.67V358.3M395.48 608.75h243V437.44M628.87 368.3l10-10 10 10" />
+  <text class="muted small" transform="translate(348.37 174.54)" style="font-size:13px;">
+    ERGO
+  </text>
+  <path d="M295.48 169.15h47M395.48 169.15h48" />
+  <path d="m433.48 159.15 10 10-10 10M632.95 169h59.03v241h-15M676.49 330h15M676.49 250h15" />
+  <path d="m642.46 179-10-10 10-10" />
+</svg>

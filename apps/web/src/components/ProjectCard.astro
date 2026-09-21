@@ -1,0 +1,27 @@
+---
+import { type Locale, localizedPath } from "@/i18n"
+import ResponsiveImage from "./ResponsiveImage.astro"
+import { formatDate } from "./site"
+
+interface Props {
+  locale: Locale
+  slug: string
+  title: string
+  description?: string
+  date: Date | string
+  hero?: string
+  cta: string
+}
+
+const { locale, slug, title, description, date, hero, cta } = Astro.props
+---
+
+<article class="project-card">
+  {hero && <ResponsiveImage class="project-card__image" src={`/img/projects/${slug}/${hero}`} alt="" />}
+  <div class="project-card__body">
+    <h2>{title}</h2>
+    <time datetime={new Date(date).toISOString()}>{formatDate(date, locale)}</time>
+    {description && <p set:html={description} />}
+    <a class="button project-card__link" href={localizedPath(locale, `/projects/${slug}/`)}>{cta}</a>
+  </div>
+</article>
