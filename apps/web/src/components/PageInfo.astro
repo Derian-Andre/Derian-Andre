@@ -1,0 +1,33 @@
+---
+import { type Locale, localeMetadata } from "@/i18n"
+
+interface Props {
+  title: string
+  subtitle?: string
+  date?: Date | string
+  locale: Locale
+}
+
+const { title, subtitle, date, locale } = Astro.props
+const parsedDate = date ? new Date(date) : undefined
+const formattedDate =
+  parsedDate && !Number.isNaN(parsedDate.valueOf())
+    ? new Intl.DateTimeFormat(localeMetadata[locale].dateLocale, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC",
+      }).format(parsedDate)
+    : undefined
+---
+
+<section class="page-info">
+  <h1 class="page-info__title"><span>{title}</span></h1>
+  {
+    (subtitle || formattedDate) && (
+      <p class="page-info__subtitle">
+        {formattedDate && parsedDate ? <time datetime={parsedDate.toISOString()}>{formattedDate}</time> : subtitle}
+      </p>
+    )
+  }
+</section>

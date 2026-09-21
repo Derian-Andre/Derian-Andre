@@ -1,0 +1,44 @@
+---
+import { getLocaleStaticPaths } from "@/components/site"
+import { getTranslations, type Locale } from "@/i18n"
+import PageLayout from "@/layouts/PageLayout.astro"
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths()
+}
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const translations = getTranslations(locale)
+const services = [
+  translations.services.design,
+  translations.services.development,
+  translations.services.photography,
+]
+---
+
+<PageLayout
+  locale={locale}
+  page="services"
+  title={translations.services.title}
+  subtitle={translations.services.subtitle}
+  description={translations.head.description}
+  contentClass="content-services"
+>
+  <div class="services-grid">
+    {
+      services.map((service) => (
+        <section>
+          <h2>{service.title}</h2>
+          <p class="lead" set:html={service.description}></p>
+          <ul set:html={service.list}></ul>
+          <hr />
+        </section>
+      ))
+    }
+  </div>
+  <a class="button" href="mailto:hola@derianandre.com">{translations.services.cta}</a>
+</PageLayout>

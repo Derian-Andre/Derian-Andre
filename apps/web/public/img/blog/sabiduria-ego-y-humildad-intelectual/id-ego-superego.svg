@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1100 700" style="enable-background:new 0 0 1100 700;" xml:space="preserve">
+	<title>Id, Ego y Superego - Derian Castillo</title>
+	<style type="text/css">
+		text {fill:currentColor;font-family:'Montserrat';}
+		.ego0{fill:url(#gradient);}
+		.ego1{opacity:0.5;}
+		.ego2{fill:none;stroke:#FFF;stroke-miterlimit:10;}
+		.ego3{fill:none;stroke:#FFF;stroke-miterlimit:10;stroke-dasharray:11.9024,11.9024;}
+		.ego4{fill:none;stroke:#FFF;stroke-width:10;stroke-miterlimit:10;}
+		.ego5{fill:none;stroke:#FFF;stroke-width:3;stroke-miterlimit:10;}
+		.ego6{fill:currentColor;}
+		.ego7{font-weight: 800;}
+		.ego8{font-size:25px;}
+		.ego9{font-weight: 600;}
+		.ego10{font-weight: 500;}
+		.ego11{font-size:20px;}
+		.ego12{fill:none;}
+	</style>
+	<g>
+		<linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="550" y1="700" x2="550" y2="-1.818989e-12">
+			<stop  offset="0" style="stop-color:#202040"/>
+			<stop  offset="0.3" style="stop-color:#242466"/>
+			<stop  offset="0.95" style="stop-color:#00FFFF"/>
+		</linearGradient>
+		<path class="ego0" d="M750,700H350c-27.6,0-50-22.4-50-50V50c0-27.6,22.4-50,50-50h400c27.6,0,50,22.4,50,50v600
+			C800,677.6,777.6,700,750,700z"/>
+		<g class="ego1">
+			<line class="ego2" x1="800" y1="400" x2="794" y2="400"/>
+			<line class="ego3" x1="782.1" y1="400" x2="312" y2="400"/>
+			<line class="ego2" x1="306" y1="400" x2="300" y2="400"/>
+			<line class="ego2" x1="300" y1="300" x2="306" y2="300"/>
+			<line class="ego3" x1="317.9" y1="300" x2="788" y2="300"/>
+			<line class="ego2" x1="794" y1="300" x2="800" y2="300"/>
+		</g>
+	</g>
+	<g>
+		<path class="ego4" d="M531.3,623.5L364.8,436.1c-8.4-9.5-8.4-23.7,0-33.2l166.6-187.4c9.9-11.2,27.4-11.2,37.4,0l166.6,187.4
+			c8.4,9.5,8.4,23.7,0,33.2L568.7,623.5C558.7,634.7,541.3,634.7,531.3,623.5z"/>
+		<line class="ego5" x1="742" y1="419.5" x2="550" y2="419.5"/>
+		<line class="ego5" x1="550.2" y1="632.5" x2="549.8" y2="207.5"/>
+		<text transform="matrix(1 0 0 1 389.4673 427.1149)" class="ego6 ego7 ego8">Superego</text>
+		<text transform="matrix(1 0 0 1 579.1914 358.0986)" class="ego6 ego7 ego8">Ego</text>
+		<text transform="matrix(1 0 0 1 591.7676 500.2344)" class="ego6 ego7 ego8">Id</text>
+	</g>
+	<g>
+		<g>
+			<text transform="matrix(1 0 0 1 105.1841 157.2998)" class="ego9 ego8">Consciente</text>
+			<text transform="matrix(1 0 0 1 61.5151 185.8699)" class="ego1 ego10 ego11">Lo que mostramos</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 54.235 357.7996)" class="ego9 ego8">Pre-consciente</text>
+			<text transform="matrix(1 0 0 1 29.8149 385.8701)" class="ego1 ego10 ego11">Lo que no mostramos</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 83.2599 558.2996)" class="ego9 ego8">Inconsciente</text>
+			<text transform="matrix(1 0 0 1 23.8145 585.8701)" class="ego1 ego10 ego11">Lo que desconocemos</text>
+		</g>
+	</g>
+</svg>

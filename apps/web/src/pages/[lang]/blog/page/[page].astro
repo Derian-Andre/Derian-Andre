@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content"
+import BlogListItem from "@/components/BlogListItem.astro"
+import Pagination from "@/components/Pagination.astro"
+import { isPublished, splitEntryId } from "@/components/site"
+import { getTranslations, type Locale, locales } from "@/i18n"
+import PageLayout from "@/layouts/PageLayout.astro"
+import { BLOG_PAGE_SIZE } from "@/lib/content/constants"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("blog")
+
+  return locales.flatMap((locale) => {
+    const count = entries.filter(
+      (entry) => splitEntryId(entry.id)?.locale === locale && isPublished(entry.data),
+    ).length
+    const totalPages = Math.max(1, Math.ceil(count / BLOG_PAGE_SIZE))
+
+    return Array.from({ length: totalPages }, (_, index) => ({
+      params: { lang: locale, page: String(index + 1) },
+      props: { locale, pageNumber: index + 1 },
+    }))
+  })
+}
+
+interface Props {
+  locale: Locale
+  pageNumber: number
+}
+
+const { locale, pageNumber } = Astro.props
+const translations = getTranslations(locale)
+const entries = await getCollection("blog")
+const blogs = entries
+  .map((entry) => ({ entry, identity: splitEntryId(entry.id) }))
+  .filter(({ entry, identity }) => identity?.locale === locale && isPublished(entry.data))
+  .sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf())
+const totalPages = Math.max(1, Math.ceil(blogs.length / BLOG_PAGE_SIZE))
+const pageEntries = blogs.slice((pageNumber - 1) * BLOG_PAGE_SIZE, pageNumber * BLOG_PAGE_SIZE)
+const listTitle =
+  pageNumber === 1 ? translations.blog.recent : `${translations.blog.page}${pageNumber}`
+---
+
+<PageLayout
+  locale={locale}
+  page="blog"
+  title={translations.blog.title}
+  subtitle={translations.blog.subtitle}
+  description={translations.head.description}
+  contentClass="content-blog-list"
+>
+  <p class="section-label">{listTitle}</p>
+  <div class="blog-list">
+    {
+      pageEntries.map(({ entry, identity }) =>
+        identity ? (
+          <BlogListItem
+            locale={locale}
+            slug={identity.slug}
+            title={entry.data.title}
+            date={entry.data.date}
+          />
+        ) : null,
+      )
+    }
+  </div>
+  <Pagination locale={locale} currentPage={pageNumber} {totalPages} />
+</PageLayout>

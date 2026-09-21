@@ -1,0 +1,54 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content"
+import LegacyContent from "@/components/LegacyContent.astro"
+import { isPublished, splitEntryId } from "@/components/site"
+import { getTranslations, type Locale, localizedPath } from "@/i18n"
+import PageLayout from "@/layouts/PageLayout.astro"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("blog")
+
+  return entries.flatMap((entry) => {
+    const identity = splitEntryId(entry.id)
+    if (!identity || !isPublished(entry.data)) return []
+
+    return [
+      { params: { lang: identity.locale, slug: identity.slug }, props: { entry, ...identity } },
+    ]
+  })
+}
+
+interface Props {
+  entry: CollectionEntry<"blog">
+  locale: Locale
+  slug: string
+}
+
+const { entry, locale, slug } = Astro.props
+const translations = getTranslations(locale)
+const { Content } = await render(entry)
+const image = entry.data.hero ? `/img/blog/${slug}/${entry.data.hero}` : "/img/derianandre.png"
+---
+
+<PageLayout
+  locale={locale}
+  page="blog"
+  title={entry.data.title}
+  date={entry.data.date}
+  description={entry.data.description ?? translations.head.description}
+  image={image}
+  type="article"
+  publishedTime={entry.data.date}
+  contentClass="content-blog"
+  mainClass="blog-post"
+>
+  <div class="blog-heading" aria-hidden="true">{entry.data.title}</div>
+  <article class="article-blog">
+    <LegacyContent class="article-blog__content">
+      <Content />
+    </LegacyContent>
+    <a class="button back-link" href={localizedPath(locale, "/blog/page/1/")}>
+      <span aria-hidden="true">←</span> {translations.blog.go_back}
+    </a>
+  </article>
+</PageLayout>

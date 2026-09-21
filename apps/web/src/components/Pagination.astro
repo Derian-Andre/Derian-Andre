@@ -1,0 +1,46 @@
+---
+import { type Locale, localizedPath } from "@/i18n"
+
+interface Props {
+  locale: Locale
+  currentPage: number
+  totalPages: number
+}
+
+const { locale, currentPage, totalPages } = Astro.props
+const label = locale === "es" ? "Paginación del blog" : "Blog pagination"
+const pageLabel = (page: number) => (locale === "es" ? `Página ${page}` : `Page ${page}`)
+---
+
+<nav class="pagination" aria-label={label}>
+  <a
+    class:list={["pagination__link", { "is-disabled": currentPage === 1 }]}
+    href={currentPage > 1 ? localizedPath(locale, `/blog/page/${currentPage - 1}/`) : undefined}
+    aria-disabled={currentPage === 1 ? "true" : undefined}
+  >
+    {locale === "es" ? "Anterior" : "Previous"}
+  </a>
+  <ol>
+    {
+      Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+        <li>
+          <a
+            class:list={["pagination__link", { "is-current": page === currentPage }]}
+            href={localizedPath(locale, `/blog/page/${page}/`)}
+            aria-current={page === currentPage ? "page" : undefined}
+            aria-label={pageLabel(page)}
+          >
+            {page}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+  <a
+    class:list={["pagination__link", { "is-disabled": currentPage === totalPages }]}
+    href={currentPage < totalPages ? localizedPath(locale, `/blog/page/${currentPage + 1}/`) : undefined}
+    aria-disabled={currentPage === totalPages ? "true" : undefined}
+  >
+    {locale === "es" ? "Siguiente" : "Next"}
+  </a>
+</nav>

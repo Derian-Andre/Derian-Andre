@@ -1,0 +1,22 @@
+---
+import type { Locale } from "@/i18n"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+interface Props {
+  locale?: Locale
+  to: string
+}
+
+const { locale = "es", to } = Astro.props
+const label = locale === "es" ? "Continuar" : "Continue"
+---
+
+<BaseLayout {locale} title={locale === "es" ? "Redirigiendo" : "Redirecting"} noindex>
+  <main id="main-content" class="redirect-page">
+    <p>{locale === "es" ? "Redirigiendo…" : "Redirecting…"}</p>
+    <a class="button" href={to}>{label}</a>
+  </main>
+  <script define:vars={{ to }}>
+    window.location.replace(to);
+  </script>
+</BaseLayout>
