@@ -1,6 +1,7 @@
 ---
+import { getCollection } from "astro:content"
 import BrandMark from "@/components/BrandMark.astro"
-import { getLocaleStaticPaths } from "@/components/site"
+import { getLocaleStaticPaths, isPublished, splitEntryId } from "@/components/site"
 import { type Locale, localizedPath } from "@/i18n"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
@@ -12,6 +13,11 @@ interface Props {
   locale: Locale
 }
 const { locale } = Astro.props
+const essays = (await getCollection("blog"))
+  .map((entry) => ({ entry, identity: splitEntryId(entry.id) }))
+  .filter(({ entry, identity }) => identity?.locale === locale && isPublished(entry.data))
+  .sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf())
+  .slice(0, 5)
 const copy =
   locale === "es"
     ? {
@@ -236,11 +242,14 @@ const globeWork = [
         <div class="home-ref-philosophy-stack">
           <p class="home-ref-philosophy-quote" aria-live="polite">{copy.quote}</p>
           <ol class="home-ref-essays" data-reveal="stagger" data-delay="200">
-            <li><a href={localizedPath(locale, "/blog/cogito-ergo-sum/")}><strong>{locale === "es" ? "Sabiduría, ego y humildad intelectual" : "Wisdom, ego and intellectual humility"}</strong><time>→</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/perspectivas/")}><strong>{locale === "es" ? "La perpectividad social" : "Social perspectivity"}</strong><time>→</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/el-numero-de-dios-matematicas-y-diseno/")}><strong>{locale === "es" ? "La paradoja de Zenón" : "Zeno’s paradox"}</strong><time>→</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/la-paradoja-de-zenon/")}><strong>{locale === "es" ? "La paradoja de Zenón" : "Zeno’s paradox"}</strong><time>31 {locale === "es" ? "mar" : "Mar"} 2021</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/sabiduria-ego-y-humildad-intelectual/")}><strong>{locale === "es" ? "Sabiduría, ego y humildad intelectual" : "Wisdom, ego and intellectual humility"}</strong><time>3 {locale === "es" ? "abr" : "Apr"} 2021</time></a></li>
+            {essays.map(({ entry, identity }) => identity && (
+              <li>
+                <a href={localizedPath(locale, `/blog/${identity.slug}/`)}>
+                  <strong>{entry.data.title}</strong>
+                  <time>{new Intl.DateTimeFormat(locale === "es" ? "es-MX" : "en-US", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }).format(entry.data.date)}</time>
+                </a>
+              </li>
+            ))}
           </ol>
           <a class="home-ref-outline-button" data-reveal="rise" data-delay="400" href={localizedPath(locale, "/blog/")}>{copy.readBlog}</a>
         </div>
