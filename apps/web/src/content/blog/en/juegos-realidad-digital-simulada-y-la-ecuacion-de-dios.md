@@ -1,5 +1,5 @@
 ---
-title: Juegos, realidad digital simulada y la ecuación de Dios
+title: Games, simulated digital reality and God’s equation
 date: 2021-05-10 12:00:00
 ---
 <blog-img src="hero.jpg"></blog-img>

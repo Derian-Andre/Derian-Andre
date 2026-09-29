@@ -12,6 +12,108 @@ interface Props {
   locale: Locale
 }
 const { locale } = Astro.props
+const copy =
+  locale === "es"
+    ? {
+        home: "Inicio",
+        polymath: "ingeniero polímata",
+        chapters: "Capítulos",
+        ai: "IA & Software",
+        design: "Diseño",
+        philosophy: "Filosofía",
+        work: "Trabajo",
+        headline: "Inteligencia Artificial,",
+        headlineEnd: "diseño y filosofía.",
+        generation: "Generación",
+        quantum: "Orbital cuántico",
+        reload: "Recarga para otra · Clic para transformar",
+        scroll: "Desplázate",
+        applied: "Inteligencia aplicada",
+        ideasHeadline: "Ideas que",
+        production: "llegan",
+        aiCopy:
+          "Soy un desarrollador full-stack que crea productos útiles, claros y memorables. Trabajo con IA, software y diseño para que las ideas lleguen más lejos.",
+        ready: "Listo",
+        console: [
+          "✓ del prototipo a producción",
+          "✓ modelos de IA integrados con criterio",
+          "✓ front-end rápido, accesible y hermoso",
+          "✓ código mantenible, revisado y probado",
+        ],
+        build: "¿qué construimos juntos?",
+        designKicker: "Marcas y experiencias que funcionan",
+        branding: "Naming, identidad y rediseño de marcas con carácter.",
+        product: "Interfaces y aplicaciones donde la forma sirve a la función.",
+        image: "Dirección de arte y fotografía para que todo cuente la misma historia.",
+        imageServices: "Asesoría de imagen · Fotografía · Retoque",
+        philosophyCopy:
+          "Me considero una persona noble, no para nada sé un ignorante que aprende y tiene experiencias nuevas, por eso me lleva a adquirir más conocimientos.",
+        quote: "“La curiosidad es una disciplina: se practica todos los días.”",
+        readBlog: "Leer el blog",
+        selectedWork: "Trabajo seleccionado",
+        client: "Cliente",
+        previous: "Trabajo anterior",
+        next: "Trabajo siguiente",
+        close: "Cerrar detalle",
+        panel: "Una colaboración donde identidad, producto y tecnología se encuentran.",
+        viewCase: "Ver caso completo",
+        drag: "Arrastra el globo · Clic para abrir",
+        ideas: "Más ideas, mejores resultados",
+        contact: "¿Hacemos algo",
+        contactEm: "chingón?",
+        whatsapp: "Hablemos por WhatsApp",
+        social: "Redes sociales",
+      }
+    : {
+        home: "Home",
+        polymath: "polymath engineer",
+        chapters: "Chapters",
+        ai: "AI & Software",
+        design: "Design",
+        philosophy: "Philosophy",
+        work: "Work",
+        headline: "Artificial Intelligence,",
+        headlineEnd: "design and philosophy.",
+        generation: "Generation",
+        quantum: "Quantum orbital",
+        reload: "Reload for another · Click to transform",
+        scroll: "Scroll",
+        applied: "Applied intelligence",
+        ideasHeadline: "Ideas that",
+        production: "ship",
+        aiCopy:
+          "I am a full-stack developer who builds useful, clear and memorable products. I work with AI, software and design so ideas can go further.",
+        ready: "Ready",
+        console: [
+          "✓ from prototype to production",
+          "✓ AI models integrated with judgment",
+          "✓ fast, accessible and beautiful front-end",
+          "✓ maintainable, reviewed and tested code",
+        ],
+        build: "what shall we build together?",
+        designKicker: "Brands and experiences that work",
+        branding: "Naming, identity and brand redesign with character.",
+        product: "Interfaces and applications where form serves function.",
+        image: "Art direction and photography so every piece tells the same story.",
+        imageServices: "Image consulting · Photography · Retouching",
+        philosophyCopy:
+          "I see myself as a humble person—still learning, gathering new experiences and expanding my knowledge.",
+        quote: "“Curiosity is a discipline: it is practiced every day.”",
+        readBlog: "Read the blog",
+        selectedWork: "Selected work",
+        client: "Client",
+        previous: "Previous work",
+        next: "Next work",
+        close: "Close details",
+        panel: "A collaboration where identity, product and technology meet.",
+        viewCase: "View full case",
+        drag: "Drag the globe · Click to open",
+        ideas: "More ideas, better outcomes",
+        contact: "Shall we make",
+        contactEm: "something great?",
+        whatsapp: "Let’s talk on WhatsApp",
+        social: "Social media",
+      }
 const globeWork = [
   ["Fundación de 10", "Cliente", "2016", "fundacion-de-10.jpg"],
   ["Blue Moon", "Cliente", "2021", "blue-moon.jpg"],
@@ -37,11 +139,11 @@ const globeWork = [
   ["IDVA", "Cliente", "2016", "idva.jpg"],
   ["Entelequia", "Cliente", "2016", "entelequia.jpg"],
   ["Caleen E-liquids", "Cliente", "2017", "caleen-e-liquids.jpg"],
-].map(([title, kind, year, image]) => {
+].map(([title, _kind, year, image]) => {
   const slug = image.replace(/\.[^.]+$/, "")
   return {
     title,
-    kind,
+    kind: copy.client,
     year,
     image: `/img/globe/${image}`,
     href: localizedPath(locale, `/work/${slug}/`),
@@ -53,7 +155,7 @@ const globeWork = [
   <header class="home-ref-header" data-reveal="rise" data-intro="1" style="position:fixed;z-index:30;top:clamp(.5rem,1.5vw,1rem);right:clamp(.5rem,1.5vw,1rem);left:clamp(.5rem,1.5vw,1rem);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:1rem;padding:.7rem clamp(.9rem,2vw,1.5rem);color:var(--body-color-high);background:hsl(220 23% 5% / .38) url('/img/noise.png');backdrop-filter:blur(22px) saturate(1.5);-webkit-backdrop-filter:blur(22px) saturate(1.5)">
     <div class="home-ref-header-brand" style="display:flex;min-width:0;align-items:center;gap:1rem">
       <a href={localizedPath(locale, "/")} aria-label="Derian André" style="display:flex;align-items:center;color:var(--body-color-high)"><BrandMark style="display:block;width:24px;height:25px;max-width:none;flex:none" /></a>
-      <span style="display:flex;min-width:0;align-items:baseline;gap:.5rem;overflow:hidden;border-left:1px solid hsl(220 30% 90% / .12);padding-left:1rem;color:var(--body-color-low);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-overflow:ellipsis;white-space:nowrap"><i style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:0">01</i> Inicio</span>
+      <span style="display:flex;min-width:0;align-items:baseline;gap:.5rem;overflow:hidden;border-left:1px solid hsl(220 30% 90% / .12);padding-left:1rem;color:var(--body-color-low);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-overflow:ellipsis;white-space:nowrap"><i style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:0">01</i> {copy.home}</span>
     </div>
     <nav aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"} style="display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.4rem 1.4rem;font-size:.78rem;font-weight:700;letter-spacing:.06em">
       <a href="#trabajo">{locale === "es" ? "Trabajo" : "Work"}</a>
@@ -75,13 +177,13 @@ const globeWork = [
       <div class="home-ref-hero-top" data-reveal="rise" data-intro="1">
         <div class="home-ref-identity">
           <span>Derian André</span>
-          <em>ingeniero polímata</em>
+          <em>{copy.polymath}</em>
         </div>
-        <nav class="home-ref-chapters" aria-label="Capítulos">
-          <a href="#cap-ia"><i>01</i> IA &amp; Software</a>
-          <a href="#cap-diseno"><i>02</i> Diseño</a>
-          <a href="#cap-filosofia"><i>03</i> Filosofía</a>
-          <a href="#trabajo"><i>04</i> Trabajo</a>
+        <nav class="home-ref-chapters" aria-label={copy.chapters}>
+          <a href="#cap-ia"><i>01</i> {copy.ai}</a>
+          <a href="#cap-diseno"><i>02</i> {copy.design}</a>
+          <a href="#cap-filosofia"><i>03</i> {copy.philosophy}</a>
+          <a href="#trabajo"><i>04</i> {copy.work}</a>
         </nav>
       </div>
 
@@ -89,13 +191,13 @@ const globeWork = [
 
       <div class="home-ref-hero-end">
         <h1>
-          <span data-reveal="mask" data-intro="1" data-delay="120">Inteligencia Artificial,</span>
+          <span data-reveal="mask" data-intro="1" data-delay="120">{copy.headline}</span>
           <span data-reveal="mask" data-intro="1" data-delay="260">Software</span>
-          <em data-reveal="mask" data-intro="1" data-delay="420">diseño y filosofía.</em>
+          <em data-reveal="mask" data-intro="1" data-delay="420">{copy.headlineEnd}</em>
         </h1>
         <div class="home-ref-hero-meta" data-reveal="wipe" data-intro="1" data-delay="700">
-          <span><i data-home-generation>Generación 01 / 05 — Orbital cuántico</i> · Recarga para otra · Clic para transformar</span>
-          <a href="#cap-ia">Desplázate <b>↓</b></a>
+          <span><i data-home-generation>{copy.generation} 01 / 05 — {copy.quantum}</i> · {copy.reload}</span>
+          <a href="#cap-ia">{copy.scroll} <b>↓</b></a>
         </div>
       </div>
     </section>
@@ -105,81 +207,81 @@ const globeWork = [
 
       <section id="cap-ia" class="home-ref-section home-ref-ai" data-bg="1" data-particle="ai">
         <div class="home-ref-ai-stack">
-          <p class="home-ref-number" data-reveal="wipe"><i>01</i> <span>Inteligencia aplicada</span></p>
-          <h2 data-reveal="mask" data-delay="120">Ideas que<br />llegan <em>a producción.</em></h2>
-          <p class="home-ref-ai-copy" data-reveal="rise" data-delay="180">Soy un desarrollador full-stack que crea productos útiles, claros y memorables. Trabajo con IA, software y diseño para que las ideas lleguen más lejos.</p>
+          <p class="home-ref-number" data-reveal="wipe"><i>01</i> <span>{copy.applied}</span></p>
+          <h2 data-reveal="mask" data-delay="120">{copy.ideasHeadline}<br />{copy.production} <em>{locale === "es" ? "a producción." : "to production."}</em></h2>
+          <p class="home-ref-ai-copy" data-reveal="rise" data-delay="180">{copy.aiCopy}</p>
         </div>
         <div class="home-ref-console" data-reveal="rise" data-delay="200">
-            <header><i>derian ~ taller</i><span>Listo</span></header>
-            <pre><span>&gt; construir(producto, &#123; ia: true &#125;)</span><span>✓ del prototipo a producción</span><span>✓ modelos de IA integrados con criterio</span><span>✓ front-end rápido, accesible y hermoso</span><span>✓ código mantenible, revisado y probado</span><strong>&gt; ¿qué construimos juntos?</strong></pre>
+            <header><i>derian ~ {locale === "es" ? "taller" : "workshop"}</i><span>{copy.ready}</span></header>
+            <pre><span>&gt; {locale === "es" ? "construir(producto" : "build(product"}, &#123; ai: true &#125;)</span>{copy.console.map((line) => <span> {line}</span>)}<strong>&gt; {copy.build}</strong></pre>
         </div>
       </section>
 
       <section id="cap-diseno" class="home-ref-section home-ref-design" data-bg="2" data-particle="design">
-        <p class="home-ref-number" data-reveal="rise"><i>02</i> <span>Marcas y experiencias que funcionan</span></p>
-        <h2 data-reveal="wipe" data-delay="100" data-sintesis-design>Diseño</h2>
+        <p class="home-ref-number" data-reveal="rise"><i>02</i> <span>{copy.designKicker}</span></p>
+        <h2 data-reveal="wipe" data-delay="100" data-sintesis-design>{copy.design}</h2>
         <div class="home-ref-design-columns" data-reveal="stagger" data-delay="250">
-          <article><h3>Branding</h3><p>Naming, identidad y rediseño de marcas con carácter.</p><span>Naming · Identidad · Rediseño · Papelería</span></article>
-          <article><h3>Producto</h3><p>Interfaces y aplicaciones donde la forma sirve a la función.</p><span>UI · UX · Apps · Web</span></article>
-          <article><h3>Imagen</h3><p>Dirección de arte y fotografía para que todo cuente la misma historia.</p><span>Asesoría de imagen · Fotografía · Retoque</span></article>
+          <article><h3>Branding</h3><p>{copy.branding}</p><span>Naming · {locale === "es" ? "Identidad · Rediseño · Papelería" : "Identity · Redesign · Stationery"}</span></article>
+          <article><h3>{locale === "es" ? "Producto" : "Product"}</h3><p>{copy.product}</p><span>UI · UX · Apps · Web</span></article>
+          <article><h3>{locale === "es" ? "Imagen" : "Image"}</h3><p>{copy.image}</p><span>{copy.imageServices}</span></article>
         </div>
       </section>
 
       <section id="cap-filosofia" class="home-ref-section home-ref-philosophy" data-bg="3" data-particle="philo">
         <div class="home-ref-philosophy-copy" data-reveal="rise">
-          <p class="home-ref-number"><i>03</i> <span>Filosofía</span></p>
-          <h2>Crear es<br />una forma<br /><em>de pensar.</em></h2>
-          <p>Me considero una persona noble, no para nada sé un ignorante que aprende y tiene experiencias nuevas, por eso me lleva a adquirir más conocimientos.</p>
+          <p class="home-ref-number"><i>03</i> <span>{copy.philosophy}</span></p>
+          <h2>{locale === "es" ? "Crear es" : "Creating is"}<br />{locale === "es" ? "una forma" : "a way"}<br /><em>{locale === "es" ? "de pensar." : "of thinking."}</em></h2>
+          <p>{copy.philosophyCopy}</p>
         </div>
         <div class="home-ref-philosophy-stack">
-          <p class="home-ref-philosophy-quote" aria-live="polite">“La curiosidad es una disciplina: se practica todos los días.”</p>
+          <p class="home-ref-philosophy-quote" aria-live="polite">{copy.quote}</p>
           <ol class="home-ref-essays" data-reveal="stagger" data-delay="200">
-            <li><a href={localizedPath(locale, "/blog/cogito-ergo-sum/")}><strong>Sabiduría, ego y humildad intelectual</strong><time>→</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/perspectivas/")}><strong>La perpectividad social</strong><time>→</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/el-numero-de-dios-matematicas-y-diseno/")}><strong>La paradoja de Zenón</strong><time>→</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/la-paradoja-de-zenon/")}><strong>La paradoja de Zenón</strong><time>31 mar 2021</time></a></li>
-            <li><a href={localizedPath(locale, "/blog/sabiduria-ego-y-humildad-intelectual/")}><strong>Sabiduría, ego y humildad intelectual</strong><time>3 abr 2021</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/cogito-ergo-sum/")}><strong>{locale === "es" ? "Sabiduría, ego y humildad intelectual" : "Wisdom, ego and intellectual humility"}</strong><time>→</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/perspectivas/")}><strong>{locale === "es" ? "La perpectividad social" : "Social perspectivity"}</strong><time>→</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/el-numero-de-dios-matematicas-y-diseno/")}><strong>{locale === "es" ? "La paradoja de Zenón" : "Zeno’s paradox"}</strong><time>→</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/la-paradoja-de-zenon/")}><strong>{locale === "es" ? "La paradoja de Zenón" : "Zeno’s paradox"}</strong><time>31 {locale === "es" ? "mar" : "Mar"} 2021</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/sabiduria-ego-y-humildad-intelectual/")}><strong>{locale === "es" ? "Sabiduría, ego y humildad intelectual" : "Wisdom, ego and intellectual humility"}</strong><time>3 {locale === "es" ? "abr" : "Apr"} 2021</time></a></li>
           </ol>
-          <a class="home-ref-outline-button" data-reveal="rise" data-delay="400" href={localizedPath(locale, "/blog/")}>Leer el blog</a>
+          <a class="home-ref-outline-button" data-reveal="rise" data-delay="400" href={localizedPath(locale, "/blog/")}>{copy.readBlog}</a>
         </div>
       </section>
     </div>
 
     <section id="trabajo" class="home-ref-work" data-bg="4">
       <div class="home-ref-work-sticky">
-        <canvas data-sintesis-globe aria-label="Globo interactivo de trabajos seleccionados"></canvas>
-        <p class="home-ref-work-heading" data-reveal="wipe"><i>04</i> <span>Trabajo seleccionado</span></p>
+        <canvas data-sintesis-globe aria-label={locale === "es" ? "Globo interactivo de trabajos seleccionados" : "Interactive globe of selected work"} style="touch-action:pan-y"></canvas>
+        <p class="home-ref-work-heading" data-reveal="wipe"><i>04</i> <span>{copy.selectedWork}</span></p>
         <div class="home-ref-work-caption" aria-live="polite">
           <i data-globe-index>01 / 24</i><h2 data-globe-title>Blue Moon</h2><span data-globe-meta>Cliente · 2021</span>
         </div>
         <div class="home-ref-work-controls" data-reveal="rise" data-delay="200">
-          <div><button type="button" data-globe-prev aria-label="Trabajo anterior">←</button><button type="button" data-globe-next aria-label="Trabajo siguiente">→</button></div>
-          <span>Arrastra el globo · Clic para abrir</span>
+          <div><button type="button" data-globe-prev aria-label={copy.previous}>←</button><button type="button" data-globe-next aria-label={copy.next}>→</button></div>
+          <span>{copy.drag}</span>
         </div>
         <aside class="home-ref-work-panel" data-globe-panel hidden>
-          <button type="button" data-globe-close aria-label="Cerrar detalle">×</button>
+          <button type="button" data-globe-close aria-label={copy.close}>×</button>
           <i data-panel-index></i><h3 data-panel-title></h3>
-          <p>Una colaboración donde identidad, producto y tecnología se encuentran.</p>
-          <a data-globe-case-link href={globeWork[0].href}>Ver caso completo</a>
+          <p>{copy.panel}</p>
+          <a data-globe-case-link href={globeWork[0].href}>{copy.viewCase}</a>
         </aside>
       </div>
     </section>
 
     <section class="home-ref-contact" data-bg="5">
       <div class="home-ref-marquee" data-reveal="blur" aria-hidden="true">
-        <div>Inteligencia Artificial <em>y</em> Software · Diseño <em>y</em> Filosofía · Inteligencia Artificial <em>y</em> Software ·</div>
-        <div>Inteligencia Artificial <em>y</em> Software · Diseño <em>y</em> Filosofía · Inteligencia Artificial <em>y</em> Software ·</div>
+        <div>{locale === "es" ? "Inteligencia Artificial" : "Artificial Intelligence"} <em>{locale === "es" ? "y" : "and"}</em> Software · {copy.design} <em>{locale === "es" ? "y" : "and"}</em> {copy.philosophy} · {locale === "es" ? "Inteligencia Artificial" : "Artificial Intelligence"} <em>{locale === "es" ? "y" : "and"}</em> Software ·</div>
+        <div>{locale === "es" ? "Inteligencia Artificial" : "Artificial Intelligence"} <em>{locale === "es" ? "y" : "and"}</em> Software · {copy.design} <em>{locale === "es" ? "y" : "and"}</em> {copy.philosophy} · {locale === "es" ? "Inteligencia Artificial" : "Artificial Intelligence"} <em>{locale === "es" ? "y" : "and"}</em> Software ·</div>
       </div>
       <div class="home-ref-contact-content">
-        <p class="home-ref-contact-kicker" data-reveal="wipe"><span><i>05</i> Más ideas, mejores resultados</span><span><b></b><time data-home-clock></time></span></p>
-        <h2><span>¿Hacemos algo</span> <em>chingón?</em></h2>
+        <p class="home-ref-contact-kicker" data-reveal="wipe"><span><i>05</i> {copy.ideas}</span><span><b></b><time data-home-clock></time></span></p>
+        <h2><span>{copy.contact}</span> <em>{copy.contactEm}</em></h2>
         <div class="home-ref-contact-actions" data-reveal="rise" data-delay="450">
-          <a class="home-ref-whatsapp" href="https://wa.me/523312781411?text=%C2%A1Hola%2C%20me%20contacto%20desde%20tu%20portafolio!">Hablemos por WhatsApp <b>↗</b></a>
+          <a class="home-ref-whatsapp" href={`https://wa.me/523312781411?text=${encodeURIComponent(locale === "es" ? "¡Hola, me contacto desde tu portafolio!" : "Hello, I am contacting you from your portfolio!")}`}>{copy.whatsapp} <b>↗</b></a>
           <a class="home-ref-email" href="mailto:hola@derianandre.com">hola@derianandre.com <b>→</b></a>
         </div>
       </div>
       <footer class="home-ref-footer" data-reveal="rise" data-delay="550">
-        <nav aria-label="Redes sociales"><a href="https://facebook.com/DerianAndre">Facebook ↗</a><a href="https://instagram.com/DerianAndre">Instagram ↗</a><a href="https://linkedin.com/in/DerianAndre">LinkedIn ↗</a><a href="https://github.com/DerianAndre">GitHub ↗</a><a href="https://wa.me/523312781411">WhatsApp ↗</a></nav>
+        <nav aria-label={copy.social}><a href="https://facebook.com/DerianAndre">Facebook ↗</a><a href="https://instagram.com/DerianAndre">Instagram ↗</a><a href="https://linkedin.com/in/DerianAndre">LinkedIn ↗</a><a href="https://github.com/DerianAndre">GitHub ↗</a><a href="https://wa.me/523312781411">WhatsApp ↗</a></nav>
         <span>© 2026 Derian André Castillo Franco</span>
       </footer>
     </section>
@@ -323,7 +425,7 @@ const globeWork = [
   }
 </style>
 
-<script is:inline define:vars={{ globeWork }}>
+<script is:inline define:vars={{ globeWork, locale, generation: copy.generation }}>
   const homeRoot = document.querySelector(".sintesis-home-ref")
   if (homeRoot) {
     const homeReduced = matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -407,7 +509,7 @@ const globeWork = [
 
       const hero = homeMonolith ? monolith.mount(homeMonolith, {
         target: homeRoot.querySelector(".home-ref-hero"), reduced: homeReduced,
-        onGen: (index, name) => { if (homeGeneration) homeGeneration.textContent = `Generación ${String(index + 1).padStart(2, "0")} / 05 — ${name}` },
+        onGen: (index, name) => { if (homeGeneration) homeGeneration.textContent = `${generation} ${String(index + 1).padStart(2, "0")} / 05 — ${name}` },
       }) : null
       homeRoot.querySelector("[data-sintesis-burst]")?.addEventListener("click", () => hero?.burst?.())
       if (homeField) {

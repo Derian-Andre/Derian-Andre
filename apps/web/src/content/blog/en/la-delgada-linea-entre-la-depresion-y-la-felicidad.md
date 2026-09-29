@@ -1,5 +1,5 @@
 ---
-title: La delgada línea entre la depresión y la felicidad
+title: The thin line between depression and happiness
 date: 2021-04-12 12:00:00
 ---
 <blog-img src="en-busca-de-la-felicidad.jpg"></blog-img>

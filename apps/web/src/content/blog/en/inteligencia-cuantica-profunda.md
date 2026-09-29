@@ -1,5 +1,5 @@
 ---
-title: Inteligencia cuántica profunda
+title: Deep quantum intelligence
 date: 2021-04-01 12:00:00
 ---
 Ya todos sabemos o al menos hemos escuchado sobre la famosa computación cuántica, una carrera donde los gigantes tecnológicos compiten por la supremacía, **¿por qué es tan importante?** la **computación cuántica será el próximo gran paso de la humanidad, una revolución sin precedentes, un salto cuántico verdadero**.

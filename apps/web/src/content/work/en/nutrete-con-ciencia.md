@@ -1,5 +1,5 @@
 ---
-title: Nútrete con Ciencia
+title: Nourish Yourself with Science
 date: 2021-09-05 12:00:00
 gallery: 1
 ---

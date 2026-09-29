@@ -1,5 +1,5 @@
 ---
-title: Fundación de 10 por México
+title: Fundación de 10 for Mexico
 date: 2016-07-09 12:00:00
 gallery: 1
 ---

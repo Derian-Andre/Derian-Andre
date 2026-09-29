@@ -1,5 +1,5 @@
 ---
-title: El número de Dios, matemáticas y diseño
+title: God’s number, mathematics and design
 date: 2021-03-30 12:00:00
 hero: pexels-161154.jpg
 ---

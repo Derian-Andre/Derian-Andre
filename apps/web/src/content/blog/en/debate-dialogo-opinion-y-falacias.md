@@ -1,5 +1,5 @@
 ---
-title: Debate, Diálogo, Opinión y Falacias
+title: Debate, dialogue, opinion and fallacies
 date: 2021-04-13 12:00:00
 hero: pexels-4761598.jpg
 ---

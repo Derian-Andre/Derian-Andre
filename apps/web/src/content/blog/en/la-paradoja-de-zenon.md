@@ -1,5 +1,5 @@
 ---
-title: La paradoja de Zenón
+title: Zeno’s paradox
 date: 2021-03-31 12:00:00
 ---
 > Imaginemos una carrera entre una tortuga y un conejo, como el conejo es mucho más rápido a la tortuga se le otorga una ventaja inicial, digamos 10 metros. Cuando inicia la carrera el conejo acorta a la mitad a 5 metros, pero la tortuga avanza otros 5 metros, el conejo avanza la mitad de este a 2.5 metros y la tortuga avanza otros 2.5 metros y así sucesivamente.

@@ -1,5 +1,5 @@
 ---
-title: Análisis del "debate" Provida vs Proaborto
+title: An analysis of the “Pro-Life vs. Pro-Choice” debate
 date: 2021-04-19 12:00:00
 hero: pexels-3807770.jpg
 ---

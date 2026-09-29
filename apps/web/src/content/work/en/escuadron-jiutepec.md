@@ -1,5 +1,5 @@
 ---
-title: Somos Escuadrón Jiutepec
+title: We Are Escuadrón Jiutepec
 date: 2017-05-30 12:00:00
 gallery: 2
 ---
