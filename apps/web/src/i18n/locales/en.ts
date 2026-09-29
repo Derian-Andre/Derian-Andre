@@ -468,7 +468,8 @@ export default {
     go_home: "Go back to home",
     construction: {
       title: "Page under construction 😅",
-      description: "I have not finished writing this page yet; please try again in a few days. 🤙🏻",
+      description:
+        "I have not finished writing this page yet; please try again in a few days. 🤙🏻",
     },
   },
   pagination: {
