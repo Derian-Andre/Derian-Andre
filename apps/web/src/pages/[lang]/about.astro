@@ -2,7 +2,7 @@
 import ResponsiveImage from "@/components/ResponsiveImage.astro"
 import { getLocaleStaticPaths } from "@/components/site"
 import { getTranslations, type Locale, localizedPath } from "@/i18n"
-import PageLayout from "@/layouts/PageLayout.astro"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()
@@ -18,36 +18,39 @@ const about = translations.about
 const summaryItems = Object.values(about.summary.list)
 ---
 
-<PageLayout
+<SintesisLayout
   locale={locale}
   page="about"
   title={about.title}
-  subtitle={about.subtitle}
   description={translations.head.description}
   image="/img/ego.jpg"
-  contentClass="content-about"
-  showFooter
+  sceneMode={0}
 >
-  <p class="eyebrow">Ego sum,</p>
-  <h2>Derian André Castillo Franco</h2>
-  <p class="lead" set:html={about.lead}></p>
-  <p set:html={about.where}></p>
-  <hr />
-  <h2>{about.summary.title}</h2>
-  <p set:html={about.summary.content}></p>
-  <ul>
-    {summaryItems.map((item) => <li set:html={item}></li>)}
-  </ul>
-  <hr />
-  <h2>{about.more.title}</h2>
-  <p>{about.more.content}</p>
-  <div class="button-row">
-    <a class="button" href={localizedPath(locale, "/curriculum/")}>{translations.curriculum.title}</a>
-    <a class="button" href={localizedPath(locale, "/projects/")}>{translations.projects.title}</a>
-    <a class="button" href="https://github.com/Derian-Andre/Derian-Andre">GitHub</a>
-  </div>
-
-  <section slot="side" class="page-side">
-    <ResponsiveImage src="/img/ego.jpg" alt="Derian André Castillo Franco" loading="eager" fetchpriority="high" />
+  <section class="sintesis-ego">
+    <figure data-reveal="blur">
+      <ResponsiveImage src="/img/ego.jpg" alt="Derian André Castillo Franco" loading="eager" fetchpriority="high" />
+      <figcaption>Ego sum.</figcaption>
+    </figure>
+    <div class="sintesis-ego__content">
+      <span data-reveal="wipe">{about.subtitle}</span>
+      <h1 data-reveal="mask" data-delay="100">{about.title}</h1>
+      <div class="sintesis-prose" data-reveal="stagger" data-delay="200">
+        <p class="lead" set:html={about.lead}></p>
+        <p set:html={about.where}></p>
+        <p set:html={about.summary.content}></p>
+      </div>
+      <ol class="sintesis-ego__roles" data-reveal="stagger" data-delay="300">
+        {summaryItems.map((item) => <li set:html={item}></li>)}
+      </ol>
+      <section class="sintesis-glass-card" data-reveal="rise">
+        <h2>{about.more.title}</h2>
+        <p>{about.more.content}</p>
+        <div class="sintesis-actions">
+          <a class="sintesis-button sintesis-button--solid" href={localizedPath(locale, "/curriculum/")}>{translations.curriculum.title}</a>
+          <a class="sintesis-button" href={localizedPath(locale, "/projects/")}>{translations.projects.title}</a>
+          <a class="sintesis-button" href="https://github.com/Derian-Andre/Derian-Andre">GitHub ↗</a>
+        </div>
+      </section>
+    </div>
   </section>
-</PageLayout>
+</SintesisLayout>

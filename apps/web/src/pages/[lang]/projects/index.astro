@@ -3,7 +3,7 @@ import { getCollection } from "astro:content"
 import ProjectCard from "@/components/ProjectCard.astro"
 import { getLocaleStaticPaths, isPublished, splitEntryId } from "@/components/site"
 import { getTranslations, type Locale } from "@/i18n"
-import PageLayout from "@/layouts/PageLayout.astro"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()
@@ -22,15 +22,19 @@ const projects = entries
   .sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf())
 ---
 
-<PageLayout
+<SintesisLayout
   locale={locale}
   page="projects"
   title={translations.projects.title}
-  subtitle={translations.projects.subtitle}
   description={translations.head.description}
-  contentClass="content-projects"
+  sceneMode={5}
 >
-  <div class="projects-grid">
+  <section class="sintesis-listing sintesis-projects-listing">
+    <header class="sintesis-listing__header">
+      <h1 data-reveal="mask">{translations.projects.title}</h1>
+      <p data-reveal="wipe-r" data-delay="150">{translations.projects.subtitle}</p>
+    </header>
+    <div class="projects-grid" data-reveal="stagger">
     {
       projects.map(({ entry, identity }) =>
         identity ? (
@@ -46,5 +50,6 @@ const projects = entries
         ) : null,
       )
     }
-  </div>
-</PageLayout>
+    </div>
+  </section>
+</SintesisLayout>

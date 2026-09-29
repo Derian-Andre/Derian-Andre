@@ -1,7 +1,7 @@
 ---
 import { getLocaleStaticPaths } from "@/components/site"
 import { getTranslations, type Locale } from "@/i18n"
-import PageLayout from "@/layouts/PageLayout.astro"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()
@@ -20,25 +20,90 @@ const services = [
 ]
 ---
 
-<PageLayout
+<SintesisLayout
   locale={locale}
   page="services"
   title={translations.services.title}
-  subtitle={translations.services.subtitle}
   description={translations.head.description}
-  contentClass="content-services"
+  sceneMode={1}
 >
-  <div class="services-grid">
+  <section class="sintesis-listing sintesis-services-listing">
+    <header class="sintesis-listing__header">
+      <h1 data-reveal="mask">{translations.services.title}</h1>
+      <p data-reveal="wipe-r" data-delay="150">{translations.services.subtitle}</p>
+    </header>
+    <div class="sintesis-services-grid">
     {
-      services.map((service) => (
-        <section>
-          <h2>{service.title}</h2>
-          <p class="lead" set:html={service.description}></p>
-          <ul set:html={service.list}></ul>
-          <hr />
-        </section>
+      services.map((service, index) => (
+        <article data-reveal="rise">
+          <div><span>{String(index + 1).padStart(2, "0")}</span><h2>{service.title}</h2></div>
+          <div>
+            <p set:html={service.description}></p>
+            <ul set:html={service.list}></ul>
+          </div>
+        </article>
       ))
     }
-  </div>
-  <a class="button" href="mailto:hola@derianandre.com">{translations.services.cta}</a>
-</PageLayout>
+    </div>
+  <div class="sintesis-services-cta" data-reveal="rise">
+      <p>{translations.services.cta}</p>
+      <a class="sintesis-whatsapp" href="https://wa.me/523312781411?text=%C2%A1Hola%2C%20me%20contacto%20desde%20tu%20portafolio!">WhatsApp ↗</a>
+    </div>
+  </section>
+</SintesisLayout>
+
+<style is:global>
+  @media (min-width: 60rem) {
+    main.sintesis-page.sintesis-services__page {
+      min-height: 0;
+    }
+
+    .sintesis-listing.sintesis-services-listing {
+      min-height: 0;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+    }
+
+    .sintesis-services-listing .sintesis-listing__header {
+      margin-bottom: 3.05rem;
+    }
+
+    .sintesis-services-listing .sintesis-listing__header h1 {
+      font-size: 7.25rem;
+    }
+
+    .sintesis-services-listing .sintesis-services-grid article {
+      padding: 3.6rem 0 .5rem;
+    }
+
+    .sintesis-services-listing .sintesis-services-grid article:nth-child(1) {
+      padding-bottom: .5rem;
+    }
+
+    .sintesis-services-listing .sintesis-services-grid article:nth-child(2) {
+      padding-bottom: 1rem;
+    }
+
+    .sintesis-services-listing .sintesis-services-grid article > div:last-child {
+      gap: .75rem;
+    }
+
+    .sintesis-services-listing .sintesis-services-cta {
+      margin-top: 5.8rem;
+    }
+
+    .sintesis-services-listing .sintesis-services-cta p {
+      font-size: 5rem;
+    }
+
+    .sintesis-services-listing .sintesis-whatsapp {
+      min-height: 3.5rem;
+      padding: .75rem 1.5rem;
+      font-size: 2rem;
+    }
+
+    body.sintesis-services .site-footer {
+      padding: .8rem 0 1rem;
+    }
+  }
+</style>

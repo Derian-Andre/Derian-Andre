@@ -31,6 +31,7 @@ export default {
     recent: "Más reciente",
     page: "Página ",
     go_back: "Volver al blog",
+    read_article: "Leer artículo",
   },
   about: {
     title: "¿Quién soy yo?",

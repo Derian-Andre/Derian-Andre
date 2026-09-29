@@ -1,13 +1,15 @@
 ---
 interface Props {
   class?: string
+  style?: string
 }
 
-const { class: className } = Astro.props
+const { class: className, style } = Astro.props
 ---
 
 <svg
   class={className}
+  style={style}
   aria-hidden="true"
   viewBox="0 0 195 200"
   xmlns="http://www.w3.org/2000/svg"

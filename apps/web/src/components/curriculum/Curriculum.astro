@@ -95,10 +95,11 @@ const providerCopy = (type: "certifications" | "courses", slug: string): Credent
 }
 ---
 
-<main id="main-content" class="cv-page" aria-labelledby="curriculum-title">
+<section class="cv-page" aria-labelledby="curriculum-title">
 	<header class="cv-title-rail">
-		<h1 id="curriculum-title">{copy.title}</h1>
-		<p>{copy.subtitle}</p>
+		<span>{copy.title}</span>
+		<h1 id="curriculum-title">Derian André <em>Castillo Franco</em></h1>
+		<p>{copy.about.lead}</p>
 	</header>
 
 	<section class="cv-content">
@@ -240,4 +241,4 @@ const providerCopy = (type: "certifications" | "courses", slug: string): Credent
 			</div>
 		</div>
 	</section>
-</main>
+</section>
