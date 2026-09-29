@@ -1,5 +1,5 @@
 ---
-title: Dios y la paradoja de Epicuro
+title: God and Epicurus’ paradox
 date: 2021-05-01 12:00:00
 ---
 <blog-img src="creation-of-adam.jpg">

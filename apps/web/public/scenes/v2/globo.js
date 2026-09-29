@@ -95,7 +95,7 @@ export function mount(canvas, { images = [], reduced = false, target = window, i
     grat.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), gm));
   }
   const initialTile = tiles.find((tile) => tile.wi === initialIndex);
-  const s = { vel: 0, yaw: initialTile ? -initialTile.lon : 0, pitch: initialTile ? initialTile.lat : -0.08, vy: 0, vp: 0, drag: false, lx: 0, ly: 0, downX: 0, downY: 0, mx: 0, my: 0, tmx: 0, tmy: 0,
+  const s = { vel: 0, yaw: initialTile ? -initialTile.lon : 0, pitch: initialTile ? initialTile.lat : -0.08, vy: 0, vp: 0, drag: false, lx: 0, ly: 0, downX: 0, downY: 0, tap: -1, pointerId: null, mx: 0, my: 0, tmx: 0, tmy: 0,
     scrollT: 0, scrollS: 0, hover: -1, front: -1, selected: -1, camZ: 13, tCamZ: 11.5, intro: 0 };
   const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(-9, -9);
   const blocked = (e) => e.target.closest && e.target.closest('a,button,input,[data-nodrag]');
@@ -106,12 +106,23 @@ export function mount(canvas, { images = [], reduced = false, target = window, i
     if (blocked(e)) ndc.set(-9, -9);
     if (s.drag && s.selected < 0) { s.vy = (e.clientX - s.lx) * 0.0032; s.vp = (e.clientY - s.ly) * 0.0026; s.lx = e.clientX; s.ly = e.clientY; }
   }
-  function onDown(e) { if (blocked(e)) return; s.drag = true; s.lx = s.downX = e.clientX; s.ly = s.downY = e.clientY; }
+  function onDown(e) {
+    if (blocked(e)) return;
+    s.drag = true; s.pointerId = e.pointerId; s.tap = s.hover;
+    s.lx = s.downX = e.clientX; s.ly = s.downY = e.clientY;
+    canvas.setPointerCapture?.(e.pointerId);
+  }
   function onUp(e) {
     if (!s.drag) return; s.drag = false;
-    if (Math.hypot(e.clientX - s.downX, e.clientY - s.downY) < 6) { if (s.hover >= 0) api.select(s.hover); else if (s.selected >= 0) api.close(); }
+    canvas.releasePointerCapture?.(s.pointerId);
+    const tapThreshold = e.pointerType === 'touch' ? 16 : 6;
+    if (Math.hypot(e.clientX - s.downX, e.clientY - s.downY) < tapThreshold) {
+      if (s.tap >= 0) api.select(s.tap); else if (s.selected >= 0) api.close();
+    }
+    s.tap = -1; s.pointerId = null;
   }
-  addEventListener('pointermove', onMove, { passive: true }); target.addEventListener('pointerdown', onDown); addEventListener('pointerup', onUp);
+  function onCancel() { s.drag = false; s.tap = -1; s.pointerId = null; }
+  addEventListener('pointermove', onMove, { passive: true }); target.addEventListener('pointerdown', onDown); addEventListener('pointerup', onUp); target.addEventListener('pointercancel', onCancel);
 
   function resize() {
     const w = canvas.clientWidth, h = canvas.clientHeight;
@@ -169,7 +180,7 @@ export function mount(canvas, { images = [], reduced = false, target = window, i
   });
 
   const api = {
-    select(i) { s.selected = i; s.tCamZ = s.far > 14 ? 11 : 7.6; onSelect && onSelect(tiles[i].wi); },
+    select(i) { s.selected = i; s.vy = 0; s.vp = 0; s.tCamZ = s.far > 14 ? 11 : 7.6; onSelect && onSelect(tiles[i].wi); },
     close() { s.selected = -1; s.tCamZ = s.far; onSelect && onSelect(-1); },
     nudge(dir) {
       if (s.selected >= 0) {
@@ -181,7 +192,7 @@ export function mount(canvas, { images = [], reduced = false, target = window, i
     },
     selectFront() { if (s.front >= 0) api.select(s.front); },
     setScroll(p) { s.scrollT = -p * Math.PI * 1.3; },
-    destroy() { stop(); ro.disconnect(); removeEventListener('pointermove', onMove); target.removeEventListener('pointerdown', onDown); removeEventListener('pointerup', onUp); renderer.dispose(); },
+    destroy() { stop(); ro.disconnect(); removeEventListener('pointermove', onMove); target.removeEventListener('pointerdown', onDown); target.removeEventListener('pointerup', onUp); target.removeEventListener('pointercancel', onCancel); renderer.dispose(); },
   };
   return api;
 }

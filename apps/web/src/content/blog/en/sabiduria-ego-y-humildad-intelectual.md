@@ -1,5 +1,5 @@
 ---
-title: Sabiduría, ego y humildad intelectual
+title: Wisdom, ego and intellectual humility
 date: 2021-04-03 12:00:00
 ---
 <blog-img src="pexels-4046386.jpg">

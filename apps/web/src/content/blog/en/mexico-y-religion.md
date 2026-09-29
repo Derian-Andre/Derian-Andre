@@ -1,5 +1,5 @@
 ---
-title: México y religión
+title: Mexico and religion
 date: 2021-03-29 12:00:00
 ---
 <blog-img src="pexels-977659.jpg">

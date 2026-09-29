@@ -47,7 +47,7 @@ const services = [
     </div>
   <div class="sintesis-services-cta" data-reveal="rise">
       <p>{translations.services.cta}</p>
-      <a class="sintesis-whatsapp" href="https://wa.me/523312781411?text=%C2%A1Hola%2C%20me%20contacto%20desde%20tu%20portafolio!">WhatsApp ↗</a>
+      <a class="sintesis-whatsapp" href={`https://wa.me/523312781411?text=${encodeURIComponent(locale === "es" ? "¡Hola, me contacto desde tu portafolio!" : "Hello, I am contacting you from your portfolio!")}`}>WhatsApp ↗</a>
     </div>
   </section>
 </SintesisLayout>

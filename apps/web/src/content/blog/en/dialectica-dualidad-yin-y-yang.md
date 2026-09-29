@@ -1,5 +1,5 @@
 ---
-title: Dialéctica, Dualidad, Yin & Yang
+title: Dialectics, duality, Yin & Yang
 date: 2021-04-07 12:00:00
 hero: pexels-6369352.jpg
 ---

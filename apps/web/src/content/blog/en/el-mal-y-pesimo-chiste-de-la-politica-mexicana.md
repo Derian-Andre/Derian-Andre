@@ -1,5 +1,5 @@
 ---
-title: El mal y pésimo chiste de la política mexicana
+title: The bad joke of Mexican politics
 date: 2021-04-06 12:00:00
 ---
 <blog-img src="pexels-7399410.jpg">

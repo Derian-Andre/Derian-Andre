@@ -1,5 +1,5 @@
 ---
-title: ​La perpetuidad social y maniqueísmo moderno
+title: Social perpetuity and modern Manichaeism
 date: 2021-04-23 12:00:00
 ---
 <blog-img src="pexels-2694434.jpg">

@@ -19,7 +19,7 @@ export default {
     github_repo: "This Github Repo",
     mail: "Send me an e-mail!",
     whatsapp: "Send me a Whatsapp message!",
-    whatsapp_api: "Hello, I am contacting myself from your portfolio!",
+    whatsapp_api: "Hello, I am contacting you from your portfolio!",
   },
   home: {
     title: "Freelancer in Design, Full-stack Development and Photography",
@@ -467,8 +467,8 @@ export default {
   page: {
     go_home: "Go back to home",
     construction: {
-      title: "Page under construcción 😅",
-      description: "I have not finished writing this page yet, try it a few days later 🤙🏻",
+      title: "Page under construction 😅",
+      description: "I have not finished writing this page yet; please try again in a few days. 🤙🏻",
     },
   },
   pagination: {
