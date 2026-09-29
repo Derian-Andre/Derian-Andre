@@ -4,32 +4,42 @@ import { getLocaleStaticPaths, isPublished, splitEntryId } from "@/components/si
 import { getTranslations, type Locale, localizedPath } from "@/i18n"
 import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
-export function getStaticPaths() { return getLocaleStaticPaths() }
-interface Props { locale: Locale }
+export function getStaticPaths() {
+  return getLocaleStaticPaths()
+}
+interface Props {
+  locale: Locale
+}
 const { locale } = Astro.props
 const translations = getTranslations(locale)
 const entries = await getCollection("work")
-const work = entries.map((entry) => ({ entry, identity: splitEntryId(entry.id) })).filter(({ entry, identity }) => identity?.locale === locale && isPublished(entry.data)).sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf())
+const work = entries
+  .map((entry) => ({ entry, identity: splitEntryId(entry.id) }))
+  .filter(({ entry, identity }) => identity?.locale === locale && isPublished(entry.data))
+  .sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf())
 const years = [...new Set(work.map(({ entry }) => entry.data.date.getUTCFullYear()))]
-const copy = locale === "es"
-  ? {
-      archive: "Archivo seleccionado",
-      summary: "Una selección cronológica de identidades, productos y experiencias creadas con intención.",
-      pieces: "casos publicados",
-      browse: "Explorar archivo",
-      view: "Ver caso",
-      cases: "casos",
-      footer: "Cada proyecto es una conversación entre contexto, forma y función.",
-    }
-  : {
-      archive: "Selected archive",
-      summary: "A chronological selection of identities, products, and experiences made with intention.",
-      pieces: "published cases",
-      browse: "Browse archive",
-      view: "View case",
-      cases: "cases",
-      footer: "Every project is a conversation between context, form, and function.",
-    }
+const copy =
+  locale === "es"
+    ? {
+        archive: "Archivo seleccionado",
+        summary:
+          "Una selección cronológica de identidades, productos y experiencias creadas con intención.",
+        pieces: "casos publicados",
+        browse: "Explorar archivo",
+        view: "Ver caso",
+        cases: "casos",
+        footer: "Cada proyecto es una conversación entre contexto, forma y función.",
+      }
+    : {
+        archive: "Selected archive",
+        summary:
+          "A chronological selection of identities, products, and experiences made with intention.",
+        pieces: "published cases",
+        browse: "Browse archive",
+        view: "View case",
+        cases: "cases",
+        footer: "Every project is a conversation between context, form, and function.",
+      }
 ---
 
 <SintesisLayout locale={locale} page="work" title={locale === "es" ? "Trabajo" : "Work"} description={translations.head.description} sceneMode={4}>

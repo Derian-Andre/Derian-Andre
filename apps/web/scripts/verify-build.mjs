@@ -139,7 +139,10 @@ async function verifyLegacyServiceWorkerCleanup(htmlFiles) {
     const html = await readFile(htmlFile, "utf8")
     if (!html.includes('class="site-layout"')) continue
 
-    if (!/serviceWorker\s*\.\s*getRegistrations/.test(html) || !/pathname\s*===\s*["']\/sw\.js["']/.test(html)) {
+    if (
+      !/serviceWorker\s*\.\s*getRegistrations/.test(html) ||
+      !/pathname\s*===\s*["']\/sw\.js["']/.test(html)
+    ) {
       missingCleanup.push(path.relative(distRoot, htmlFile).replace(/\\/g, "/"))
     }
   }

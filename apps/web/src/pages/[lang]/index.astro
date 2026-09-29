@@ -1,7 +1,7 @@
 ---
-import Home from "./home.astro"
 import { getLocaleStaticPaths } from "@/components/site"
 import type { Locale } from "@/i18n"
+import Home from "./home.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()

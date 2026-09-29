@@ -33,7 +33,9 @@ const caseHero = slug === "paxut" ? "/img/case/paxut-1.jpg" : heroPath
 const caseImage = slug === "paxut" ? "/img/case/paxut-2.jpg" : heroPath
 const workEntries = (await getCollection("work"))
   .map((workEntry) => ({ entry: workEntry, identity: splitEntryId(workEntry.id) }))
-  .filter(({ entry: workEntry, identity }) => identity?.locale === locale && isPublished(workEntry.data))
+  .filter(
+    ({ entry: workEntry, identity }) => identity?.locale === locale && isPublished(workEntry.data),
+  )
   .sort((a, b) => a.entry.data.date.valueOf() - b.entry.data.date.valueOf())
 const workIndex = workEntries.findIndex(({ identity }) => identity?.slug === slug)
 const nextWork = workIndex >= 0 ? workEntries[(workIndex + 1) % workEntries.length] : undefined

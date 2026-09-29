@@ -82,7 +82,10 @@ const sceneByPage: Record<string, number> = {
   "page-error": 2,
   "work-index": 4,
 }
-const sceneMode = requestedSceneMode ?? Object.entries(sceneByPage).find(([className]) => bodyClass.includes(className))?.[1] ?? 6
+const sceneMode =
+  requestedSceneMode ??
+  Object.entries(sceneByPage).find(([className]) => bodyClass.includes(className))?.[1] ??
+  6
 ---
 
 <!doctype html>
