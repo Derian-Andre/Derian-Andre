@@ -1,10 +1,9 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content"
 import LegacyContent from "@/components/LegacyContent.astro"
-import ResponsiveImage from "@/components/ResponsiveImage.astro"
 import { isPublished, splitEntryId } from "@/components/site"
-import { getTranslations, type Locale } from "@/i18n"
-import PageLayout from "@/layouts/PageLayout.astro"
+import { getTranslations, type Locale, localizedPath } from "@/i18n"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export async function getStaticPaths() {
   const entries = await getCollection("work")
@@ -30,48 +29,68 @@ const translations = getTranslations(locale)
 const { Content } = await render(entry)
 const hero = entry.data.hero ?? `${slug}.png`
 const heroPath = `/img/work/${slug}/${hero}`
+const caseHero = slug === "paxut" ? "/img/case/paxut-1.jpg" : heroPath
+const caseImage = slug === "paxut" ? "/img/case/paxut-2.jpg" : heroPath
+const workEntries = (await getCollection("work"))
+  .map((workEntry) => ({ entry: workEntry, identity: splitEntryId(workEntry.id) }))
+  .filter(({ entry: workEntry, identity }) => identity?.locale === locale && isPublished(workEntry.data))
+  .sort((a, b) => a.entry.data.date.valueOf() - b.entry.data.date.valueOf())
+const workIndex = workEntries.findIndex(({ identity }) => identity?.slug === slug)
+const nextWork = workIndex >= 0 ? workEntries[(workIndex + 1) % workEntries.length] : undefined
 ---
 
-<PageLayout
+<SintesisLayout
   locale={locale}
   page="work"
   title={entry.data.title}
-  date={entry.data.date}
   description={entry.data.description ?? translations.head.description}
-  image={heroPath}
+  image={caseHero}
   type="article"
   publishedTime={entry.data.date}
+  sceneMode={6}
   noindex={entry.data.draft}
 >
   {
     entry.data.draft ? (
-      <section class="construction-notice">
-        <h2>{translations.page.construction.title}</h2>
+      <section class="sintesis-case sintesis-case--notice">
+        <h1>{translations.page.construction.title}</h1>
         <p>{translations.page.construction.description}</p>
       </section>
     ) : (
-      <>
-        {!entry.data.working && (
-          <blockquote>
-            <h2>{translations.work.not_working.title}</h2>
-            <p set:html={translations.work.not_working.description}></p>
-          </blockquote>
-        )}
-        <LegacyContent class="article">
-          <Content />
-        </LegacyContent>
-      </>
-    )
-  }
+      <article class="sintesis-case">
+        <section class="sintesis-case__hero">
+          <img data-reveal="blur" src={caseHero} alt={entry.data.title} />
+          <div aria-hidden="true"></div>
+          <div>
+            <a data-reveal="wipe" href={localizedPath(locale, "/work/")}>← {locale === "es" ? "Todo el trabajo" : "All work"}</a>
+            <h1 data-reveal="mask" data-delay="100">{entry.data.title}</h1>
+            {entry.data.subtitle && <p data-reveal="mask" data-delay="250">{entry.data.subtitle}</p>}
+          </div>
+        </section>
 
-  {
-    !entry.data.draft && (
-      <section slot="side" class="page-side work-gallery">
-        <ResponsiveImage src={heroPath} alt={entry.data.title} loading="eager" fetchpriority="high" />
-        {Array.from({ length: Math.max(entry.data.gallery - 1, 0) }, (_, index) => index + 2).map((number) => (
-          <ResponsiveImage src={`/img/work/${slug}/${slug}-${number}.png`} alt={entry.data.title} />
-        ))}
-      </section>
+        <section class="sintesis-case__meta" data-reveal="stagger">
+          <div><span>{locale === "es" ? "Año" : "Year"}</span><b>{entry.data.date.getUTCFullYear()}</b></div>
+          <div><span>{locale === "es" ? "Cliente" : "Client"}</span><b>{entry.data.title}</b></div>
+          <div><span>{locale === "es" ? "Trabajo" : "Work"}</span><ul><li>{locale === "es" ? "Identidad" : "Identity"}</li><li>{locale === "es" ? "Diseño" : "Design"}</li><li>{locale === "es" ? "Producto" : "Product"}</li></ul></div>
+        </section>
+
+        {!entry.data.working && <aside class="sintesis-case__notice"><h2>{translations.work.not_working.title}</h2><p set:html={translations.work.not_working.description}></p></aside>}
+        {entry.data.description && <p class="sintesis-case__lead" data-reveal="rise">{entry.data.description}</p>}
+        <figure class="sintesis-case__image"><img data-reveal="wipe" src={caseImage} alt={entry.data.title} /></figure>
+        <section class="sintesis-case__body">
+          <h2 data-reveal="wipe">{locale === "es" ? "Justificación" : "Rationale"}</h2>
+          <div data-reveal="stagger"><LegacyContent class="sintesis-prose"><Content /></LegacyContent></div>
+        </section>
+        {
+          nextWork?.identity && (
+            <a class="sintesis-case__next" data-reveal="rise" href={localizedPath(locale, `/work/${nextWork.identity.slug}/`)}>
+              <img src={`/img/work/${nextWork.identity.slug}/${nextWork.entry.data.hero ?? `${nextWork.identity.slug}.png`}`} alt="" />
+              <div><span>{locale === "es" ? "Siguiente caso" : "Next case"}</span><b>{nextWork.entry.data.title}</b></div>
+              <strong aria-hidden="true">→</strong>
+            </a>
+          )
+        }
+      </article>
     )
   }
-</PageLayout>
+</SintesisLayout>

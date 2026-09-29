@@ -1,7 +1,8 @@
 ---
-import RedirectPage from "@/components/RedirectPage.astro"
-import { getLocaleStaticPaths } from "@/components/site"
-import { type Locale, localizedPath } from "@/i18n"
+import { getCollection } from "astro:content"
+import { formatDate, getLocaleStaticPaths, isPublished, splitEntryId } from "@/components/site"
+import { getTranslations, type Locale, localizedPath } from "@/i18n"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()
@@ -12,6 +13,55 @@ interface Props {
 }
 
 const { locale } = Astro.props
+const translations = getTranslations(locale)
+const entries = await getCollection("blog")
+const posts = entries
+  .map((entry) => ({ entry, identity: splitEntryId(entry.id) }))
+  .filter(({ entry, identity }) => identity?.locale === locale && isPublished(entry.data))
+  .sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf())
+const [featured, ...rest] = posts
 ---
 
-<RedirectPage {locale} to={localizedPath(locale, "/blog/page/1/")} />
+<SintesisLayout
+  {locale}
+  page="blog"
+  title={translations.blog.title}
+  description={translations.head.description}
+  sceneMode={3}
+>
+  <section class="sintesis-blog-listing">
+    <div class="sintesis-watermark" aria-hidden="true">{translations.blog.title}</div>
+    <header class="sintesis-blog-listing__header">
+      <span data-reveal="wipe">{locale === "es" ? `Filosofía · ${posts.length} ensayos` : `Philosophy · ${posts.length} essays`}</span>
+      <h1 data-reveal="mask" data-delay="100">{translations.blog.subtitle}</h1>
+    </header>
+
+    {
+      featured?.identity ? (
+        <a class="blog-featured" data-reveal="rise" data-delay="200" href={localizedPath(locale, `/blog/${featured.identity.slug}/`)}>
+          <div>
+            <span>{translations.blog.recent} · <time datetime={featured.entry.data.date.toISOString()}>{formatDate(featured.entry.data.date, locale)}</time></span>
+            <h2>{featured.entry.data.title}</h2>
+          </div>
+          <b aria-hidden="true">→</b>
+        </a>
+      ) : null
+    }
+
+    <ol class="sintesis-blog-list" data-reveal="stagger">
+      {
+        rest.map(({ entry, identity }) =>
+          identity ? (
+            <li>
+              <a href={localizedPath(locale, `/blog/${identity.slug}/`)}>
+                <time datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date, locale)}</time>
+                <span>{entry.data.title}</span>
+                <b aria-hidden="true">→</b>
+              </a>
+            </li>
+          ) : null,
+        )
+      }
+    </ol>
+  </section>
+</SintesisLayout>

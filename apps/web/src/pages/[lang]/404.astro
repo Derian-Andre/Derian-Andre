@@ -1,8 +1,7 @@
 ---
-import ResponsiveImage from "@/components/ResponsiveImage.astro"
 import { getLocaleStaticPaths } from "@/components/site"
 import { type Locale, localizedPath } from "@/i18n"
-import PageLayout from "@/layouts/PageLayout.astro"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()
@@ -16,33 +15,51 @@ const { locale } = Astro.props
 const copy =
   locale === "es"
     ? {
-        title: "No se encontró la página",
+        title: "No se encontró la estúpida y sensual página",
         description: "La página solicitada no existe o fue movida.",
-        message: "La página que buscas no está aquí. Puede que haya cambiado de dirección.",
-        action: "Volver al inicio",
+        message: "Quizás la borré o quién sabe... todo se me olvida o quizás no...",
+        action: "¡Regresa al inicio de la creación!",
       }
     : {
         title: "Page not found",
         description: "The requested page does not exist or has moved.",
-        message: "The page you are looking for is not here. Its address may have changed.",
-        action: "Back home",
+        message: "Maybe I deleted it, or who knows... I forget everything, or maybe not...",
+        reflection: "If this page was not found, why does this page exist? How can I be a missing page if you just found me? So... am I or am I not? What is being? Who are you and what are you doing here? Are you real?",
+        action: "Return to the beginning of creation!",
       }
 ---
 
-<PageLayout
+<SintesisLayout
   {locale}
   page="error"
   title={copy.title}
-  subtitle="Error 404"
   description={copy.description}
-  mainClass="page-error"
+  sceneMode={2}
   noindex
 >
-  <p>{copy.message}</p>
-  <p class="error-code" aria-hidden="true">42</p>
-  <a class="button" href={localizedPath(locale, "/")}>{copy.action}</a>
-
-  <section slot="side" class="page-side">
-    <ResponsiveImage src="/img/emoji.svg" alt="" />
+  <section class="sintesis-404">
+    <div aria-hidden="true">404</div>
+    <span data-reveal="wipe">{locale === "es" ? "Error en la matrix" : "Error in the matrix"}</span>
+    {
+      locale === "es" ? (
+        <h1 data-reveal="mask" data-delay="100">No se encontró la estúpida y <em>sensual</em> página</h1>
+      ) : (
+        <h1 data-reveal="mask" data-delay="100">{copy.title}</h1>
+      )
+    }
+    {
+      locale === "es" ? (
+        <div data-reveal="stagger" data-delay="250">
+          <p>{copy.message}</p>
+          <p>En fin, si esta página no se encontró, <strong>¿por qué existe esta página?</strong></p>
+          <p><strong>¿Cómo puedo ser una página no encontrada</strong>, si me acabas de encontrar?</p>
+          <p>Entonces... <strong>¿soy o no soy? ¿Qué es ser?</strong></p>
+          <p><strong>¿Quién eres tú?</strong> y... <strong>¿qué haces aquí? ¿Eres real?</strong></p>
+        </div>
+      ) : (
+        <div data-reveal="stagger" data-delay="250"><p>{copy.message}</p></div>
+      )
+    }
+    <a class="sintesis-button sintesis-button--solid" data-reveal="rise" data-delay="500" href={localizedPath(locale, "/")}>{copy.action}</a>
   </section>
-</PageLayout>
+</SintesisLayout>

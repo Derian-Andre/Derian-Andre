@@ -1,6 +1,5 @@
 ---
 import type { Locale } from "@/i18n"
-import SocialIcon from "./SocialIcon.astro"
 
 interface Props {
   locale: Locale
@@ -8,14 +7,6 @@ interface Props {
 
 const { locale } = Astro.props
 const links = [
-  { label: "Instagram", icon: "instagram", href: "https://instagram.com/DerianAndre" },
-  { label: "LinkedIn", icon: "linkedin", href: "https://linkedin.com/in/DerianAndre" },
-  { label: "GitHub", icon: "github", href: "https://github.com/DerianAndre" },
-  {
-    label: locale === "es" ? "Correo" : "Email",
-    icon: "mail",
-    href: "mailto:hola@derianandre.com",
-  },
   {
     label: "WhatsApp",
     icon: "whatsapp",
@@ -25,15 +16,22 @@ const links = [
         : "Hello, I am contacting you from your portfolio!",
     )}`,
   },
+  {
+    label: locale === "es" ? "Correo" : "Email",
+    icon: "mail",
+    href: "mailto:hola@derianandre.com",
+  },
+  { label: "Instagram", icon: "instagram", href: "https://instagram.com/DerianAndre" },
+  { label: "LinkedIn", icon: "linkedin", href: "https://linkedin.com/in/DerianAndre" },
+  { label: "GitHub", icon: "github", href: "https://github.com/DerianAndre" },
 ] as const
 ---
 
-<footer class="social-links" aria-label={locale === "es" ? "Redes sociales" : "Social media"}>
+<footer class="site-footer" aria-label={locale === "es" ? "Redes sociales" : "Social media"}>
   {
     links.map((link) => (
-      <a href={link.href} target="_blank" rel="noopener noreferrer nofollow" aria-label={link.label}>
-        <SocialIcon name={link.icon} />
-      </a>
+      <a href={link.href} target="_blank" rel="noopener noreferrer nofollow" aria-label={link.label}>{link.label} ↗</a>
     ))
   }
+  <small>© 2026 Derian André Castillo Franco</small>
 </footer>

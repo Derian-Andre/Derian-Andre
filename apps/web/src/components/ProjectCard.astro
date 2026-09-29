@@ -14,14 +14,21 @@ interface Props {
 }
 
 const { locale, slug, title, description, date, hero, cta } = Astro.props
+const imagePath = hero
+  ? slug === "orca-tools"
+    ? `/img/projects/${slug}/${hero}`
+    : `/img/projects/${hero}`
+  : undefined
 ---
 
-<article class="project-card">
-  {hero && <ResponsiveImage class="project-card__image" src={`/img/projects/${slug}/${hero}`} alt="" />}
+<a class="project-card" href={localizedPath(locale, `/projects/${slug}/`)} data-reveal="rise">
+  {imagePath && <ResponsiveImage class="project-card__image" src={imagePath} alt="" />}
   <div class="project-card__body">
-    <h2>{title}</h2>
-    <time datetime={new Date(date).toISOString()}>{formatDate(date, locale)}</time>
+    <div class="project-card__heading">
+      <h2>{title}</h2>
+      <time datetime={new Date(date).toISOString()}>{formatDate(date, locale)}</time>
+    </div>
     {description && <p set:html={description} />}
-    <a class="button project-card__link" href={localizedPath(locale, `/projects/${slug}/`)}>{cta}</a>
+    <span class="project-card__link">{cta} <span aria-hidden="true">→</span></span>
   </div>
-</article>
+</a>

@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection, render } from "astro:content"
 import LegacyContent from "@/components/LegacyContent.astro"
 import { isPublished, splitEntryId } from "@/components/site"
 import { getTranslations, type Locale, localizedPath } from "@/i18n"
-import PageLayout from "@/layouts/PageLayout.astro"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export async function getStaticPaths() {
   const entries = await getCollection("blog")
@@ -28,27 +28,58 @@ const { entry, locale, slug } = Astro.props
 const translations = getTranslations(locale)
 const { Content } = await render(entry)
 const image = entry.data.hero ? `/img/blog/${slug}/${entry.data.hero}` : "/img/derianandre.png"
+const relatedPosts = (await getCollection("blog"))
+  .map((post) => ({ entry: post, identity: splitEntryId(post.id) }))
+  .filter(({ entry: post, identity }) => identity?.locale === locale && isPublished(post.data))
+  .sort((a, b) => a.entry.data.date.valueOf() - b.entry.data.date.valueOf())
+const currentPostIndex = relatedPosts.findIndex(({ identity }) => identity?.slug === slug)
+const previousPost = currentPostIndex > 0 ? relatedPosts[currentPostIndex - 1] : undefined
+const nextPost = currentPostIndex >= 0 ? relatedPosts[currentPostIndex + 1] : undefined
+const readingTime = locale === "es" ? "4 min de lectura" : "4 min read"
 ---
 
-<PageLayout
+<SintesisLayout
   locale={locale}
   page="blog"
   title={entry.data.title}
-  date={entry.data.date}
   description={entry.data.description ?? translations.head.description}
   image={image}
   type="article"
   publishedTime={entry.data.date}
-  contentClass="content-blog"
-  mainClass="blog-post"
+  sceneMode={6}
 >
-  <div class="blog-heading" aria-hidden="true">{entry.data.title}</div>
-  <article class="article-blog">
-    <LegacyContent class="article-blog__content">
-      <Content />
-    </LegacyContent>
-    <a class="button back-link" href={localizedPath(locale, "/blog/page/1/")}>
-      <span aria-hidden="true">←</span> {translations.blog.go_back}
-    </a>
+  <article class="sintesis-article">
+    <div class="sintesis-watermark" aria-hidden="true">{entry.data.title}</div>
+    <div class="sintesis-article__inner">
+      <a class="sintesis-back-link" data-reveal="wipe" href={localizedPath(locale, "/blog/")}>← {translations.blog.go_back}</a>
+      <div class="sintesis-article__meta" data-reveal="wipe" data-delay="80">
+        <time datetime={entry.data.date.toISOString()}>{new Intl.DateTimeFormat(locale === "es" ? "es-MX" : "en-US", { dateStyle: "long", timeZone: "UTC" }).format(entry.data.date)}</time>
+        <span>{readingTime}</span>
+      </div>
+      <h1 data-reveal="mask" data-delay="150">{entry.data.title}</h1>
+      <div data-reveal="stagger">
+        <LegacyContent class="sintesis-article__content">
+          <Content />
+        </LegacyContent>
+      </div>
+      <nav class="sintesis-article__nav">
+        {
+          previousPost?.identity && (
+            <a href={localizedPath(locale, `/blog/${previousPost.identity.slug}/`)}>
+              <span>← {locale === "es" ? "Anterior" : "Previous"}</span>
+              <b>{previousPost.entry.data.title}</b>
+            </a>
+          )
+        }
+        {
+          nextPost?.identity && (
+            <a href={localizedPath(locale, `/blog/${nextPost.identity.slug}/`)}>
+              <span>{locale === "es" ? "Siguiente" : "Next"} →</span>
+              <b>{nextPost.entry.data.title}</b>
+            </a>
+          )
+        }
+      </nav>
+    </div>
   </article>
-</PageLayout>
+</SintesisLayout>

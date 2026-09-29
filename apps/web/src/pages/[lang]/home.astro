@@ -1,17 +1,419 @@
 ---
-import RedirectPage from "@/components/RedirectPage.astro"
 import { getLocaleStaticPaths } from "@/components/site"
 import { type Locale, localizedPath } from "@/i18n"
+import BrandMark from "@/components/BrandMark.astro"
+import BaseLayout from "@/layouts/BaseLayout.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()
 }
 
-interface Props {
-  locale: Locale
-}
-
+interface Props { locale: Locale }
 const { locale } = Astro.props
+const globeWork = [
+  ["Fundación de 10", "Cliente", "2016", "fundacion-de-10.jpg"],
+  ["Blue Moon", "Cliente", "2021", "blue-moon.jpg"], ["Shellhook", "Cliente", "2021", "shellhook.jpg"],
+  ["SVGO", "Cliente", "2021", "svgo.jpg"], ["Nútrete con Ciencia", "Cliente", "2021", "nutrete-con-ciencia.jpg"],
+  ["Constructora GRAN", "Cliente", "2020", "constructora-gran.jpg"], ["Paxut", "Cliente", "2019", "paxut.jpg"],
+  ["The Hive Offices", "Cliente", "2019", "the-hive-offices.jpg"], ["Inbright", "Cliente", "2018", "inbright.jpg"],
+  ["Grupo RESA", "Cliente", "2018", "grupo-resa.jpg"], ["Huitzil", "Cliente", "2018", "huitzil-muebles.jpg"],
+  ["Alphabook", "Cliente", "2018", "alphabook.jpg"], ["Buddies", "Cliente", "2018", "buddies.jpg"],
+  ["Akuma Store", "Cliente", "2018", "akuma-store.jpg"], ["El Taco Rojo", "Cliente", "2018", "el-taco-rojo.jpg"],
+  ["VITEM", "Cliente", "2018", "vitem.jpg"], ["Winter Wolves", "Cliente", "2018", "winter-wolves.jpg"],
+  ["OCEL Global", "Cliente", "2016", "ocel-global.jpg"],
+  ["Anthropos Politeia", "Cliente", "2016", "anthropos-politeia.jpg"], ["Red5 Gaming", "Cliente", "2016", "red5-gaming.jpg"],
+  ["Havoks Gaming", "Cliente", "2016", "havoks-gaming.jpg"], ["IDVA", "Cliente", "2016", "idva.jpg"],
+  ["Entelequia", "Cliente", "2016", "entelequia.jpg"], ["Caleen E-liquids", "Cliente", "2017", "caleen-e-liquids.jpg"],
+].map(([title, kind, year, image]) => {
+  const slug = image.replace(/\.[^.]+$/, "")
+  return { title, kind, year, image: `/img/globe/${image}`, href: localizedPath(locale, `/work/${slug}/`) }
+})
 ---
 
-<RedirectPage {locale} to={localizedPath(locale, "/")} />
+<BaseLayout locale={locale} title="Derian André" bodyClass="sintesis-home" showHeader={false}>
+  <header class="home-ref-header" data-reveal="rise" data-intro="1" style="position:fixed;z-index:30;top:clamp(.5rem,1.5vw,1rem);right:clamp(.5rem,1.5vw,1rem);left:clamp(.5rem,1.5vw,1rem);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:1rem;padding:.7rem clamp(.9rem,2vw,1.5rem);color:var(--body-color-high);background:hsl(220 23% 5% / .38) url('/img/noise.png');backdrop-filter:blur(22px) saturate(1.5);-webkit-backdrop-filter:blur(22px) saturate(1.5)">
+    <div class="home-ref-header-brand" style="display:flex;min-width:0;align-items:center;gap:1rem">
+      <a href={localizedPath(locale, "/")} aria-label="Derian André" style="display:flex;align-items:center;color:var(--body-color-high)"><BrandMark style="display:block;width:24px;height:25px;max-width:none;flex:none" /></a>
+      <span style="display:flex;min-width:0;align-items:baseline;gap:.5rem;overflow:hidden;border-left:1px solid hsl(220 30% 90% / .12);padding-left:1rem;color:var(--body-color-low);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-overflow:ellipsis;white-space:nowrap"><i style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:0">01</i> Inicio</span>
+    </div>
+    <nav aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"} style="display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.4rem 1.4rem;font-size:.78rem;font-weight:700;letter-spacing:.06em">
+      <a href="#trabajo">{locale === "es" ? "Trabajo" : "Work"}</a>
+      <a href={localizedPath(locale, "/projects/")}>{locale === "es" ? "Proyectos" : "Projects"}</a>
+      <a href={localizedPath(locale, "/blog/")}>Blog</a>
+      <a href={localizedPath(locale, "/about/")}>Ego</a>
+      <a href={localizedPath(locale, "/services/")}>{locale === "es" ? "Servicios" : "Services"}</a>
+      <a href={localizedPath(locale, "/curriculum/")}>CV</a>
+      <a class="home-ref-header-language" href={localizedPath(locale === "es" ? "en" : "es", "/")} lang={locale === "es" ? "en" : "es"}>{locale === "es" ? "EN" : "ES"}</a>
+    </nav>
+  </header>
+  <main id="main-content" class="sintesis-home-ref">
+    <canvas class="home-ref-background" data-sintesis-background aria-hidden="true"></canvas>
+
+    <section id="inicio" class="home-ref-hero" data-bg="0" data-particle="cloud">
+      <canvas class="home-ref-monolith" data-sintesis-monolith aria-hidden="true"></canvas>
+      <button class="home-ref-burst" type="button" data-sintesis-burst aria-label="Transformar el monograma"></button>
+
+      <div class="home-ref-hero-top" data-reveal="rise" data-intro="1">
+        <div class="home-ref-identity">
+          <span>Derian André</span>
+          <em>ingeniero polímata</em>
+        </div>
+        <nav class="home-ref-chapters" aria-label="Capítulos">
+          <a href="#cap-ia"><i>01</i> IA &amp; Software</a>
+          <a href="#cap-diseno"><i>02</i> Diseño</a>
+          <a href="#cap-filosofia"><i>03</i> Filosofía</a>
+          <a href="#trabajo"><i>04</i> Trabajo</a>
+        </nav>
+      </div>
+
+      <div></div>
+
+      <div class="home-ref-hero-end">
+        <h1>
+          <span data-reveal="mask" data-intro="1" data-delay="120">Inteligencia Artificial,</span>
+          <span data-reveal="mask" data-intro="1" data-delay="260">Software</span>
+          <em data-reveal="mask" data-intro="1" data-delay="420">diseño y filosofía.</em>
+        </h1>
+        <div class="home-ref-hero-meta" data-reveal="wipe" data-intro="1" data-delay="700">
+          <span><i data-home-generation>Generación 01 / 05 — Orbital cuántico</i> · Recarga para otra · Clic para transformar</span>
+          <a href="#cap-ia">Desplázate <b>↓</b></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="home-ref-chapter-area">
+      <div class="home-ref-field"><canvas data-sintesis-field aria-hidden="true"></canvas></div>
+
+      <section id="cap-ia" class="home-ref-section home-ref-ai" data-bg="1" data-particle="ai">
+        <div class="home-ref-ai-stack">
+          <p class="home-ref-number" data-reveal="wipe"><i>01</i> <span>Inteligencia aplicada</span></p>
+          <h2 data-reveal="mask" data-delay="120">Ideas que<br />llegan <em>a producción.</em></h2>
+          <p class="home-ref-ai-copy" data-reveal="rise" data-delay="180">Soy un desarrollador full-stack que crea productos útiles, claros y memorables. Trabajo con IA, software y diseño para que las ideas lleguen más lejos.</p>
+        </div>
+        <div class="home-ref-console" data-reveal="rise" data-delay="200">
+            <header><i>derian ~ taller</i><span>Listo</span></header>
+            <pre><span>&gt; construir(producto, &#123; ia: true &#125;)</span><span>✓ del prototipo a producción</span><span>✓ modelos de IA integrados con criterio</span><span>✓ front-end rápido, accesible y hermoso</span><span>✓ código mantenible, revisado y probado</span><strong>&gt; ¿qué construimos juntos?</strong></pre>
+        </div>
+      </section>
+
+      <section id="cap-diseno" class="home-ref-section home-ref-design" data-bg="2" data-particle="design">
+        <p class="home-ref-number" data-reveal="rise"><i>02</i> <span>Marcas y experiencias que funcionan</span></p>
+        <h2 data-reveal="wipe" data-delay="100" data-sintesis-design>Diseño</h2>
+        <div class="home-ref-design-columns" data-reveal="stagger" data-delay="250">
+          <article><h3>Branding</h3><p>Naming, identidad y rediseño de marcas con carácter.</p><span>Naming · Identidad · Rediseño · Papelería</span></article>
+          <article><h3>Producto</h3><p>Interfaces y aplicaciones donde la forma sirve a la función.</p><span>UI · UX · Apps · Web</span></article>
+          <article><h3>Imagen</h3><p>Dirección de arte y fotografía para que todo cuente la misma historia.</p><span>Asesoría de imagen · Fotografía · Retoque</span></article>
+        </div>
+      </section>
+
+      <section id="cap-filosofia" class="home-ref-section home-ref-philosophy" data-bg="3" data-particle="philo">
+        <div class="home-ref-philosophy-copy" data-reveal="rise">
+          <p class="home-ref-number"><i>03</i> <span>Filosofía</span></p>
+          <h2>Crear es<br />una forma<br /><em>de pensar.</em></h2>
+          <p>Me considero una persona noble, no para nada sé un ignorante que aprende y tiene experiencias nuevas, por eso me lleva a adquirir más conocimientos.</p>
+        </div>
+        <div class="home-ref-philosophy-stack">
+          <p class="home-ref-philosophy-quote" aria-live="polite">“La curiosidad es una disciplina: se practica todos los días.”</p>
+          <ol class="home-ref-essays" data-reveal="stagger" data-delay="200">
+            <li><a href={localizedPath(locale, "/blog/cogito-ergo-sum/")}><strong>Sabiduría, ego y humildad intelectual</strong><time>→</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/perspectivas/")}><strong>La perpectividad social</strong><time>→</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/el-numero-de-dios-matematicas-y-diseno/")}><strong>La paradoja de Zenón</strong><time>→</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/la-paradoja-de-zenon/")}><strong>La paradoja de Zenón</strong><time>31 mar 2021</time></a></li>
+            <li><a href={localizedPath(locale, "/blog/sabiduria-ego-y-humildad-intelectual/")}><strong>Sabiduría, ego y humildad intelectual</strong><time>3 abr 2021</time></a></li>
+          </ol>
+          <a class="home-ref-outline-button" data-reveal="rise" data-delay="400" href={localizedPath(locale, "/blog/")}>Leer el blog</a>
+        </div>
+      </section>
+    </div>
+
+    <section id="trabajo" class="home-ref-work" data-bg="4">
+      <div class="home-ref-work-sticky">
+        <canvas data-sintesis-globe aria-label="Globo interactivo de trabajos seleccionados"></canvas>
+        <p class="home-ref-work-heading" data-reveal="wipe"><i>04</i> <span>Trabajo seleccionado</span></p>
+        <div class="home-ref-work-caption" aria-live="polite">
+          <i data-globe-index>01 / 24</i><h2 data-globe-title>Blue Moon</h2><span data-globe-meta>Cliente · 2021</span>
+        </div>
+        <div class="home-ref-work-controls" data-reveal="rise" data-delay="200">
+          <div><button type="button" data-globe-prev aria-label="Trabajo anterior">←</button><button type="button" data-globe-next aria-label="Trabajo siguiente">→</button></div>
+          <span>Arrastra el globo · Clic para abrir</span>
+        </div>
+        <aside class="home-ref-work-panel" data-globe-panel hidden>
+          <button type="button" data-globe-close aria-label="Cerrar detalle">×</button>
+          <i data-panel-index></i><h3 data-panel-title></h3>
+          <p>Una colaboración donde identidad, producto y tecnología se encuentran.</p>
+          <a data-globe-case-link href={globeWork[0].href}>Ver caso completo</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="home-ref-contact" data-bg="5">
+      <div class="home-ref-marquee" data-reveal="blur" aria-hidden="true">
+        <div>Inteligencia Artificial <em>y</em> Software · Diseño <em>y</em> Filosofía · Inteligencia Artificial <em>y</em> Software ·</div>
+        <div>Inteligencia Artificial <em>y</em> Software · Diseño <em>y</em> Filosofía · Inteligencia Artificial <em>y</em> Software ·</div>
+      </div>
+      <div class="home-ref-contact-content">
+        <p class="home-ref-contact-kicker" data-reveal="wipe"><span><i>05</i> Más ideas, mejores resultados</span><span><b></b><time data-home-clock></time></span></p>
+        <h2><span>¿Hacemos algo</span> <em>chingón?</em></h2>
+        <div class="home-ref-contact-actions" data-reveal="rise" data-delay="450">
+          <a class="home-ref-whatsapp" href="https://wa.me/523312781411?text=%C2%A1Hola%2C%20me%20contacto%20desde%20tu%20portafolio!">Hablemos por WhatsApp <b>↗</b></a>
+          <a class="home-ref-email" href="mailto:hola@derianandre.com">hola@derianandre.com <b>→</b></a>
+        </div>
+      </div>
+      <footer class="home-ref-footer" data-reveal="rise" data-delay="550">
+        <nav aria-label="Redes sociales"><a href="https://facebook.com/DerianAndre">Facebook ↗</a><a href="https://instagram.com/DerianAndre">Instagram ↗</a><a href="https://linkedin.com/in/DerianAndre">LinkedIn ↗</a><a href="https://github.com/DerianAndre">GitHub ↗</a><a href="https://wa.me/523312781411">WhatsApp ↗</a></nav>
+        <span>© 2026 Derian André Castillo Franco</span>
+      </footer>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .sintesis-home .site-layout{min-height:100vh}.sintesis-home .skip-link{z-index:50}.home-ref-header{position:fixed;z-index:30;top:clamp(.5rem,1.5vw,1rem);right:clamp(.5rem,1.5vw,1rem);left:clamp(.5rem,1.5vw,1rem);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:1rem;padding:.7rem clamp(.9rem,2vw,1.5rem);color:var(--body-color-high);background:hsl(220 23% 5% / .38) url('/img/noise.png');backdrop-filter:blur(22px) saturate(1.5);-webkit-backdrop-filter:blur(22px) saturate(1.5)}.home-ref-header-brand{display:flex;min-width:0;align-items:center;gap:1rem}.home-ref-header-brand>a{display:flex;align-items:center;color:var(--body-color-high)}.home-ref-header-brand svg{width:24px;height:25px}.home-ref-header-brand>span{display:flex;min-width:0;align-items:baseline;gap:.5rem;overflow:hidden;border-left:1px solid hsl(220 30% 90% / .12);padding-left:1rem;color:var(--body-color-low);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-overflow:ellipsis;white-space:nowrap}.home-ref-header-brand i{font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:0}.home-ref-header nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.4rem 1.4rem;font-size:.78rem;font-weight:700;letter-spacing:.06em}.home-ref-header nav a{color:var(--body-color-high);text-decoration:none;transition:color 200ms ease}.home-ref-header nav a:hover{color:var(--body-color-normal)}.home-ref-header .home-ref-header-language{color:var(--body-color-low)}
+  .sintesis-home-ref{position:relative;min-height:100vh;isolation:isolate;overflow:clip;color:var(--body-color-normal);font-family:var(--font-heading)}
+  .home-ref-background{position:fixed;inset:0;z-index:-2;display:block;width:100vw;height:100vh}.home-ref-hero{position:relative;z-index:1;isolation:isolate;display:grid;min-height:max(100vh,32rem);grid-template-rows:auto minmax(0,1fr) auto;padding:clamp(5.5rem,9vw,7rem) clamp(1.25rem,3.5vw,3rem) clamp(1.25rem,3vw,2.25rem);touch-action:pan-y}.home-ref-monolith{position:absolute;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}.home-ref-burst{position:absolute;z-index:1;top:50%;left:50%;width:min(28vw,24rem);height:min(45vw,34rem);border:0;background:transparent;cursor:pointer;transform:translate(-50%,-50%)}
+  .home-ref-hero-top{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:1.5rem 3rem;color:#fff;pointer-events:none;mix-blend-mode:difference}.home-ref-identity{display:flex;flex-direction:column;gap:.6rem}.home-ref-identity span{color:#fff;font-size:clamp(1.6rem,2.6vw,2.6rem);font-weight:900;line-height:1;letter-spacing:-.01em;white-space:nowrap}.home-ref-identity em{margin-top:-20px;color:#ffffff81;font-family:'Instrument Serif',var(--font-serif);font-size:clamp(2rem,3vw,5rem);font-style:italic;font-weight:400;line-height:1.1;white-space:nowrap}.home-ref-chapters{display:grid;grid-template-columns:auto auto;align-items:baseline;gap:.35rem 1rem;pointer-events:auto}.home-ref-chapters a{display:grid;grid-template-columns:1.5rem auto;gap:.25rem;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.06em;line-height:1.2;text-decoration:none;white-space:nowrap}.home-ref-chapters i{color:#fff;font-family:'Instrument Serif',var(--font-serif);font-size:1rem;font-style:italic;font-weight:400;opacity:.6}
+  .home-ref-hero-end{position:relative;z-index:2;display:flex;flex-direction:column;gap:clamp(1.25rem,2.5vw,2rem);pointer-events:none}.home-ref-hero-end h1{display:flex;flex-direction:column;align-items:flex-end;margin:0;color:#fff;text-align:right;mix-blend-mode:difference}.home-ref-hero-end h1 span{color:#fff;font-family:var(--font-heading);font-size:clamp(2.25rem,min(5vw,10vh),7.25rem);font-weight:900;letter-spacing:-.04em;line-height:.9}.home-ref-hero-end h1 span:nth-child(2){font-size:clamp(2.25rem,min(7vw,15vh),15rem)}.home-ref-hero-end h1 em{margin:.02em -.02em 0 0;color:#ffffff5c;font-family:'Instrument Serif',var(--font-serif);font-size:clamp(3.25rem,min(11.2vw,17vh),10rem);font-style:italic;font-weight:400;letter-spacing:-.02em;line-height:.85;white-space:nowrap}.home-ref-hero-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;padding-top:1rem;border-top:1px solid hsl(220 30% 90% / .12);color:var(--body-color-normal);font-size:.75rem;font-weight:700;letter-spacing:.08em}.home-ref-hero-meta span{white-space:nowrap}.home-ref-hero-meta i{color:var(--body-color-medium);font-family:'Instrument Serif',var(--font-serif);font-size:1.05rem;font-style:italic;font-weight:400;letter-spacing:0}.home-ref-hero-meta a{display:flex;align-items:center;gap:.75rem;color:var(--body-color-low);pointer-events:auto;text-decoration:none;white-space:nowrap}.home-ref-hero-meta b{color:var(--body-color-high);font-size:1rem}
+  .home-ref-chapter-area{position:relative;touch-action:pan-y}.home-ref-field{position:sticky;top:0;z-index:0;height:100vh;margin-bottom:-100vh;pointer-events:none}.home-ref-field canvas{position:absolute;inset:0;display:block;width:100%;height:100%}.home-ref-section{position:relative;z-index:1;min-height:120vh;padding:6rem clamp(1.25rem,3.5vw,3rem)}.home-ref-ai{display:flex;align-items:center}.home-ref-ai-stack{display:flex;width:100%;max-width:40rem;flex-direction:column;gap:clamp(1.5rem,3vw,2.25rem)}.home-ref-number{display:flex;align-items:baseline;gap:1rem;margin:0;color:var(--body-color-low);font-size:.8rem;font-weight:700;letter-spacing:.08em;white-space:nowrap}.home-ref-number i{color:var(--body-color-lower);font-family:'Instrument Serif',var(--font-serif);font-size:clamp(3rem,6vw,5rem);font-style:italic;font-weight:400;letter-spacing:0;line-height:.8}.home-ref-ai h2{max-width:12ch;margin:0;color:var(--body-color-high);font-family:var(--font-heading);font-size:clamp(2.5rem,6vw,5.75rem);font-weight:900;letter-spacing:-.04em;line-height:.88}.home-ref-ai h2 em{font-family:'Instrument Serif',var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-.02em}
+  .home-ref-console{display:flex;flex-direction:column;border:1px solid hsl(220 30% 90% / .09);background:hsl(220 23% 5% / .34) url('/img/noise.png');backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5)}.home-ref-console header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1.1rem;border-bottom:1px dotted var(--body-color-muted);color:var(--body-color-low);font-size:.72rem;font-weight:700;letter-spacing:.06em}.home-ref-console header i{font-family:var(--font-serif);font-size:.9rem;font-style:italic;font-weight:400;letter-spacing:0}.home-ref-console pre{min-height:13.5rem;margin:0;padding:1.1rem 1.1rem 1.25rem;color:var(--body-color-medium);background:transparent;border:0;font-family:var(--font-serif);font-size:clamp(.95rem,1.3vw,1.1rem);line-height:1.75;white-space:pre-wrap}.home-ref-console pre span,.home-ref-console pre strong{display:block;font:inherit}.home-ref-console pre span:first-child,.home-ref-console pre strong{color:var(--body-color-high)}.home-ref-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}.home-ref-tags li{padding:.35rem .7rem;border:1px solid hsl(220 30% 90% / .12);color:var(--body-color-normal);background:hsl(220 30% 90% / .05);font-size:.75rem;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+  .home-ref-design{display:flex;flex-direction:column;justify-content:center;gap:clamp(1.5rem,3vw,2.5rem);overflow:hidden}.home-ref-design h2{margin:0 0 0 -.04em;color:transparent;font-family:var(--font-heading);font-size:clamp(5.5rem,21vw,22rem);font-weight:900;letter-spacing:-.05em;line-height:.8;white-space:nowrap;-webkit-text-stroke:3px var(--body-color-high);paint-order:stroke fill;transition:font-weight 250ms ease,letter-spacing 250ms ease}.home-ref-design-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1rem;max-width:64rem}.home-ref-design-columns article{display:flex;flex-direction:column;gap:.75rem;padding:1.4rem;border:1px solid hsl(220 30% 90% / .09);background:hsl(220 23% 5% / .34) url('/img/noise.png');backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);transition:background 350ms ease,transform 350ms ease}.home-ref-design-columns article:hover{background:hsl(220 30% 90% / .08);transform:translateY(-4px)}.home-ref-design-columns h3{margin:0;color:var(--body-color-high);font-size:1.35rem;font-weight:800}.home-ref-design-columns p{margin:0;color:var(--body-color-normal);font-family:var(--font-serif);font-size:1rem;line-height:1.6}.home-ref-design-columns span{color:var(--body-color-low);font-size:.75rem;font-weight:700;letter-spacing:.04em}
+  .home-ref-philosophy{display:flex;align-items:center;justify-content:flex-end}.home-ref-philosophy-stack{display:flex;width:100%;max-width:40rem;flex-direction:column;align-items:flex-end;gap:clamp(1.5rem,3vw,2.25rem);text-align:right}.home-ref-philosophy .home-ref-number{justify-content:flex-end}.home-ref-philosophy-quote{display:flex;width:100%;min-height:1.95em;align-items:flex-end;justify-content:flex-end;margin:0;color:var(--body-color-high);font-family:'Instrument Serif',var(--font-serif);font-size:clamp(3rem,7vw,6.75rem);font-style:italic;font-weight:400;letter-spacing:-.03em;line-height:.95;text-wrap:balance}.home-ref-essays{width:100%;max-width:30rem;margin:0;padding:.5rem 1.25rem;border:1px solid hsl(220 30% 90% / .09);background:hsl(220 23% 5% / .34) url('/img/noise.png');list-style:none;text-align:left;backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5)}.home-ref-essays li+li{border-top:1px solid hsl(220 30% 90% / .1)}.home-ref-essays a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:1rem;padding:.7rem 0;color:var(--body-color-high);text-decoration:none;transition:opacity 350ms ease}.home-ref-essays a:hover{opacity:.65}.home-ref-essays strong{font-size:.95rem;font-weight:800}.home-ref-essays time{color:var(--body-color-low);font-family:var(--font-serif);font-size:.85rem;font-style:italic;white-space:nowrap}.home-ref-outline-button{display:inline-flex;align-items:center;min-height:2.75rem;padding:.55rem 1.4rem;border:2px solid var(--body-color-normal);color:var(--body-color-normal);font-size:.8rem;font-weight:700;letter-spacing:.04em;text-decoration:none;transition:background 350ms ease,color 350ms ease,border-color 350ms ease}.home-ref-outline-button:hover{border-color:var(--body-color-high);color:var(--body-bg);background:var(--body-color-high)}
+  .home-ref-work{position:relative;z-index:1;height:190vh;touch-action:pan-y}.home-ref-work-sticky{position:sticky;top:0;height:100vh;overflow:hidden;user-select:none;-webkit-user-select:none}.home-ref-work-sticky>canvas{position:absolute;inset:0;display:block;width:100%;height:100%}.home-ref-work-heading{position:absolute;z-index:2;top:clamp(5.5rem,9vw,7rem);left:clamp(1.25rem,3.5vw,3rem);display:flex;align-items:baseline;gap:.75rem;margin:0;color:var(--body-color-high);pointer-events:none}.home-ref-work-heading i{color:var(--body-color-low);font-family:var(--font-serif);font-size:1.1rem;font-style:italic}.home-ref-work-heading span{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:900;letter-spacing:-.01em}.home-ref-work-caption{position:absolute;z-index:2;bottom:clamp(1.25rem,3vw,2.5rem);left:clamp(1.25rem,3.5vw,3rem);display:flex;max-width:min(80vw,45rem);flex-direction:column;gap:.6rem;pointer-events:none}.home-ref-work-caption i{color:var(--body-color-low);font-family:var(--font-serif);font-size:1rem;font-style:italic}.home-ref-work-caption h2{max-width:13ch;margin:0;color:var(--body-color-high);font-family:var(--font-heading);font-size:clamp(2.5rem,7vw,7rem);font-weight:900;letter-spacing:-.035em;line-height:.9;text-wrap:balance}.home-ref-work-caption span{color:var(--body-color-normal);font-size:.8rem;font-weight:700;letter-spacing:.06em}.home-ref-work-controls{position:absolute;z-index:3;right:clamp(1.25rem,3.5vw,3rem);bottom:clamp(1.25rem,3vw,2.5rem);display:flex;flex-direction:column;align-items:flex-end;gap:1rem}.home-ref-work-controls div{display:flex;gap:.5rem}.home-ref-work-controls button{display:grid;width:2.75rem;height:2.75rem;place-items:center;border:1px solid hsl(220 30% 90% / .2);color:var(--body-color-high);background:hsl(220 23% 5% / .35);font:700 1rem var(--font-heading);cursor:pointer;backdrop-filter:blur(16px);transition:background 350ms ease,color 350ms ease}.home-ref-work-controls button:hover{color:var(--body-bg);background:var(--body-color-high)}.home-ref-work-controls span{color:var(--body-color-lower);font-size:.72rem;font-weight:700;letter-spacing:.08em;white-space:nowrap}.home-ref-work-panel{position:absolute;z-index:4;inset:0;display:flex;align-items:flex-end;flex-direction:column;justify-content:flex-end;gap:1.25rem;padding:6rem clamp(1.25rem,3.5vw,3rem) clamp(1.25rem,3vw,2.5rem) 30%;color:var(--body-color-medium);background:linear-gradient(to top left,hsl(220 23% 5%) 0%,hsl(220 23% 5% / .92) 22%,hsl(220 23% 5% / .55) 42%,transparent 62%);text-align:right;user-select:text}.home-ref-work-panel[hidden]{display:none}.home-ref-work-panel>button{position:absolute;top:5.5rem;right:clamp(1.25rem,3.5vw,3rem);width:2.75rem;height:2.75rem;border:1px solid var(--hr-bg);color:var(--body-color-high);background:transparent;font-size:1.4rem;cursor:pointer}.home-ref-work-panel i{color:var(--body-color-low);font-family:var(--font-serif);font-size:1rem;font-style:italic}.home-ref-work-panel h3{max-width:12ch;margin:0;color:var(--body-color-high);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;letter-spacing:-.03em;line-height:.95}.home-ref-work-panel p{max-width:28rem;margin:0;font-family:var(--font-serif);font-size:1.05rem;line-height:1.7}.home-ref-work-panel a{display:inline-flex;min-height:2.75rem;align-items:center;padding:.55rem 1.4rem;color:var(--body-bg);background:var(--body-color-high);font-size:.8rem;font-weight:700;letter-spacing:.04em;text-decoration:none}
+  .home-ref-contact{position:relative;z-index:1;display:flex;min-height:max(100vh,46rem);flex-direction:column;justify-content:flex-end;gap:clamp(2rem,5vw,4rem);padding:7rem 0 clamp(1.25rem,3vw,2rem);overflow:hidden}.home-ref-marquee{position:absolute;top:7rem;left:0;right:0;display:flex;flex-direction:column;gap:.1em;color:transparent;font-family:var(--font-heading);font-size:clamp(3.5rem,11vw,11rem);font-weight:900;letter-spacing:-.04em;line-height:.95;opacity:.8;pointer-events:none;white-space:nowrap}.home-ref-marquee div{display:flex;gap:.5em;width:max-content;-webkit-text-stroke:1.5px hsl(220 18% 85% / .22);animation:home-marquee 28s linear infinite}.home-ref-marquee div:last-child{opacity:.6;animation-direction:reverse;animation-duration:34s}.home-ref-marquee em{color:hsl(220 18% 85% / .3);font-family:'Instrument Serif',var(--font-serif);font-style:italic;font-weight:400;-webkit-text-stroke:0}@keyframes home-marquee{to{transform:translateX(-28%)}}.home-ref-contact-content{position:relative;display:flex;flex-direction:column;gap:clamp(1.25rem,3vw,2rem);padding:0 clamp(1.25rem,3.5vw,3rem)}.home-ref-contact-kicker{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;margin:0;color:var(--body-color-low);font-size:.8rem;font-weight:700;letter-spacing:.08em}.home-ref-contact-kicker>span{display:flex;align-items:baseline;gap:1rem;white-space:nowrap}.home-ref-contact-kicker i{color:var(--body-color-lower);font-family:'Instrument Serif',var(--font-serif);font-size:clamp(3rem,6vw,5rem);font-style:italic;font-weight:400;letter-spacing:0;line-height:.8}.home-ref-contact-kicker b{display:block;width:.5rem;height:.5rem;border-radius:50%;background:var(--body-color-high);animation:home-pulse 1.8s ease-in-out infinite}@keyframes home-pulse{50%{opacity:.25}}.home-ref-contact-kicker time{color:var(--body-color-normal);font-family:var(--font-serif);font-size:.95rem;font-style:italic;font-weight:400;letter-spacing:0}.home-ref-contact h2{display:flex;max-width:12ch;flex-wrap:wrap;gap:0 .22em;margin:0;color:var(--body-color-high);font-family:var(--font-heading);font-size:clamp(3.25rem,9vw,10rem);font-weight:900;letter-spacing:-.04em;line-height:.9}.home-ref-contact h2 em{font-family:'Instrument Serif',var(--font-serif);font-style:italic;font-weight:400}.home-ref-contact-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem 2rem}.home-ref-contact-actions a{display:inline-flex;align-items:center;gap:1rem;min-height:4rem;text-decoration:none;transition:background 350ms ease,color 350ms ease,border-color 350ms ease}.home-ref-whatsapp{padding:.9rem 1.75rem;border:2px solid var(--body-color-high);color:var(--body-color-high);font-family:'Instrument Serif',var(--font-serif);font-size:clamp(1.5rem,3vw,2.5rem);font-style:italic;line-height:1;white-space:nowrap}.home-ref-whatsapp b{font-family:var(--font-heading);font-size:.7em;font-style:normal}.home-ref-email{padding:.9rem 1.75rem;border:2px solid hsl(220 30% 90% / .25);color:var(--body-color-medium);font-size:clamp(.95rem,1.4vw,1.1rem);font-weight:700;letter-spacing:.04em;white-space:nowrap}.home-ref-contact-actions a:hover{border-color:var(--body-color-high);color:var(--body-bg);background:var(--body-color-high)}.home-ref-footer{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;margin:0 clamp(1.25rem,3.5vw,3rem);padding-top:1.25rem;border-top:1px solid hsl(220 30% 90% / .12)}.home-ref-footer nav{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem}.home-ref-footer a{color:var(--body-color-normal);font-size:.85rem;font-weight:700;letter-spacing:.06em;text-decoration:none;transition:color 350ms ease,transform 350ms ease}.home-ref-footer a:hover{color:var(--body-color-high);transform:translateY(-3px)}.home-ref-footer>span{color:var(--body-color-lower);font-family:var(--font-serif);font-size:.9rem;font-style:italic;white-space:nowrap}
+  /* Screenshot reference composition: generous editorial canvas with independent left/right anchors. */
+  .home-ref-chapter-area{min-height:300vh}.home-ref-field{position:absolute;inset:0;height:100%;margin:0}.home-ref-field canvas{position:sticky;top:0;height:100vh}.home-ref-section{min-height:100vh;padding:clamp(5rem,10vw,10rem) clamp(1.25rem,3.5vw,3rem)}
+  .home-ref-ai{display:block}.home-ref-ai-stack{position:relative;z-index:2;width:min(28vw,23rem);max-width:none;margin-top:clamp(10rem,18vh,16rem);gap:1rem}.home-ref-ai .home-ref-number{font-size:.7rem}.home-ref-ai h2{max-width:9ch;font-size:clamp(3rem,5.7vw,6rem);line-height:.78}.home-ref-ai h2 em{display:block;font-size:1.1em;line-height:.88}.home-ref-ai-copy{max-width:24rem;margin:0;color:var(--body-color-normal);font-family:var(--font-serif);font-size:clamp(.88rem,1.1vw,1.05rem);line-height:1.5}.home-ref-ai>.home-ref-console{position:absolute;z-index:2;top:38%;right:clamp(5rem,15vw,18rem);width:min(30vw,29rem);transform:translateY(-50%)}.home-ref-ai .home-ref-console pre{min-height:10rem;font-size:clamp(.8rem,1vw,1rem);line-height:1.55}.home-ref-ai .home-ref-console header{font-size:.62rem}
+  .home-ref-design{position:relative;display:block;min-height:78vh;padding-top:clamp(4rem,7vw,7rem)}.home-ref-design>.home-ref-number{position:absolute;top:18%;left:clamp(1.25rem,3.5vw,3rem);z-index:2;font-size:.7rem}.home-ref-design h2{position:absolute;top:32%;left:clamp(1.25rem,3.5vw,3rem);margin:0;color:var(--body-color-high);font-size:clamp(8rem,19vw,22rem);font-weight:900;letter-spacing:-.08em;line-height:.65;-webkit-text-stroke:0}.home-ref-design-columns{position:absolute;z-index:2;top:38%;right:clamp(1.25rem,7vw,8rem);width:min(35vw,34rem);grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem}.home-ref-design-columns article{min-height:10rem;gap:.45rem;padding:1rem;background:hsl(220 23% 5% / .28) url('/img/noise.png')}.home-ref-design-columns h3{font-size:1rem}.home-ref-design-columns p{font-size:.82rem;line-height:1.4}.home-ref-design-columns span{font-size:.62rem;line-height:1.35}
+  .home-ref-philosophy{position:relative;display:block;min-height:100vh;padding-top:clamp(7rem,14vw,12rem)}.home-ref-philosophy-copy{position:absolute;z-index:2;top:34%;left:clamp(1.25rem,6vw,7rem);width:min(28vw,24rem)}.home-ref-philosophy-copy .home-ref-number{font-size:.7rem}.home-ref-philosophy-copy h2{margin:1rem 0;color:var(--body-color-high);font-size:clamp(2.4rem,4.2vw,4.75rem);font-weight:900;letter-spacing:-.05em;line-height:.8}.home-ref-philosophy-copy h2 em{font-family:'Instrument Serif',var(--font-serif);font-size:1.15em;font-style:italic;font-weight:400}.home-ref-philosophy-copy>p:last-child{margin:0;color:var(--body-color-normal);font-family:var(--font-serif);font-size:.9rem;line-height:1.45}.home-ref-philosophy-stack{position:absolute;z-index:2;top:34%;right:clamp(1.25rem,7vw,8rem);width:min(31vw,31rem);max-width:none;align-items:stretch;gap:1.4rem}.home-ref-philosophy-quote{min-height:0;justify-content:flex-start;padding:1.25rem;color:var(--body-color-normal);background:hsl(220 23% 5% / .55) url('/img/noise.png');font-size:clamp(1.65rem,2.2vw,2.75rem);line-height:.9;text-align:left}.home-ref-essays{max-width:none;padding:.3rem 1.1rem;background:hsl(220 23% 5% / .25)}.home-ref-essays a{padding:.65rem 0}.home-ref-essays strong{font-size:.78rem}.home-ref-outline-button{align-self:flex-end}
+  .home-ref-work{height:112vh}.home-ref-work-heading{top:clamp(5rem,9vw,8rem);font-size:.82rem}.home-ref-work-caption{bottom:clamp(2rem,7vw,6rem);left:clamp(1.25rem,3.5vw,3rem)}.home-ref-work-caption h2{max-width:9ch;font-size:clamp(3rem,5.5vw,6.5rem);line-height:.83}.home-ref-work-controls{right:clamp(1.25rem,3.5vw,3rem);bottom:clamp(2rem,7vw,6rem)}
+  .home-ref-contact{min-height:100vh;padding-top:clamp(9rem,14vw,14rem)}.home-ref-contact-content{padding-left:clamp(1.25rem,5vw,6rem)}.home-ref-contact h2{max-width:10ch;font-size:clamp(3.5rem,7vw,9rem);line-height:.78}.home-ref-contact h2 em{display:block}.home-ref-whatsapp,.home-ref-email{min-height:3rem;padding:.7rem 1.25rem}.home-ref-footer{margin-top:2rem}
+  @media(max-width:52rem){.home-ref-header{grid-template-columns:1fr;padding:.6rem .75rem}.home-ref-header-brand>span{display:none}.home-ref-header nav{gap:.35rem .8rem;font-size:.68rem}.home-ref-chapter-area{min-height:0}.home-ref-field{position:sticky;top:0;height:100vh;margin-bottom:-100vh}.home-ref-section{min-height:100svh}.home-ref-ai-stack{width:100%;margin-top:8rem}.home-ref-ai>.home-ref-console{position:relative;top:auto;right:auto;width:100%;margin-top:2rem;transform:none}.home-ref-design{min-height:auto;padding-bottom:5rem}.home-ref-design>.home-ref-number,.home-ref-design h2,.home-ref-design-columns,.home-ref-philosophy-copy,.home-ref-philosophy-stack{position:relative;top:auto;right:auto;left:auto;width:auto;margin-top:2rem}.home-ref-design h2{font-size:clamp(5rem,22vw,11rem)}.home-ref-design-columns{grid-template-columns:1fr}.home-ref-design-columns article{min-height:0}.home-ref-philosophy{min-height:auto;padding-bottom:5rem}.home-ref-philosophy-stack{align-items:stretch}.home-ref-work-panel{padding-left:15%}.home-ref-work-caption{max-width:calc(100vw - 2.5rem)}}@media(max-width:36rem){.home-ref-header nav a:nth-child(-n+2){display:none}.home-ref-header nav{gap:.35rem .7rem}.home-ref-hero{padding-top:6.5rem}.home-ref-hero-top{gap:1rem}.home-ref-identity span{font-size:1.35rem}.home-ref-identity em{margin-top:-.6rem;font-size:1.65rem}.home-ref-chapters{width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}.home-ref-chapters a{font-size:.68rem}.home-ref-hero-end h1 span,.home-ref-hero-end h1 span:nth-child(2){font-size:clamp(2.25rem,12vw,4.5rem)}.home-ref-hero-end h1 em{font-size:clamp(2.8rem,12vw,5rem)}.home-ref-hero-meta{font-size:.62rem}.home-ref-hero-meta span{white-space:normal}.home-ref-philosophy-quote{font-size:2.2rem}.home-ref-essays time{display:none}.home-ref-contact{min-height:48rem}.home-ref-contact h2{font-size:clamp(3.25rem,16vw,5.5rem)}.home-ref-footer>span{font-size:.75rem}}
+  /* Design chapter: preserve three independent zones so the type, particle form,
+     and service cards never compete for the same visual space. */
+  @media (min-width:75.0625rem) {
+    .home-ref-design {
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(28rem,31rem);
+      grid-template-rows:auto minmax(0,1fr);
+      align-content:center;
+      column-gap:clamp(4rem,8vw,10rem);
+      row-gap:clamp(2rem,5vw,5rem);
+      min-height:120vh;
+      padding-block:clamp(6rem,9vw,9rem);
+    }
+    .home-ref-design>.home-ref-number {
+      position:static;
+      grid-column:1;
+      grid-row:1;
+      align-self:end;
+      margin:0;
+    }
+    .home-ref-design h2 {
+      position:static;
+      grid-column:1;
+      grid-row:2;
+      align-self:center;
+      max-width:6.3ch;
+      margin:0;
+      color:var(--body-color-high);
+      font-size:clamp(8rem,13.25vw,16rem);
+      letter-spacing:-.075em;
+      line-height:.72;
+      -webkit-text-stroke:0;
+    }
+    .home-ref-design-columns {
+      position:static;
+      grid-column:2;
+      grid-row:1 / 3;
+      align-self:center;
+      justify-self:end;
+      width:min(100%,31rem);
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.75rem;
+    }
+  }
+
+  @media (min-width:52.0625rem) and (max-width:75rem) {
+    .home-ref-design {
+      display:grid;
+      grid-template-columns:1fr;
+      grid-template-rows:auto auto minmax(14rem,28svh) auto;
+      gap:clamp(1.5rem,3vw,3rem);
+      min-height:110vh;
+      padding-block:clamp(5rem,8vw,7rem);
+    }
+    .home-ref-design>.home-ref-number,
+    .home-ref-design h2,
+    .home-ref-design-columns { position:static; margin:0; }
+    .home-ref-design>.home-ref-number { grid-row:1; }
+    .home-ref-design h2 {
+      grid-row:2;
+      max-width:6.3ch;
+      color:var(--body-color-high);
+      font-size:clamp(7rem,17vw,12rem);
+      line-height:.72;
+      -webkit-text-stroke:0;
+    }
+    .home-ref-design::before {
+      content:"";
+      grid-row:3;
+      min-height:14rem;
+      pointer-events:none;
+    }
+    .home-ref-design-columns {
+      grid-row:4;
+      width:100%;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.75rem;
+    }
+  }
+
+  @media (max-width:52rem) {
+    .home-ref-design {
+      display:grid;
+      grid-template-columns:1fr;
+      grid-template-rows:auto auto minmax(12rem,30svh) auto;
+      gap:clamp(1.5rem,6vw,2.5rem);
+      min-height:auto;
+      padding-block:6rem 5rem;
+    }
+    .home-ref-design>.home-ref-number,
+    .home-ref-design h2,
+    .home-ref-design-columns { position:static; margin:0; width:auto; }
+    .home-ref-design>.home-ref-number { grid-row:1; }
+    .home-ref-design h2 {
+      grid-row:2;
+      max-width:6.3ch;
+      color:var(--body-color-high);
+      font-size:clamp(5rem,22vw,11rem);
+      line-height:.72;
+      -webkit-text-stroke:0;
+    }
+    .home-ref-design::before {
+      content:"";
+      grid-column:1;
+      grid-row:3;
+      min-height:12rem;
+      pointer-events:none;
+    }
+    .home-ref-design-columns {
+      grid-column:1;
+      grid-row:4;
+      grid-template-columns:1fr;
+      gap:.75rem;
+    }
+  }
+</style>
+
+<script is:inline define:vars={{ globeWork }}>
+  const homeRoot = document.querySelector(".sintesis-home-ref")
+  if (homeRoot) {
+    const homeReduced = matchMedia("(prefers-reduced-motion: reduce)").matches
+    const homeBackground = homeRoot.querySelector("[data-sintesis-background]")
+    const homeMonolith = homeRoot.querySelector("[data-sintesis-monolith]")
+    const homeField = homeRoot.querySelector("[data-sintesis-field]")
+    const homeGlobe = homeRoot.querySelector("[data-sintesis-globe]")
+    const homeGeneration = homeRoot.querySelector("[data-home-generation]")
+    const homeClock = homeRoot.querySelector("[data-home-clock]")
+    const homePanel = homeRoot.querySelector("[data-globe-panel]")
+    const homeCaseLink = homeRoot.querySelector("[data-globe-case-link]")
+    const homeSections = [...homeRoot.querySelectorAll("[data-bg]")]
+
+    const setWork = (index) => {
+      const item = globeWork[index] ?? globeWork[0]
+      homeRoot.querySelector("[data-globe-index]").textContent = `${String(index + 1).padStart(2, "0")} / ${String(globeWork.length).padStart(2, "0")}`
+      homeRoot.querySelector("[data-globe-title]").textContent = item.title
+      homeRoot.querySelector("[data-globe-meta]").textContent = `${item.kind} · ${item.year}`
+      homeRoot.querySelector("[data-panel-index]").textContent = `${String(index + 1).padStart(2, "0")} — ${item.kind}, ${item.year}`
+      homeRoot.querySelector("[data-panel-title]").textContent = item.title
+      if (homeCaseLink) homeCaseLink.href = item.href
+    }
+
+    const updateClock = () => {
+      if (homeClock) homeClock.textContent = new Intl.DateTimeFormat("es-MX", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false, timeZone: "America/Mexico_City" }).format(new Date())
+    }
+    updateClock()
+    window.setInterval(updateClock, 1000)
+
+    const designWord = homeRoot.querySelector("[data-sintesis-design]")
+    homeRoot.querySelector(".home-ref-design")?.addEventListener("pointermove", (event) => {
+      if (!designWord) return
+      const rect = event.currentTarget.getBoundingClientRect()
+      const position = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width))
+      designWord.style.fontWeight = String(Math.round(300 + position * 600))
+      designWord.style.letterSpacing = `${(-0.02 - position * 0.05).toFixed(3)}em`
+    })
+
+    Promise.all([import("/scenes/fondo.js"), import("/scenes/v2/monolito.js"), import("/scenes/v2/campo.js"), import("/scenes/v2/globo.js")]).then(async ([background, monolith, field, globe]) => {
+      const scene = homeBackground ? background.mount(homeBackground, { reduced: homeReduced }) : null
+      let fieldApi = null
+      let activeSection = null
+      let sectionFrame = 0
+
+      const applySection = (section, force = false) => {
+        if (!section || (!force && section === activeSection)) return
+        activeSection = section
+        scene?.setMode(Number(section.getAttribute("data-bg") ?? 0))
+
+        const particle = section.getAttribute("data-particle")
+        if (particle) {
+          fieldApi?.setShape(particle)
+          homeField?.setAttribute("data-particle-shape", particle)
+        }
+      }
+
+      const currentSection = () => {
+        const marker = innerHeight * 0.5
+        return homeSections.reduce((closest, section) => {
+          const rect = section.getBoundingClientRect()
+          const distance = marker < rect.top ? rect.top - marker : marker > rect.bottom ? marker - rect.bottom : 0
+          const closestRect = closest.getBoundingClientRect()
+          const closestDistance = marker < closestRect.top ? closestRect.top - marker : marker > closestRect.bottom ? marker - closestRect.bottom : 0
+          return distance < closestDistance ? section : closest
+        }, homeSections[0])
+      }
+
+      const syncSection = () => {
+        sectionFrame = 0
+        applySection(currentSection())
+      }
+      const queueSectionSync = () => {
+        if (!sectionFrame) sectionFrame = requestAnimationFrame(syncSection)
+      }
+
+      const modeObserver = new IntersectionObserver(queueSectionSync, { rootMargin: "-49% 0px -49% 0px", threshold: 0 })
+      homeSections.forEach((section) => modeObserver.observe(section))
+      addEventListener("scroll", () => { scene?.setScroll(scrollY); queueSectionSync() }, { passive: true })
+      addEventListener("resize", queueSectionSync, { passive: true })
+      syncSection()
+
+      const hero = homeMonolith ? monolith.mount(homeMonolith, {
+        target: homeRoot.querySelector(".home-ref-hero"), reduced: homeReduced,
+        onGen: (index, name) => { if (homeGeneration) homeGeneration.textContent = `Generación ${String(index + 1).padStart(2, "0")} / 05 — ${name}` },
+      }) : null
+      homeRoot.querySelector("[data-sintesis-burst]")?.addEventListener("click", () => hero?.burst?.())
+      if (homeField) {
+        fieldApi = await field.mount(homeField, { target: homeRoot.querySelector(".home-ref-chapter-area"), reduced: homeReduced })
+        fieldApi.setShape("cloud")
+        applySection(activeSection ?? currentSection(), true)
+      }
+      if (!homeGlobe) return
+
+      let visibleIndex = 0
+      const globeApi = globe.mount(homeGlobe, {
+        images: globeWork.map((item) => item.image), reduced: homeReduced, initialIndex: 0, target: homeRoot.querySelector(".home-ref-work-sticky"),
+        onFront: (index) => { visibleIndex = index; setWork(index) },
+        onSelect: (index) => { if (index < 0) { homePanel.hidden = true; return }; visibleIndex = index; setWork(index); homePanel.hidden = false },
+      })
+      homeRoot.querySelector("[data-globe-prev]")?.addEventListener("click", () => globeApi.nudge(-1))
+      homeRoot.querySelector("[data-globe-next]")?.addEventListener("click", () => globeApi.nudge(1))
+      homeRoot.querySelector("[data-globe-close]")?.addEventListener("click", () => globeApi.close())
+      addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") globeApi.nudge(-1)
+        if (event.key === "ArrowRight") globeApi.nudge(1)
+        if (event.key === "Enter") globeApi.selectFront()
+        if (event.key === "Escape") globeApi.close()
+      })
+      setWork(visibleIndex)
+    })
+  }
+</script>

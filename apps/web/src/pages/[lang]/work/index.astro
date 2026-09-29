@@ -1,17 +1,126 @@
 ---
-import RedirectPage from "@/components/RedirectPage.astro"
-import { getLocaleStaticPaths } from "@/components/site"
-import { type Locale, localizedPath } from "@/i18n"
+import { getCollection } from "astro:content"
+import { getLocaleStaticPaths, isPublished, splitEntryId } from "@/components/site"
+import { getTranslations, type Locale, localizedPath } from "@/i18n"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
-export function getStaticPaths() {
-  return getLocaleStaticPaths()
-}
-
-interface Props {
-  locale: Locale
-}
-
+export function getStaticPaths() { return getLocaleStaticPaths() }
+interface Props { locale: Locale }
 const { locale } = Astro.props
+const translations = getTranslations(locale)
+const entries = await getCollection("work")
+const work = entries.map((entry) => ({ entry, identity: splitEntryId(entry.id) })).filter(({ entry, identity }) => identity?.locale === locale && isPublished(entry.data)).sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf())
+const years = [...new Set(work.map(({ entry }) => entry.data.date.getUTCFullYear()))]
+const copy = locale === "es"
+  ? {
+      archive: "Archivo seleccionado",
+      summary: "Una selección cronológica de identidades, productos y experiencias creadas con intención.",
+      pieces: "casos publicados",
+      browse: "Explorar archivo",
+      view: "Ver caso",
+      cases: "casos",
+      footer: "Cada proyecto es una conversación entre contexto, forma y función.",
+    }
+  : {
+      archive: "Selected archive",
+      summary: "A chronological selection of identities, products, and experiences made with intention.",
+      pieces: "published cases",
+      browse: "Browse archive",
+      view: "View case",
+      cases: "cases",
+      footer: "Every project is a conversation between context, form, and function.",
+    }
 ---
 
-<RedirectPage {locale} to={localizedPath(locale, "/")} />
+<SintesisLayout locale={locale} page="work" title={locale === "es" ? "Trabajo" : "Work"} description={translations.head.description} sceneMode={4}>
+  <section class="sintesis-work-index">
+    <header class="sintesis-work-index__hero">
+      <div class="sintesis-work-index__eyebrow" data-reveal="wipe"><i>04</i><span>{copy.archive}</span></div>
+      <div class="sintesis-work-index__title-row">
+        <h1 data-reveal="mask">{locale === "es" ? "Trabajo" : "Work"}</h1>
+        <p data-reveal="wipe-r" data-delay="150">{locale === "es" ? "Hecho con intención." : "Made with intention."}</p>
+      </div>
+      <div class="sintesis-work-index__intro" data-reveal="rise" data-delay="220">
+        <p>{copy.summary}</p>
+        <dl>
+          <div><dt>{copy.pieces}</dt><dd>{String(work.length).padStart(2, "0")}</dd></div>
+          <div><dt>{locale === "es" ? "Periodo" : "Period"}</dt><dd>{Math.min(...years)}—{Math.max(...years)}</dd></div>
+        </dl>
+      </div>
+      <nav class="sintesis-work-index__years" aria-label={copy.browse} data-reveal="rise" data-delay="300">
+        {years.map((year) => <a href={`#year-${year}`}>{year}</a>)}
+      </nav>
+    </header>
+
+    <div id="archivo" class="sintesis-work-index__archive">
+      {years.map((year, yearIndex) => {
+        const worksForYear = work.filter(({ entry }) => entry.data.date.getUTCFullYear() === year)
+        return (
+          <section id={`year-${year}`} class="sintesis-work-year">
+            <header data-reveal="wipe">
+              <h2>{year}</h2>
+              <p>{worksForYear.length} {copy.cases}</p>
+            </header>
+            <div class="sintesis-work-grid" data-reveal="stagger">
+              {worksForYear.map(({ entry, identity }, index) => identity && (
+                <a
+                  class:list={{ "sintesis-work-card": true, "sintesis-work-card--feature": index === 0, "sintesis-work-card--wide": index > 0 && index % 4 === 0 }}
+                  href={localizedPath(locale, `/work/${identity.slug}/`)}
+                >
+                  <img src={`/img/work/${identity.slug}/${entry.data.hero ?? `${identity.slug}.png`}`} alt={entry.data.title} loading={yearIndex === 0 && index < 2 ? "eager" : "lazy"} />
+                  <span>
+                    <small>{year} · {entry.data.working === false ? (locale === "es" ? "Archivo" : "Archive") : copy.archive}</small>
+                    <b>{entry.data.title}</b>
+                    <i>{copy.view} <strong aria-hidden="true">↗</strong></i>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )
+      })}
+    </div>
+    <p class="sintesis-work-index__closing" data-reveal="rise">{copy.footer}</p>
+  </section>
+</SintesisLayout>
+
+<style is:global>
+  .sintesis-work-index { padding:clamp(7rem,12vw,10rem) clamp(1.25rem,3.5vw,3rem) clamp(3rem,7vw,6rem); }
+  .sintesis-work-index__hero { display:grid; min-height:calc(100vh - 6rem); align-content:space-between; gap:clamp(2rem,6vw,6rem); padding-bottom:clamp(3rem,7vw,6rem); border-bottom:1px solid hsl(220 30% 90% / .12); }
+  .sintesis-work-index__eyebrow { display:flex; align-items:baseline; gap:.9rem; color:var(--body-color-low); font:700 .75rem var(--font-heading); letter-spacing:.07em; }
+  .sintesis-work-index__eyebrow i { color:var(--body-color-lower); font:italic clamp(2.5rem,5vw,4.5rem)/.75 'Instrument Serif',var(--font-serif); letter-spacing:0; }
+  .sintesis-work-index__title-row { display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:1rem 3rem; }
+  .sintesis-work-index__title-row h1 { margin:0; color:var(--body-color-high); font:900 clamp(4.5rem,15vw,15rem)/.74 var(--font-heading); letter-spacing:-.075em; }
+  .sintesis-work-index__title-row p { margin:0 0 .1em; color:var(--body-color-medium); font:italic clamp(2rem,4vw,4.5rem)/.92 'Instrument Serif',var(--font-serif); }
+  .sintesis-work-index__intro { display:grid; max-width:68rem; grid-template-columns:minmax(0,1.25fr) minmax(16rem,.75fr); align-items:end; gap:2rem clamp(3rem,8vw,9rem); }
+  .sintesis-work-index__intro > p { max-width:28ch; margin:0; color:var(--body-color-high); font:800 clamp(1.25rem,2vw,1.75rem)/1.25 var(--font-heading); letter-spacing:-.02em; }
+  .sintesis-work-index__intro dl { display:grid; margin:0; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+  .sintesis-work-index__intro dl div { display:flex; padding-top:.75rem; flex-direction:column; gap:.35rem; border-top:1px solid hsl(220 30% 90% / .14); }
+  .sintesis-work-index__intro dt { color:var(--body-color-low); font:700 .68rem var(--font-heading); letter-spacing:.06em; text-transform:uppercase; }
+  .sintesis-work-index__intro dd { margin:0; color:var(--body-color-high); font:italic 1.65rem/1 'Instrument Serif',var(--font-serif); }
+  .sintesis-work-index__years { display:flex; flex-wrap:wrap; gap:.45rem .8rem; }
+  .sintesis-work-index__years a { padding:.45rem 0; color:var(--body-color-low); font:700 .78rem var(--font-heading); letter-spacing:.06em; text-decoration:none; transition:color 250ms ease,transform 250ms ease; }
+  .sintesis-work-index__years a::before { content:"/"; margin-right:.45rem; color:var(--body-color-lower); }
+  .sintesis-work-index__years a:hover { color:var(--body-color-high); transform:translateX(.25rem); }
+  .sintesis-work-index__archive { display:flex; flex-direction:column; }
+  .sintesis-work-year { padding:clamp(4rem,9vw,8rem) 0 0; scroll-margin-top:5rem; }
+  .sintesis-work-year > header { display:flex; margin-bottom:clamp(1.25rem,3vw,2.25rem); align-items:baseline; justify-content:space-between; gap:1rem; border-bottom:1px solid hsl(220 30% 90% / .12); }
+  .sintesis-work-year h2 { margin:0 0 -.08em; color:var(--body-color-high); font:italic clamp(3.5rem,9vw,9rem)/.8 'Instrument Serif',var(--font-serif); letter-spacing:-.05em; }
+  .sintesis-work-year p { margin:0 0 .75rem; color:var(--body-color-low); font:700 .72rem var(--font-heading); letter-spacing:.06em; text-transform:uppercase; }
+  .sintesis-work-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:clamp(.65rem,1.5vw,1.25rem); }
+  .sintesis-work-card { position:relative; display:flex; min-height:clamp(16rem,28vw,28rem); grid-column:span 4; align-items:flex-end; overflow:hidden; isolation:isolate; color:var(--body-color-high); background:hsl(220 23% 7%); text-decoration:none; }
+  .sintesis-work-card--feature { grid-column:span 7; min-height:clamp(20rem,38vw,40rem); }
+  .sintesis-work-card--wide { grid-column:span 5; }
+  .sintesis-work-card::after { position:absolute; z-index:-1; inset:0; content:""; background:linear-gradient(to top,hsl(220 23% 4% / .96),transparent 62%); }
+  .sintesis-work-card img { position:absolute; z-index:-2; inset:0; width:100%; height:100%; opacity:.88; filter:saturate(.72) contrast(1.04); object-fit:cover; transition:opacity 450ms ease,filter 700ms ease,transform 900ms cubic-bezier(.2,.7,.1,1); }
+  .sintesis-work-card:hover img { opacity:1; filter:saturate(1) contrast(1.04); transform:scale(1.045); }
+  .sintesis-work-card > span { display:flex; width:100%; padding:clamp(1rem,2.2vw,2rem); flex-direction:column; gap:.38rem; }
+  .sintesis-work-card small { color:var(--body-color-normal); font:700 .68rem var(--font-heading); letter-spacing:.065em; text-transform:uppercase; }
+  .sintesis-work-card b { max-width:12ch; color:var(--body-color-high); font:900 clamp(1.5rem,3vw,3.5rem)/.92 var(--font-heading); letter-spacing:-.04em; }
+  .sintesis-work-card i { display:flex; margin-top:.45rem; align-items:center; gap:.4rem; color:var(--body-color-medium); font:italic 1.1rem 'Instrument Serif',var(--font-serif); }
+  .sintesis-work-card strong { font:700 1rem var(--font-heading); font-style:normal; transition:transform 250ms ease; }
+  .sintesis-work-card:hover strong { transform:translate(.2rem,-.2rem); }
+  .sintesis-work-index__closing { max-width:18ch; padding-top:clamp(6rem,12vw,12rem); margin:0; color:var(--body-color-high); font:900 clamp(3rem,8vw,8rem)/.84 var(--font-heading); letter-spacing:-.055em; }
+  @media (max-width:60rem) { .sintesis-work-index__hero { min-height:auto; } .sintesis-work-index__intro { grid-template-columns:1fr; max-width:40rem; } .sintesis-work-card { grid-column:span 6; } .sintesis-work-card--feature { grid-column:span 12; } .sintesis-work-card--wide { grid-column:span 6; } }
+  @media (max-width:36rem) { .sintesis-work-index { padding-top:6rem; } .sintesis-work-index__title-row { align-items:flex-start; flex-direction:column; } .sintesis-work-index__title-row h1 { font-size:clamp(4rem,22vw,6rem); } .sintesis-work-index__intro dl { max-width:18rem; } .sintesis-work-grid { grid-template-columns:1fr; } .sintesis-work-card,.sintesis-work-card--feature,.sintesis-work-card--wide { min-height:18rem; grid-column:1; } .sintesis-work-card--feature { min-height:24rem; } .sintesis-work-index__closing { font-size:clamp(2.75rem,14vw,4.5rem); } }
+</style>

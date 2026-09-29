@@ -1,0 +1,46 @@
+---
+import Footer from "@/components/Footer.astro"
+import type { Locale } from "@/i18n"
+import BaseLayout from "./BaseLayout.astro"
+
+interface Props {
+  locale: Locale
+  page: string
+  title: string
+  description?: string
+  image?: string
+  type?: "website" | "article"
+  publishedTime?: Date | string
+  noindex?: boolean
+  sceneMode: number
+}
+
+const {
+  locale,
+  page,
+  title,
+  description,
+  image,
+  type,
+  publishedTime,
+  noindex,
+  sceneMode,
+} = Astro.props
+---
+
+<BaseLayout
+  {locale}
+  {title}
+  {description}
+  {image}
+  {type}
+  {publishedTime}
+  {noindex}
+  sceneMode={sceneMode}
+  bodyClass={`page page-${page} sintesis-route sintesis-${page}`}
+>
+  <main id="main-content" class={`sintesis-page sintesis-${page}__page`}>
+    <slot />
+  </main>
+  <Footer {locale} />
+</BaseLayout>

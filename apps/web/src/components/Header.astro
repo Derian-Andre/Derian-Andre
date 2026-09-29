@@ -2,7 +2,6 @@
 import {
   getTranslations,
   type Locale,
-  localeMetadata,
   locales,
   localizedPath,
   stripLocalePrefix,
@@ -18,12 +17,20 @@ const translations = getTranslations(locale)
 const currentPath = Astro.url.pathname
 const pathWithoutLocale = stripLocalePrefix(currentPath)
 const alternateLocales = locales.filter((candidate) => candidate !== locale)
+const routeKey = pathWithoutLocale.replace(/^\/+|\/+$/g, "").split("/")[0] || "home"
+const routeParts = pathWithoutLocale.replace(/^\/+|\/+$/g, "").split("/").filter(Boolean)
+const isArticle = routeKey === "blog" && routeParts.length > 1 && routeParts[1] !== "page"
+const isWorkCase = routeKey === "work" && routeParts.length > 1
+const routeIndex: Record<string, string> = { work: isWorkCase ? "01" : "04", projects: "02", blog: isArticle ? "04" : "03", about: "05", services: "06", curriculum: "07", "404": "404" }
+const routeLabel: Record<string, string> = { work: isWorkCase ? (locale === "es" ? "Caso" : "Case") : (locale === "es" ? "Trabajo" : "Work"), projects: locale === "es" ? "Proyectos" : "Projects", blog: isArticle ? (locale === "es" ? "Artículo" : "Article") : "Blog", about: "Ego", services: translations.header.services, curriculum: locale === "es" ? "Curriculum Vitae" : "Curriculum Vitae", "404": locale === "es" ? "Error en la matrix" : "Error" }
+const pageIndex = routeIndex[routeKey]
 const menu = [
-  { key: "home", path: "/" },
-  { key: "blog", path: "/blog/" },
-  { key: "about", path: "/about/" },
-  { key: "curriculum", path: "/curriculum/" },
-  { key: "services", path: "/services/" },
+  { key: "work", path: "/work/", label: locale === "es" ? "Trabajo" : "Work" },
+  { key: "projects", path: "/projects/", label: locale === "es" ? "Proyectos" : "Projects" },
+  { key: "blog", path: "/blog/", label: translations.header.blog },
+  { key: "about", path: "/about/", label: translations.header.about },
+  { key: "services", path: "/services/", label: translations.header.services },
+  { key: "curriculum", path: "/curriculum/", label: "CV" },
 ] as const
 ---
 
@@ -33,77 +40,28 @@ const menu = [
       <span class="sr-only">Derian André Castillo Franco</span>
       <BrandMark />
     </a>
+    {pageIndex && <span class="site-header__page"><i>{pageIndex}</i><b>{routeLabel[routeKey]}</b></span>}
   </div>
 
-  <nav class="site-navigation" aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"}>
-    {
-      menu.map((item) => {
-        const href = localizedPath(locale, item.path);
-        const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
-        const normalizedHref = href.replace(/\/$/, "") || "/";
-        const active =
-          item.path === "/"
-            ? normalizedCurrent === normalizedHref
-            : normalizedCurrent === normalizedHref || normalizedCurrent.startsWith(`${normalizedHref}/`);
+  <div class="site-header__navigation">
+    <nav class="site-navigation" aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"}>
+      {
+        menu.map((item) => {
+          const href = localizedPath(locale, item.path);
+          const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
+          const normalizedHref = href.replace(/\/$/, "") || "/";
+          const active =
+            normalizedCurrent === normalizedHref || normalizedCurrent.startsWith(`${normalizedHref}/`);
 
-        return (
-          <a class="site-navigation__item" href={href} aria-current={active ? "page" : undefined}>
-            {translations.header[item.key]}
-          </a>
-        );
-      })
-    }
-    {
-      alternateLocales.map((alternateLocale) => (
-        <a
-          class="site-navigation__item site-navigation__language"
-          href={localizedPath(alternateLocale, pathWithoutLocale)}
-          hreflang={alternateLocale}
-          lang={alternateLocale}
-          aria-label={localeMetadata[alternateLocale].switchLabel}
-        >
-          {alternateLocale}
-        </a>
-      ))
-    }
-  </nav>
+          return (
+            <a class="site-navigation__item" href={href} aria-current={active ? "page" : undefined}>
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </nav>
 
-  <div class="site-header__bottom">
-    <button
-      class="theme-toggle"
-      type="button"
-      data-theme-toggle
-      aria-label={locale === "es" ? "Cambiar tema de color" : "Change color theme"}
-      aria-pressed="false"
-    >
-      <svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="4"></circle>
-        <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
-      </svg>
-      <svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
-      </svg>
-    </button>
+    <div class="site-header__locale">{alternateLocales.map((alternateLocale) => <a href={localizedPath(alternateLocale, pathWithoutLocale)} hreflang={alternateLocale} lang={alternateLocale}>{alternateLocale.toUpperCase()}</a>)}</div>
   </div>
 </header>
-
-<script>
-  const themeButtons = document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]");
-
-  for (const button of themeButtons) {
-    const updateState = () => {
-      button.setAttribute("aria-pressed", String(document.documentElement.dataset.theme === "dark"));
-    };
-
-    updateState();
-    button.addEventListener("click", () => {
-      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = nextTheme;
-      document.documentElement.classList.remove("light", "dark");
-      document.documentElement.classList.add(nextTheme);
-      document.documentElement.style.colorScheme = nextTheme;
-      localStorage.setItem("theme", nextTheme);
-      updateState();
-    });
-  }
-</script>

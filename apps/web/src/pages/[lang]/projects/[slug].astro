@@ -1,10 +1,9 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content"
 import LegacyContent from "@/components/LegacyContent.astro"
-import ResponsiveImage from "@/components/ResponsiveImage.astro"
 import { isPublished, splitEntryId } from "@/components/site"
-import { getTranslations, type Locale } from "@/i18n"
-import PageLayout from "@/layouts/PageLayout.astro"
+import { getTranslations, type Locale, localizedPath } from "@/i18n"
+import SintesisLayout from "@/layouts/SintesisLayout.astro"
 
 export async function getStaticPaths() {
   const entries = await getCollection("projects")
@@ -28,42 +27,43 @@ interface Props {
 const { entry, locale, slug } = Astro.props
 const translations = getTranslations(locale)
 const { Content } = await render(entry)
-const image = entry.data.hero ? `/img/projects/${slug}/${entry.data.hero}` : undefined
+const image = entry.data.hero
+  ? slug === "orca-tools"
+    ? `/img/projects/${slug}/${entry.data.hero}`
+    : `/img/projects/${entry.data.hero}`
+  : undefined
 ---
 
-<PageLayout
+<SintesisLayout
   locale={locale}
   page="projects"
   title={entry.data.title}
-  subtitle={entry.data.subtitle}
   description={entry.data.description ?? translations.head.description}
   image={image}
   type="article"
   publishedTime={entry.data.date}
+  sceneMode={5}
 >
-  <time class="content-date" datetime={entry.data.date.toISOString()}>
-    {new Intl.DateTimeFormat(locale === "es" ? "es-MX" : "en-US", { dateStyle: "long", timeZone: "UTC" }).format(entry.data.date)}
-  </time>
-  <LegacyContent class="article">
-    <Content />
-  </LegacyContent>
-  <hr />
-  <h2>{translations.projects.sponsor.title}</h2>
-  <p>{translations.projects.sponsor.description}</p>
-  <div class="button-row">
-    <a class="button" target="_blank" rel="noreferrer nofollow noopener" href="https://github.com/sponsors/derianandre">
-      {translations.projects.sponsor.github}
-    </a>
-    <a class="button" target="_blank" rel="noreferrer nofollow noopener" href="https://paypal.me/DerianAndre">
-      {translations.projects.sponsor.paypal}
-    </a>
-  </div>
-
-  {
-    image && (
-      <section slot="side" class="page-side">
-        <ResponsiveImage src={image} alt={entry.data.title} loading="eager" fetchpriority="high" />
-      </section>
-    )
-  }
-</PageLayout>
+  <article class="sintesis-project-detail">
+    <header>
+      {image && <img data-reveal="blur" src={image} alt={entry.data.title} />}
+      <div>
+        <a data-reveal="wipe" href={localizedPath(locale, "/projects/")}>← {locale === "es" ? "Todos los proyectos" : "All projects"}</a>
+        <time data-reveal="wipe" data-delay="80" datetime={entry.data.date.toISOString()}>{new Intl.DateTimeFormat(locale === "es" ? "es-MX" : "en-US", { dateStyle: "long", timeZone: "UTC" }).format(entry.data.date)}</time>
+        <h1 data-reveal="mask" data-delay="150">{entry.data.title}</h1>
+        {entry.data.subtitle && <p>{entry.data.subtitle}</p>}
+      </div>
+    </header>
+    <section class="sintesis-project-detail__content" data-reveal="stagger">
+      <LegacyContent class="sintesis-prose"><Content /></LegacyContent>
+    </section>
+    <aside class="sintesis-glass-card sintesis-project-detail__support" data-reveal="rise">
+      <h2>{translations.projects.sponsor.title}</h2>
+      <p>{translations.projects.sponsor.description}</p>
+      <div class="sintesis-actions">
+        <a class="sintesis-button" target="_blank" rel="noreferrer nofollow noopener" href="https://github.com/sponsors/derianandre">{translations.projects.sponsor.github}</a>
+        <a class="sintesis-button" target="_blank" rel="noreferrer nofollow noopener" href="https://paypal.me/DerianAndre">{translations.projects.sponsor.paypal}</a>
+      </div>
+    </aside>
+  </article>
+</SintesisLayout>

@@ -31,6 +31,7 @@ export default {
     recent: "Recent posts",
     page: "Page ",
     go_back: "Go back to blog",
+    read_article: "Read article",
   },
   about: {
     title: "Who am I?",
