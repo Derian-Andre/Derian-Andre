@@ -1,32 +1,51 @@
 ---
+import BrandMark from "@/components/BrandMark.astro"
 import { getLocaleStaticPaths } from "@/components/site"
 import { type Locale, localizedPath } from "@/i18n"
-import BrandMark from "@/components/BrandMark.astro"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
 export function getStaticPaths() {
   return getLocaleStaticPaths()
 }
 
-interface Props { locale: Locale }
+interface Props {
+  locale: Locale
+}
 const { locale } = Astro.props
 const globeWork = [
   ["Fundación de 10", "Cliente", "2016", "fundacion-de-10.jpg"],
-  ["Blue Moon", "Cliente", "2021", "blue-moon.jpg"], ["Shellhook", "Cliente", "2021", "shellhook.jpg"],
-  ["SVGO", "Cliente", "2021", "svgo.jpg"], ["Nútrete con Ciencia", "Cliente", "2021", "nutrete-con-ciencia.jpg"],
-  ["Constructora GRAN", "Cliente", "2020", "constructora-gran.jpg"], ["Paxut", "Cliente", "2019", "paxut.jpg"],
-  ["The Hive Offices", "Cliente", "2019", "the-hive-offices.jpg"], ["Inbright", "Cliente", "2018", "inbright.jpg"],
-  ["Grupo RESA", "Cliente", "2018", "grupo-resa.jpg"], ["Huitzil", "Cliente", "2018", "huitzil-muebles.jpg"],
-  ["Alphabook", "Cliente", "2018", "alphabook.jpg"], ["Buddies", "Cliente", "2018", "buddies.jpg"],
-  ["Akuma Store", "Cliente", "2018", "akuma-store.jpg"], ["El Taco Rojo", "Cliente", "2018", "el-taco-rojo.jpg"],
-  ["VITEM", "Cliente", "2018", "vitem.jpg"], ["Winter Wolves", "Cliente", "2018", "winter-wolves.jpg"],
+  ["Blue Moon", "Cliente", "2021", "blue-moon.jpg"],
+  ["Shellhook", "Cliente", "2021", "shellhook.jpg"],
+  ["SVGO", "Cliente", "2021", "svgo.jpg"],
+  ["Nútrete con Ciencia", "Cliente", "2021", "nutrete-con-ciencia.jpg"],
+  ["Constructora GRAN", "Cliente", "2020", "constructora-gran.jpg"],
+  ["Paxut", "Cliente", "2019", "paxut.jpg"],
+  ["The Hive Offices", "Cliente", "2019", "the-hive-offices.jpg"],
+  ["Inbright", "Cliente", "2018", "inbright.jpg"],
+  ["Grupo RESA", "Cliente", "2018", "grupo-resa.jpg"],
+  ["Huitzil", "Cliente", "2018", "huitzil-muebles.jpg"],
+  ["Alphabook", "Cliente", "2018", "alphabook.jpg"],
+  ["Buddies", "Cliente", "2018", "buddies.jpg"],
+  ["Akuma Store", "Cliente", "2018", "akuma-store.jpg"],
+  ["El Taco Rojo", "Cliente", "2018", "el-taco-rojo.jpg"],
+  ["VITEM", "Cliente", "2018", "vitem.jpg"],
+  ["Winter Wolves", "Cliente", "2018", "winter-wolves.jpg"],
   ["OCEL Global", "Cliente", "2016", "ocel-global.jpg"],
-  ["Anthropos Politeia", "Cliente", "2016", "anthropos-politeia.jpg"], ["Red5 Gaming", "Cliente", "2016", "red5-gaming.jpg"],
-  ["Havoks Gaming", "Cliente", "2016", "havoks-gaming.jpg"], ["IDVA", "Cliente", "2016", "idva.jpg"],
-  ["Entelequia", "Cliente", "2016", "entelequia.jpg"], ["Caleen E-liquids", "Cliente", "2017", "caleen-e-liquids.jpg"],
+  ["Anthropos Politeia", "Cliente", "2016", "anthropos-politeia.jpg"],
+  ["Red5 Gaming", "Cliente", "2016", "red5-gaming.jpg"],
+  ["Havoks Gaming", "Cliente", "2016", "havoks-gaming.jpg"],
+  ["IDVA", "Cliente", "2016", "idva.jpg"],
+  ["Entelequia", "Cliente", "2016", "entelequia.jpg"],
+  ["Caleen E-liquids", "Cliente", "2017", "caleen-e-liquids.jpg"],
 ].map(([title, kind, year, image]) => {
   const slug = image.replace(/\.[^.]+$/, "")
-  return { title, kind, year, image: `/img/globe/${image}`, href: localizedPath(locale, `/work/${slug}/`) }
+  return {
+    title,
+    kind,
+    year,
+    image: `/img/globe/${image}`,
+    href: localizedPath(locale, `/work/${slug}/`),
+  }
 })
 ---
 

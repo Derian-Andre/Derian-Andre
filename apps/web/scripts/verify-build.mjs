@@ -108,6 +108,50 @@ async function verifyLocalReferences(htmlFiles) {
   }
 }
 
+async function verifySceneCspCoverage() {
+  const headers = await readFile(path.join(distRoot, "_headers"), "utf8")
+  const csp = headers.match(/^\s*Content-Security-Policy:\s*(.+)$/m)?.[1] ?? ""
+  const scriptSources = csp.match(/(?:^|;)\s*script-src\s+([^;]+)/)?.[1] ?? ""
+  const sceneRoot = path.join(distRoot, "scenes")
+
+  if (!(await exists(sceneRoot))) return
+
+  const sceneFiles = await walk(sceneRoot, (filePath) => filePath.endsWith(".js"))
+  const externalOrigins = new Set()
+
+  for (const sceneFile of sceneFiles) {
+    const source = await readFile(sceneFile, "utf8")
+    for (const match of source.matchAll(/(?:from\s*["']|import\(\s*["'])(https:\/\/[^"')\s]+)/g)) {
+      externalOrigins.add(new URL(match[1]).origin)
+    }
+  }
+
+  const missingOrigins = [...externalOrigins].filter((origin) => !scriptSources.includes(origin))
+  if (missingOrigins.length) {
+    throw new Error(`CSP script-src is missing scene module origins:\n${missingOrigins.join("\n")}`)
+  }
+}
+
+async function verifyLegacyServiceWorkerCleanup(htmlFiles) {
+  const missingCleanup = []
+
+  for (const htmlFile of htmlFiles) {
+    const html = await readFile(htmlFile, "utf8")
+    if (!html.includes('class="site-layout"')) continue
+
+    if (
+      !/serviceWorker\s*\.\s*getRegistrations/.test(html) ||
+      !/pathname\s*===\s*["']\/sw\.js["']/.test(html)
+    ) {
+      missingCleanup.push(path.relative(distRoot, htmlFile).replace(/\\/g, "/"))
+    }
+  }
+
+  if (missingCleanup.length) {
+    throw new Error(`Missing legacy service worker cleanup:\n${missingCleanup.join("\n")}`)
+  }
+}
+
 if (!(await exists(distRoot)))
   throw new Error("dist/ is missing. Run the build before verification.")
 
@@ -142,5 +186,7 @@ await assertRoutes(await expectedContentRoutes())
 
 const htmlFiles = await walk(distRoot, (filePath) => filePath.endsWith(".html"))
 await verifyLocalReferences(htmlFiles)
+await verifySceneCspCoverage()
+await verifyLegacyServiceWorkerCleanup(htmlFiles)
 
 console.log(`Verified ${htmlFiles.length} generated HTML files; all local references resolve.`)

@@ -1,11 +1,5 @@
 ---
-import {
-  getTranslations,
-  type Locale,
-  locales,
-  localizedPath,
-  stripLocalePrefix,
-} from "@/i18n"
+import { getTranslations, type Locale, locales, localizedPath, stripLocalePrefix } from "@/i18n"
 import BrandMark from "./BrandMark.astro"
 
 interface Props {
@@ -18,11 +12,30 @@ const currentPath = Astro.url.pathname
 const pathWithoutLocale = stripLocalePrefix(currentPath)
 const alternateLocales = locales.filter((candidate) => candidate !== locale)
 const routeKey = pathWithoutLocale.replace(/^\/+|\/+$/g, "").split("/")[0] || "home"
-const routeParts = pathWithoutLocale.replace(/^\/+|\/+$/g, "").split("/").filter(Boolean)
+const routeParts = pathWithoutLocale
+  .replace(/^\/+|\/+$/g, "")
+  .split("/")
+  .filter(Boolean)
 const isArticle = routeKey === "blog" && routeParts.length > 1 && routeParts[1] !== "page"
 const isWorkCase = routeKey === "work" && routeParts.length > 1
-const routeIndex: Record<string, string> = { work: isWorkCase ? "01" : "04", projects: "02", blog: isArticle ? "04" : "03", about: "05", services: "06", curriculum: "07", "404": "404" }
-const routeLabel: Record<string, string> = { work: isWorkCase ? (locale === "es" ? "Caso" : "Case") : (locale === "es" ? "Trabajo" : "Work"), projects: locale === "es" ? "Proyectos" : "Projects", blog: isArticle ? (locale === "es" ? "Artículo" : "Article") : "Blog", about: "Ego", services: translations.header.services, curriculum: locale === "es" ? "Curriculum Vitae" : "Curriculum Vitae", "404": locale === "es" ? "Error en la matrix" : "Error" }
+const routeIndex: Record<string, string> = {
+  work: isWorkCase ? "01" : "04",
+  projects: "02",
+  blog: isArticle ? "04" : "03",
+  about: "05",
+  services: "06",
+  curriculum: "07",
+  "404": "404",
+}
+const routeLabel: Record<string, string> = {
+  work: isWorkCase ? (locale === "es" ? "Caso" : "Case") : locale === "es" ? "Trabajo" : "Work",
+  projects: locale === "es" ? "Proyectos" : "Projects",
+  blog: isArticle ? (locale === "es" ? "Artículo" : "Article") : "Blog",
+  about: "Ego",
+  services: translations.header.services,
+  curriculum: locale === "es" ? "Curriculum Vitae" : "Curriculum Vitae",
+  "404": locale === "es" ? "Error en la matrix" : "Error",
+}
 const pageIndex = routeIndex[routeKey]
 const menu = [
   { key: "work", path: "/work/", label: locale === "es" ? "Trabajo" : "Work" },

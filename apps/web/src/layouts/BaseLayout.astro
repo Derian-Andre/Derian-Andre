@@ -82,7 +82,10 @@ const sceneByPage: Record<string, number> = {
   "page-error": 2,
   "work-index": 4,
 }
-const sceneMode = requestedSceneMode ?? Object.entries(sceneByPage).find(([className]) => bodyClass.includes(className))?.[1] ?? 6
+const sceneMode =
+  requestedSceneMode ??
+  Object.entries(sceneByPage).find(([className]) => bodyClass.includes(className))?.[1] ??
+  6
 ---
 
 <!doctype html>
@@ -143,6 +146,37 @@ const sceneMode = requestedSceneMode ?? Object.entries(sceneByPage).find(([class
       document.documentElement.classList.add("dark");
       document.documentElement.dataset.theme = "dark";
       document.documentElement.style.colorScheme = "dark";
+    </script>
+    <script is:inline>
+      // The previous deployment installed a root-scoped Workbox worker that is no longer served.
+      // Remove it once so existing visitors can load the current static site without stale caching.
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .getRegistrations()
+          .then(async (registrations) => {
+            const legacyRegistrations = registrations.filter((registration) => {
+              const worker = registration.active ?? registration.waiting ?? registration.installing
+              return worker && new URL(worker.scriptURL).pathname === "/sw.js"
+            })
+
+            if (!legacyRegistrations.length) return
+
+            const unregistered = (
+              await Promise.all(legacyRegistrations.map((registration) => registration.unregister()))
+            ).some(Boolean)
+
+            if (!unregistered) return
+
+            const cacheKeys = await caches.keys()
+            await Promise.all(
+              cacheKeys
+                .filter((cacheKey) => cacheKey.startsWith("workbox"))
+                .map((cacheKey) => caches.delete(cacheKey)),
+            )
+            location.reload()
+          })
+          .catch(() => undefined)
+      }
     </script>
   </head>
   <body class={bodyClass}>
