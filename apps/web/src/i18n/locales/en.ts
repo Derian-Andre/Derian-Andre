@@ -1,7 +1,7 @@
 export default {
   head: {
     description:
-      "I am a freelancer, designer, full-stack developer and photographer, specializing in front-end development, I love designing, taking photos and creating beautiful things with a good user experience",
+      "Senior AI Fullstack Engineer — architecture, secure delivery and AI engineering infrastructure.",
   },
   header: {
     home: "Home",
@@ -87,7 +87,7 @@ export default {
     subtitle: "Derian Castillo",
     about: {
       title: "Profile",
-      lead: "Frontend Software Engineer with a focus on beautiful UX/UI.",
+      lead: "Architecture, secure delivery and AI engineering infrastructure.",
       contact: {
         title: "Contact",
         address: "Zapopan, Jalisco, Mexico",
@@ -110,6 +110,8 @@ export default {
       skills: {
         title: "Skills",
         years: "{years} years",
+        ai: "AI",
+        cloud: "Cloud & security",
         design: "Design",
         frontend: "Front-end",
         backend: "Back-end",
@@ -119,9 +121,9 @@ export default {
     },
     experience: {
       title: "Experience",
-      lead: "My goal is always to give my best, learn what is necessary and grow, I love challenges and I take advantage of the opportunities that makes me evolve. Create functional, beautiful and accessible experiences that add value to people.",
+      lead: "AI engineer who works from first principles, a habit from nanotechnology engineering. I orchestrate AI agents and generative workflows to deliver with a researcher’s depth and an architect’s precision; as engineering lead of a production fintech platform, I took the team to 85% verifiable AI-assisted commits with 90.7% API test coverage.",
       "in-progress": "In progress",
-      current: "Current",
+      current: "Present",
       years: "{n} year | {n} years",
       months: "{n} month | {n} months",
       days: "{n} day | {n} days",
@@ -130,76 +132,32 @@ export default {
         title: "Jobs",
         pwc: {
           title: "PwC México",
-          subtitle: "Senior Fullstack Software Engineer",
-          description: `
-						<ul>
-							<li>Proficient in full stack development, emphasizing code maintainability, quality, best practices and performance.</li>
-							<li>Addressing VeraCode and SonarQube issues and implementing best solutions for code quality.</li>
-							<li>Conduct thorough code reviews, enhancing readability and efficiency in frontend and backend services.</li>
-							<li>Committed to improving code maintainability through strategic refactoring and optimizations.</li>
-							<li>Actively contribute to team collaboration, guiding a clear vision and encouraging innovation and growth.</li>
-						</ul>
-					`,
+          subtitle: "Senior Fullstack AI Software Engineer · Remote",
+          description: `<ul><li>Technical lead of an international team delivering a fullstack Oracle project.</li><li>Owned code quality across frontend and backend services: resolved Veracode and SonarQube findings and became a Veracode Level 3 Verified Continuous Security Champion.</li><li>Ran code reviews and strategic refactoring to improve maintainability, readability and performance.</li></ul>`,
         },
         blueoptima: {
           title: "BlueOptima",
           subtitle: "Frontend Software Engineer",
-          description: `
-						<ul>
-							<li>Led features to made into production with any major bug, from analysis, documentation to implementation, providing accurate time estimates and top-quality code.</li>
-							<li>Successfully resolved major breaking-production bugs and prevented critical bugs.</li>
-							<li>Provided technical support for client-specific bugs and maintained angular legacy code.</li>
-							<li>Utilized unit testing and code reviews to ensure high-quality code and maintain compliance with industry standards.</li>
-						</ul>
-					`,
-        },
-        xolvex: {
-          title: "Xolvex (An Inbright company)",
-          subtitle: "Frontend Software Engineer",
-          description: `
-						<ul>
-							<li>Led a cross-functional team in the development and implementation of front-end architecture.</li>
-							<li>Managed the analysis and task delegation, ensuring on-time delivery and budget adherence.</li>
-							<li>Collaborated with backend members to bring ideas to reality, resulting in the successful launch of several new products.</li>
-						</ul>
-					`,
+          description: `<ul><li>Took features from analysis and documentation to production with no major bugs, on accurate estimates.</li><li>Resolved production-breaking bugs, prevented critical regressions and supported client-specific issues on a legacy Angular codebase.</li><li>Kept quality and compliance with industry standards through unit testing and code review.</li></ul>`,
         },
         inbright: {
-          title: "Inbright",
+          title: "Inbright & Xolvex",
           subtitle: "Frontend Software Engineer",
-          description: `
-						<ul>
-							<li>Led a cross-functional team in the development and implementation of front-end architecture.</li>
-							<li>Managed the analysis and task delegation, ensuring on-time delivery and budget adherence.</li>
-							<li>Collaborated with backend members to bring ideas to reality, resulting in the successful launch of several new products.</li>
-						</ul>
-					`,
+          description: `<ul><li>Led a cross-functional team designing and implementing the frontend architecture behind several product launches.</li><li>Managed analysis and task delegation, delivering on time and within budget.</li><li>Partnered with backend engineers to take new products from idea to launch.</li></ul>`,
         },
         derianandre: {
-          title: "Freelancer",
-          subtitle: "Fullstack Software Engineer / Designer",
-          description: `
-						<ul>
-							<li>Built a diverse portfolio of clients, ranging from small startups to large national and international companies.</li>
-							<li>Provided full-stack development solutions, from design to implementation, resulting in the successful launch of several new products.</li>
-							<li>Led small teams when needed, ensuring on-time delivery and budget adherence.</li>
-						</ul>
-					`,
+          title: "Freelance / Contract",
+          subtitle: "Engineering Lead, AI Engineer & Designer · Remote",
+          description: `<ul><li><strong>Production fintech platform —</strong> Engineering Lead for a team of five: 228 API endpoints across 60 controllers, 16 domain entities and 182 database migrations (TypeScript, Node, TypeORM, SQL, Next.js).</li><li><strong>Production fintech platform —</strong> Built the AI engineering infrastructure the team adopted: a custom agent harness of 327 skill, agent and rule files for agentic coding workflows, reaching 85% verifiable AI-assisted commits.</li><li><strong>Production fintech platform —</strong> Held API test coverage at 90.7% of statements with CI gates of 80% global and 90/85 per file on fintech surfaces: transfers, commissions, accounts, authentication, authorization and RBAC/tenancy.</li><li><strong>Production fintech platform —</strong> Built release engineering from zero (annotated tags, promotion PRs, drift-guard CI): one release every 4.6 days and a median PR lead time of 2.4 hours across 443 PRs (DORA Elite band).</li><li><strong>Production fintech platform —</strong> Led the migration to AWS ECS Fargate across three environments, the IAM/AuthZ rewrite with CASL, a TypeORM upgrade with 170+ migrations and Next.js 16; authored 248 of 309 architecture decision records.</li><li><strong>Crypto wallet product —</strong> Engineering lead end to end: architecture, implementation and visual identity.</li><li><strong>AI automation clients —</strong> Design and deploy agentic automations on Claude, connected through MCP to Gmail, Google Drive and WhatsApp Business, with scheduled routines and human approval before anything runs.</li><li><strong>AI automation clients —</strong> Built a reusable Claude plugin (skills, tool guards and an execution journal) that runs discovery, automation specs and content production the same way for every client.</li><li><strong>AI automation clients —</strong> Ran the technical assessment and the technical-lead selection for a factoring fintech.</li><li>Since 2015: full-stack development and design from concept to launch for startups and national and international companies, leading small teams when needed.</li></ul>`,
         },
       },
       education: {
         title: "Education",
         iteso: {
           title: "Instituto Tecnológico y de Estudios Superiores de Occidente",
-          subtitle: "Nanotechnology engineering",
+          subtitle: "Nanotechnology Engineering",
           date: "2013 - 2018",
-          description: `
-						<ul>
-							<li>Successfully managed a nanotechnology laboratory, utilizing equipment such as SEM, XPS, AFM, and Sputtering.</li>
-							<li>Utilized Python and ORCA ab initio to simulate molecular systems and particles.</li>
-							<li>Synthesized and characterized a variety of nanomaterials, including carbon nanotubes, silver, and copper nanoparticles.</li>
-						</ul>
-					`,
+          description: `<ul><li>Managed a nanotechnology laboratory, operating SEM, XPS, AFM and sputtering equipment.</li><li>Used Python and ORCA to simulate molecular systems and particles.</li><li>Synthesized and characterized nanomaterials, including carbon nanotubes and silver and copper nanoparticles.</li></ul>`,
         },
         cbtis: {
           title: "Centro de Bachillerato Tecnológico Industrial y de Servicios #43",
@@ -219,28 +177,15 @@ export default {
         cinvestav: {
           title: "UDG - CINVESTAV",
           subtitle:
-            "Simulations of organometallic molecular systems and development of web application for analysis and data management",
+            "Simulations of organometallic molecular systems and a web app for data analysis",
           date: "2018 August - December",
-          description: `
-						<ul>
-							<li>Simulations of organometallic molecular systems and web-app development for data analysis.</li>
-							<li>Conducted simulations of organometallic molecular systems using the ORCA ab initio software.</li>
-							<li>Developed a web application for data analysis of the simulations, which included features such as: comparison of initial and final geometries, visualization of orbital energies, detection of optimization, and generation of comparative tables between simulations.</li>
-						</ul>
-					`,
+          description: `<ul><li>Simulated organometallic molecular systems with the ORCA ab initio software.</li><li>Built a web app to analyze the simulations: comparison of initial and final geometries, orbital-energy visualization, optimization detection and comparative tables between runs.</li></ul>`,
         },
         casasyterrenos: {
           title: "Casa y Terrenos",
-          subtitle:
-            "Mathematical modeling program for the development of business plans and projects using machine learning",
+          subtitle: "Mathematical modeling for business plans and projects using machine learning",
           date: "2018 January - May",
-          description: `
-						<ul>
-							<li>Developed a solution for the development of business plans and projects using machine learning techniques.</li>
-							<li>Implemented a property qualification system based on the quality of the data.</li>
-							<li>Managed MySQL and MongoDB databases, programming scripts in Python and using the server through SSH.</li>
-						</ul>
-					`,
+          description: `<ul><li>Built a machine-learning solution to develop business plans and projects.</li><li>Implemented a property scoring system based on data quality.</li><li>Managed MySQL and MongoDB databases and a server over SSH tunneling with Python.</li></ul>`,
         },
       },
       certifications: {

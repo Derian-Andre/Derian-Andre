@@ -8,8 +8,9 @@ export interface CurriculumContact {
 
 export interface CurriculumSkillGroup {
   readonly slug: string
-  readonly years: number
+  readonly years?: number
   readonly items: readonly string[]
+  readonly labels?: readonly string[]
 }
 
 export interface CurriculumExperienceItem {
@@ -25,18 +26,19 @@ export interface CurriculumExperienceGroup {
 }
 
 export interface CurriculumCredentialItem {
-  readonly type: string
+  readonly icon?: string
   readonly slug: string
-  readonly date: IsoDateString
-  readonly id: string | null
-  readonly url?: string | null
-  readonly author?: string
+  readonly title: string
+  readonly issued: string
+  readonly credentialId: string | null
+  readonly url: string | null
 }
 
 export interface CurriculumCredentialProvider {
   readonly slug: string
-  readonly home: string
-  readonly validator: string
+  readonly title: string
+  readonly logo?: string
+  readonly logoText?: boolean
   readonly items: readonly CurriculumCredentialItem[]
 }
 
@@ -46,5 +48,4 @@ export interface CurriculumData {
   readonly skills: readonly CurriculumSkillGroup[]
   readonly experience: readonly CurriculumExperienceGroup[]
   readonly certifications: readonly CurriculumCredentialProvider[]
-  readonly courses: readonly CurriculumCredentialProvider[]
 }

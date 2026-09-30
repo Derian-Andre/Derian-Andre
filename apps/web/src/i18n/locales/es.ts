@@ -110,6 +110,8 @@ export default {
       skills: {
         title: "Habilidades",
         years: "{years} años",
+        ai: "IA",
+        cloud: "Nube y seguridad",
         design: "Diseño",
         frontend: "Front-end",
         backend: "Back-end",

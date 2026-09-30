@@ -14,7 +14,7 @@ if (!isLocale(rawLocale)) {
 
 const locale: Locale = rawLocale
 const translations = getTranslations(locale)
-const title = translations.curriculum.title
+const title = `${translations.curriculum.title} | Senior AI Fullstack Engineer`
 const description = translations.curriculum.about.lead
 ---
 
@@ -23,228 +23,391 @@ const description = translations.curriculum.about.lead
 </SintesisLayout>
 
 <style is:global>
-	@media (min-width: 75rem) {
-		.sintesis-curriculum__page .cv-page {
-			display: grid;
-			grid-template-columns: minmax(0, 1fr) 32.5rem 15rem;
-			column-gap: 2rem;
-			align-items: start;
-		}
+	/* The CV has its own editorial layout. Keep one surface recipe for cards and
+	 * move the padding to the sidebar sections instead of their empty wrapper. */
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-page {
+		display: block;
+		min-height: 100vh;
+		padding: clamp(5.5rem, 8vw, 8rem) clamp(1.25rem, 3.5vw, 3rem) clamp(3rem, 6vw, 5rem);
+	}
 
-		.sintesis-curriculum__page .cv-title-rail {
-			grid-column: 1;
-			grid-row: 1;
-			margin: 0;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail {
+		position: static;
+		display: block;
+		min-height: auto;
+		padding: 0;
+		border: 0;
+		writing-mode: initial;
+	}
 
-		.sintesis-curriculum__page .cv-content,
-		.sintesis-curriculum__page .cv-columns {
-			display: contents;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail > span {
+		display: block;
+		margin-bottom: 0.8rem;
+		color: var(--body-color-low);
+		font: 800 0.75rem var(--font-heading);
+		letter-spacing: 0.07em;
+	}
 
-		.sintesis-curriculum__page .cv-experience {
-			grid-column: 2;
-			grid-row: 1;
-			order: initial;
-			min-width: 0;
-			margin-top: -2.5rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail h1,
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail p {
+		transform: none;
+	}
 
-		.sintesis-curriculum__page .cv-about {
-			grid-column: 3;
-			grid-row: 1;
-			position: sticky;
-			top: 5rem;
-			order: initial;
-			min-width: 0;
-			margin-top: -2.5rem;
-			padding: 0;
-			gap: .65rem;
-			border: 0;
-			background: transparent;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail h1 {
+		max-width: 18ch;
+		margin: 0;
+		color: var(--body-color-high);
+		font: 900 clamp(3.25rem, 7.2vw, 7.75rem) / 0.86 var(--font-heading);
+		letter-spacing: -0.06em;
+	}
 
-		.sintesis-curriculum__page .cv-experience > h2 {
-			font-size: 3.5rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail h1 em {
+		color: rgb(210 214 224);
+		font: italic 400 0.88em / 1 "Instrument Serif", var(--font-serif);
+		letter-spacing: -0.06em;
+	}
 
-		.sintesis-curriculum__page .cv-intro {
-			font-size: .85rem;
-			line-height: 1.45;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail p {
+		max-width: 55rem;
+		margin: 0.7rem 0 0;
+		color: var(--body-color-medium);
+		font: 600 clamp(1rem, 1.35vw, 1.35rem) / 1.35 var(--font-serif);
+	}
 
-		.sintesis-curriculum__page .cv-actions {
-			margin-top: .65rem;
-			gap: .35rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-content {
+		max-width: none;
+		padding: clamp(2.5rem, 5vw, 4.5rem) 0 0;
+		overflow: visible;
+	}
 
-		.sintesis-curriculum__page .cv-action {
-			min-height: 1.55rem;
-			padding: .2rem .55rem;
-			font-size: .55rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-columns {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: clamp(2rem, 4vw, 4rem);
+	}
 
-		.sintesis-curriculum__page .cv-page hr {
-			margin: .9rem 0;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-experience {
+		order: 1;
+		flex: 3 1 34rem;
+		min-width: 0;
+	}
 
-		.sintesis-curriculum__page .cv-experience-columns {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 1.6rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-about {
+		position: static;
+		order: 2;
+		display: grid;
+		flex: 1 1 18rem;
+		gap: 0.75rem;
+		min-width: min(100%, 18rem);
+		padding: 0;
+		border: 0;
+		background: transparent;
+	}
 
-		.sintesis-curriculum__page .cv-experience h3 {
-			margin-bottom: .65rem;
-			font-size: 1.25rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-about section,
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-card {
+		box-sizing: border-box;
+		border: 1px solid hsl(220 30% 90% / 0.12);
+		background: hsl(220 23% 5% / 0.42) url("/img/noise.png");
+	}
 
-		.sintesis-curriculum__page .cv-entry {
-			padding: 1rem 0 1.25rem;
-			gap: .55rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-about section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding: 1.1rem;
+	}
 
-		.sintesis-curriculum__page .cv-entry-logo {
-			width: min(8rem, 100%);
-			height: 2.4rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-about hr {
+		display: none;
+	}
 
-		.sintesis-curriculum__page .cv-provider-logo {
-			width: 6.5rem;
-			height: 2rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-about h2, .cv-about h3) {
+		margin: 0;
+		color: var(--body-color-low);
+		font: 800 0.72rem var(--font-heading);
+		letter-spacing: 0.07em;
+	}
 
-		.sintesis-curriculum__page .cv-entry h4 {
-			margin-bottom: .35rem;
-			font-size: 1rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-about h4 {
+		margin: 0;
+		color: var(--body-color-high);
+		font: 800 0.9rem var(--font-heading);
+	}
 
-		.sintesis-curriculum__page .cv-entry h5 {
-			margin-bottom: .35rem;
-			font-size: .75rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-about h4 small {
+		font-size: 0.55rem;
+	}
 
-		.sintesis-curriculum__page .cv-entry h6 {
-			margin-bottom: .45rem;
-			font-size: .65rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list {
+		gap: 0.55rem;
+	}
 
-		.sintesis-curriculum__page .cv-entry-description {
-			font-size: .7rem;
-			line-height: 1.5;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list li {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+	}
 
-		.sintesis-curriculum__page .cv-entry-description ul {
-			padding-inline-start: .95rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list a {
+		display: block;
+		color: var(--body-color-medium);
+		font: 700 0.8rem / 1.25 var(--font-heading);
+	}
 
-		.sintesis-curriculum__page .cv-entry-description li + li {
-			margin-top: .15rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list span {
+		display: grid;
+		width: 1.55rem;
+		height: 1.55rem;
+		place-items: center;
+		border: 1px solid hsl(220 30% 90% / 0.16);
+		color: var(--body-color-high);
+		font: 800 0.6rem var(--font-heading);
+	}
 
-		.sintesis-curriculum__page .cv-entry-stack {
-			gap: .25rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list .cv-contact-icon--social .social-icon {
+		width: 0.72rem;
+		height: 0.72rem;
+	}
 
-		.sintesis-curriculum__page .cv-entry-stack img {
-			width: .75rem;
-			height: .75rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-group + .cv-skill-group {
+		margin-top: 0.7rem;
+	}
 
-		.sintesis-curriculum__page .cv-extra {
-			padding: .65rem;
-			border-color: hsl(220 30% 90% / .1);
-			background: hsl(220 23% 5% / .18);
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-icons {
+		gap: 0.3rem;
+	}
 
-		.sintesis-curriculum__page .cv-extra-heading {
-			gap: .35rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-icons img {
+		width: 1.2rem;
+		height: 1.2rem;
+	}
 
-		.sintesis-curriculum__page .cv-extra-heading img {
-			width: .7rem;
-			height: .7rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-labels {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem 0.5rem;
+	}
 
-		.sintesis-curriculum__page .cv-extra h5 {
-			margin-bottom: .25rem;
-			font-size: .7rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-labels span {
+		color: var(--body-color-normal);
+		font: 600 0.62rem / 1.35 var(--font-heading);
+	}
 
-		.sintesis-curriculum__page .cv-extra h6,
-		.sintesis-curriculum__page .cv-extra-description {
-			margin-bottom: .4rem;
-			font-size: .6rem;
-			line-height: 1.4;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-labels span:not(:last-child)::after {
+		margin-left: 0.5rem;
+		color: var(--body-color-lower);
+		content: "•";
+	}
 
-		.sintesis-curriculum__page .cv-about h2,
-		.sintesis-curriculum__page .cv-about h3 {
-			margin-bottom: .35rem;
-			font-size: .6rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-experience > h2 {
+		margin: 0;
+		color: var(--body-color-high);
+		font: italic 400 clamp(3rem, 5vw, 5rem) / 0.9 "Instrument Serif", var(--font-serif);
+		letter-spacing: -0.045em;
+	}
 
-		.sintesis-curriculum__page .cv-about h4 {
-			margin-bottom: .35rem;
-			font-size: .72rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-intro {
+		max-width: 58ch;
+		margin-top: 1rem;
+		color: var(--body-color-medium);
+		font: clamp(1rem, 1.3vw, 1.2rem) / 1.6 var(--font-serif);
+	}
 
-		.sintesis-curriculum__page .cv-about h4 small {
-			margin-inline-start: .5rem;
-			font-size: .48rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-actions {
+		margin-top: 1.25rem;
+		gap: 0.6rem;
+	}
 
-		.sintesis-curriculum__page .cv-about .cv-intro,
-		.sintesis-curriculum__page .cv-contact-list a {
-			font-size: .68rem;
-			line-height: 1.35;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-action {
+		min-height: 2.25rem;
+		padding: 0.4rem 0.8rem;
+		border-color: hsl(220 30% 90% / 0.32);
+		font-size: 0.65rem;
+	}
 
-		.sintesis-curriculum__page .cv-contact-list {
-			gap: .35rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-page hr {
+		margin: 2rem 0;
+		border-color: hsl(220 30% 90% / 0.12);
+	}
 
-		.sintesis-curriculum__page .cv-contact-list a {
-			gap: .4rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-experience-content {
+		display: grid;
+		gap: clamp(2.5rem, 5vw, 4.5rem);
+	}
 
-		.sintesis-curriculum__page .cv-contact-list span {
-			width: 1.15rem;
-			height: 1.15rem;
-			font-size: .5rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-experience-section,
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credentials {
+		min-width: 0;
+	}
 
-		.sintesis-curriculum__page .cv-skill-group + .cv-skill-group {
-			margin-top: .55rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-experience h3 {
+		margin: 0 0 1.25rem;
+		color: var(--body-color-high);
+		font: 900 clamp(1.75rem, 2.6vw, 2.7rem) / 0.95 var(--font-heading);
+		letter-spacing: -0.045em;
+	}
 
-		.sintesis-curriculum__page .cv-skill-icons {
-			gap: .25rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry {
+		display: flex;
+		padding: 2rem 0;
+		flex-direction: column;
+		gap: 0.85rem;
+		border-top: 1px solid hsl(220 30% 90% / 0.12);
+		border-bottom: 0;
+	}
 
-		.sintesis-curriculum__page .cv-skill-icons img {
-			width: .85rem;
-			height: .85rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-logo {
+		width: min(13rem, 100%);
+		height: 3.6rem;
+		margin: 0;
+		opacity: 1;
+	}
 
-		body.sintesis-curriculum .site-footer {
-			padding: .8rem 0 1rem;
-		}
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h4 {
+		margin: 0;
+		color: var(--body-color-high);
+		font: 900 clamp(1.2rem, 1.8vw, 1.6rem) / 1.1 var(--font-heading);
+		letter-spacing: -0.03em;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h5 {
+		margin: 0;
+		color: var(--body-color-medium);
+		font: 700 0.9rem var(--font-heading);
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h6 {
+		margin: 0;
+		color: var(--body-color-low);
+		font: italic 0.85rem var(--font-serif);
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description {
+		color: var(--body-color-normal);
+		font: 1rem / 1.65 var(--font-serif);
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-stack {
+		gap: 0.35rem;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-stack img {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-provider + .cv-provider {
+		margin-top: 2.5rem;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-provider-logo {
+		width: auto;
+		max-width: min(13rem, 100%);
+		height: 3.25rem;
+		margin: 0 0 1rem;
+		opacity: 1;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-provider-heading {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		margin-bottom: 1rem;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-provider-heading .cv-provider-logo {
+		margin: 0;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-provider-title {
+		margin: 0;
+		color: var(--body-color-high);
+		font: 900 clamp(1.25rem, 2vw, 1.7rem) / 1 var(--font-heading);
+		letter-spacing: -0.035em;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+		gap: 0.75rem;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-card {
+		display: flex;
+		min-height: 0;
+		padding: 1.1rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-heading {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		align-items: start;
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-mark {
+		width: 1.05rem;
+		height: 1.05rem;
+		margin-top: 0.1rem;
+		object-fit: contain;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-mark--provider {
+		width: 2.35rem;
+		height: 1.25rem;
+		object-position: left center;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-card h5 {
+		margin: 0;
+		color: var(--body-color-high);
+		font: 800 0.85rem / 1.2 var(--font-heading);
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-card h5 a {
+		color: inherit;
+		text-decoration-color: hsl(220 30% 90% / 0.35);
+		text-underline-offset: 0.18em;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-card h6 {
+		margin: 0.7rem 0 0;
+		color: var(--body-color-low);
+		font: italic 0.72rem var(--font-serif);
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-id {
+		margin: 0.85rem 0 0;
+		color: var(--body-color-low);
+		font: 0.6rem / 1.35 var(--font-heading);
+		word-break: break-all;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-id span {
+		font-weight: 800;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-id code {
+		color: var(--body-color-muted);
+		font: inherit;
 	}
 
 	@media (min-width: 75rem) {
 		body.sintesis-curriculum .sintesis-curriculum__page .cv-page {
 			display: grid;
-			grid-template-columns: minmax(0, 1fr) 32.5rem 15rem;
-			column-gap: 2rem;
-			row-gap: 3rem;
+			grid-template-columns: minmax(0, 1fr) clamp(17rem, 28vw, 32rem);
+			column-gap: clamp(1.5rem, 3vw, 3rem);
 			align-items: start;
 		}
 
 		body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail {
 			grid-column: 1 / -1;
 			grid-row: 1;
-			margin: 0;
 		}
 
 		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-content, .cv-columns) {
@@ -252,430 +415,37 @@ const description = translations.curriculum.about.lead
 		}
 
 		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience {
-			grid-column: 2;
+			grid-column: 1;
 			grid-row: 2;
 			order: initial;
-			min-width: 0;
-			margin-top: 0;
 		}
 
 		body.sintesis-curriculum .sintesis-curriculum__page .cv-about {
-			grid-column: 3;
-			grid-row: 2;
 			position: sticky;
 			top: 5rem;
+			grid-column: 2;
+			grid-row: 2;
 			order: initial;
+		}
+	}
+
+	@media (min-width: 95rem) {
+		body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-grid {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 40rem) {
+		body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail h1 {
+			font-size: clamp(2.8rem, 15vw, 4.5rem);
+		}
+
+		body.sintesis-curriculum .sintesis-curriculum__page .cv-about {
 			min-width: 0;
-			margin-top: 0;
-			padding: 0;
-			gap: .65rem;
-			border: 0;
-			background: transparent;
 		}
 
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience > h2 {
-			font-size: 3.5rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-intro {
-			font-size: .85rem;
-			line-height: 1.45;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-actions {
-			margin-top: .65rem;
-			gap: .35rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-action {
-			min-height: 1.55rem;
-			padding: .2rem .55rem;
-			font-size: .55rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-page hr {
-			margin: .9rem 0;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience-columns {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 1.6rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience h3 {
-			margin-bottom: .65rem;
-			font-size: 1.25rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry {
-			padding: 1rem 0 1.25rem;
-			gap: .55rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-logo {
-			width: min(8rem, 100%);
-			height: 2.4rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-provider-logo {
-			width: 6.5rem;
-			height: 2rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h4 {
-			margin-bottom: .35rem;
-			font-size: 1rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h5 {
-			margin-bottom: .35rem;
-			font-size: .75rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h6 {
-			margin-bottom: .45rem;
-			font-size: .65rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description {
-			font-size: .7rem;
-			line-height: 1.5;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description ul {
-			padding-inline-start: .95rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description li + li {
-			margin-top: .15rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-stack {
-			gap: .25rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-stack img {
-			width: .75rem;
-			height: .75rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra {
-			padding: .65rem;
-			border-color: hsl(220 30% 90% / .1);
-			background: hsl(220 23% 5% / .18);
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra-heading {
-			gap: .35rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra-heading img {
-			width: .7rem;
-			height: .7rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra h5 {
-			margin-bottom: .25rem;
-			font-size: .7rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-extra h6, .cv-extra-description) {
-			margin-bottom: .4rem;
-			font-size: .6rem;
-			line-height: 1.4;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-about h2, .cv-about h3) {
-			margin-bottom: .35rem;
-			font-size: .6rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-about h4 {
-			margin-bottom: .35rem;
-			font-size: .72rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-about h4 small {
-			margin-inline-start: .5rem;
-			font-size: .48rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-about .cv-intro, .cv-contact-list a) {
-			font-size: .68rem;
-			line-height: 1.35;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list {
-			gap: .35rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list a {
-			gap: .4rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list span {
-			width: 1.15rem;
-			height: 1.15rem;
-			font-size: .5rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-group + .cv-skill-group {
-			margin-top: .55rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-icons {
-			gap: .25rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-icons img {
-			width: .85rem;
-			height: .85rem;
-		}
-
-		body.sintesis-curriculum .site-footer {
-			padding: .8rem 0 1rem;
-		}
-	}
-
-	@media (min-width: 75rem) and (max-width: 119.999rem) {
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-page {
-			padding-bottom: 15rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail {
-			transform: none;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail h1 {
-			max-width: 55rem;
-			font-size: 5.75rem;
-			line-height: .92;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail p {
-			margin-top: 1.5rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-page hr {
-			margin: 1.6rem 0;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience h3 {
-			margin-bottom: .9rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry {
-			padding: 2rem 0 6rem;
-			gap: .75rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h4 {
-			font-size: 1.05rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h5 {
-			font-size: .8rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h6 {
-			font-size: .72rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description {
-			font-size: .84rem;
-			line-height: 1.65;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description li + li {
-			margin-top: .3rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra {
-			padding: .8rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-extra h6, .cv-extra-description) {
-			font-size: .67rem;
-			line-height: 1.5;
-		}
-	}
-
-	/* The supplied CV reference is a 3648px-wide capture. Scale the editorial
-	 * composition there instead of leaving the two information rails at their
-	 * 1824px dimensions. */
-	@media (min-width: 120rem) {
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-page {
-			padding-top: 17.5rem;
-			padding-bottom: 7rem;
-			grid-template-columns: minmax(0, 1fr) 65rem 30rem;
-			column-gap: 4rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail h1 {
-			max-width: 12ch;
-			font-size: 11rem;
-			line-height: .86;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-title-rail p {
-			max-width: 58rem;
-			font-size: 2.1rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience > h2 {
-			font-size: 6rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-intro {
-			font-size: 1.25rem;
-			line-height: 1.55;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-actions {
-			margin-top: 1.1rem;
-			gap: .65rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-action {
-			min-height: 2.25rem;
-			padding: .4rem .9rem;
-			font-size: .75rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-page hr {
-			margin: 2.3rem 0;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience-columns {
-			gap: 3.2rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-experience h3 {
-			margin-bottom: 1.2rem;
-			font-size: 1.85rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry {
-			padding: 2rem 0 2.5rem;
-			gap: 1rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-logo {
-			width: min(14rem, 100%);
-			height: 4.2rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-provider-logo {
-			width: 11rem;
-			height: 3.25rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h4 {
-			margin-bottom: .45rem;
-			font-size: 1.45rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h5 {
-			margin-bottom: .45rem;
-			font-size: 1rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry h6 {
-			margin-bottom: .6rem;
-			font-size: .9rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description {
-			font-size: .95rem;
-			line-height: 1.6;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description ul {
-			padding-inline-start: 1.25rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-description li + li {
-			margin-top: .35rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-stack {
-			gap: .4rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-entry-stack img {
-			width: 1rem;
-			height: 1rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra {
-			padding: 1rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra-heading {
-			gap: .5rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra-heading img {
-			width: 1rem;
-			height: 1rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-extra h5 {
-			margin-bottom: .4rem;
-			font-size: .9rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-extra h6, .cv-extra-description) {
-			margin-bottom: .5rem;
-			font-size: .76rem;
-			line-height: 1.5;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-about h2, .cv-about h3) {
-			margin-bottom: .5rem;
-			font-size: .78rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-about h4 {
-			margin-bottom: .5rem;
-			font-size: .95rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-about h4 small {
-			font-size: .6rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page :is(.cv-about .cv-intro, .cv-contact-list a) {
-			font-size: .85rem;
-			line-height: 1.5;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list {
-			gap: .5rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-contact-list span {
-			width: 1.5rem;
-			height: 1.5rem;
-			font-size: .65rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-group + .cv-skill-group {
-			margin-top: .8rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-icons {
-			gap: .35rem;
-		}
-
-		body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-icons img {
-			width: 1.1rem;
-			height: 1.1rem;
-		}
-
-		body.sintesis-curriculum .site-footer {
-			padding: 1.25rem 0 1.5rem;
+		body.sintesis-curriculum .sintesis-curriculum__page .cv-credential-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
