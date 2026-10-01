@@ -14,9 +14,8 @@ export const curriculumData = {
     {
       title: "Querétaro, México (UTC-6)",
       icon: "geo-alt-fill",
-      url: "https://goo.gl/maps/resBeWvWuGR1VFwB6",
+      url: "https://www.google.com/maps/search/?api=1&query=Quer%C3%A9taro%2C%20M%C3%A9xico",
     },
-    { title: "+52 (33) 1278-1411", icon: "phone-fill", url: "tel:+523312781411" },
     { title: "hola@derianandre.com", icon: "envelope-fill", url: "mailto:hola@derianandre.com" },
     { title: "GitHub", icon: "github", url: "https://github.com/DerianAndre" },
     { title: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/derianandre/" },
@@ -25,14 +24,7 @@ export const curriculumData = {
   skills: [
     {
       slug: "ai",
-      items: ["claude"],
-      labels: [
-        "Claude Code",
-        "MCP connectors",
-        "agentic workflows",
-        "custom agent harnesses (skills, agents, rules)",
-        "prompt engineering",
-      ],
+      items: ["claude", "cursor", "codex", "kimi", "qwen", "z-ai", "higgsfield", "model-context-protocol", "n8n", "zapier", "agentic-workflows", "prompt-engineering"],
     },
     {
       slug: "frontend",
@@ -40,21 +32,11 @@ export const curriculumData = {
     },
     {
       slug: "backend",
-      items: ["node", "express", "mongodb", "mongoose", "mysql", "python"],
-      labels: [
-        "Nest",
-        "TypeORM",
-        "Prisma",
-        "SQL",
-        "REST",
-        "GraphQL",
-        "WebSockets",
-      ],
+      items: ["node", "express", "hono", "nestjs", "typeorm", "prisma", "drizzle", "pnpm", "sql", "mongodb", "mongoose", "mysql", "rest-api", "graphql", "socketdotio", "python"],
     },
     {
       slug: "cloud",
-      items: ["microsoft-azure", "github", "security"],
-      labels: ["AWS (ECS Fargate, IAM)", "GitHub Actions", "CASL", "Veracode", "SonarQube"],
+      items: ["aws", "cloudflare", "docker", "githubactions", "casl", "veracode", "sonarqube"],
     },
     { slug: "design", items: ["adobe-illustrator", "adobe-photoshop", "figma"] },
     {
@@ -74,6 +56,10 @@ export const curriculumData = {
             "typescript",
             "react",
             "node",
+            "claude",
+            "cursor",
+            "model-context-protocol",
+            "agentic-workflows",
             "express",
             "mongodb",
             "microsoft-azure-devops",

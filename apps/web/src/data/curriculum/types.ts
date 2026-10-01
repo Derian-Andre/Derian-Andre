@@ -10,7 +10,6 @@ export interface CurriculumSkillGroup {
   readonly slug: string
   readonly years?: number
   readonly items: readonly string[]
-  readonly labels?: readonly string[]
 }
 
 export interface CurriculumExperienceItem {

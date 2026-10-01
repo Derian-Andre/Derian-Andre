@@ -90,7 +90,7 @@ export default {
       lead: "Ingeniero de Software Frontend con un enfoque en UX/UI hermoso",
       contact: {
         title: "Contacto",
-        address: "Zapopan, Jalisco, México",
+        address: "Querétaro, México (UTC-6)",
       },
       specialty: {
         title: "Área de especialidad",

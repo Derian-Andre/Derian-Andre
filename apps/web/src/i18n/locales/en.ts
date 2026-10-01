@@ -90,7 +90,7 @@ export default {
       lead: "Architecture, secure delivery and AI engineering infrastructure.",
       contact: {
         title: "Contact",
-        address: "Zapopan, Jalisco, Mexico",
+        address: "Querétaro, México (UTC-6)",
       },
       specialty: {
         title: "Specialty area",

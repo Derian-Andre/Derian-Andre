@@ -179,26 +179,54 @@ const description = translations.curriculum.about.lead
 		gap: 0.3rem;
 	}
 
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-icon-tooltip {
+		position: relative;
+		display: inline-grid;
+		width: 1.2rem;
+		height: 1.2rem;
+		place-items: center;
+		cursor: help;
+		outline: none;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-icon-tooltip::after {
+		position: absolute;
+		z-index: 20;
+		bottom: calc(100% + 0.45rem);
+		left: 50%;
+		width: max-content;
+		max-width: min(15rem, calc(100vw - 2rem));
+		padding: 0.38rem 0.5rem;
+		border: 1px solid hsl(220 30% 90% / 0.28);
+		background: hsl(224 26% 6% / 0.96);
+		box-shadow: 0 0.45rem 1.2rem hsl(228 42% 2% / 0.45);
+		color: var(--body-color-high);
+		content: attr(data-tooltip);
+		font: 700 0.62rem / 1.2 var(--font-heading);
+		letter-spacing: 0.01em;
+		opacity: 0;
+		pointer-events: none;
+		transform: translate(-50%, 0.2rem);
+		transition: opacity 140ms ease, transform 140ms ease;
+		visibility: hidden;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-icon-tooltip:hover::after,
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-icon-tooltip:focus-visible::after,
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-icon-tooltip:active::after {
+		opacity: 1;
+		transform: translate(-50%, 0);
+		visibility: visible;
+	}
+
+	body.sintesis-curriculum .sintesis-curriculum__page .cv-icon-tooltip:focus-visible {
+		border-radius: 0.12rem;
+		box-shadow: 0 0 0 2px hsl(220 30% 90% / 0.56);
+	}
+
 	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-icons img {
 		width: 1.2rem;
 		height: 1.2rem;
-	}
-
-	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-labels {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.35rem 0.5rem;
-	}
-
-	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-labels span {
-		color: var(--body-color-normal);
-		font: 600 0.62rem / 1.35 var(--font-heading);
-	}
-
-	body.sintesis-curriculum .sintesis-curriculum__page .cv-skill-labels span:not(:last-child)::after {
-		margin-left: 0.5rem;
-		color: var(--body-color-lower);
-		content: "•";
 	}
 
 	body.sintesis-curriculum .sintesis-curriculum__page .cv-experience > h2 {

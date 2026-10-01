@@ -33,7 +33,6 @@ const skillCopy = copy.about.skills as Record<string, string>
 
 const contactMarks: Record<string, string> = {
   "geo-alt-fill": "⌖",
-  "phone-fill": "☎",
   "envelope-fill": "@",
 }
 
@@ -62,36 +61,64 @@ const iconTitles: Record<string, string> = {
   "atlassian-bitbucket": "Bitbucket",
   "atlassian-confluence": "Confluence",
   "atlassian-jira": "Jira",
+  "agentic-workflows": "Agentic workflows and custom agent harnesses",
+  aws: "AWS",
+  casl: "CASL authorization",
   claude: "Claude",
+  cloudflare: "Cloudflare",
+  codex: "OpenAI Codex",
+  cursor: "Cursor",
+  docker: "Docker",
+  drizzle: "Drizzle ORM",
   css: "CSS",
   express: "Express",
   figma: "Figma",
   git: "Git",
   github: "GitHub",
+  githubactions: "GitHub Actions",
   gitlab: "GitLab",
+  graphql: "GraphQL",
+  higgsfield: "Higgsfield",
   html: "HTML5",
+  hono: "Hono",
   javascript: "JavaScript",
   jest: "Jest",
   jquery: "jQuery",
+  kimi: "Kimi",
   "microsoft-azure": "Microsoft Azure",
   "microsoft-azure-devops": "Azure DevOps",
   mongodb: "MongoDB",
+  "model-context-protocol": "MCP connectors",
   mongoose: "Mongoose",
   mysql: "MySQL",
   next: "Next.js",
+  n8n: "n8n",
   node: "Node.js",
+  nestjs: "NestJS",
   nuxt: "Nuxt",
   "power-bi": "Power BI",
+  pnpm: "pnpm",
   python: "Python",
+  prisma: "Prisma",
+  "prompt-engineering": "Prompt engineering",
+  qwen: "Qwen",
   react: "React",
+  "rest-api": "REST API",
   sass: "Sass",
   security: "Application security",
+  sonarqube: "SonarQube",
+  socketdotio: "Socket.IO",
   slack: "Slack",
+  sql: "SQL",
   trello: "Trello",
   troubleshooting: "Problem solving",
   typescript: "TypeScript",
+  typeorm: "TypeORM",
+  veracode: "Veracode",
   vscode: "Visual Studio Code",
   vue: "Vue.js",
+  zapier: "Zapier",
+  "z-ai": "Z.ai",
 }
 
 const iconTitle = (name: string) => iconTitles[name] ?? name
@@ -115,7 +142,7 @@ const providers = curriculumData.certifications as readonly CurriculumCredential
 					<ul class="cv-contact-list">
 						{curriculumData.contact.map((item) => (
 							<li>
-								<span class:list={{ "cv-contact-icon": true, "cv-contact-icon--social": item.icon === "github" || item.icon === "linkedin" }} aria-hidden="true">
+								<span class:list={{ "cv-contact-icon": true, "cv-contact-icon--social": item.icon === "github" || item.icon === "linkedin" }} title={item.title} aria-hidden="true">
 									{item.icon === "github" || item.icon === "linkedin" ? <SocialIcon name={item.icon} /> : (contactMarks[item.icon] ?? "·")}
 								</span>
 								<a href={item.url} target={item.url.startsWith("http") ? "_blank" : undefined} rel={item.url.startsWith("http") ? "noopener noreferrer nofollow" : undefined}>
@@ -147,11 +174,13 @@ const providers = curriculumData.certifications as readonly CurriculumCredential
 								{skill.years !== undefined && <small>{locale === "es" ? `${skill.years} años` : `${skill.years} years`}</small>}
 							</h4>
 							<div class="cv-skill-icons">
-								{skill.items.map((name) => (
-									<img src={`/img/curriculum/icons/${name}.svg`} alt="" title={iconTitle(name)} loading="lazy" />
-								))}
+								{skill.items.map((name) => {
+									const label = iconTitle(name)
+									return <span class="cv-icon-tooltip" tabindex="0" role="img" aria-label={label} data-tooltip={label}>
+										<img src={`/img/curriculum/icons/${name}.svg`} alt="" title={label} loading="lazy" />
+									</span>
+								})}
 							</div>
-							{skill.labels && <div class="cv-skill-labels">{skill.labels.map((label) => <span>{label}</span>)}</div>}
 						</div>
 					))}
 				</section>
@@ -176,7 +205,7 @@ const providers = curriculumData.certifications as readonly CurriculumCredential
 								const itemCopy = sectionCopy(section.slug)[item.slug] as ExperienceItemCopy
 								return (
 									<article class="cv-entry">
-										<img class="cv-entry-logo" src={`/img/curriculum/${item.slug}.svg`} alt="" loading="lazy" />
+										<img class="cv-entry-logo" src={`/img/curriculum/${item.slug}.svg`} alt="" title={itemCopy.title} loading="lazy" />
 										<h4>{itemCopy.title}</h4>
 										<h5>{itemCopy.subtitle}</h5>
 										<h6>
