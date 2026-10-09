@@ -238,7 +238,8 @@ export default {
             items: {
               "ai-engineer-agentic-track-the-complete-agent-and-mcp-course": {
                 title: "AI Engineer Agentic Track: The Complete Agent & MCP Course",
-                description: "A 21-hour course on building AI agents and working with the Model Context Protocol (MCP).",
+                description:
+                  "A 21-hour course on building AI agents and working with the Model Context Protocol (MCP).",
               },
               "typescript-guia-completa": {
                 title: "TypeScript: Your complete guide and handbook.",
