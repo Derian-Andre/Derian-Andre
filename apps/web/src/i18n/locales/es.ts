@@ -293,6 +293,10 @@ export default {
           udemy: {
             title: "Udemy",
             items: {
+              "ai-engineer-agentic-track-the-complete-agent-and-mcp-course": {
+                title: "AI Engineer Agentic Track: The Complete Agent & MCP Course",
+                description: "Curso de 21 horas sobre la creación de agentes de IA y el uso del Model Context Protocol (MCP).",
+              },
               "typescript-guia-completa": {
                 title: "TypeScript: Tu completa guía y manual de mano",
                 description: "La base sólida que necesitas para trabajar con TypeScript.",
