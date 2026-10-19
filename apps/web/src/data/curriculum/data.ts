@@ -211,6 +211,13 @@ export const curriculumData = {
       logoText: true,
       items: [
         certificate(
+          "claude-certified-architect-professional",
+          "Claude Certified Architect - Professional",
+          "2026-10",
+          "b691f174-5739-4572-bbbf-1d413e161eb6",
+          "https://www.credly.com/badges/b691f174-5739-4572-bbbf-1d413e161eb6",
+        ),
+        certificate(
           "ai-fluency-for-nonprofits",
           "AI Fluency for nonprofits",
           "2026-10",
