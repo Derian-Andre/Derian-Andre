@@ -353,6 +353,42 @@ export const curriculumData = {
       ],
     },
     {
+      slug: "openai",
+      title: "OpenAI Partner Network",
+      logo: "openai",
+      logoText: true,
+      items: [
+        certificate(
+          "chatgpt-solutions-practitioner",
+          "ChatGPT Solutions Practitioner",
+          "2026-11",
+          "0385f14b-3dac-4d1a-9690-3a2de5c8a6d6",
+          "https://www.credential.net/0385f14b-3dac-4d1a-9690-3a2de5c8a6d6",
+        ),
+        certificate(
+          "codex-solutions-practitioner",
+          "Codex Solutions Practitioner",
+          "2026-11",
+          "9f8aa166-19a4-4ae4-930f-5fd84772a5aa",
+          "https://www.credential.net/9f8aa166-19a4-4ae4-930f-5fd84772a5aa",
+        ),
+        certificate(
+          "openai-technical-practitioner",
+          "OpenAI Technical Practitioner",
+          "2026-11",
+          "ab9ce9cd-a104-4869-ab83-ff6101e4b699",
+          "https://www.credential.net/ab9ce9cd-a104-4869-ab83-ff6101e4b699",
+        ),
+        certificate(
+          "openai-foundational-knowledge",
+          "OpenAI Foundational Knowledge",
+          "2026-11",
+          "b48c2436-3333-478a-8e12-3771b8cd694a",
+          "https://www.credential.net/b48c2436-3333-478a-8e12-3771b8cd694a",
+        ),
+      ],
+    },
+    {
       slug: "deeplearning-ai",
       title: "DeepLearning.AI",
       logo: "deeplearning-ai",
