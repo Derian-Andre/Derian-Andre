@@ -373,6 +373,20 @@ export const curriculumData = {
           "https://www.credential.net/6ce1eea2-963a-4030-a1df-ad12c97becab",
         ),
         certificate(
+          "openai-advanced-api-practitioner",
+          "OpenAI Advanced API Practitioner",
+          "2026-11",
+          "24ca1974-a7ce-48a6-92c2-cbc7092b8710",
+          "https://www.credential.net/24ca1974-a7ce-48a6-92c2-cbc7092b8710",
+        ),
+        certificate(
+          "openai-advanced-cyber-practitioner",
+          "OpenAI Advanced Cyber Practitioner",
+          "2026-11",
+          "84f402c1-79df-4519-a1a7-a057fde1ffe7",
+          "https://www.credential.net/84f402c1-79df-4519-a1a7-a057fde1ffe7",
+        ),
+        certificate(
           "openai-advanced-cyber-deployment-practitioner",
           "OpenAI Advanced Cyber Deployment Practitioner",
           "2026-11",
